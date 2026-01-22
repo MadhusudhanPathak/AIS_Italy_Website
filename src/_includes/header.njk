@@ -1,0 +1,43 @@
+<a class="sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:rounded-md" href="#main">Skip to content</a>
+
+{% include "icons.njk" %}
+
+<header class="bg-white/90 backdrop-blur-sm border-b border-gray-100 sticky top-0 z-50">
+  <nav class="container flex items-center justify-between py-4">
+    <div class="flex items-center space-x-4">
+      <a href="/" class="flex items-center gap-3">
+        <span class="inline-block w-10 h-10 rounded-md bg-gradient-to-br from-accent to-safety-purple flex items-center justify-center text-white font-semibold">AI</span>
+        <span class="text-lg font-bold text-slate-900">{{ site.site.name }}</span>
+      </a>
+    </div>
+
+    <ul class="hidden md:flex items-center space-x-6 text-sm">
+      {% for item in site.navigation %}
+        <li>
+          <a href="{{ item.url }}" class="px-2 py-1 hover:text-accent {% if item.url == page.url %}active{% endif %}">{{ item.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <div class="hidden md:flex items-center space-x-4">
+      <a href="{{ site.forms.mailingList }}" target="_blank" class="btn btn-primary">Join</a>
+    </div>
+
+    <div class="md:hidden">
+      <button id="menuToggle" aria-expanded="false" aria-controls="mobileMenu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100" onclick="toggleMenu()">
+        <span class="sr-only">Open main menu</span>
+        ☰
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div id="mobileMenu" class="hidden md:hidden border-t border-gray-100">
+    <div class="px-4 pb-6 pt-2 space-y-1">
+      {% for item in site.navigation %}
+        <a href="{{ item.url }}" class="block py-2 text-gray-700 hover:text-accent">{{ item.name }}</a>
+      {% endfor %}
+      <a href="{{ site.forms.mailingList }}" target="_blank" class="block mt-3 btn btn-primary text-center">Join</a>
+    </div>
+  </div>
+</header>

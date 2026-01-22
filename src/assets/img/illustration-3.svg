@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" preserveAspectRatio="xMidYMid meet">
+  <defs>
+    <linearGradient id="lg3" x1="0" x2="1">
+      <stop offset="0" stop-color="#6d28d9"/>
+      <stop offset="1" stop-color="#0284c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="520" rx="28" fill="url(#lg3)"/>
+  <g transform="translate(60,60)" fill="rgba(255,255,255,0.12)">
+    <path d="M40 360 C140 220, 300 200, 420 240 C540 280, 700 240, 700 240 L700 360 L40 360 Z"/>
+    <circle cx="140" cy="120" r="42"/>
+    <rect x="260" y="80" width="260" height="120" rx="14"/>
+  </g>
+  <g transform="translate(120,380)">
+    <text x="0" y="0" font-family="system-ui,Segoe UI,Roboto,Helvetica,Arial" font-size="20" fill="#fff">Illustration — networked systems</text>
+  </g>
+</svg>
