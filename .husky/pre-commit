@@ -1,0 +1,3 @@
+#!/usr/bin/env sh
+: "$(dirname "$0")"/..\node_modules\.bin\sh-help >/dev/null 2>&1 || true
+npx --no-install lint-staged

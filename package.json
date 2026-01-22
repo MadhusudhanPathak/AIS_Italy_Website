@@ -1,0 +1,46 @@
+{
+  "name": "ai-safety-italy-website",
+  "version": "1.0.0",
+  "description": "AI Safety Italia Website - Built with Eleventy",
+  "main": "index.js",
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "debug": "DEBUG=Eleventy* eleventy",
+    "clean": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/clean.ps1",
+    "format": "prettier --write \"src/**/*.{js,md,css,html,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,md,css,html,json}\""
+  },
+  "lint-staged": {
+    "src/**/*.{js}": [
+      "eslint --fix",
+      "prettier --write",
+      "git add"
+    ],
+    "src/**/*.{md,css,json}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prepare": "husky install",
+  "lint": "eslint \"src/**/*.{js}\" --fix",
+  "keywords": [
+    "ai-safety",
+    "eleventy",
+    "static-site-generator"
+  ],
+  "author": "AI Safety Italia",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "tailwindcss": "^3.3.0",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "autoprefixer": "^10.4.14",
+    "prettier": "^2.8.8",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^8.8.0"
+  }
+}

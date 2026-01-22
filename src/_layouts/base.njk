@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.site.description }}">
+    <title>{{ title }} | {{ site.site.name }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="bg-white border-b border-gray-200">
+        <nav class="container flex items-center justify-between py-5">
+            <div class="flex items-center space-x-3">
+                <span class="text-3xl">🔒</span>
+                <a href="/" class="text-2xl font-bold bg-gradient-to-r from-accent to-safety-purple bg-clip-text text-transparent">{{ site.site.name }}</a>
+            </div>
+            <ul class="hidden md:flex space-x-8">
+                {% for item in site.navigation %}
+                    <li>
+                        <a href="{{ item.url }}" class="{% if item.url == page.url %}active{% endif %}">{{ item.name }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+            <button class="md:hidden text-gray-700 text-2xl" onclick="toggleMenu()">☰</button>
+        </nav>
+        <!-- Mobile menu -->
+        <ul id="mobileMenu" class="hidden md:hidden flex flex-col space-y-2 pb-4 px-4">
+            {% for item in site.navigation %}
+                <li>
+                    <a href="{{ item.url }}" class="block py-2 text-gray-700 hover:text-accent">{{ item.name }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </header>
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+                <div>
+                    <h3 class="text-white font-bold mb-4">About AI Safety Italia</h3>
+                    <p class="text-sm text-gray-400 leading-relaxed">{{ site.site.description }}</p>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Quick Links</h3>
+                    <ul class="text-sm space-y-3">
+                        <li><a href="/about/" class="text-gray-400 hover:text-accent transition-colors">About Us</a></li>
+                        <li><a href="/activities/" class="text-gray-400 hover:text-accent transition-colors">Activities</a></li>
+                        <li><a href="/community/" class="text-gray-400 hover:text-accent transition-colors">Community</a></li>
+                        <li><a href="/contact/" class="text-gray-400 hover:text-accent transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold mb-4">Connect With Us</h3>
+                    <ul class="text-sm space-y-3">
+                        <li><a href="mailto:{{ site.site.email }}" class="text-gray-400 hover:text-accent transition-colors">📧 {{ site.site.email }}</a></li>
+                        <li><a href="{{ site.social.linkedin }}" target="_blank" class="text-gray-400 hover:text-accent transition-colors">💼 LinkedIn</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8 text-center text-sm text-gray-500">
+                <p>&copy; 2026 {{ site.site.name }} | Advancing AI Safety | Last updated January 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
