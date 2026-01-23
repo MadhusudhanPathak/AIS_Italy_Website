@@ -39,104 +39,120 @@ permalink: /community/
             <p class="text-xl text-gray-600 mt-4">Explore curated materials to deepen your understanding of AI safety</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card hover-lift">
-                <span class="text-4xl mb-4 block">🌱</span>
-                <h3>Foundations of AI Safety</h3>
-                <p class="text-gray-600 mb-4">Start here if you're new to AI safety topics.</p>
-                <ul class="text-sm space-y-3 mb-6">
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>What is AI Safety?</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Why it matters now</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Key research areas</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Career pathways</span>
-                    </li>
-                </ul>
-                <a href="#" class="text-accent font-semibold hover:underline">Explore →</a>
+            <div class="card hover-lift bg-emerald-50">
+                <div class="card-body">
+                    <span class="text-4xl mb-4 block">🌱</span>
+                    <h3>Foundations of AI Safety</h3>
+                    <p class="text-gray-600 mb-4">Start here if you're new to AI safety topics.</p>
+                    <ul class="text-sm space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>What is AI Safety?</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Why it matters now</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Key research areas</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Career pathways</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
+                </div>
             </div>
 
-            <div class="card hover-lift">
-                <span class="text-4xl mb-4 block">🔬</span>
-                <h3>Technical Deep Dives</h3>
-                <p class="text-gray-600 mb-4">Advanced resources for technical researchers.</p>
-                <ul class="text-sm space-y-3 mb-6">
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Interpretability research</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Alignment techniques</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Safety evaluations</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Code and tools</span>
-                    </li>
-                </ul>
-                <a href="#" class="text-accent font-semibold hover:underline">Explore →</a>
+            <div class="card hover-lift bg-emerald-50">
+                <div class="card-body">
+                    <span class="text-4xl mb-4 block">🔬</span>
+                    <h3>Technical Deep Dives</h3>
+                    <p class="text-gray-600 mb-4">Advanced resources for technical researchers.</p>
+                    <ul class="text-sm space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Interpretability research</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Alignment techniques</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Safety evaluations</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Code and tools</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
+                </div>
             </div>
 
-            <div class="card hover-lift">
-                <span class="text-4xl mb-4 block">⚖️</span>
-                <h3>Policy & Governance</h3>
-                <p class="text-gray-600 mb-4">For those interested in AI policy work.</p>
-                <ul class="text-sm space-y-3 mb-6">
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>EU AI Act resources</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Regulatory frameworks</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Policy analysis tools</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Government initiatives</span>
-                    </li>
-                </ul>
-                <a href="#" class="text-accent font-semibold hover:underline">Explore →</a>
+            <div class="card hover-lift bg-emerald-50">
+                <div class="card-body">
+                    <span class="text-4xl mb-4 block">⚖️</span>
+                    <h3>Policy & Governance</h3>
+                    <p class="text-gray-600 mb-4">For those interested in AI policy work.</p>
+                    <ul class="text-sm space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>EU AI Act resources</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Regulatory frameworks</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Policy analysis tools</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Government initiatives</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
+                </div>
             </div>
 
-            <div class="card hover-lift">
-                <span class="text-4xl mb-4 block">📖</span>
-                <h3>Research & Academic</h3>
-                <p class="text-gray-600 mb-4">Curated research materials.</p>
-                <ul class="text-sm space-y-3 mb-6">
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Featured papers</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Research groups</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Key conferences</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <span class="text-accent">→</span>
-                        <span>Relevant journals</span>
-                    </li>
-                </ul>
-                <a href="#" class="text-accent font-semibold hover:underline">Explore →</a>
+            <div class="card hover-lift bg-emerald-50">
+                <div class="card-body">
+                    <span class="text-4xl mb-4 block">📖</span>
+                    <h3>Research & Academic</h3>
+                    <p class="text-gray-600 mb-4">Curated research materials.</p>
+                    <ul class="text-sm space-y-3 mb-6">
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Featured papers</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Research groups</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Key conferences</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-600">→</span>
+                            <span>Relevant journals</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
+                </div>
             </div>
         </div>
     </div>
@@ -151,33 +167,39 @@ permalink: /community/
         <h2 class="text-center mb-4">🌐 External Resources & Organizations</h2>
         <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Connect with leading organizations and initiatives in AI safety</p>
         <div class="space-y-4 max-w-2xl mx-auto">
-            <a href="https://ai-alignment.com" target="_blank" class="card hover-lift hover:shadow-xl">
-                <div class="flex items-start gap-4">
-                    <span class="text-3xl flex-shrink-0">🎯</span>
-                    <div class="flex-1">
-                        <h3 class="mb-1">AI Alignment Research Center</h3>
-                        <p class="text-sm text-gray-600">Leading organization researching AI alignment and safety methodologies.</p>
+            <div class="card hover-lift hover:shadow-xl bg-gray-50">
+                <div class="card-body">
+                    <div class="flex items-start gap-4">
+                        <span class="text-3xl flex-shrink-0">🎯</span>
+                        <div class="flex-1">
+                            <h3 class="mb-1">AI Alignment Research Center</h3>
+                            <p class="text-sm text-gray-600">Leading organization researching AI alignment and safety methodologies.</p>
+                        </div>
                     </div>
                 </div>
-            </a>
-            <a href="https://futureoflife.org" target="_blank" class="card hover-lift hover:shadow-xl">
-                <div class="flex items-start gap-4">
-                    <span class="text-3xl flex-shrink-0">🌍</span>
-                    <div class="flex-1">
-                        <h3 class="mb-1">Future of Life Institute</h3>
-                        <p class="text-sm text-gray-600">Organization working on existential risks from advanced AI and global catastrophic risks.</p>
+            </div>
+            <div class="card hover-lift hover:shadow-xl bg-gray-50">
+                <div class="card-body">
+                    <div class="flex items-start gap-4">
+                        <span class="text-3xl flex-shrink-0">🌍</span>
+                        <div class="flex-1">
+                            <h3 class="mb-1">Future of Life Institute</h3>
+                            <p class="text-sm text-gray-600">Organization working on existential risks from advanced AI and global catastrophic risks.</p>
+                        </div>
                     </div>
                 </div>
-            </a>
-            <a href="https://www.mlsafety.org" target="_blank" class="card hover-lift hover:shadow-xl">
-                <div class="flex items-start gap-4">
-                    <span class="text-3xl flex-shrink-0">🎓</span>
-                    <div class="flex-1">
-                        <h3 class="mb-1">ML Safety Scholars Program</h3>
-                        <p class="text-sm text-gray-600">Comprehensive training program for aspiring AI safety researchers and professionals.</p>
+            </div>
+            <div class="card hover-lift hover:shadow-xl bg-gray-50">
+                <div class="card-body">
+                    <div class="flex items-start gap-4">
+                        <span class="text-3xl flex-shrink-0">🎓</span>
+                        <div class="flex-1">
+                            <h3 class="mb-1">ML Safety Scholars Program</h3>
+                            <p class="text-sm text-gray-600">Comprehensive training program for aspiring AI safety researchers and professionals.</p>
+                        </div>
                     </div>
                 </div>
-            </a>
+            </div>
         </div>
     </div>
 </section>

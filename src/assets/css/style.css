@@ -64,7 +64,13 @@ a {
 
 /* Cards & Layout */
 .card {
-  @apply bg-white rounded-xl border border-gray-100 p-6 hover:shadow-lg transition;
+  @apply bg-white rounded-xl border border-gray-100 p-6 hover:shadow-lg transition h-full flex flex-col;
+}
+.card-body {
+  @apply flex-grow;
+}
+.card-footer {
+  @apply pt-4 border-t border-gray-100;
 }
 .card-accent {
   @apply bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-accent;

@@ -50,7 +50,7 @@ permalink: /
 </section>
 
 <!-- Mission Section with Split Layout -->
-<section class="section bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden">
+<section class="section bg-gradient-to-br from-emerald-900 to-slate-800 text-white relative overflow-hidden">
     <div class="absolute top-20 left-0 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-safety-purple rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
     <div class="container relative z-10">
@@ -63,7 +63,7 @@ permalink: /
                         <h2 class="text-white mb-6 mt-0">The Challenge</h2>
                         <p class="text-blue-100 mb-4">AI will soon radically transform our society, for better or worse. Experts broadly expect significant progress during our lifetimes, potentially achieving human-level intelligence.</p>
                         <p class="text-blue-100">Digital systems with such capabilities would revolutionize every aspect of our society, making their safe development one of the most pressing challenges of our time.</p>
-                        <a href="/community/" class="inline-block text-accent font-semibold hover:text-blue-300 transition-colors mt-6">Explore the Issues →</a>
+                        <a href="/community/" class="inline-block text-emerald-400 font-semibold hover:text-emerald-300 transition-colors mt-6">Explore the Issues →</a>
                     </div>
                 </div>
             </div>

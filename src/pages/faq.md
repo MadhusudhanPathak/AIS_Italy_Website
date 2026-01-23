@@ -17,11 +17,11 @@ permalink: /faq/
     <div class="container max-w-3xl mx-auto">
         <div class="space-y-4">
             <!-- FAQ Item 1 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>What is AI Safety?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -30,11 +30,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>Who should apply for the introductory courses?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -43,11 +43,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>How much time do the courses require?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -56,11 +56,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>Are the courses online or in-person?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -69,11 +69,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 5 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>What's the difference between Governance and Alignment tracks?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -82,11 +82,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 6 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>How can I get involved if I can't take a full course?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -95,11 +95,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 7 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>Is there a cost to join?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -108,11 +108,11 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 8 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>Can I switch between the two tracks?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -121,24 +121,24 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 9 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>How can I stay updated about courses and events?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
-                    <p>The best way is to subscribe to our <a href="{{ site.forms.mailingList }}" target="_blank" class="text-accent font-semibold hover:underline">mailing list</a>. We send regular updates about course registrations, events, and important announcements. You can also follow us on <a href="{{ site.social.linkedin }}" target="_blank" class="text-accent font-semibold hover:underline">LinkedIn</a> for updates and community highlights.</p>
+                    <p>The best way is to subscribe to our <a href="{{ site.forms.mailingList }}" target="_blank" class="text-emerald-600 font-semibold hover:underline">mailing list</a>. We send regular updates about course registrations, events, and important announcements. You can also follow us on <a href="{{ site.social.linkedin }}" target="_blank" class="text-emerald-600 font-semibold hover:underline">LinkedIn</a> for updates and community highlights.</p>
                 </div>
             </div>
 
             <!-- FAQ Item 10 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>What career paths exist in AI Safety?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
@@ -147,15 +147,15 @@ permalink: /faq/
             </div>
 
             <!-- FAQ Item 11 -->
-            <div class="faq-item">
+            <div class="faq-item bg-gray-50">
                 <div class="faq-header">
                     <h3 class="mb-0 flex items-center justify-between cursor-pointer">
                         <span>I have more questions. How can I contact you?</span>
-                        <span class="text-accent">+</span>
+                        <span class="text-emerald-600">+</span>
                     </h3>
                 </div>
                 <div class="faq-content hidden">
-                    <p>Feel free to <a href="mailto:{{ site.site.email }}" class="text-accent font-semibold hover:underline">email us at {{ site.site.email }}</a> with any questions. You can also reach out through our <a href="/contact/" class="text-accent font-semibold hover:underline">contact page</a> or connect via our <a href="{{ site.social.linkedin }}" target="_blank" class="text-accent font-semibold hover:underline">LinkedIn</a>. We're here to help!</p>
+                    <p>Feel free to <a href="mailto:{{ site.site.email }}" class="text-emerald-600 font-semibold hover:underline">email us at {{ site.site.email }}</a> with any questions. You can also reach out through our <a href="/contact/" class="text-emerald-600 font-semibold hover:underline">contact page</a> or connect via our <a href="{{ site.social.linkedin }}" target="_blank" class="text-emerald-600 font-semibold hover:underline">LinkedIn</a>. We're here to help!</p>
                 </div>
             </div>
         </div>
@@ -164,10 +164,10 @@ permalink: /faq/
 </section>
 
 <!-- CTA Section -->
-<section class="section bg-gradient-to-br from-blue-50 to-indigo-50">
+<section class="section bg-gradient-to-br from-emerald-50 to-blue-50">
     <div class="container max-w-2xl mx-auto">
-        <div class="card-accent border-2 border-accent text-center">
-            <h2 class="text-accent mb-4 mt-0">Didn't find what you're looking for?</h2>
+        <div class="card-accent border-2 border-emerald-200 text-center">
+            <h2 class="text-emerald-600 mb-4 mt-0">Didn't find what you're looking for?</h2>
             <p class="mb-6">Contact us directly and we'll be happy to help answer your questions.</p>
             <a href="/contact/" class="btn btn-primary">Get in Touch</a>
         </div>
@@ -178,13 +178,13 @@ permalink: /faq/
 document.querySelectorAll('.faq-item').forEach(item => {
     const header = item.querySelector('.faq-header');
     const content = item.querySelector('.faq-content');
-    const icon = header.querySelector('.text-accent');
+    const icon = header.querySelector('.text-emerald-600');
     
     header.addEventListener('click', () => {
         content.classList.toggle('hidden');
         icon.textContent = content.classList.contains('hidden') ? '+' : '−';
         item.classList.toggle('bg-gradient-to-r', !content.classList.contains('hidden'));
-        item.classList.toggle('from-accent', !content.classList.contains('hidden'));
+        item.classList.toggle('from-emerald-50', !content.classList.contains('hidden'));
         item.classList.toggle('from-blue-50', !content.classList.contains('hidden'));
     });
 });

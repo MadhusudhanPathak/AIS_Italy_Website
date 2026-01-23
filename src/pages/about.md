@@ -82,15 +82,17 @@ permalink: /about/
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {% for member in team %}
-            <div class="card hover-lift text-center">
-                <div class="w-24 h-24 rounded-full bg-gradient-to-br from-accent to-safety-purple flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
-                    {{ member.name | first }}
+            <div class="card hover-lift text-center bg-gray-50">
+                <div class="card-body">
+                    <div class="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
+                        {{ member.name | first }}
+                    </div>
+                    <h3 class="mb-2">{{ member.name }}</h3>
+                    <p class="text-sm text-emerald-600 font-semibold mb-3 uppercase tracking-wide">{{ member.role }}</p>
+                    <p class="text-sm text-gray-600 mb-6">{{ member.bio }}</p>
                 </div>
-                <h3 class="mb-2">{{ member.name }}</h3>
-                <p class="text-sm text-accent font-semibold mb-3 uppercase tracking-wide">{{ member.role }}</p>
-                <p class="text-sm text-gray-600 mb-6">{{ member.bio }}</p>
-                <div class="pt-4 border-t border-gray-100">
-                    <a href="mailto:{{ member.email }}" class="text-sm text-accent hover:text-accent-dark font-semibold">Get in touch</a>
+                <div class="card-footer">
+                    <a href="mailto:{{ member.email }}" class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold">Get in touch</a>
                 </div>
             </div>
             {% endfor %}
