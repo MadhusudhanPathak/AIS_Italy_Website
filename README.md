@@ -45,6 +45,11 @@ cd AI_Safety_Italy_Website
 npm install
 ```
 
+**Note:** If you are on Windows, you might need to adjust your PowerShell execution policy to run npm scripts. You can do this by running the following command in a PowerShell window with administrator privileges:
+```powershell
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
 ## Development
 
 To start the development server:
@@ -52,25 +57,24 @@ To start the development server:
 npm start
 ```
 
-The site will be available at `http://localhost:8080` with live reload enabled.
+This will start a local server at `http://localhost:8080` with live reload. It will also watch for changes in your CSS files and automatically rebuild them.
 
 ## Building
 
-To build for production:
+To build the website for production:
 ```bash
 npm run build
 ```
 
-Output will be generated in the `_site/` directory.
+The output will be generated in the `_site/` directory.
 
 ## Housekeeping
 
-- **Clean build outputs**: `npm run clean` (runs `scripts/clean.ps1`)
+- **Clean build outputs**: `npm run clean`
 - **Format repository**: `npm run format` (uses Prettier)
 - **Check formatting**: `npm run format:check`
 
 Files added for consistency:
-- `scripts/clean.ps1` — PowerShell cleanup script
 - `.editorconfig` — editor settings
 - `.prettierrc` — Prettier configuration
  

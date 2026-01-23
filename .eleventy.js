@@ -20,10 +20,6 @@ module.exports = function(eleventyConfig) {
     return collection.getFilteredByGlob("src/pages/events/*.md");
   });
 
-  eleventyConfig.addCollection("resources", function(collection) {
-    return collection.getFilteredByGlob("src/pages/resources/*.md");
-  });
-
   return {
     dir: {
       input: "src",

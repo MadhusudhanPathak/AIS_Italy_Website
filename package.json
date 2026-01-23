@@ -4,12 +4,16 @@
   "description": "AI Safety Italia Website - Built with Eleventy",
   "main": "index.js",
   "scripts": {
-    "start": "eleventy --serve",
-    "build": "eleventy",
+    "start": "npm-run-all --parallel watch:*",
+    "build": "run-s clean build:css build:eleventy",
     "debug": "DEBUG=Eleventy* eleventy",
-    "clean": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/clean.ps1",
+    "clean": "rimraf _site",
     "format": "prettier --write \"src/**/*.{js,md,css,html,json}\"",
-    "format:check": "prettier --check \"src/**/*.{js,md,css,html,json}\""
+    "format:check": "prettier --check \"src/**/*.{js,md,css,html,json}\"",
+    "watch:css": "postcss src/assets/css/style.css -o _site/assets/css/style.css --watch",
+    "watch:eleventy": "eleventy --serve",
+    "build:css": "postcss src/assets/css/style.css -o _site/assets/css/style.css",
+    "build:eleventy": "eleventy"
   },
   "lint-staged": {
     "src/**/*.{js}": [
@@ -38,9 +42,11 @@
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.0",
     "lint-staged": "^16.2.7",
+    "npm-run-all": "^4.1.5",
     "postcss": "^8.4.24",
     "postcss-cli": "^10.1.0",
     "prettier": "^2.8.8",
+    "rimraf": "^5.0.5",
     "tailwindcss": "^3.3.0"
   }
 }
