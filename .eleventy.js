@@ -1,6 +1,9 @@
 module.exports = function(eleventyConfig) {
   // Pass through copy
-  eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy("src/assets/js"); // Assuming there might be JS assets to copy
+  eleventyConfig.addPassthroughCopy({ "src/assets/fonts": "assets/fonts" }); // Assuming there might be font assets to copy
+
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   
   // Watch targets
