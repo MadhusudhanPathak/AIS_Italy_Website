@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ site.site.description }}">
+    <meta name="author" content="{{ site.site.name }}">
+    <meta name="theme-color" content="#3b82f6">
+    <title>{% if title %}{{ title }} | {% endif %}{{ site.site.name }}</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+</head>
+<body class="bg-white">
+    {% include "header.njk" %}
+
+    <main id="main" class="min-h-screen">
+        {{ content | safe }}
+    </main>
+
+    {% include "footer.njk" %}
+
+    <script>
+        // DOM ready function
+        function domReady(callback) {
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', callback);
+            } else {
+                callback();
+            }
+        }
+
+        // Toggle mobile menu with error handling
+        function toggleMenu() {
+            try {
+                const menu = document.getElementById('mobileMenu');
+                const btn = document.getElementById('menuToggle');
+                
+                if (!menu || !btn) {
+                    console.error('Mobile menu elements not found');
+                    return;
+                }
+                
+                const isHidden = menu.classList.contains('hidden');
+                if (isHidden) {
+                    menu.classList.remove('hidden');
+                    btn.setAttribute('aria-expanded', 'true');
+                    // Focus first element in menu for accessibility
+                    const firstFocusable = menu.querySelector('a, button, input');
+                    if (firstFocusable) {
+                        firstFocusable.focus();
+                    }
+                } else {
+                    menu.classList.add('hidden');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.focus(); // Return focus to menu button
+                }
+            } catch (error) {
+                console.error('Error toggling menu:', error);
+            }
+        }
+
+        // Close mobile menu when clicking outside
+        function setupOutsideClickHandler() {
+            try {
+                document.addEventListener('click', function (e) {
+                    const menu = document.getElementById('mobileMenu');
+                    const btn = document.getElementById('menuToggle');
+                    
+                    if (!menu || !btn) return;
+                    
+                    if (!menu.classList.contains('hidden')) {
+                        if (!menu.contains(e.target) && !btn.contains(e.target)) {
+                            menu.classList.add('hidden');
+                            btn.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            } catch (error) {
+                console.error('Error setting up outside click handler:', error);
+            }
+        }
+
+        // Initialize when DOM is ready
+        domReady(function() {
+            setupOutsideClickHandler();
+            
+            // Add error handling for potential JavaScript issues
+            window.addEventListener('error', function(e) {
+                console.error('JavaScript error:', e.error);
+            });
+        });
+
+        // Enhanced keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            // Close menu with Escape key
+            if (e.key === 'Escape') {
+                const menu = document.getElementById('mobileMenu');
+                const btn = document.getElementById('menuToggle');
+                
+                if (menu && !menu.classList.contains('hidden')) {
+                    menu.classList.add('hidden');
+                    btn.setAttribute('aria-expanded', 'false');
+                    btn.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>

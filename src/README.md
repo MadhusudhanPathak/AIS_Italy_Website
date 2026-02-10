@@ -2,11 +2,12 @@ This folder contains the Eleventy source content used to build the site.
 
 Structure overview:
 
-- `_includes/` — reusable Nunjucks templates and components
-- `_layouts/` — layout templates (`base.njk`, `page.njk`)
-- `_data/` — global data files (`site.js`, `team.js`)
-- `assets/` — static assets (CSS, images)
-- `pages/` — page Markdown files used as content
+- `components/` — reusable Nunjucks templates and components
+- `layouts/` — layout templates (`base.njk`, `page.njk`)
+- `data/` — global data files (`site.js`, `team.js`)
+- `content/` — page Markdown files used as content
+- `assets/` — static assets (CSS, images, JS)
+- `utils/` — utility functions and helpers
 - `robots.txt` — robots rules included in build
 
 Notes:

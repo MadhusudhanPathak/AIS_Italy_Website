@@ -10,27 +10,18 @@ A modern, minimal static website for AI Safety Italia - built with Eleventy and 
 - **Content Management**: Simple Markdown + YAML structure
 - **Component-Based**: Reusable Nunjucks templates
 - **SEO Optimized**: Semantic HTML and proper metadata
+- **Accessibility Focused**: Proper ARIA attributes and keyboard navigation
 
-## Project Structure
+## Table of Contents
 
-```
-AI_Safety_Italy_Website/
-├── src/
-│   ├── _includes/          # Reusable template components
-│   ├── _layouts/           # Page layout templates
-│   ├── _data/              # Global data files (site config, team, etc.)
-│   ├── assets/             # CSS, images, and other static files
-│   │   ├── css/
-│   │   └── img/
-│   ├── pages/              # Page content in Markdown
-│   └── robots.txt
-├── .eleventy.js            # Eleventy configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-├── postcss.config.js       # PostCSS configuration
-├── vercel.json             # Vercel deployment config
-├── package.json
-└── README.md
-```
+- [Installation](#installation)
+- [Development](#development)
+- [Building](#building)
+- [Project Structure](#project-structure)
+- [Content Management](#content-management)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
 
 ## Installation
 
@@ -68,32 +59,63 @@ npm run build
 
 The output will be generated in the `_site/` directory.
 
+## Project Structure
+
+```
+AI_Safety_Italy_Website/
+├── src/
+│   ├── components/         # Reusable template components
+│   ├── layouts/            # Page layout templates
+│   ├── data/               # Global data files (site config, team, etc.)
+│   ├── content/            # Page content in Markdown
+│   │   ├── about/
+│   │   ├── activities/
+│   │   ├── community/
+│   │   ├── contact/
+│   │   ├── events/
+│   │   ├── faq/
+│   │   └── home/
+│   ├── assets/
+│   │   ├── css/
+│   │   ├── js/
+│   │   ├── img/
+│   │   └── fonts/
+│   └── utils/              # Utility files
+├── .eleventy.js            # Eleventy configuration
+├── tailwind.config.js      # Tailwind CSS configuration
+├── postcss.config.js       # PostCSS configuration
+├── vercel.json             # Vercel deployment config
+├── package.json
+└── README.md
+```
+
+## Content Management
+
+### Pages
+Edit Markdown files in `src/content/` to update page content.
+
+### Site Configuration
+Update `src/data/site.js` to change site metadata, navigation, social links, and form URLs.
+
+### Team Members
+Update `src/data/team.js` to manage team member information.
+
+### Styling
+- Tailwind CSS: `tailwind.config.js`
+- Custom CSS: `src/assets/css/style.css`
+
 ## Housekeeping
 
 - **Clean build outputs**: `npm run clean`
 - **Format repository**: `npm run format` (uses Prettier)
 - **Check formatting**: `npm run format:check`
+- **Lint JavaScript**: `npm run lint`
 
 Files added for consistency:
 - `.editorconfig` — editor settings
 - `.prettierrc` — Prettier configuration
- 
+
 Note: Nunjucks template files (`.njk`) are intentionally excluded from the automatic Prettier formatting because they require a specific parser. Edit these files manually or add a Nunjucks Prettier plugin if you want them auto-formatted.
-
-## Content Management
-
-### Pages
-Edit Markdown files in `src/pages/` to update page content.
-
-### Site Configuration
-Update `src/_data/site.js` to change site metadata, navigation, social links, and form URLs.
-
-### Team Members
-Update `src/_data/team.js` to manage team member information.
-
-### Styling
-- Tailwind CSS: `tailwind.config.js`
-- Custom CSS: `src/assets/css/style.css`
 
 ## Deployment
 
@@ -108,20 +130,13 @@ Update `src/_data/team.js` to manage team member information.
 1. Build: `npm run build`
 2. Deploy the `_site/` folder to your hosting provider
 
+## Contributing
+
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.
+
 ## Environment Variables
 
-No environment variables required for MVP. Google Forms URLs are configured in `src/_data/site.js`.
-
-## TODO / Future Enhancements
-
-- [ ] Replace placeholder Google Forms URLs with actual forms
-- [ ] Add team member photos
-- [ ] Implement search functionality
-- [ ] Add blog/news section
-- [ ] Set up analytics
-- [ ] Add language toggle for Italian/English
-- [ ] Create custom 404 page
-- [ ] Add sitemap generation
+No environment variables required for MVP. Google Forms URLs are configured in `src/data/site.js`.
 
 ## License
 
