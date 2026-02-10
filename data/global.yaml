@@ -1,0 +1,118 @@
+# Global Content Data
+# This file contains shared content elements used across multiple pages
+# Each field is documented with comments explaining its purpose
+
+# Site-wide navigation
+navigation:
+  - name: "Home"
+    url: "/"
+    dropdown: false
+  - name: "About"
+    url: "/about/"
+    dropdown: false
+  - name: "Events & News"
+    url: "/events/"
+    dropdown: false
+  - name: "Activities"
+    url: "/activities/"
+    dropdown: false
+  - name: "Community"
+    url: "/community/"
+    dropdown: false
+  - name: "FAQ"
+    url: "/faq/"
+    dropdown: false
+  - name: "Contact"
+    url: "/contact/"
+    dropdown: false
+
+# Site metadata
+site_metadata:
+  name: "AI Safety Italia"
+  description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
+  domain: "aisafetyitalia.org"
+  email: "contact@aisafetyitalia.org"
+
+# Social links
+social_links:
+  linkedin: "https://www.linkedin.com/company/ai-safety-italia/"
+  twitter: "https://twitter.com/aisafetyitalia"
+
+# Theme settings
+theme:
+  default: "light"  # Default theme: light or dark
+  toggle_enabled: true
+  toggle_label: "Toggle Dark Mode"
+
+# Common CTAs
+common_ctas:
+  join_community: 
+    text: "Join Our Community"
+    link: "/community/"
+  learn_more:
+    text: "Learn More"
+    link: "#"
+  contact_us:
+    text: "Contact Us"
+    link: "/contact/"
+
+# Footer content
+footer:
+  sections:
+    - title: "Quick Links"
+      links:
+        - name: "Home"
+          url: "/"
+        - name: "About"
+          url: "/about/"
+        - name: "Events"
+          url: "/events/"
+        - name: "Community"
+          url: "/community/"
+    - title: "Resources"
+      links:
+        - name: "FAQ"
+          url: "/faq/"
+        - name: "Contact"
+          url: "/contact/"
+        - name: "Activities"
+          url: "/activities/"
+    - title: "Legal"
+      links:
+        - name: "Privacy Policy"
+          url: "/privacy/"
+        - name: "Terms of Service"
+          url: "/terms/"
+
+  copyright: "© 2026 AI Safety Italia. All rights reserved."
+
+# Forms and external links
+forms:
+  mailing_list: "https://forms.google.com/placeholder-mailing-list"
+  course_application: "https://forms.google.com/placeholder-course-application"
+
+# Common badges and labels
+badges:
+  upcoming: "Upcoming"
+  recurring: "Recurring"
+  featured: "Featured"
+  new: "New"
+  popular: "Popular"
+
+# Common icons mapping
+icons:
+  home: "🏠"
+  about: "ℹ️"
+  events: "📅"
+  activities: "🎯"
+  community: "👥"
+  faq: "❓"
+  contact: "📧"
+  education: "🎓"
+  research: "🔬"
+  collaboration: "🤝"
+  resources: "📚"
+  governance: "⚖️"
+  alignment: "⚙️"
+  theme_toggle: "🌙"
+  theme_toggle_alt: "☀️"

@@ -8,6 +8,24 @@
   --safety-blue: #0284c7;
   --safety-purple: #6d28d9;
   --muted: #6b7280;
+  --bg-primary: #ffffff;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #111827;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --card-bg: #1f2937;
+  --border-color: #374151;
+  --accent: #60a5fa;
+  --accent-dark: #93c5fd;
+  --safety-blue: #7dd3fc;
+  --safety-purple: #c4b5fd;
+  --muted: #9ca3af;
 }
 
 /* Base styles */
@@ -16,7 +34,137 @@ html {
 }
 
 body {
-  @apply font-sans text-gray-800 bg-white antialiased;
+  @apply font-sans antialiased;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+p {
+  color: var(--text-secondary);
+}
+
+a {
+  color: var(--accent);
+}
+
+/* Header */
+header {
+  background-color: color-mix(in srgb, var(--bg-primary) 90%, transparent 10%);
+  border-color: var(--border-color);
+}
+
+/* Navigation */
+nav a {
+  color: var(--text-primary);
+}
+nav a.active {
+  color: var(--accent);
+}
+
+/* Buttons */
+.btn-primary {
+  @apply bg-gradient-to-r from-accent to-safety-blue text-white shadow-md hover:scale-105;
+}
+.btn-outline {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+/* Cards */
+.card {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+.card-accent {
+  background: linear-gradient(to bottom right, #eff6ff, #f0f9ff);
+}
+
+/* Sections */
+.section {
+  @apply py-16 md:py-24;
+  background-color: var(--bg-primary);
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+  color: var(--text-secondary);
+}
+footer h3 {
+  color: white;
+}
+footer a {
+  color: var(--text-secondary);
+}
+
+/* Feature boxes */
+.feature-box {
+  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
+  border-color: var(--border-color);
+}
+
+/* Stats */
+.stat-item {
+  @apply text-center;
+}
+.stat-item .text-4xl {
+  color: var(--text-primary);
+}
+.stat-item .opacity-90 {
+  color: var(--text-secondary);
+}
+
+/* CTA box */
+.cta-box {
+  @apply rounded-xl p-8 md:p-12 text-center shadow-2xl bg-gradient-to-r from-accent via-safety-blue to-safety-purple;
+}
+.cta-box h2,
+.cta-box p {
+  @apply text-white;
+}
+
+/* Divider */
+.divider {
+  @apply h-1 my-12;
+  background: linear-gradient(to right, transparent, var(--accent), transparent);
+}
+
+/* Badge classes */
+.badge {
+  @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+}
+.badge-primary {
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent 90%);
+  color: color-mix(in srgb, var(--accent) 80%, black 20%);
+}
+.badge-info {
+  background-color: color-mix(in srgb, var(--safety-blue) 10%, transparent 90%);
+  color: color-mix(in srgb, var(--safety-blue) 80%, black 20%);
+}
+.badge-success {
+  background-color: color-mix(in srgb, #10b981 10%, transparent 90%);
+  color: color-mix(in srgb, #10b981 80%, black 20%);
+}
+
+/* Card dark variants */
+.card-dark {
+  background-color: var(--card-bg);
+  color: white;
+  border-color: var(--border-color);
 }
 
 /* Typography */
@@ -86,6 +234,7 @@ a {
 /* Hero */
 .hero {
   @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 py-24 md:py-36 relative overflow-hidden;
+  min-height: 80vh;
 }
 .hero::before {
   content: '';
@@ -94,6 +243,13 @@ a {
   opacity: 0.18;
   background-image: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.32), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(109, 40, 217, 0.24), transparent 40%);
+}
+.hero-background {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.7;
+  z-index: 0;
 }
 
 /* Navigation tweaks */

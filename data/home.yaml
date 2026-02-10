@@ -1,0 +1,92 @@
+# Home Page Content Data
+# This file contains all user-facing content for the home page
+# Each field is documented with comments explaining its purpose
+
+# Hero Section
+hero:
+  title: "AI Safety Italia"
+  subtitle: "Building a safer future through awareness, education, and community"
+  description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
+  cta_text: "Join Our Community"
+  cta_link: "/community/"
+  secondary_cta_text: "Learn More"
+  secondary_cta_link: "#learn-more"
+
+# Stats Section
+stats:
+  - count: "500+"
+    label: "Community Members"
+  - count: "25+"
+    label: "Events Hosted"
+  - count: "8"
+    label: "Educational Programs"
+  - count: "3"
+    label: "Active Chapters"
+
+# Announcements Section
+announcements:
+  - id: 1
+    emoji: "📚"
+    title: "Introductory Courses Coming Soon"
+    description: "Registration for our <strong>8-week introductory courses</strong> will be opening in March 2026. We'll be offering tracks in AI Governance and AI Safety Alignment."
+    link_text: "Sign up for our mailing list"
+    link_url: "{{ site.forms.mailingList }}"
+    link_target: "_blank"
+
+# Recent Events Section
+recent_events:
+  - id: 1
+    title: "AI Safety Roundtable"
+    date: "January 20, 2026"
+    emoji: "🗣️"
+    participants: "40+ participants"
+    description: "Industry experts discussed current challenges in AI alignment research and governance. Key topics included transformer interpretability and societal impacts."
+    link: "/events/"
+  - id: 2
+    title: "AI Safety Workshop"
+    date: "January 15, 2026"
+    emoji: "🎓"
+    participants: "50+ participants"
+    description: "Interactive workshop covering fundamentals of AI safety, technical approaches, and policy considerations with hands-on activities."
+    link: "/events/"
+
+# Mission Section
+mission:
+  problem_title: "The Challenge"
+  problem_emoji: "⚠️"
+  problem_description: "AI will soon radically transform our society, for better or worse. Experts broadly expect significant progress during our lifetimes, potentially achieving human-level intelligence.\n\nDigital systems with such capabilities would revolutionize every aspect of our society, making their safe development one of the most pressing challenges of our time."
+  problem_cta_text: "Explore the Issues"
+  problem_cta_link: "/community/"
+  
+  solution_title: "Our Solution"
+  solution_emoji: "💡"
+  solution_description: "We work to ensure AI is developed to benefit humanity's future. Through education, community building, and raising awareness, we create a network of people committed to safer AI development.\n\nWe organize courses, host events, and connect members with resources and opportunities in the rapidly growing AI safety field."
+  solution_cta_text: "Get Involved Today"
+  solution_cta_link: "{{ site.forms.mailingList }}"
+
+# Features Section
+features:
+  - id: 1
+    emoji: "🎓"
+    title: "Educational Programs"
+    description: "Comprehensive courses and workshops designed to upskill individuals in AI safety concepts and practices."
+  - id: 2
+    emoji: "🤝"
+    title: "Community Building"
+    description: "Connect with like-minded individuals passionate about AI safety through our events and networking opportunities."
+  - id: 3
+    emoji: "🔬"
+    title: "Research & Resources"
+    description: "Access curated research materials and resources to stay updated on the latest developments in AI safety."
+
+# CTA Section
+cta:
+  title: "Ready to Make a Difference?"
+  description: "Join our community of researchers, practitioners, and enthusiasts working towards safer AI development."
+  button_text: "Get Started Today"
+  button_link: "/community/"
+
+# Theme Background Images
+theme_backgrounds:
+  dark_image: "/assets/img/ais_italy_dark_bg.png"
+  light_image: "/assets/img/ais_italy_light_bg.png"

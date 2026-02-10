@@ -7,199 +7,115 @@ permalink: /community/
 <!-- Hero Section -->
 <section class="hero">
     <div class="container text-center relative z-10">
-        <h1>Community</h1>
-        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">Join our growing community of AI enthusiasts, researchers, and professionals committed to safer AI development.</p>
+        <h1>{{ community.hero.title }}</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ community.hero.subtitle }}</p>
     </div>
 </section>
 
-<!-- Newsletter CTA -->
-<section class="section bg-white">
-    <div class="container max-w-2xl mx-auto">
-        <div class="card-accent border-2 border-accent">
-            <div class="flex items-start space-x-6">
-                <span class="text-5xl flex-shrink-0">💌</span>
-                <div class="flex-1">
-                    <h2 class="text-accent mb-2 mt-0">Stay Connected</h2>
-                    <p class="mb-4">Join our mailing list to receive updates about courses, events, research opportunities, and community initiatives.</p>
-                    <a href="{{ site.forms.mailingList }}" target="_blank" class="btn btn-primary">Subscribe to Newsletter</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- Learning Resources -->
+<!-- Community Benefits -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-12">
-            <span class="badge badge-primary mb-4">📚 Resources</span>
-            <h2>Learning Resources</h2>
-            <p class="text-xl text-gray-600 mt-4">Explore curated materials to deepen your understanding of AI safety</p>
+        <div class="text-center mb-16">
+            <h2>Why Join Our Community?</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Connect, learn, and collaborate with like-minded individuals advancing AI safety.</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card hover-lift bg-emerald-50">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {% for benefit in community.benefits %}
+            <div class="card hover-lift text-center">
                 <div class="card-body">
-                    <span class="text-4xl mb-4 block">🌱</span>
-                    <h3>Foundations of AI Safety</h3>
-                    <p class="text-gray-600 mb-4">Start here if you're new to AI safety topics.</p>
-                    <ul class="text-sm space-y-3 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>What is AI Safety?</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Why it matters now</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Key research areas</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Career pathways</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
+                    <span class="text-4xl mb-4 block">{{ benefit.emoji }}</span>
+                    <h3 class="mb-3">{{ benefit.title }}</h3>
+                    <p>{{ benefit.description }}</p>
                 </div>
             </div>
-
-            <div class="card hover-lift bg-emerald-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-4 block">🔬</span>
-                    <h3>Technical Deep Dives</h3>
-                    <p class="text-gray-600 mb-4">Advanced resources for technical researchers.</p>
-                    <ul class="text-sm space-y-3 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Interpretability research</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Alignment techniques</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Safety evaluations</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Code and tools</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
-                </div>
-            </div>
-
-            <div class="card hover-lift bg-emerald-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-4 block">⚖️</span>
-                    <h3>Policy & Governance</h3>
-                    <p class="text-gray-600 mb-4">For those interested in AI policy work.</p>
-                    <ul class="text-sm space-y-3 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>EU AI Act resources</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Regulatory frameworks</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Policy analysis tools</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Government initiatives</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
-                </div>
-            </div>
-
-            <div class="card hover-lift bg-emerald-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-4 block">📖</span>
-                    <h3>Research & Academic</h3>
-                    <p class="text-gray-600 mb-4">Curated research materials.</p>
-                    <ul class="text-sm space-y-3 mb-6">
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Featured papers</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Research groups</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Key conferences</span>
-                        </li>
-                        <li class="flex items-start gap-2">
-                            <span class="text-emerald-600">→</span>
-                            <span>Relevant journals</span>
-                        </li>
-                    </ul>
-                </div>
-                <div class="card-footer">
-                    <a href="#" class="text-emerald-600 font-semibold hover:underline">Explore →</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
-
 </section>
 
 <div class="divider"></div>
 
-<!-- External Resources -->
+<!-- Membership Options -->
 <section class="section bg-gradient-to-br from-blue-50 to-indigo-50">
     <div class="container">
-        <h2 class="text-center mb-4">🌐 External Resources & Organizations</h2>
-        <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Connect with leading organizations and initiatives in AI safety</p>
-        <div class="space-y-4 max-w-2xl mx-auto">
-            <div class="card hover-lift hover:shadow-xl bg-gray-50">
+        <div class="text-center mb-16">
+            <h2>{{ community.membership_options.title }}</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Choose the level that best fits your interests and involvement.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {% for option in community.membership_options.options %}
+            <div class="card bg-white border border-gray-200 {% if option.featured %}relative overflow-hidden{% endif %}">
+                {% if option.featured %}
+                <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">POPULAR</div>
+                {% endif %}
                 <div class="card-body">
-                    <div class="flex items-start gap-4">
-                        <span class="text-3xl flex-shrink-0">🎯</span>
-                        <div class="flex-1">
-                            <h3 class="mb-1">AI Alignment Research Center</h3>
-                            <p class="text-sm text-gray-600">Leading organization researching AI alignment and safety methodologies.</p>
-                        </div>
+                    <h3 class="text-xl font-bold mb-3">{{ option.title }}</h3>
+                    <div class="text-4xl font-bold mb-4">{{ option.price }}{% if option.price != "Free" and option.price != "Custom" %}<span class="text-sm font-normal">/year</span>{% endif %}</div>
+                    <ul class="space-y-3 mb-6">
+                        {% for feature in option.features %}
+                        <li class="flex items-start">
+                            <span class="text-emerald-500 mr-2">✓</span>
+                            <span>{{ feature }}</span>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ option.cta_link }}" class="btn {% if option.featured %}bg-white text-emerald-600 hover:bg-gray-100{% else %}btn-outline{% endif %} w-full">{{ option.cta_text }}</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- Community Sections -->
+<section class="section">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2>Community Sections</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Engage with different parts of our community based on your interests.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for section in community.sections %}
+            <div class="card hover-lift">
+                <div class="card-body text-center">
+                    <span class="text-4xl mb-4 block">{{ section.emoji }}</span>
+                    <h3 class="mb-3">{{ section.title }}</h3>
+                    <p class="mb-4">{{ section.description }}</p>
+                    <a href="{{ section.cta_link }}" class="text-emerald-600 font-semibold hover:underline">{{ section.cta_text }} →</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2 class="text-white">What Our Members Say</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for testimonial in community.testimonials %}
+            <div class="card-dark">
+                <div class="flex items-start space-x-4">
+                    <span class="text-3xl">👍</span>
+                    <div>
+                        <p class="mb-4 italic">{{ testimonial.quote }}</p>
+                        <p class="font-semibold">— {{ testimonial.author }}</p>
+                        <p class="text-sm opacity-75">{{ testimonial.role }}</p>
                     </div>
                 </div>
             </div>
-            <div class="card hover-lift hover:shadow-xl bg-gray-50">
-                <div class="card-body">
-                    <div class="flex items-start gap-4">
-                        <span class="text-3xl flex-shrink-0">🌍</span>
-                        <div class="flex-1">
-                            <h3 class="mb-1">Future of Life Institute</h3>
-                            <p class="text-sm text-gray-600">Organization working on existential risks from advanced AI and global catastrophic risks.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card hover-lift hover:shadow-xl bg-gray-50">
-                <div class="card-body">
-                    <div class="flex items-start gap-4">
-                        <span class="text-3xl flex-shrink-0">🎓</span>
-                        <div class="flex-1">
-                            <h3 class="mb-1">ML Safety Scholars Program</h3>
-                            <p class="text-sm text-gray-600">Comprehensive training program for aspiring AI safety researchers and professionals.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -207,40 +123,10 @@ permalink: /community/
 <!-- CTA Section -->
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
     <div class="container">
-        <div class="cta-box">
-            <h2>Ready to Join?</h2>
-            <p>Become part of a community committed to ensuring AI benefits humanity and operates safely.</p>
-            <a href="{{ site.forms.mailingList }}" target="_blank" class="btn bg-white text-accent hover:bg-gray-100 mt-6">Get Started</a>
+        <div class="cta-box text-center">
+            <h2 class="text-white">{{ community.cta.title }}</h2>
+            <p class="text-white">{{ community.cta.description }}</p>
+            <a href="{{ community.cta.button_link }}" class="btn bg-white text-accent hover:bg-gray-100 mt-6">{{ community.cta.button_text }}</a>
         </div>
     </div>
-</section>
-            <a href="https://jobs.80000hours.org" target="_blank" class="block card hover:shadow-lg">
-                <strong>80,000 Hours Job Board</strong>
-                <p class="text-sm text-gray-600">Career advice and job opportunities in high-impact fields.</p>
-            </a>
-        </div>
-
-        <!-- Social & Connection -->
-        <div class="mt-12 p-8 bg-gray-50 rounded-lg">
-            <h2 class="mb-4">Connect With Us</h2>
-            <p class="mb-6">Follow our activities and connect with the community through social media and direct channels.</p>
-            <div class="flex flex-col md:flex-row gap-4">
-                <a href="{{ site.social.linkedin }}" target="_blank" class="btn btn-primary">LinkedIn</a>
-                <a href="mailto:{{ site.site.email }}" class="btn btn-secondary">Email Us</a>
-                <a href="{{ site.forms.mailingList }}" target="_blank" class="btn btn-outline">Join Newsletter</a>
-            </div>
-        </div>
-
-        <!-- Community Guidelines -->
-        <div class="mt-8 p-6 bg-blue-50 rounded-lg">
-            <h3 class="font-semibold mb-3">Community Values</h3>
-            <ul class="space-y-2 text-sm">
-                <li>✓ <strong>Inclusive:</strong> Welcoming to people from all backgrounds interested in AI safety</li>
-                <li>✓ <strong>Collaborative:</strong> Supporting each other's learning and growth</li>
-                <li>✓ <strong>Rigorous:</strong> Committed to evidence-based discussions and research</li>
-                <li>✓ <strong>Respectful:</strong> Treating all members with dignity and respect</li>
-            </ul>
-        </div>
-    </div>
-
 </section>

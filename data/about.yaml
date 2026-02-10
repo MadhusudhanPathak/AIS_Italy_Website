@@ -1,0 +1,72 @@
+# About Page Content Data
+# This file contains all user-facing content for the about page
+# Each field is documented with comments explaining its purpose
+
+# Hero Section
+hero:
+  title: "About AI Safety Italia"
+  subtitle: "We are a grassroots community dedicated to reducing risks from advanced AI and ensuring its safe development for humanity's benefit."
+
+# Mission and Vision Section
+mission_vision:
+  mission:
+    title: "Our Mission"
+    emoji: "🎯"
+    description: "We work to raise awareness about AI safety challenges, upskill individuals in the field, and create opportunities for collaboration among researchers, policymakers, and technologists committed to safer AI."
+    note: "We believe that addressing AI safety is one of the most important challenges of our time."
+  
+  vision:
+    title: "Our Vision"
+    emoji: "🌍"
+    description: "A world where advanced AI systems are developed responsibly, with safety and human values at the core of AI development practices across organizations and governments."
+    note: "We're building a community of informed, engaged professionals dedicated to this vision."
+
+# Our Approach Section
+approach:
+  - id: 1
+    icon: "📚"
+    title: "Education & Learning"
+    description: "Comprehensive 8-week courses on AI governance and alignment, making complex topics accessible to everyone."
+  - id: 2
+    icon: "🤝"
+    title: "Community Building"
+    description: "Connect researchers, practitioners, and enthusiasts to share knowledge and collaborate on solutions."
+  - id: 3
+    icon: "📦"
+    title: "Resources & Tools"
+    description: "Curated learning materials, research guides, and connections to leading organizations in AI safety."
+  - id: 4
+    icon: "🎤"
+    title: "Events & Workshops"
+    description: "Regular workshops, roundtables, and networking events featuring industry experts and thought leaders."
+
+# Team Section
+team_section:
+  title: "Our Leadership Team"
+  subtitle: "Passionate individuals driving AI safety forward"
+
+# Values Section
+values:
+  - id: 1
+    icon: "🔬"
+    title: "Evidence-Based"
+    description: "We ground our work in rigorous research and evidence, staying connected to cutting-edge developments in AI safety."
+  - id: 2
+    icon: "🤝"
+    title: "Collaborative"
+    description: "We believe in the power of community and work together across disciplines to address complex challenges."
+  - id: 3
+    icon: "🌱"
+    title: "Inclusive"
+    description: "AI safety concerns everyone. We welcome diverse perspectives and create accessible entry points for all."
+  - id: 4
+    icon: "⚡"
+    title: "Action-Oriented"
+    description: "Beyond awareness, we empower people to take concrete steps toward safer AI development."
+
+# CTA Section
+cta:
+  title: "Join Our Mission"
+  description: "Whether you're a researcher, student, professional, or just curious about AI safety, there's a place for you in our community."
+  button_text: "Get Involved Today"
+  button_link: "{{ site.forms.mailingList }}"

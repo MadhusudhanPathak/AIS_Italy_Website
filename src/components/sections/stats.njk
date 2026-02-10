@@ -1,0 +1,16 @@
+<!-- Stats Section Component -->
+<!-- This component displays statistics in a grid layout -->
+<!-- Usage: {% include "sections/stats.njk" with { stats: [{ count: "500+", label: "Members" }, ...] } %} -->
+
+<section class="section bg-gradient-to-r from-accent to-safety-blue text-white">
+    <div class="container">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {% for stat in data.stats %}
+            <div class="stat-item">
+                <div class="text-4xl font-bold">{{ stat.count }}</div>
+                <div class="text-sm opacity-90">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

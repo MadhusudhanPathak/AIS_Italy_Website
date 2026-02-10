@@ -1,0 +1,119 @@
+# Community Page Content Data
+# This file contains all user-facing content for the community page
+# Each field is documented with comments explaining its purpose
+
+# Hero Section
+hero:
+  title: "Join Our Community"
+  subtitle: "Connect with researchers, practitioners, and enthusiasts passionate about AI safety."
+
+# Community Benefits Section
+benefits:
+  - id: 1
+    title: "Networking Opportunities"
+    emoji: "🤝"
+    description: "Connect with like-minded individuals who share your passion for AI safety. Our community includes researchers, students, policymakers, and industry professionals."
+  
+  - id: 2
+    title: "Learning Resources"
+    emoji: "📚"
+    description: "Access exclusive learning materials, research summaries, and curated resources to deepen your understanding of AI safety topics."
+  
+  - id: 3
+    title: "Event Access"
+    emoji: "📅"
+    description: "Priority access to our events, workshops, and exclusive member-only sessions with leading experts in the field."
+  
+  - id: 4
+    title: "Career Support"
+    emoji: "💼"
+    description: "Get guidance on career paths in AI safety, job opportunities, and connections to organizations working in the field."
+
+# Membership Options Section
+membership_options:
+  title: "Membership Options"
+  options:
+    - id: 1
+      title: "Community Member"
+      price: "Free"
+      features:
+        - "Access to public events"
+        - "Newsletter subscription"
+        - "Community forum access"
+        - "Resource library"
+      cta_text: "Join Free Community"
+      cta_link: "{{ site.forms.mailingList }}"
+      featured: false
+    
+    - id: 2
+      title: "Active Member"
+      price: "€25/year"
+      features:
+        - "All Community Member benefits"
+        - "Exclusive workshops"
+        - "Mentorship program access"
+        - "Career guidance sessions"
+        - "Early event registration"
+      cta_text: "Become Active Member"
+      cta_link: "/contact/"
+      featured: true
+    
+    - id: 3
+      title: "Supporter"
+      price: "Custom"
+      features:
+        - "All Active Member benefits"
+        - "Priority mentorship"
+        - "Project collaboration opportunities"
+        - "Direct access to leadership"
+        - "Recognition on website"
+      cta_text: "Contact Us"
+      cta_link: "/contact/"
+      featured: false
+
+# Community Sections
+sections:
+  - id: 1
+    title: "Research Groups"
+    emoji: "🔬"
+    description: "Join our specialized research groups focusing on different aspects of AI safety. Participate in paper readings, discussions, and collaborative projects."
+    cta_text: "Explore Research Groups"
+    cta_link: "/events/"
+  
+  - id: 2
+    title: "Student Chapter"
+    emoji: "🎓"
+    description: "Connect with fellow students interested in AI safety. Access educational resources, career guidance, and networking opportunities tailored for students."
+    cta_text: "Join Student Chapter"
+    cta_link: "/contact/"
+  
+  - id: 3
+    title: "Professional Network"
+    emoji: "💼"
+    description: "Connect with professionals working in AI safety across academia, industry, and policy. Share experiences and opportunities."
+    cta_text: "Join Professional Network"
+    cta_link: "/contact/"
+
+# Testimonials Section
+testimonials:
+  - id: 1
+    quote: "Being part of AI Safety Italia has opened doors to incredible opportunities and connections in the field. The community is supportive and knowledgeable."
+    author: "Marco T."
+    role: "PhD Student in AI Ethics"
+  
+  - id: 2
+    quote: "The educational programs and networking events have been instrumental in shaping my career path in AI safety. Highly recommended!"
+    author: "Sofia R."
+    role: "AI Policy Analyst"
+  
+  - id: 3
+    quote: "As someone coming from a non-technical background, I found the community welcoming and the resources accessible. It's inspiring to see the impact we can have together."
+    author: "Andrea L."
+    role: "Science Communicator"
+
+# CTA Section
+cta:
+  title: "Ready to Join Our Community?"
+  description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  button_text: "Join Today"
+  button_link: "{{ site.forms.mailingList }}"

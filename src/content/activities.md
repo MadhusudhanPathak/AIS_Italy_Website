@@ -7,208 +7,93 @@ permalink: /activities/
 <!-- Hero Section -->
 <section class="hero">
     <div class="container text-center relative z-10">
-        <h1>Our Activities</h1>
-        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">Explore the programs and initiatives we offer to support AI safety learning and community building.</p>
+        <h1>{{ activities.hero.title }}</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ activities.hero.subtitle }}</p>
     </div>
 </section>
 
-<!-- Main Programs -->
+<!-- Main Activities -->
 <section class="section">
     <div class="container">
-        <div class="text-center mb-12">
-            <span class="badge badge-primary mb-4">📋 Programs</span>
-            <h2>Our Educational Programs</h2>
+        <div class="text-center mb-16">
+            <h2>What We Do</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Our core activities span education, research, community building, and advocacy.</p>
         </div>
+        
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <!-- Introductory Courses -->
-            <div class="card hover-lift bg-emerald-50">
+            {% for activity in activities.activities %}
+            <div class="card hover-lift">
                 <div class="card-body">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="text-4xl">📖</span>
-                        <h3 class="mb-0">Introductory Courses</h3>
-                    </div>
-                    <p class="text-gray-600 font-semibold mb-4">Our flagship 8-week learning program</p>
-                    <p class="mb-6">Our flagship reading and discussion groups introduce participants to AI safety concepts, research, and career opportunities in an accessible way.</p>
-                    
-                    <h4 class="font-bold text-emerald-600 mb-3 mt-6">🛤️ Track 1: AI Safety Governance</h4>
-                    <p class="text-sm text-gray-700 mb-6">Explore policy frameworks, international cooperation, and governance approaches to AI safety. Learn about regulatory landscapes and institutional responses to AI risks.</p>
-                    
-                    <h4 class="font-bold text-emerald-600 mb-3">🛤️ Track 2: AI Safety Alignment</h4>
-                    <p class="text-sm text-gray-700 mb-6">Dive into technical approaches to AI alignment, interpretability research, and safety methodologies. Understand how to build AI systems that behave as intended.</p>
-                    
-                    <div class="bg-emerald-100 p-4 rounded-lg mt-6 mb-6 border border-emerald-200">
-                        <div class="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-gray-600">⏱️ Duration</p>
-                                <p class="font-semibold">8 weeks</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-600">👥 Commitment</p>
-                                <p class="font-semibold">3-4 hrs/week</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-600">📅 Next Cohort</p>
-                                <p class="font-semibold">March 2026</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-600">💻 Format</p>
-                                <p class="font-semibold">Online + Groups</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="{{ site.forms.courseApplication }}" target="_blank" class="btn btn-primary w-full text-center">Express Interest</a>
-                </div>
-            </div>
-
-            <!-- Advanced Reading Group -->
-            <div class="card hover-lift bg-emerald-50">
-                <div class="card-body">
-                    <div class="flex items-center space-x-3 mb-4">
-                        <span class="text-4xl">🔬</span>
-                        <h3 class="mb-0">Advanced Reading Group</h3>
-                    </div>
-                    <p class="text-gray-600 font-semibold mb-4">For experienced researchers and practitioners</p>
-                    <p class="mb-6">Deep dive into cutting-edge research and discuss open problems in the field with other experts and enthusiasts.</p>
-
-                    <h4 class="font-bold text-emerald-600 mb-3 mt-6">What We Cover</h4>
-                    <ul class="text-sm space-y-2 mb-6">
-                        <li class="flex items-start">
-                            <span class="text-emerald-600 mr-2">✓</span>
-                            <span>Recent AI safety papers and breakthroughs</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-emerald-600 mr-2">✓</span>
-                            <span>Advanced technical topics in alignment</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-emerald-600 mr-2">✓</span>
-                            <span>Policy and governance discussions</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="text-emerald-600 mr-2">✓</span>
-                            <span>Collaborative research projects</span>
-                        </li>
+                    <span class="text-4xl mb-4 block">{{ activity.emoji }}</span>
+                    <h3 class="mb-3">{{ activity.title }}</h3>
+                    <p class="mb-4">{{ activity.description }}</p>
+                    <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                        {% for detail in activity.details %}
+                        <li>• {{ detail }}</li>
+                        {% endfor %}
                     </ul>
-
-                    <div class="bg-emerald-100 p-4 rounded-lg mb-6 border border-emerald-200">
-                        <div class="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p class="text-gray-600">🎯 Frequency</p>
-                                <p class="font-semibold">Bi-weekly</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-600">💬 Format</p>
-                                <p class="font-semibold">Seminars + Chat</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-600">📊 Size</p>
-                                <p class="font-semibold">Small Groups</p>
-                            </div>
-                            <div>
-                                <p class="text-gray-600">📋 Prereq</p>
-                                <p class="font-semibold">AI Safety Exp</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-footer">
-                    <a href="mailto:{{ site.site.email }}" class="btn btn-primary w-full text-center">Join Us</a>
+                    <a href="{{ activity.cta_link }}" class="text-emerald-600 font-semibold hover:underline">{{ activity.cta_text }} →</a>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
-
 </section>
 
 <div class="divider"></div>
 
-<!-- Research & Mentorship -->
+<!-- Educational Tracks -->
 <section class="section bg-gradient-to-br from-blue-50 to-indigo-50">
     <div class="container">
-        <div class="max-w-3xl mx-auto">
-            <div class="card-accent border-2 border-accent">
-                <div class="flex items-start space-x-6">
-                    <span class="text-5xl flex-shrink-0">🧑‍🔬</span>
-                    <div class="flex-1">
-                        <h2 class="text-accent mb-4 mt-0">Research & Mentorship Program</h2>
-                        <p class="mb-4">Interested in contributing to AI safety research? We offer mentorship opportunities connecting you with experienced researchers working on critical problems in the field.</p>
-                        <p class="mb-6">Whether you're looking to start a research project, collaborate with others, or explore career opportunities, we can help connect you with the right people and resources.</p>
-                        <a href="mailto:{{ site.site.email }}" class="btn btn-primary">Get in Touch</a>
-                    </div>
+        <div class="text-center mb-12">
+            <h2>{{ activities.educational_tracks.title }}</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">{{ activities.educational_tracks.subtitle }}</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {% for track in activities.educational_tracks.tracks %}
+            <div class="card bg-white border-2 border-emerald-500">
+                <div class="card-body">
+                    <h3 class="text-emerald-600 font-bold mb-3">{{ track.title }}</h3>
+                    <p class="mb-4">{{ track.description }}</p>
+                    <ul class="text-sm text-gray-600 space-y-1 mb-4">
+                        <li>• Duration: {{ track.duration }}</li>
+                        <li>• Commitment: {{ track.commitment }}</li>
+                    </ul>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- External Opportunities -->
-<section class="section">
+<!-- Impact Metrics -->
+<section class="section bg-gradient-to-r from-accent to-safety-blue text-white">
     <div class="container">
-        <h2 class="text-center mb-12">🌟 Explore More Opportunities</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="card hover-lift hover:shadow-2xl bg-gray-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-3 block">💼</span>
-                    <h3>AI Safety Career Board</h3>
-                    <p>Discover career opportunities with leading organizations like Anthropic, OpenAI, and DeepMind working on AI safety challenges.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://jobs.80000hours.org" target="_blank" class="text-emerald-600 font-semibold">Browse Positions →</a>
-                </div>
+        <div class="text-center mb-12">
+            <h2 class="text-white">{{ activities.impact_metrics.title }}</h2>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {% for metric in activities.impact_metrics.metrics %}
+            <div class="stat-item">
+                <div class="text-4xl font-bold">{{ metric.count }}</div>
+                <div class="text-sm opacity-90">{{ metric.label }}</div>
             </div>
-            <div class="card hover-lift hover:shadow-2xl bg-gray-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-3 block">🏆</span>
-                    <h3>Alignment Hackathons</h3>
-                    <p>Participate in 48-hour collaborative challenges to work on AI alignment problems and win recognition.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://www.apartresearch.com" target="_blank" class="text-emerald-600 font-semibold">View Competitions →</a>
-                </div>
-            </div>
-            <div class="card hover-lift hover:shadow-2xl bg-gray-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-3 block">🎖️</span>
-                    <h3>Alignment Awards</h3>
-                    <p>Compete for recognition and prizes for your work on AI alignment and safety initiatives.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="https://www.alignmentawards.com" target="_blank" class="text-emerald-600 font-semibold">Learn More →</a>
-                </div>
-            </div>
-            <div class="card hover-lift hover:shadow-2xl bg-gray-50">
-                <div class="card-body">
-                    <span class="text-4xl mb-3 block">📚</span>
-                    <h3>Learning Resources</h3>
-                    <p>Access our curated collection of AI safety resources, papers, guides, and educational materials.</p>
-                </div>
-                <div class="card-footer">
-                    <a href="/community/" class="text-emerald-600 font-semibold">Explore Resources →</a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
 
 <!-- CTA Section -->
-<section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
+<section class="section bg-gradient-to-r from-emerald-500 to-teal-600">
     <div class="container">
-        <div class="cta-box">
-            <h2>Ready to Get Started?</h2>
-            <p>Join thousands of individuals committed to ensuring AI is developed safely and for the benefit of humanity.</p>
-            <a href="{{ site.forms.mailingList }}" target="_blank" class="btn bg-white text-accent hover:bg-gray-100 mt-6">Subscribe to Updates</a>
-        </div>
-    </div>
-</section>
-                <a href="/community/" class="card hover:shadow-lg">
-                    <h3>Community Resources »</h3>
-                    <p>Explore learning materials, research links, and community discussions.</p>
-                </a>
-            </div>
+        <div class="cta-box text-center">
+            <h2 class="text-white">{{ activities.cta.title }}</h2>
+            <p class="text-white">{{ activities.cta.description }}</p>
+            <a href="{{ activities.cta.button_link }}" class="btn bg-white text-emerald-600 hover:bg-gray-100 mt-6">{{ activities.cta.button_text }}</a>
         </div>
     </div>
 </section>

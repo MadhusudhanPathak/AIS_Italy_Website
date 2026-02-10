@@ -1,0 +1,85 @@
+# Events & News Page Content Data
+# This file contains all user-facing content for the events & news page
+# Each field is documented with comments explaining its purpose
+
+# Hero Section
+hero:
+  title: "Events & News"
+  subtitle: "Stay updated on our latest events, workshops, and announcements."
+
+# Upcoming Events Section
+upcoming_events:
+  - id: 1
+    title: "AI Safety Governance Panel Discussion"
+    date: "February 15, 2026 | 18:00 CET"
+    emoji: "📅"
+    status: "Upcoming"
+    description: "Join us for a panel discussion with leading experts on AI governance frameworks, regulatory approaches, and the role of international cooperation in AI safety policy."
+    format_info:
+      - label: "Format"
+        value: "Online Panel + Q&A"
+      - label: "Duration"
+        value: "2 hours"
+      - label: "Speakers"
+        value: "Industry leaders & policymakers"
+    register_text: "Register for Details"
+    register_link: "{{ site.forms.mailingList }}"
+    register_target: "_blank"
+  
+  - id: 2
+    title: "8-Week Introductory Courses Begin"
+    date: "March 2026"
+    emoji: "📅"
+    status: "Upcoming"
+    description: "Our flagship educational program launches with two tracks: AI Safety Governance and AI Safety Alignment. Learn from experienced practitioners and join a community of like-minded individuals."
+    format_info:
+      - label: "Duration"
+        value: "8 weeks"
+      - label: "Format"
+        value: "Online + Discussion Groups"
+      - label: "Commitment"
+        value: "3-4 hours/week"
+    register_text: "Apply Now"
+    register_link: "{{ site.forms.courseApplication }}"
+    register_target: "_blank"
+  
+  - id: 3
+    title: "Monthly Researcher Meetup"
+    date: "Every 2nd Thursday at 19:00 CET"
+    emoji: "📅"
+    status: "Recurring"
+    description: "Informal gathering for AI safety researchers, students, and enthusiasts to discuss recent papers, share ideas, and collaborate on projects. A great place to network with the community!"
+    format_info:
+      - label: "Format"
+        value: "Virtual Meetup"
+      - label: "Size"
+        value: "20-40 participants"
+      - label: "Level"
+        value: "All experience welcome"
+    register_text: "Get Meeting Details"
+    register_link: "{{ site.forms.mailingList }}"
+    register_target: "_blank"
+
+# Recent Highlights Section
+recent_highlights:
+  - id: 1
+    title: "AI Safety Roundtable Discussion"
+    date: "January 20, 2026"
+    emoji: "🏆"
+    description: "Industry experts discussed current challenges in AI alignment research and governance. Topics included transformer interpretability and societal impacts of large language models."
+    participants: "40+ participants"
+  
+  - id: 2
+    title: "Introduction to AI Safety Workshop"
+    date: "January 15, 2026"
+    emoji: "🎓"
+    description: "Interactive workshop covering fundamentals of AI safety, technical approaches, policy considerations, and career paths. Hands-on activities and expert insights made it engaging for all levels."
+    participants: "50+ participants"
+
+# Newsletter CTA Section
+newsletter_cta:
+  title: "Never Miss an Event"
+  description: "Subscribe to our mailing list and get notifications about upcoming events, workshops, and news."
+  button_text: "Subscribe to Mailing List"
+  button_link: "{{ site.forms.mailingList }}"
+  button_target: "_blank"

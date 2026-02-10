@@ -63,42 +63,37 @@ The output will be generated in the `_site/` directory.
 
 ```
 AI_Safety_Italy_Website/
+├── data/                   # Content data files (for non-technical editors)
 ├── src/
 │   ├── components/         # Reusable template components
 │   ├── layouts/            # Page layout templates
 │   ├── data/               # Global data files (site config, team, etc.)
-│   ├── content/            # Page content in Markdown
-│   │   ├── about/
-│   │   ├── activities/
-│   │   ├── community/
-│   │   ├── contact/
-│   │   ├── events/
-│   │   ├── faq/
-│   │   └── home/
+│   ├── content/            # Page content in Markdown (references data files)
 │   ├── assets/
 │   │   ├── css/
 │   │   ├── js/
 │   │   ├── img/
 │   │   └── fonts/
-│   └── utils/              # Utility files
+│   ├── utils/              # Utility functions
 ├── .eleventy.js            # Eleventy configuration
 ├── tailwind.config.js      # Tailwind CSS configuration
 ├── postcss.config.js       # PostCSS configuration
 ├── vercel.json             # Vercel deployment config
 ├── package.json
+├── ModificationGuide.md    # Content modification guide for non-technical users
 └── README.md
 ```
 
 ## Content Management
 
-### Pages
-Edit Markdown files in `src/content/` to update page content.
+### For Non-Technical Users
+For instructions on how to safely edit website content without affecting functionality, please see our [Content Modification Guide](ModificationGuide.md). This guide explains how to update text, headings, links, and other content using the data files in the `/data` directory.
 
-### Site Configuration
-Update `src/data/site.js` to change site metadata, navigation, social links, and form URLs.
-
-### Team Members
-Update `src/data/team.js` to manage team member information.
+### For Technical Users
+- Edit Markdown files in `src/content/` to update page structure and layout (these now reference data files).
+- Update data files in `/data/` to modify content (YAML format).
+- Update `src/data/site.js` to change site metadata, navigation, social links, and form URLs.
+- Update `src/data/team.js` to manage team member information.
 
 ### Styling
 - Tailwind CSS: `tailwind.config.js`

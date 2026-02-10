@@ -1,0 +1,25 @@
+<!-- Feature Cards Component -->
+<!-- This component displays feature cards in a grid layout -->
+<!-- Usage: {% include "sections/features.njk" with { title: "What We Do", subtitle: "Our core activities", features: [...] } %} -->
+
+<section class="section bg-white">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2>{{ data.title or "Features" }}</h2>
+            {% if data.subtitle %}
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">{{ data.subtitle }}</p>
+            {% endif %}
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for feature in data.features %}
+            <div class="card hover-lift">
+                <div class="card-body text-center">
+                    <span class="text-4xl mb-4 block">{{ feature.emoji }}</span>
+                    <h3 class="mb-3">{{ feature.title }}</h3>
+                    <p class="text-gray-600">{{ feature.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

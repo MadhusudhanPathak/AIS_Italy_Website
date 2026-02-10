@@ -1,0 +1,23 @@
+<!-- Hero Section Component -->
+<!-- This component displays the hero section for any page -->
+<!-- Usage: {% include "sections/hero.njk" with { title: "Page Title", subtitle: "Page Subtitle", description: "Description" } %} -->
+
+<section class="hero">
+    <div class="container text-center relative z-10">
+        <h1>{{ data.title or "Default Title" }}</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ data.subtitle or "Default Subtitle" }}</p>
+        {% if data.description %}
+        <p class="text-lg text-blue-200 max-w-2xl mx-auto mt-4">{{ data.description }}</p>
+        {% endif %}
+        {% if data.cta %}
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            {% if data.cta.primary %}
+            <a href="{{ data.cta.primary.link }}" class="btn btn-primary">{{ data.cta.primary.text }}</a>
+            {% endif %}
+            {% if data.cta.secondary %}
+            <a href="{{ data.cta.secondary.link }}" class="btn btn-secondary">{{ data.cta.secondary.text }}</a>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+</section>

@@ -96,7 +96,7 @@
             if (e.key === 'Escape') {
                 const menu = document.getElementById('mobileMenu');
                 const btn = document.getElementById('menuToggle');
-                
+
                 if (menu && !menu.classList.contains('hidden')) {
                     menu.classList.add('hidden');
                     btn.setAttribute('aria-expanded', 'false');
@@ -104,6 +104,62 @@
                 }
             }
         });
+
+        // Theme toggle functionality
+        function initThemeToggle() {
+            const themeToggleBtn = document.getElementById('theme-toggle');
+            const themeIcon = document.getElementById('theme-icon');
+            const currentTheme = localStorage.getItem('theme') || '{{ global.theme.default or "light" }}';
+
+            // Apply saved theme on page load
+            if (currentTheme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+                themeIcon.textContent = '☀️'; // Sun icon for light mode
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙'; // Moon icon for dark mode
+            }
+
+            // Update background images based on theme
+            function updateBackgroundImages() {
+                const heroBg = document.querySelector('.hero-background');
+                if (heroBg) {
+                    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                        heroBg.style.backgroundImage = 'url("/assets/img/ais_italy_dark_bg.png")';
+                    } else {
+                        heroBg.style.backgroundImage = 'url("/assets/img/ais_italy_light_bg.png")';
+                    }
+                }
+            }
+
+            // Initialize background images
+            updateBackgroundImages();
+
+            // Add click event to toggle theme
+            if (themeToggleBtn) {
+                themeToggleBtn.addEventListener('click', function() {
+                    const currentThemeAttr = document.documentElement.getAttribute('data-theme');
+                    
+                    if (currentThemeAttr === 'dark') {
+                        // Switch to light mode
+                        document.documentElement.removeAttribute('data-theme');
+                        localStorage.setItem('theme', 'light');
+                        themeIcon.textContent = '🌙';
+                    } else {
+                        // Switch to dark mode
+                        document.documentElement.setAttribute('data-theme', 'dark');
+                        localStorage.setItem('theme', 'dark');
+                        themeIcon.textContent = '☀️';
+                    }
+                    
+                    // Update background images after theme change
+                    updateBackgroundImages();
+                });
+            }
+        }
+
+        // Initialize theme toggle when DOM is ready
+        domReady(initThemeToggle);
     </script>
 </body>
 </html>

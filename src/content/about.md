@@ -7,8 +7,8 @@ permalink: /about/
 <!-- Hero Section -->
 <section class="hero">
     <div class="container text-center relative z-10">
-        <h1>About AI Safety Italia</h1>
-        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">We are a grassroots community dedicated to reducing risks from advanced AI and ensuring its safe development for humanity's benefit.</p>
+        <h1>{{ about.hero.title }}</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ about.hero.subtitle }}</p>
     </div>
 </section>
 
@@ -17,16 +17,16 @@ permalink: /about/
     <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div class="feature-box">
-                <span class="text-5xl mb-4 block">🎯</span>
-                <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
-                <p>We work to raise awareness about AI safety challenges, upskill individuals in the field, and create opportunities for collaboration among researchers, policymakers, and technologists committed to safer AI.</p>
-                <p class="text-sm text-gray-600 mt-4">We believe that addressing AI safety is one of the most important challenges of our time.</p>
+                <span class="text-5xl mb-4 block">{{ about.mission_vision.mission.emoji }}</span>
+                <h2 class="text-2xl font-bold mb-4">{{ about.mission_vision.mission.title }}</h2>
+                <p>{{ about.mission_vision.mission.description }}</p>
+                <p class="text-sm text-gray-600 mt-4">{{ about.mission_vision.mission.note }}</p>
             </div>
             <div class="feature-box">
-                <span class="text-5xl mb-4 block">🌍</span>
-                <h2 class="text-2xl font-bold mb-4">Our Vision</h2>
-                <p>A world where advanced AI systems are developed responsibly, with safety and human values at the core of AI development practices across organizations and governments.</p>
-                <p class="text-sm text-gray-600 mt-4">We're building a community of informed, engaged professionals dedicated to this vision.</p>
+                <span class="text-5xl mb-4 block">{{ about.mission_vision.vision.emoji }}</span>
+                <h2 class="text-2xl font-bold mb-4">{{ about.mission_vision.vision.title }}</h2>
+                <p>{{ about.mission_vision.vision.description }}</p>
+                <p class="text-sm text-gray-600 mt-4">{{ about.mission_vision.vision.note }}</p>
             </div>
         </div>
     </div>
@@ -39,34 +39,15 @@ permalink: /about/
     <div class="container">
         <h2 class="text-center mb-12">How We Work</h2>
         <div class="feature-list">
+            {% for approach in about.approach %}
             <div class="feature-item">
-                <span class="feature-icon">📚</span>
+                <span class="feature-icon">{{ approach.icon }}</span>
                 <div class="feature-content">
-                    <h4>Education & Learning</h4>
-                    <p>Comprehensive 8-week courses on AI governance and alignment, making complex topics accessible to everyone.</p>
+                    <h4>{{ approach.title }}</h4>
+                    <p>{{ approach.description }}</p>
                 </div>
             </div>
-            <div class="feature-item">
-                <span class="feature-icon">🤝</span>
-                <div class="feature-content">
-                    <h4>Community Building</h4>
-                    <p>Connect researchers, practitioners, and enthusiasts to share knowledge and collaborate on solutions.</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-icon">📦</span>
-                <div class="feature-content">
-                    <h4>Resources & Tools</h4>
-                    <p>Curated learning materials, research guides, and connections to leading organizations in AI safety.</p>
-                </div>
-            </div>
-            <div class="feature-item">
-                <span class="feature-icon">🎤</span>
-                <div class="feature-content">
-                    <h4>Events & Workshops</h4>
-                    <p>Regular workshops, roundtables, and networking events featuring industry experts and thought leaders.</p>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -77,8 +58,8 @@ permalink: /about/
 <section class="section">
     <div class="container">
         <div class="text-center mb-16">
-            <h2>Our Leadership Team</h2>
-            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Passionate individuals driving AI safety forward</p>
+            <h2>{{ about.team_section.title }}</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">{{ about.team_section.subtitle }}</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {% for member in team %}
@@ -107,26 +88,13 @@ permalink: /about/
     <div class="container">
         <h2 class="text-center text-white mb-12">Our Core Values</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for value in about.values %}
             <div class="card-dark">
-                <span class="text-3xl mb-4 block">🔬</span>
-                <h3 class="text-white mb-3">Evidence-Based</h3>
-                <p>We ground our work in rigorous research and evidence, staying connected to cutting-edge developments in AI safety.</p>
+                <span class="text-3xl mb-4 block">{{ value.icon }}</span>
+                <h3 class="text-white mb-3">{{ value.title }}</h3>
+                <p>{{ value.description }}</p>
             </div>
-            <div class="card-dark">
-                <span class="text-3xl mb-4 block">🤝</span>
-                <h3 class="text-white mb-3">Collaborative</h3>
-                <p>We believe in the power of community and work together across disciplines to address complex challenges.</p>
-            </div>
-            <div class="card-dark">
-                <span class="text-3xl mb-4 block">🌱</span>
-                <h3 class="text-white mb-3">Inclusive</h3>
-                <p>AI safety concerns everyone. We welcome diverse perspectives and create accessible entry points for all.</p>
-            </div>
-            <div class="card-dark">
-                <span class="text-3xl mb-4 block">⚡</span>
-                <h3 class="text-white mb-3">Action-Oriented</h3>
-                <p>Beyond awareness, we empower people to take concrete steps toward safer AI development.</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -135,9 +103,9 @@ permalink: /about/
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
     <div class="container">
         <div class="cta-box">
-            <h2>Join Our Mission</h2>
-            <p>Whether you're a researcher, student, professional, or just curious about AI safety, there's a place for you in our community.</p>
-            <a href="{{ site.forms.mailingList }}" target="_blank" class="btn bg-white text-accent hover:bg-gray-100 mt-6">Get Involved Today</a>
+            <h2>{{ about.cta.title }}</h2>
+            <p>{{ about.cta.description }}</p>
+            <a href="{{ about.cta.button_link }}" target="_blank" class="btn bg-white text-accent hover:bg-gray-100 mt-6">{{ about.cta.button_text }}</a>
         </div>
     </div>
 </section>

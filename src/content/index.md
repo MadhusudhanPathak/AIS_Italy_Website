@@ -4,11 +4,33 @@ title: Home
 permalink: /
 ---
 
-{% include "hero.njk" %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-background absolute inset-0 z-0 opacity-70" style="background-size: cover; background-position: center;"></div>
+    <div class="container text-center relative z-10">
+        <h1>{{ home.hero.title }}</h1>
+        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ home.hero.subtitle }}</p>
+        <p class="text-lg text-blue-200 max-w-2xl mx-auto mt-4">{{ home.hero.description }}</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+            <a href="{{ home.hero.cta_link }}" class="btn btn-primary">{{ home.hero.cta_text }}</a>
+            <a href="{{ home.hero.secondary_cta_link }}" class="btn btn-secondary">{{ home.hero.secondary_cta_text }}</a>
+        </div>
+    </div>
+</section>
 
 <!-- Stats Section -->
-
-{% include "stats.njk" %}
+<section class="section bg-gradient-to-r from-accent to-safety-blue text-white">
+    <div class="container">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            {% for stat in home.stats %}
+            <div class="stat-item">
+                <div class="text-4xl font-bold">{{ stat.count }}</div>
+                <div class="text-sm opacity-90">{{ stat.label }}</div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
 <!-- Current Announcements -->
 <section class="section bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
@@ -19,16 +41,18 @@ permalink: /
             <h2>Latest Announcements</h2>
         </div>
         <div class="max-w-2xl mx-auto">
+            {% for announcement in home.announcements %}
             <div class="card-accent">
                 <div class="flex items-start space-x-4">
-                    <span class="text-4xl flex-shrink-0">📚</span>
+                    <span class="text-4xl flex-shrink-0">{{ announcement.emoji }}</span>
                     <div class="flex-1">
-                        <h3 class="text-accent mb-2">Introductory Courses Coming Soon</h3>
-                        <p class="text-gray-700 mb-3">Registration for our <strong>8-week introductory courses</strong> will be opening in March 2026. We'll be offering tracks in AI Governance and AI Safety Alignment.</p>
-                        <p class="text-sm text-gray-600">Stay updated by <a href="{{ site.forms.mailingList }}" target="_blank" class="text-accent font-semibold hover:underline">signing up for our mailing list</a>!</p>
+                        <h3 class="text-accent mb-2">{{ announcement.title }}</h3>
+                        <p class="text-gray-700 mb-3">{{ announcement.description | safe }}</p>
+                        <p class="text-sm text-gray-600">Stay updated by <a href="{{ announcement.link_url }}" target="{{ announcement.link_target }}" class="text-accent font-semibold hover:underline">{{ announcement.link_text }}</a>!</p>
                     </div>
                 </div>
             </div>
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -42,9 +66,10 @@ permalink: /
             <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Join us for engaging discussions, workshops, and networking opportunities</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {% for event in home.recent_events %}
             {% from "event-card.njk" import event_card %}
-            {{ event_card('AI Safety Roundtable', 'January 20, 2026', '🗣️', '40+ participants', 'Industry experts discussed current challenges in AI alignment research and governance. Key topics included transformer interpretability and societal impacts.', '/events/') }}
-            {{ event_card('AI Safety Workshop', 'January 15, 2026', '🎓', '50+ participants', 'Interactive workshop covering fundamentals of AI safety, technical approaches, and policy considerations with hands-on activities.', '/events/') }}
+            {{ event_card(event.title, event.date, event.emoji, event.participants, event.description, event.link) }}
+            {% endfor %}
         </div>
     </div>
 </section>
@@ -58,34 +83,63 @@ permalink: /
             <!-- The Problem -->
             <div class="feature-box bg-opacity-10 border-0">
                 <div class="flex items-start space-x-4 mb-6">
-                    <span class="text-5xl">⚠️</span>
+                    <span class="text-5xl">{{ home.mission.problem_emoji }}</span>
                     <div class="flex-1">
-                        <h2 class="text-white mb-6 mt-0">The Challenge</h2>
-                        <p class="text-blue-100 mb-4">AI will soon radically transform our society, for better or worse. Experts broadly expect significant progress during our lifetimes, potentially achieving human-level intelligence.</p>
-                        <p class="text-blue-100">Digital systems with such capabilities would revolutionize every aspect of our society, making their safe development one of the most pressing challenges of our time.</p>
-                        <a href="/community/" class="inline-block text-emerald-400 font-semibold hover:text-emerald-300 transition-colors mt-6">Explore the Issues →</a>
+                        <h2 class="text-white mb-6 mt-0">{{ home.mission.problem_title }}</h2>
+                        <p class="text-blue-100 mb-4">{{ home.mission.problem_description | split('\n\n') | first }}</p>
+                        <p class="text-blue-100">{{ home.mission.problem_description | split('\n\n') | last }}</p>
+                        <a href="{{ home.mission.problem_cta_link }}" class="inline-block text-emerald-400 font-semibold hover:text-emerald-300 transition-colors mt-6">{{ home.mission.problem_cta_text }} →</a>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Our Solution -->
             <div class="feature-box bg-opacity-10 border-0">
                 <div class="flex items-start space-x-4 mb-6">
-                    <span class="text-5xl">💡</span>
+                    <span class="text-5xl">{{ home.mission.solution_emoji }}</span>
                     <div class="flex-1">
-                        <h2 class="text-white mb-6 mt-0">Our Solution</h2>
-                        <p class="text-blue-100 mb-4">We work to ensure AI is developed to benefit humanity's future. Through education, community building, and raising awareness, we create a network of people committed to safer AI development.</p>
-                        <p class="text-blue-100">We organize courses, host events, and connect members with resources and opportunities in the rapidly growing AI safety field.</p>
-                        <a href="{{ site.forms.mailingList }}" target="_blank" class="btn btn-primary inline-block mt-6">Get Involved Today</a>
+                        <h2 class="text-white mb-6 mt-0">{{ home.mission.solution_title }}</h2>
+                        <p class="text-blue-100 mb-4">{{ home.mission.solution_description | split('\n\n') | first }}</p>
+                        <p class="text-blue-100">{{ home.mission.solution_description | split('\n\n') | last }}</p>
+                        <a href="{{ home.mission.solution_cta_link }}" class="btn btn-primary inline-block mt-6">{{ home.mission.solution_cta_text }}</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </section>
 
 <div class="divider"></div>
 
-{% include "features.njk" %}
+<!-- Features Section -->
+<section class="section bg-white">
+    <div class="container">
+        <div class="text-center mb-16">
+            <h2>What We Do</h2>
+            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Our core activities and impact areas</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for feature in home.features %}
+            <div class="card hover-lift">
+                <div class="card-body text-center">
+                    <span class="text-4xl mb-4 block">{{ feature.emoji }}</span>
+                    <h3 class="mb-3">{{ feature.title }}</h3>
+                    <p class="text-gray-600">{{ feature.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
 
-{% include "cta.njk" %}
+<!-- CTA Section -->
+<section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
+    <div class="container">
+        <div class="cta-box text-center">
+            <h2>{{ home.cta.title }}</h2>
+            <p>{{ home.cta.description }}</p>
+            <a href="{{ home.cta.button_link }}" class="btn bg-white text-accent hover:bg-gray-100 mt-6">{{ home.cta.button_text }}</a>
+        </div>
+    </div>
+</section>

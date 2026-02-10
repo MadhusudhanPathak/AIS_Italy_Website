@@ -1,0 +1,110 @@
+# Contact Page Content Data
+# This file contains all user-facing content for the contact page
+# Each field is documented with comments explaining its purpose
+
+# Hero Section
+hero:
+  title: "Get in Touch"
+  subtitle: "Have questions or want to get involved? Reach out to us through any of these channels."
+
+# Contact Methods Section
+contact_methods:
+  - id: 1
+    title: "General Inquiries"
+    emoji: "📧"
+    description: "For general questions about our organization, events, or membership."
+    contact_info: "contact@aisafetyitalia.org"
+    cta_text: "Send Email"
+    cta_link: "mailto:contact@aisafetyitalia.org"
+  
+  - id: 2
+    title: "Course Applications"
+    emoji: "🎓"
+    description: "For questions about our educational programs and application process."
+    contact_info: "courses@aisafetyitalia.org"
+    cta_text: "Send Email"
+    cta_link: "mailto:courses@aisafetyitalia.org"
+  
+  - id: 3
+    title: "Partnerships"
+    emoji: "🤝"
+    description: "For partnership opportunities, collaborations, or sponsorship inquiries."
+    contact_info: "partnerships@aisafetyitalia.org"
+    cta_text: "Send Email"
+    cta_link: "mailto:partnerships@aisafetyitalia.org"
+
+# Mailing List Section
+mailing_list:
+  title: "Stay Updated"
+  description: "Subscribe to our mailing list to receive updates about events, programs, and news."
+  form_url: "{{ site.forms.mailingList }}"
+  form_target: "_blank"
+  button_text: "Subscribe Now"
+
+# Location Section
+location:
+  title: "Visit Us"
+  address: "Via dei Condotti, 1\n00187 Roma, Italy"
+  description: "While we're primarily an online community, we occasionally host events at this location. Check our events page for upcoming gatherings."
+
+# Social Media Section
+social_media:
+  title: "Follow Us"
+  platforms:
+    - id: 1
+      name: "LinkedIn"
+      emoji: "💼"
+      description: "Follow us for updates, articles, and professional networking."
+      link: "{{ site.social.linkedin }}"
+      username: "@ai-safety-italia"
+    
+    - id: 2
+      name: "Twitter"
+      emoji: "🐦"
+      description: "Join conversations about AI safety and follow our daily updates."
+      link: "https://twitter.com/aisafetyitalia"
+      username: "@aisafetyitalia"
+
+# Office Hours Section
+office_hours:
+  title: "Office Hours"
+  description: "We hold virtual office hours every Tuesday and Thursday from 17:00 to 18:00 CET. Drop in to ask questions or chat about AI safety."
+  days: "Tuesday & Thursday"
+  time: "17:00 - 18:00 CET"
+  format: "Virtual (Zoom)"
+  additional_info: "No appointment necessary - just drop in!"
+
+# Contact Form Section
+contact_form:
+  title: "Send Us a Message"
+  description: "Fill out the form below for general inquiries. For specific matters, use the contact methods above."
+  fields:
+    name:
+      label: "Your Name"
+      placeholder: "Enter your name"
+      required: true
+    email:
+      label: "Email Address"
+      placeholder: "Enter your email"
+      required: true
+    subject:
+      label: "Subject"
+      placeholder: "What is this regarding?"
+      required: true
+    message:
+      label: "Message"
+      placeholder: "Enter your message here..."
+      required: true
+  submit_button: "Send Message"
+  success_message: "Thank you for your message! We'll get back to you within 2 business days."
+  error_message: "Sorry, there was an error sending your message. Please try again or contact us directly."
+
+# CTA Section
+cta:
+  title: "Want to Get Involved?"
+  description: "There are many ways to participate in our community beyond just contacting us. Explore our other pages to learn more."
+  buttons:
+    - text: "Join Our Community"
+      link: "/community/"
+    - text: "View Events"
+      link: "/events/"
