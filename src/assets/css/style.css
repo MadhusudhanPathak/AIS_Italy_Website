@@ -9,23 +9,23 @@
   --safety-purple: #6d28d9;
   --muted: #6b7280;
   --bg-primary: #ffffff;
-  --text-primary: #1f2937;
-  --text-secondary: #6b7280;
+  --text-primary: #111827;
+  --text-secondary: #4b5563;
   --card-bg: #ffffff;
   --border-color: #e5e7eb;
 }
 
 [data-theme='dark'] {
-  --bg-primary: #111827;
+  --bg-primary: #0f1727;
   --text-primary: #f9fafb;
-  --text-secondary: #d1d5db;
-  --card-bg: #1f2937;
-  --border-color: #374151;
+  --text-secondary: #cbd5e1;
+  --card-bg: #1e293b;
+  --border-color: #334155;
   --accent: #60a5fa;
-  --accent-dark: #93c5fd;
+  --accent-dark: #3b82f6;
   --safety-blue: #7dd3fc;
   --safety-purple: #c4b5fd;
-  --muted: #9ca3af;
+  --muted: #94a3b8;
 }
 
 /* Base styles */
@@ -47,26 +47,49 @@ h4,
 h5,
 h6 {
   color: var(--text-primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem; /* ~40px */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2rem; /* ~32px */
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.5rem; /* ~24px */
+  margin-bottom: 0.75rem;
+}
+
+h4 {
+  font-size: 1.25rem; /* ~20px */
+  margin-bottom: 0.5rem;
 }
 
 p {
   color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 a {
   color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
 }
 
-/* Header */
-header {
-  background-color: color-mix(in srgb, var(--bg-primary) 90%, transparent 10%);
-  border-color: var(--border-color);
+a:hover {
+  color: var(--accent-dark);
+  text-decoration-thickness: 2px;
 }
 
 /* Navigation */
-nav a {
-  color: var(--text-primary);
-}
 nav a.active {
   color: var(--accent);
 }
@@ -88,15 +111,19 @@ nav a.active {
 .card {
   background-color: var(--card-bg);
   border-color: var(--border-color);
+  color: var(--text-primary);
 }
 .card-accent {
-  background: linear-gradient(to bottom right, #eff6ff, #f0f9ff);
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }
 
 /* Sections */
 .section {
-  @apply py-16 md:py-24;
   background-color: var(--bg-primary);
+  color: var(--text-primary);
+  @apply py-16 md:py-24;
 }
 
 /* Footer */
@@ -115,6 +142,7 @@ footer a {
 .feature-box {
   background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
   border-color: var(--border-color);
+  color: var(--text-primary);
 }
 
 /* Stats */
@@ -163,7 +191,7 @@ footer a {
 /* Card dark variants */
 .card-dark {
   background-color: var(--card-bg);
-  color: white;
+  color: var(--text-primary);
   border-color: var(--border-color);
 }
 
@@ -177,56 +205,60 @@ footer a {
 }
 
 h1 {
-  @apply text-3xl md:text-5xl font-bold text-slate-900 mb-4;
+  @apply text-3xl md:text-5xl font-bold mb-4;
 }
 h2 {
-  @apply text-2xl md:text-4xl font-bold text-slate-900 mb-6;
+  @apply text-2xl md:text-4xl font-bold mb-6;
 }
 h3 {
-  @apply text-xl md:text-2xl font-semibold text-slate-900 mb-3;
+  @apply text-xl md:text-2xl font-semibold mb-3;
 }
 p {
-  @apply text-base md:text-lg text-gray-700 leading-relaxed mb-4;
-}
-
-a {
-  @apply text-accent hover:text-accent-dark transition-colors;
+  @apply text-base md:text-lg leading-relaxed mb-4;
 }
 
 /* Buttons */
 .btn {
-  @apply inline-block px-6 py-2 rounded-md font-semibold transition transform;
+  @apply inline-block px-6 py-2 rounded-md font-semibold transition-all duration-300 ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 .btn-primary {
-  @apply bg-gradient-to-r from-accent to-safety-blue text-white shadow-md hover:scale-105;
+  @apply bg-gradient-to-r from-accent to-safety-blue text-white shadow-lg hover:shadow-xl hover:scale-[1.03];
+  transition: all 0.3s ease;
 }
 .btn-cta {
-  @apply bg-white text-accent px-6 py-2 rounded-md font-semibold shadow hover:bg-gray-100;
+  @apply bg-white text-accent px-6 py-2 rounded-md font-semibold shadow-md hover:shadow-lg hover:bg-gray-50;
+  transition: all 0.3s ease;
 }
 .btn-ghost {
   @apply bg-white bg-opacity-10 text-white border border-white/20 px-6 py-2 rounded-md;
 }
 .btn-outline {
-  @apply border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all;
+  @apply border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all duration-300;
+}
+.btn:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
-/* Cards & Layout */
+/* Cards */
 .card {
-  @apply bg-white rounded-xl border border-gray-100 p-6 hover:shadow-lg transition h-full flex flex-col;
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-primary);
 }
 .card-body {
   @apply flex-grow;
 }
 .card-footer {
-  @apply pt-4 border-t border-gray-100;
+  @apply pt-4 border-t border-gray-100 dark:border-primary-700;
+  color: var(--text-primary);
 }
 .card-accent {
-  @apply bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border-l-4 border-accent;
+  @apply rounded-xl p-6 border-l-4 border-accent bg-white dark:bg-primary-800; /* Use theme-aware background */
+  color: var(--text-primary);
 }
 
-.section {
-  @apply py-16 md:py-24;
-}
 .container {
   @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
 }
@@ -254,31 +286,39 @@ a {
 
 /* Navigation tweaks */
 nav a {
-  @apply text-gray-700 font-medium hover:text-accent transition-colors relative;
+  @apply text-gray-700 dark:text-primary-200 font-medium hover:text-accent transition-all duration-300 relative;
+  position: relative;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+nav a:hover {
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent 90%);
 }
 nav a.active {
   @apply text-accent font-semibold;
+  background-color: color-mix(in srgb, var(--accent) 15%, transparent 85%);
 }
 
 /* Footer */
 footer {
-  @apply bg-gradient-to-b from-slate-900 to-slate-950 text-gray-300 py-16 mt-16;
+  @apply bg-gradient-to-b from-slate-900 to-slate-950 text-gray-300 dark:text-primary-200 py-16 mt-16;
 }
 footer h3 {
-  @apply text-white font-bold mb-4;
+  @apply text-white dark:text-primary-100 font-bold mb-4;
+}
+footer a {
+  @apply text-gray-300 dark:text-primary-200;
 }
 
 /* Feature highlights */
-.feature-box {
-  @apply bg-white/60 rounded-xl p-6 border border-gray-100 hover:shadow-md transition;
-}
 .accent-text {
   @apply bg-gradient-to-r from-accent to-safety-purple bg-clip-text text-transparent;
 }
 
 /* Stats */
 .stat-box {
-  @apply bg-white rounded-xl p-6 border border-gray-100 text-center;
+  @apply bg-white dark:bg-primary-800 rounded-xl p-6 border border-gray-100 dark:border-primary-700 text-center;
+  color: var(--text-primary);
 }
 .stat-number {
   @apply text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-accent to-safety-purple bg-clip-text text-transparent;
@@ -286,7 +326,43 @@ footer h3 {
 
 /* Utility enhancements */
 .hover-lift {
-  @apply transition-all hover:-translate-y-1 hover:shadow-xl;
+  @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl;
+}
+
+/* Interactive elements */
+.interactive-element {
+  @apply transition-all duration-300 ease-in-out;
+}
+
+.interactive-element:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+}
+
+/* Focus states for accessibility */
+.focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading animations */
+.loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 /* CTA box */
@@ -303,6 +379,133 @@ footer h3 {
 /* Small helpers */
 .divider {
   @apply h-1 bg-gradient-to-r from-transparent via-accent to-transparent my-12;
+}
+
+/* Feature item */
+.feature-item {
+  @apply flex items-start space-x-4 p-4 rounded-lg;
+  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+.feature-content h4 {
+  color: var(--text-primary);
+}
+
+.feature-content p {
+  color: var(--text-secondary);
+}
+
+/* Testimonials */
+.testimonial {
+  @apply p-6 rounded-lg;
+  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Membership cards */
+.membership-card {
+  @apply rounded-xl p-6 border;
+  border-color: var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+/* FAQ accordion */
+.faq-item {
+  @apply border-b border-gray-200 dark:border-primary-700 py-4;
+  color: var(--text-primary);
+}
+
+.faq-question {
+  @apply font-semibold text-lg cursor-pointer;
+  color: var(--text-primary);
+}
+
+.faq-answer {
+  @apply mt-2 text-gray-600 dark:text-primary-300;
+  color: var(--text-secondary);
+}
+
+/* Contact card */
+.contact-card {
+  @apply rounded-lg p-6;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Form elements */
+.form-input {
+  @apply w-full px-4 py-2 rounded-md border;
+  border-color: var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+/* Accordion details/summary elements */
+details summary {
+  cursor: pointer;
+  color: var(--text-primary);
+}
+
+details summary:hover {
+  color: var(--accent);
+}
+
+/* Table elements */
+table {
+  color: var(--text-primary);
+}
+
+th {
+  color: var(--text-primary);
+  background-color: color-mix(in srgb, var(--accent) 10%, transparent 90%);
+}
+
+td {
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Link styles */
+a {
+  color: var(--accent);
+}
+
+a:hover {
+  color: var(--accent-dark);
+}
+
+/* Blockquote */
+blockquote {
+  color: var(--text-primary);
+  border-left: 4px solid var(--accent);
+  background-color: color-mix(in srgb, var(--card-bg) 80%, transparent 20%);
+  border-radius: 0 4px 4px 0;
+}
+
+/* Code elements */
+code {
+  color: var(--text-primary);
+  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  color: var(--text-primary);
 }
 
 /* Animations */

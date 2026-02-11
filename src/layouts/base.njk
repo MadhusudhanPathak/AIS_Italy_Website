@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 </head>
-<body class="bg-white">
+<body class="bg-white text-primary-900 dark:bg-primary-900 dark:text-primary-100">
     {% include "header.njk" %}
 
     <main id="main" class="min-h-screen">
@@ -122,14 +122,27 @@
 
             // Update background images based on theme
             function updateBackgroundImages() {
-                const heroBg = document.querySelector('.hero-background');
-                if (heroBg) {
+                const heroBgs = document.querySelectorAll('.hero-background');
+                heroBgs.forEach(heroBg => {
                     if (document.documentElement.getAttribute('data-theme') === 'dark') {
                         heroBg.style.backgroundImage = 'url("/assets/img/ais_italy_dark_bg.png")';
                     } else {
                         heroBg.style.backgroundImage = 'url("/assets/img/ais_italy_light_bg.png")';
                     }
-                }
+                });
+                
+                // Also update any other themed backgrounds if needed
+                const themedElements = document.querySelectorAll('[data-theme-bg]');
+                themedElements.forEach(element => {
+                    const lightBg = element.getAttribute('data-theme-bg-light');
+                    const darkBg = element.getAttribute('data-theme-bg-dark');
+                    
+                    if (document.documentElement.getAttribute('data-theme') === 'dark') {
+                        if (darkBg) element.style.backgroundImage = `url("${darkBg}")`;
+                    } else {
+                        if (lightBg) element.style.backgroundImage = `url("${lightBg}")`;
+                    }
+                });
             }
 
             // Initialize background images
@@ -139,7 +152,7 @@
             if (themeToggleBtn) {
                 themeToggleBtn.addEventListener('click', function() {
                     const currentThemeAttr = document.documentElement.getAttribute('data-theme');
-                    
+
                     if (currentThemeAttr === 'dark') {
                         // Switch to light mode
                         document.documentElement.removeAttribute('data-theme');
@@ -151,7 +164,7 @@
                         localStorage.setItem('theme', 'dark');
                         themeIcon.textContent = '☀️';
                     }
-                    
+
                     // Update background images after theme change
                     updateBackgroundImages();
                 });

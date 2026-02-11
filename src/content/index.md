@@ -33,7 +33,7 @@ permalink: /
 </section>
 
 <!-- Current Announcements -->
-<section class="section bg-gradient-to-br from-blue-50 to-indigo-50 relative overflow-hidden">
+<section class="section bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-primary-800 dark:to-primary-900 relative overflow-hidden">
     <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-32"></div>
     <div class="container relative z-10">
         <div class="text-center mb-12">
@@ -47,8 +47,8 @@ permalink: /
                     <span class="text-4xl flex-shrink-0">{{ announcement.emoji }}</span>
                     <div class="flex-1">
                         <h3 class="text-accent mb-2">{{ announcement.title }}</h3>
-                        <p class="text-gray-700 mb-3">{{ announcement.description | safe }}</p>
-                        <p class="text-sm text-gray-600">Stay updated by <a href="{{ announcement.link_url }}" target="{{ announcement.link_target }}" class="text-accent font-semibold hover:underline">{{ announcement.link_text }}</a>!</p>
+                        <p class="text-primary-700 dark:text-primary-300 mb-3">{{ announcement.description | safe }}</p>
+                        <p class="text-sm text-primary-600 dark:text-primary-300">Stay updated by <a href="{{ announcement.link_url }}" target="{{ announcement.link_target }}" class="text-accent font-semibold hover:underline">{{ announcement.link_text }}</a>!</p>
                     </div>
                 </div>
             </div>
@@ -58,12 +58,12 @@ permalink: /
 </section>
 
 <!-- Recent Events -->
-<section class="section bg-white" id="learn-more">
+<section class="section" id="learn-more">
     <div class="container">
         <div class="text-center mb-12">
             <span class="badge badge-info mb-4">🎯 Events</span>
             <h2>Recent Community Highlights</h2>
-            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Join us for engaging discussions, workshops, and networking opportunities</p>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Join us for engaging discussions, workshops, and networking opportunities</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             {% for event in home.recent_events %}
@@ -113,11 +113,11 @@ permalink: /
 <div class="divider"></div>
 
 <!-- Features Section -->
-<section class="section bg-white">
+<section class="section bg-white dark:bg-primary-900">
     <div class="container">
         <div class="text-center mb-16">
             <h2>What We Do</h2>
-            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Our core activities and impact areas</p>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Our core activities and impact areas</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {% for feature in home.features %}
@@ -125,7 +125,7 @@ permalink: /
                 <div class="card-body text-center">
                     <span class="text-4xl mb-4 block">{{ feature.emoji }}</span>
                     <h3 class="mb-3">{{ feature.title }}</h3>
-                    <p class="text-gray-600">{{ feature.description }}</p>
+                    <p class="text-primary-600 dark:text-primary-300">{{ feature.description }}</p>
                 </div>
             </div>
             {% endfor %}
@@ -139,7 +139,7 @@ permalink: /
         <div class="cta-box text-center">
             <h2>{{ home.cta.title }}</h2>
             <p>{{ home.cta.description }}</p>
-            <a href="{{ home.cta.button_link }}" class="btn bg-white text-accent hover:bg-gray-100 mt-6">{{ home.cta.button_text }}</a>
+            <a href="{{ home.cta.button_link }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600 mt-6">{{ home.cta.button_text }}</a>
         </div>
     </div>
 </section>

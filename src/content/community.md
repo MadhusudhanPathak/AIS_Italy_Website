@@ -6,6 +6,7 @@ permalink: /community/
 
 <!-- Hero Section -->
 <section class="hero">
+    <div class="hero-background absolute inset-0 z-0 opacity-70" style="background-size: cover; background-position: center;"></div>
     <div class="container text-center relative z-10">
         <h1>{{ community.hero.title }}</h1>
         <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ community.hero.subtitle }}</p>
@@ -17,7 +18,7 @@ permalink: /community/
     <div class="container">
         <div class="text-center mb-16">
             <h2>Why Join Our Community?</h2>
-            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Connect, learn, and collaborate with like-minded individuals advancing AI safety.</p>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Connect, learn, and collaborate with like-minded individuals advancing AI safety.</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -37,38 +38,39 @@ permalink: /community/
 <div class="divider"></div>
 
 <!-- Membership Options -->
-<section class="section bg-gradient-to-br from-blue-50 to-indigo-50">
+<section class="section bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-primary-800 dark:to-primary-900">
     <div class="container">
         <div class="text-center mb-16">
-            <h2>{{ community.membership_options.title }}</h2>
-            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Choose the level that best fits your interests and involvement.</p>
+            <h2 class="text-primary-900 dark:text-primary-100">{{ community.membership_options.title }}</h2>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Choose the level that best fits your interests and involvement.</p>
         </div>
-        
+
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {% for option in community.membership_options.options %}
-            <div class="card bg-white border border-gray-200 {% if option.featured %}relative overflow-hidden{% endif %}">
+            <div class="card border border-gray-200 dark:border-primary-700 {% if option.featured %}relative overflow-hidden{% endif %}">
                 {% if option.featured %}
-                <div class="absolute top-4 right-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">POPULAR</div>
+                <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">POPULAR</div>
                 {% endif %}
                 <div class="card-body">
-                    <h3 class="text-xl font-bold mb-3">{{ option.title }}</h3>
-                    <div class="text-4xl font-bold mb-4">{{ option.price }}{% if option.price != "Free" and option.price != "Custom" %}<span class="text-sm font-normal">/year</span>{% endif %}</div>
+                    <h3 class="text-xl font-bold text-primary-900 dark:text-primary-100 mb-3">{{ option.title }}</h3>
+                    <div class="text-4xl font-bold text-primary-900 dark:text-primary-100 mb-4">{{ option.price }}{% if option.price != "Free" and option.price != "Custom" %}<span class="text-sm font-normal">/year</span>{% endif %}</div>
                     <ul class="space-y-3 mb-6">
                         {% for feature in option.features %}
                         <li class="flex items-start">
-                            <span class="text-emerald-500 mr-2">✓</span>
-                            <span>{{ feature }}</span>
+                            <span class="text-accent mr-2">✓</span>
+                            <span class="text-primary-700 dark:text-primary-300">{{ feature }}</span>
                         </li>
                         {% endfor %}
                     </ul>
                 </div>
                 <div class="card-footer">
-                    <a href="{{ option.cta_link }}" class="btn {% if option.featured %}bg-white text-emerald-600 hover:bg-gray-100{% else %}btn-outline{% endif %} w-full">{{ option.cta_text }}</a>
+                    <a href="{{ option.cta_link }}" class="btn {% if option.featured %}bg-white dark:bg-primary-700 text-emerald-600 dark:text-emerald-400 hover:bg-gray-100 dark:hover:bg-primary-600{% else %}btn-outline{% endif %} w-full">{{ option.cta_text }}</a>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
+
 </section>
 
 <div class="divider"></div>
@@ -78,7 +80,7 @@ permalink: /community/
     <div class="container">
         <div class="text-center mb-16">
             <h2>Community Sections</h2>
-            <p class="text-xl text-gray-600 mt-4 max-w-2xl mx-auto">Engage with different parts of our community based on your interests.</p>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Engage with different parts of our community based on your interests.</p>
         </div>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -126,7 +128,7 @@ permalink: /community/
         <div class="cta-box text-center">
             <h2 class="text-white">{{ community.cta.title }}</h2>
             <p class="text-white">{{ community.cta.description }}</p>
-            <a href="{{ community.cta.button_link }}" class="btn bg-white text-accent hover:bg-gray-100 mt-6">{{ community.cta.button_text }}</a>
+            <a href="{{ community.cta.button_link }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600 mt-6">{{ community.cta.button_text }}</a>
         </div>
     </div>
 </section>
