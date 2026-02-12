@@ -139,4 +139,4 @@ MIT
 
 ## Support
 
-For questions or contributions, contact contact@aisafetyitalia.org
+For questions or contributions, contact aisafetyitalia@gmail.com

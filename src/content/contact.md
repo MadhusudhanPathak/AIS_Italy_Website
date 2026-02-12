@@ -121,13 +121,9 @@ permalink: /contact/
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
     <div class="container">
         <div class="cta-box text-center">
-            <h2>{{ contact.cta.title }}</h2>
-            <p>{{ contact.cta.description }}</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mt-6">
-                {% for button in contact.cta.buttons %}
-                <a href="{{ button.link }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600">{{ button.text }}</a>
-                {% endfor %}
-            </div>
+            <h2 class="text-white">{{ community.cta.title }}</h2>
+            <p class="text-white">{{ community.cta.description }}</p>
+            <a href="{{ site.social.discord }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600 mt-6" target="_blank" rel="noopener noreferrer">{{ community.cta.button_text }}</a>
         </div>
     </div>
 </section>

@@ -40,28 +40,6 @@ permalink: /faq/
     </div>
 </section>
 
-<!-- Additional Resources -->
-<section class="section bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-primary-800 dark:to-primary-900">
-    <div class="container max-w-4xl mx-auto">
-        <div class="text-center mb-12">
-            <h2 class="text-primary-900 dark:text-primary-100">{{ faq.resources.title }}</h2>
-            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4">{{ faq.resources.subtitle }}</p>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {% for resource in faq.resources.items %}
-            <div class="card">
-                <div class="card-body">
-                    <h3 class="font-bold text-primary-900 dark:text-primary-100 mb-3">{{ resource.title }}</h3>
-                    <p class="text-sm text-primary-600 dark:text-primary-300 mb-4">{{ resource.description }}</p>
-                    <a href="{{ resource.link_url }}" class="text-emerald-600 font-semibold text-sm hover:underline">{{ resource.link_text }} →</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-
-</section>
 
 <!-- CTA Section -->
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">

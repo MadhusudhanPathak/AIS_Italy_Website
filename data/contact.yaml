@@ -13,9 +13,9 @@ contact_methods:
     title: "General Inquiries"
     emoji: "📧"
     description: "For general questions about our organization, events, or membership."
-    contact_info: "contact@aisafetyitalia.org"
+    contact_info: "aisafetyitalia@gmail.com"
     cta_text: "Send Email"
-    cta_link: "mailto:contact@aisafetyitalia.org"
+    cta_link: "mailto:aisafetyitalia@gmail.com"
   
   - id: 2
     title: "Course Applications"
@@ -59,11 +59,11 @@ social_media:
       username: "@ai-safety-italia"
     
     - id: 2
-      name: "Twitter"
-      emoji: "🐦"
-      description: "Join conversations about AI safety and follow our daily updates."
-      link: "https://twitter.com/aisafetyitalia"
-      username: "@aisafetyitalia"
+      name: "Discord"
+      emoji: "💬"
+      description: "Chat with the community, join events, and discuss AI safety in real time."
+      link: "https://discord.gg/aYNAPZjQJu"
+      username: "AI Safety Italia Discord"
 
 # Office Hours Section
 office_hours:
@@ -101,10 +101,7 @@ contact_form:
 
 # CTA Section
 cta:
-  title: "Want to Get Involved?"
-  description: "There are many ways to participate in our community beyond just contacting us. Explore our other pages to learn more."
-  buttons:
-    - text: "Join Our Community"
-      link: "/community/"
-    - text: "View Events"
-      link: "/events/"
+  title: "Ready to Join Our Community?"
+  description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  button_text: "Join Today"
+  # Link handled directly in template via `site.social.discord`

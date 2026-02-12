@@ -13,15 +13,15 @@ hero:
   secondary_cta_link: "#learn-more"
 
 # Stats Section
-stats:
-  - count: "500+"
-    label: "Community Members"
-  - count: "25+"
-    label: "Events Hosted"
-  - count: "8"
-    label: "Educational Programs"
-  - count: "3"
-    label: "Active Chapters"
+# stats:
+#   - count: "500+"
+#     label: "Community Members"
+#   - count: "25+"
+#     label: "Events Hosted"
+#   - count: "8"
+#     label: "Educational Programs"
+#   - count: "3"
+#     label: "Active Chapters"
 
 # Announcements Section
 announcements:
@@ -81,10 +81,10 @@ features:
 
 # CTA Section
 cta:
-  title: "Ready to Make a Difference?"
-  description: "Join our community of researchers, practitioners, and enthusiasts working towards safer AI development."
-  button_text: "Get Started Today"
-  button_link: "/community/"
+  title: "Ready to Join Our Community?"
+  description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  button_text: "Join Today"
+  # Link handled directly in template via `site.social.discord`
 
 # Theme Background Images
 theme_backgrounds:

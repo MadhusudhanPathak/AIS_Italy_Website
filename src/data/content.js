@@ -25,7 +25,6 @@ const loadDataFile = (filename) => {
 const home = loadDataFile('home.yaml');
 const about = loadDataFile('about.yaml');
 const events = loadDataFile('events.yaml');
-const activities = loadDataFile('activities.yaml');
 const community = loadDataFile('community.yaml');
 const faq = loadDataFile('faq.yaml');
 const contact = loadDataFile('contact.yaml');
@@ -36,7 +35,6 @@ module.exports = {
   home,
   about,
   events,
-  activities,
   community,
   faq,
   contact,

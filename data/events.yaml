@@ -76,10 +76,9 @@ recent_highlights:
     description: "Interactive workshop covering fundamentals of AI safety, technical approaches, policy considerations, and career paths. Hands-on activities and expert insights made it engaging for all levels."
     participants: "50+ participants"
 
-# Newsletter CTA Section
-newsletter_cta:
-  title: "Never Miss an Event"
-  description: "Subscribe to our mailing list and get notifications about upcoming events, workshops, and news."
-  button_text: "Subscribe to Mailing List"
-  button_link: "{{ site.forms.mailingList }}"
-  button_target: "_blank"
+# CTA Section
+cta:
+  title: "Ready to Join Our Community?"
+  description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  button_text: "Join Today"
+  # Link handled directly in template via `site.social.discord`

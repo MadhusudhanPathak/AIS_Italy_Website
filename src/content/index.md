@@ -19,7 +19,7 @@ permalink: /
 </section>
 
 <!-- Stats Section -->
-<section class="section bg-gradient-to-r from-accent to-safety-blue text-white">
+<!-- <section class="section bg-gradient-to-r from-accent to-safety-blue text-white">
     <div class="container">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {% for stat in home.stats %}
@@ -30,7 +30,7 @@ permalink: /
             {% endfor %}
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- Current Announcements -->
 <section class="section bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-primary-800 dark:to-primary-900 relative overflow-hidden">
@@ -57,7 +57,7 @@ permalink: /
     </div>
 </section>
 
-<!-- Recent Events -->
+<!-- Recent Events
 <section class="section" id="learn-more">
     <div class="container">
         <div class="text-center mb-12">
@@ -72,15 +72,14 @@ permalink: /
             {% endfor %}
         </div>
     </div>
-</section>
+</section> -->
 
-<!-- Mission Section with Split Layout -->
+<!-- Mission Section with Split Layout
 <section class="section bg-gradient-to-br from-emerald-900 to-slate-800 text-white relative overflow-hidden">
     <div class="absolute top-20 left-0 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
     <div class="absolute bottom-0 right-0 w-96 h-96 bg-safety-purple rounded-full mix-blend-multiply filter blur-3xl opacity-10"></div>
     <div class="container relative z-10">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <!-- The Problem -->
             <div class="feature-box bg-opacity-10 border-0">
                 <div class="flex items-start space-x-4 mb-6">
                     <span class="text-5xl">{{ home.mission.problem_emoji }}</span>
@@ -92,8 +91,6 @@ permalink: /
                     </div>
                 </div>
             </div>
-
-            <!-- Our Solution -->
             <div class="feature-box bg-opacity-10 border-0">
                 <div class="flex items-start space-x-4 mb-6">
                     <span class="text-5xl">{{ home.mission.solution_emoji }}</span>
@@ -107,13 +104,10 @@ permalink: /
             </div>
         </div>
     </div>
-
-</section>
-
-<div class="divider"></div>
+</section> -->
 
 <!-- Features Section -->
-<section class="section bg-white dark:bg-primary-900">
+<!-- <section class="section bg-white dark:bg-primary-900">
     <div class="container">
         <div class="text-center mb-16">
             <h2>What We Do</h2>
@@ -131,7 +125,7 @@ permalink: /
             {% endfor %}
         </div>
     </div>
-</section>
+</section> -->
 
 <!-- CTA Section -->
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
@@ -143,3 +137,6 @@ permalink: /
         </div>
     </div>
 </section>
+
+
+

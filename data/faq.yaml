@@ -16,88 +16,44 @@ categories:
       - id: 1
         question: "What is AI safety?"
         answer: "AI safety refers to the field of research and practice focused on ensuring that artificial intelligence systems behave in ways that are beneficial to humanity. This includes preventing unintended consequences, ensuring AI systems remain under human control, and aligning AI goals with human values."
-      
       - id: 2
         question: "Why is AI safety important?"
         answer: "As AI systems become more powerful and integrated into society, ensuring their safe development becomes increasingly critical. Advanced AI could have transformative effects on society, and getting safety right is essential to realizing the benefits while avoiding potential risks."
-      
       - id: 3
         question: "What is the difference between AI safety and AI ethics?"
         answer: "AI ethics focuses on the moral implications and societal impacts of AI, while AI safety is more concerned with technical methods to ensure AI systems behave as intended. Both fields overlap significantly and are complementary."
-  
+
   - id: 2
     name: "About Our Organization"
     icon: "🏢"
     questions:
       - id: 4
         question: "What does AI Safety Italia do?"
-        answer: "We work to reduce risks from advanced AI by raising awareness, upskilling individuals, and creating opportunities for collaboration. We organize educational programs, host events, and build a community of people committed to safer AI development."
-      
+        answer: "We work to reduce risks from advanced AI by raising awareness and creating networking opportunities for collaboration. We organize events and build a community of people committed to safer AI development."
       - id: 5
         question: "Who can join AI Safety Italia?"
         answer: "Anyone interested in AI safety is welcome! Our community includes researchers, students, professionals from various fields, policymakers, and anyone curious about the topic. We believe diverse perspectives are essential for addressing AI safety challenges."
-      
       - id: 6
         question: "Is AI Safety Italia affiliated with any institution?"
-        answer: "AI Safety Italia is an independent grassroots organization. We collaborate with various institutions, universities, and organizations but operate independently to serve the Italian AI safety community."
-  
+        answer: "AI Safety Italia is an independent grassroots organization. We collaborate with various universities and organizations but operate independently to serve the Italian AI safety community."
+
   - id: 3
-    name: "Education & Programs"
-    icon: "🎓"
-    questions:
-      - id: 7
-        question: "What educational programs do you offer?"
-        answer: "We offer 8-week introductory courses on AI Safety Governance and AI Safety Alignment. These comprehensive programs are designed to make complex topics accessible to people from various backgrounds."
-      
-      - id: 8
-        question: "Are your courses free?"
-        answer: "Our courses have a modest fee to ensure commitment from participants and to support our operations. However, we offer scholarships for students and those facing financial constraints."
-      
-      - id: 9
-        question: "Do I need a technical background to join your programs?"
-        answer: "No, our programs are designed to be accessible to people from various backgrounds. We offer different tracks to accommodate different levels of technical expertise."
-  
-  - id: 4
     name: "Getting Involved"
     icon: "🤝"
     questions:
-      - id: 10
+      - id: 7
         question: "How can I get involved with AI Safety Italia?"
-        answer: "There are many ways to get involved: attend our events, join our community, participate in our educational programs, volunteer for our initiatives, or contribute to our research projects. Check our events page or contact us for more information."
-      
-      - id: 11
+        answer: "There are many ways to get involved: join our community, volunteer for our initiatives, or contribute to our research projects. Check our events page or contact us for more information."
+      - id: 8
         question: "Can I volunteer with AI Safety Italia?"
-        answer: "Yes! We welcome volunteers to help with organizing events, managing our community, developing educational content, and supporting our operations. Contact us to learn about current opportunities."
-      
-      - id: 12
+        answer: "Yes! We welcome volunteers to help with organizing events, managing our community, developing educational content, and supporting our operations. Join our Discord and contact us to learn about current opportunities."
+      - id: 9
         question: "How can I stay updated on your activities?"
-        answer: "Subscribe to our mailing list to receive updates about events, programs, and news. You can also follow us on social media and join our community forum."
-
-# Additional Resources Section
-resources:
-  title: "Additional Resources"
-  items:
-    - id: 1
-      title: "AI Safety Papers Database"
-      description: "Curated collection of foundational and recent papers in AI safety research."
-      link_text: "Browse Papers"
-      link_url: "/resources/"
-    
-    - id: 2
-      title: "Career Guide"
-      description: "Information about career paths in AI safety, including roles, organizations, and preparation."
-      link_text: "View Guide"
-      link_url: "/resources/"
-    
-    - id: 3
-      title: "Reading List"
-      description: "Essential books and articles for understanding AI safety concepts and challenges."
-      link_text: "See Reading List"
-      link_url: "/resources/"
+        answer: "Join our Discord channel and LinkedIn page to receive updates about events, programs, and news."
 
 # CTA Section
 cta:
-  title: "Still Have Questions?"
-  description: "If you don't find the answer to your question here, feel free to reach out to us directly."
-  button_text: "Contact Us"
-  button_link: "/contact/"
+  title: "Ready to Join Our Community?"
+  description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  button_text: "Join Today"
+  # Link handled directly in template via `site.social.discord`

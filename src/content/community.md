@@ -13,114 +13,36 @@ permalink: /community/
     </div>
 </section>
 
-<!-- Community Benefits -->
+<!-- Team Section -->
 <section class="section">
     <div class="container">
         <div class="text-center mb-16">
-            <h2>Why Join Our Community?</h2>
-            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Connect, learn, and collaborate with like-minded individuals advancing AI safety.</p>
+            <h2>{{ about.team_section.title }}</h2>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">{{ about.team_section.subtitle }}</p>
         </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {% for benefit in community.benefits %}
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {% for member in team %}
             <div class="card hover-lift text-center">
                 <div class="card-body">
-                    <span class="text-4xl mb-4 block">{{ benefit.emoji }}</span>
-                    <h3 class="mb-3">{{ benefit.title }}</h3>
-                    <p>{{ benefit.description }}</p>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- Membership Options -->
-<section class="section bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-primary-800 dark:to-primary-900">
-    <div class="container">
-        <div class="text-center mb-16">
-            <h2 class="text-primary-900 dark:text-primary-100">{{ community.membership_options.title }}</h2>
-            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Choose the level that best fits your interests and involvement.</p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {% for option in community.membership_options.options %}
-            <div class="card border border-gray-200 dark:border-primary-700 {% if option.featured %}relative overflow-hidden{% endif %}">
-                {% if option.featured %}
-                <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-bold">POPULAR</div>
-                {% endif %}
-                <div class="card-body">
-                    <h3 class="text-xl font-bold text-primary-900 dark:text-primary-100 mb-3">{{ option.title }}</h3>
-                    <div class="text-4xl font-bold text-primary-900 dark:text-primary-100 mb-4">{{ option.price }}{% if option.price != "Free" and option.price != "Custom" %}<span class="text-sm font-normal">/year</span>{% endif %}</div>
-                    <ul class="space-y-3 mb-6">
-                        {% for feature in option.features %}
-                        <li class="flex items-start">
-                            <span class="text-accent mr-2">✓</span>
-                            <span class="text-primary-700 dark:text-primary-300">{{ feature }}</span>
-                        </li>
-                        {% endfor %}
-                    </ul>
+                    <div class="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
+                        {{ member.name | first }}
+                    </div>
+                    <h3 class="mb-2">{{ member.name }}</h3>
+                    <p class="text-sm text-emerald-600 font-semibold mb-3 uppercase tracking-wide">{{ member.role }}</p>
+                    <p class="text-sm text-primary-600 dark:text-primary-300 mb-6">{{ member.bio }}</p>
                 </div>
                 <div class="card-footer">
-                    <a href="{{ option.cta_link }}" class="btn {% if option.featured %}bg-white dark:bg-primary-700 text-emerald-600 dark:text-emerald-400 hover:bg-gray-100 dark:hover:bg-primary-600{% else %}btn-outline{% endif %} w-full">{{ option.cta_text }}</a>
+                    <a href="mailto:{{ member.email }}" class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold">Get in touch</a>
                 </div>
             </div>
             {% endfor %}
         </div>
     </div>
-
 </section>
 
 <div class="divider"></div>
 
-<!-- Community Sections -->
-<section class="section">
-    <div class="container">
-        <div class="text-center mb-16">
-            <h2>Community Sections</h2>
-            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">Engage with different parts of our community based on your interests.</p>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for section in community.sections %}
-            <div class="card hover-lift">
-                <div class="card-body text-center">
-                    <span class="text-4xl mb-4 block">{{ section.emoji }}</span>
-                    <h3 class="mb-3">{{ section.title }}</h3>
-                    <p class="mb-4">{{ section.description }}</p>
-                    <a href="{{ section.cta_link }}" class="text-emerald-600 font-semibold hover:underline">{{ section.cta_text }} →</a>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
 
-<!-- Testimonials -->
-<section class="section bg-gradient-to-br from-slate-900 to-slate-800 text-white">
-    <div class="container">
-        <div class="text-center mb-16">
-            <h2 class="text-white">What Our Members Say</h2>
-        </div>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for testimonial in community.testimonials %}
-            <div class="card-dark">
-                <div class="flex items-start space-x-4">
-                    <span class="text-3xl">👍</span>
-                    <div>
-                        <p class="mb-4 italic">{{ testimonial.quote }}</p>
-                        <p class="font-semibold">— {{ testimonial.author }}</p>
-                        <p class="text-sm opacity-75">{{ testimonial.role }}</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
 
 <!-- CTA Section -->
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
@@ -128,7 +50,7 @@ permalink: /community/
         <div class="cta-box text-center">
             <h2 class="text-white">{{ community.cta.title }}</h2>
             <p class="text-white">{{ community.cta.description }}</p>
-            <a href="{{ community.cta.button_link }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600 mt-6">{{ community.cta.button_text }}</a>
+            <a href="{{ site.social.discord }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600 mt-6" target="_blank" rel="noopener noreferrer">{{ community.cta.button_text }}</a>
         </div>
     </div>
 </section>

@@ -31,12 +31,12 @@ site_metadata:
   name: "AI Safety Italia"
   description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
   domain: "aisafetyitalia.org"
-  email: "contact@aisafetyitalia.org"
+  email: "aisafetyitalia@gmail.com"
 
 # Social links
 social_links:
   linkedin: "https://www.linkedin.com/company/ai-safety-italia/"
-  twitter: "https://twitter.com/aisafetyitalia"
+  discord: "https://discord.gg/aYNAPZjQJu"
 
 # Theme settings
 theme:
@@ -75,8 +75,6 @@ footer:
           url: "/faq/"
         - name: "Contact"
           url: "/contact/"
-        - name: "Activities"
-          url: "/activities/"
     - title: "Legal"
       links:
         - name: "Privacy Policy"

@@ -40,19 +40,19 @@ const siteData = {
     description:
       'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.',
     domain: 'aisafetyitalia.org',
-    email: 'contact@aisafetyitalia.org',
+    email: 'aisafetyitalia@gmail.com',
   },
   navigation: [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/about/', dropdown: false },
     { name: 'Events & News', url: '/events/' },
-    { name: 'Activities', url: '/activities/', dropdown: false },
     { name: 'Community', url: '/community/' },
     { name: 'FAQ', url: '/faq/' },
     { name: 'Contact', url: '/contact/' },
   ],
   social: {
     linkedin: 'https://www.linkedin.com/company/ai-safety-italia/',
+    discord: 'https://discord.gg/aYNAPZjQJu'
   },
   forms: {
     mailingList: 'https://forms.google.com/placeholder-mailing-list',
