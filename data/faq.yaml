@@ -46,7 +46,7 @@ categories:
         answer: "There are many ways to get involved: join our community, volunteer for our initiatives, or contribute to our research projects. Check our events page or contact us for more information."
       - id: 8
         question: "Can I volunteer with AI Safety Italia?"
-        answer: "Yes! We welcome volunteers to help with organizing events, managing our community, developing educational content, and supporting our operations. Join our Discord and contact us to learn about current opportunities."
+        answer: "Yes! We welcome volunteers to help with organizing events, managing our community, developing educational content, and supporting our operations. Join our Discord and contact us to learn about current opportunities and contribute in your way."
       - id: 9
         question: "How can I stay updated on your activities?"
         answer: "Join our Discord channel and LinkedIn page to receive updates about events, programs, and news."
@@ -55,5 +55,5 @@ categories:
 cta:
   title: "Ready to Join Our Community?"
   description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-  button_text: "Join Today"
+  button_text: "Join Our Discord"
   # Link handled directly in template via `site.social.discord`

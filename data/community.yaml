@@ -19,6 +19,12 @@ benefits:
     emoji: "💼"
     description: "Get guidance on career paths in AI safety, job opportunities, and connections to organizations working in the field."
 
+
+# Team Section
+team_section:
+  title: "Our Team"
+  subtitle: "Passionate individuals driving AI safety forward"
+
 # Membership Options Section
 # membership_options:
 #   title: "Membership Options"
@@ -105,5 +111,5 @@ benefits:
 cta:
   title: "Ready to Join Our Community?"
   description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-  button_text: "Join Today"
+  button_text: "Join Our Discord"
   # Link handled directly in template via `site.social.discord`

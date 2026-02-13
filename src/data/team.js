@@ -35,16 +35,16 @@ const teamData = [
     email: 'maria@aisafetyitalia.org',
   },
   {
-    name: 'Alessandro Ferrari',
-    role: 'Program Director',
-    bio: 'Tech educator and community builder. Passionate about making AI safety accessible.',
-    email: 'alessandro@aisafetyitalia.org',
+    name: 'Cristian Curaba',
+    role: 'Research Fellowship',
+    bio: 'Based in Udine, I am currently investigating the role of autoformalization for AI safety.',
+    email: 'https://cristian-curaba.github.io/',
   },
   {
-    name: 'Giulia Bianchi',
-    role: 'Community Coordinator',
-    bio: 'Organizes events and manages community engagement across Italy.',
-    email: 'giulia@aisafetyitalia.org',
+    name: 'Michele Mignani',
+    role: 'PhD Student',
+    bio: 'Based in Udine, I am currently investigating the role of autoformalization for AI safety..',
+    email: 'michele.mignani@uniud.it',
   },
 ];
 

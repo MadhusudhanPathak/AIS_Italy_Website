@@ -3,8 +3,8 @@ layout: page.njk
 title: Community
 permalink: /community/
 ---
-
 <!-- Hero Section -->
+
 <section class="hero">
     <div class="hero-background absolute inset-0 z-0 opacity-70" style="background-size: cover; background-position: center;"></div>
     <div class="container text-center relative z-10">
@@ -14,11 +14,12 @@ permalink: /community/
 </section>
 
 <!-- Team Section -->
+
 <section class="section">
     <div class="container">
         <div class="text-center mb-16">
-            <h2>{{ about.team_section.title }}</h2>
-            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">{{ about.team_section.subtitle }}</p>
+            <h2>{{ community.team_section.title }}</h2>
+            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">{{ community.team_section.subtitle }}</p>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             {% for member in team %}
@@ -26,13 +27,12 @@ permalink: /community/
                 <div class="card-body">
                     <div class="w-24 h-24 rounded-full bg-gradient-to-br from-emerald-500 to-blue-500 flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4">
                         {{ member.name | first }}
-                    </div>
+                </div>
                     <h3 class="mb-2">{{ member.name }}</h3>
                     <p class="text-sm text-emerald-600 font-semibold mb-3 uppercase tracking-wide">{{ member.role }}</p>
                     <p class="text-sm text-primary-600 dark:text-primary-300 mb-6">{{ member.bio }}</p>
                 </div>
-                <div class="card-footer">
-                    <a href="mailto:{{ member.email }}" class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold">Get in touch</a>
+                <a href="{{ member.email }}" class="text-sm text-emerald-600 hover:text-emerald-700 font-semibold"> {{ member.email }}</a>
                 </div>
             </div>
             {% endfor %}
@@ -40,11 +40,11 @@ permalink: /community/
     </div>
 </section>
 
+
 <div class="divider"></div>
 
-
-
 <!-- CTA Section -->
+
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
     <div class="container">
         <div class="cta-box text-center">

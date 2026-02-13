@@ -26,29 +26,29 @@ hero:
 # Announcements Section
 announcements:
   - id: 1
-    emoji: "📚"
-    title: "Introductory Courses Coming Soon"
-    description: "Registration for our <strong>8-week introductory courses</strong> will be opening in March 2026. We'll be offering tracks in AI Governance and AI Safety Alignment."
-    link_text: "Sign up for our mailing list"
-    link_url: "{{ site.forms.mailingList }}"
+    emoji: "🌐"
+    title: "AIsafety.com"
+    description: "Find your place in the AI safety ecosystem: Curated lists of events, communities, courses, and more - focused on preventing human extinction from AI."
+    link_text: "Stay updated by registering to its newsletter."
+    link_url: "{{ https://www.aisafety.com/ }}"
     link_target: "_blank"
 
 # Recent Events Section
-recent_events:
-  - id: 1
-    title: "AI Safety Roundtable"
-    date: "January 20, 2026"
-    emoji: "🗣️"
-    participants: "40+ participants"
-    description: "Industry experts discussed current challenges in AI alignment research and governance. Key topics included transformer interpretability and societal impacts."
-    link: "/events/"
-  - id: 2
-    title: "AI Safety Workshop"
-    date: "January 15, 2026"
-    emoji: "🎓"
-    participants: "50+ participants"
-    description: "Interactive workshop covering fundamentals of AI safety, technical approaches, and policy considerations with hands-on activities."
-    link: "/events/"
+# recent_events:
+#   - id: 1
+#     title: "AI Safety Roundtable"
+#     date: "January 20, 2026"
+#     emoji: "🗣️"
+#     participants: "40+ participants"
+#     description: "Industry experts discussed current challenges in AI alignment research and governance. Key topics included transformer interpretability and societal impacts."
+#     link: "/events/"
+#   - id: 2
+#     title: "AI Safety Workshop"
+#     date: "January 15, 2026"
+#     emoji: "🎓"
+#     participants: "50+ participants"
+#     description: "Interactive workshop covering fundamentals of AI safety, technical approaches, and policy considerations with hands-on activities."
+#     link: "/events/"
 
 # Mission Section
 mission:
@@ -83,7 +83,7 @@ features:
 cta:
   title: "Ready to Join Our Community?"
   description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-  button_text: "Join Today"
+  button_text: "Join Our Discord"
   # Link handled directly in template via `site.social.discord`
 
 # Theme Background Images

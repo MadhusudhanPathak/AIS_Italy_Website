@@ -42,11 +42,6 @@ approach:
   #   title: "Events & Workshops"
   #   description: "Regular workshops, roundtables, and networking events featuring industry experts and thought leaders."
 
-# Team Section
-team_section:
-  title: "Our Leadership Team"
-  subtitle: "Passionate individuals driving AI safety forward"
-
 # CTA Section
 cta:
   title: "Join Our Mission"
