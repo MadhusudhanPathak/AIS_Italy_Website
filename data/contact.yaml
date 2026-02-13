@@ -14,7 +14,7 @@ channels:
     emoji: "📧"
     description: "For any questions about our organization, activities, or how to get involved."
     link: "mailto:{{ site.site.email }}"
-    button_text: "aisafetyitalia@gmail.com'"
+    button_text: "aisafetyitalia@gmail.com"
 
   - id: linkedin
     title: "LinkedIn"

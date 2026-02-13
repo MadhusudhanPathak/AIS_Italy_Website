@@ -20,26 +20,49 @@ permalink: /contact/
 <section class="section">
     <div class="container">
         <div class="text-center mb-16">
-            <h2>Get in Touch</h2>
-            <p class="text-xl text-primary-600 dark:text-primary-300 mt-4 max-w-2xl mx-auto">
-                Reach us through your preferred channel
-            </p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for channel in contact.channels %}
+        <div class="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+            <!-- Email -->
             <div class="card hover-lift text-center">
                 <div class="card-body">
-                    <span class="text-4xl mb-4 block">{{ channel.emoji }}</span>
-                    <h3 class="mb-3">{{ channel.title }}</h3>
+                    <span class="text-4xl mb-4 block">📧</span>
+                    <h3 class="mb-3">Email</h3>
                     <p class="text-primary-600 dark:text-primary-300 mb-4">
-                        {{ channel.description }}
+                        For any questions:
                     </p>
-                    <a href="{{ channel.link }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
-                        {{ channel.button_text }}
+                    <a href="mailto:{{ site.site.email }}" class="btn btn-outline">
+                        {{ site.site.email }}
                     </a>
                 </div>
             </div>
-            {% endfor %}
+
+            <!-- LinkedIn -->
+            <div class="card hover-lift text-center">
+                <div class="card-body">
+                    <span class="text-4xl mb-4 block">💼</span>
+                    <h3 class="mb-3">LinkedIn</h3>
+                    <p class="text-primary-600 dark:text-primary-300 mb-4">
+                        Follow us for updates and networking opportunities.
+                    </p>
+                    <a href="{{ site.social.linkedin }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        Visit LinkedIn
+                    </a>
+                </div>
+            </div>
+
+            <!-- Discord -->
+            <div class="card hover-lift text-center">
+                <div class="card-body">
+                    <span class="text-4xl mb-4 block">💬</span>
+                    <h3 class="mb-3">Discord</h3>
+                    <p class="text-primary-600 dark:text-primary-300 mb-4">
+                        Chat with the community, join events and contribute to AI Safety Italia.
+                    </p>
+                    <a href="{{ site.social.discord }}" class="btn btn-outline" target="_blank" rel="noopener noreferrer">
+                        Join Discord
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>

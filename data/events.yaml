@@ -56,8 +56,8 @@ upcoming_events:
         value: "3-10 participants"
       - label: "Level"
         value: "All experience welcome"
-    register_text: "Get Meeting Details"
-    register_link: "{{ site.social.discord }}"
+    register_text: ""
+    register_link: ""
     register_target: "_blank"
 
 # Recent Highlights Section
