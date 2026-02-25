@@ -1,9 +1,11 @@
 # AI Safety Italia Website
 
-A modern, minimal static website for AI Safety Italia - built with Eleventy and Tailwind CSS.
+A modern, minimal static website for AI Safety Italia - built with Eleventy, Tailwind CSS, and a comprehensive design token system.
 
 ## Features
 
+- **Design Token System**: All colors, fonts, spacing, and styles controlled via YAML files
+- **Dark/Light Themes**: Fully configurable theme system with CSS variables
 - **Modern Responsive Design**: Clean, minimal aesthetic using Tailwind CSS
 - **Fast Performance**: Static site generation with Eleventy
 - **Easy Deployment**: Configured for Vercel
@@ -14,103 +16,233 @@ A modern, minimal static website for AI Safety Italia - built with Eleventy and 
 
 ## Table of Contents
 
+- [Quick Start](#quick-start)
 - [Installation](#installation)
 - [Development](#development)
 - [Building](#building)
 - [Project Structure](#project-structure)
+- [Design System](#design-system)
 - [Content Management](#content-management)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
 
+## Quick Start
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm start
+
+# Build for production
+npm run build
+```
+
 ## Installation
 
 1. Clone the repository
+
 ```bash
 git clone https://github.com/yourusername/AI_Safety_Italy_Website.git
 cd AI_Safety_Italy_Website
 ```
 
 2. Install dependencies
+
 ```bash
 npm install
 ```
 
-**Note:** If you are on Windows, you might need to adjust your PowerShell execution policy to run npm scripts. You can do this by running the following command in a PowerShell window with administrator privileges:
+**Windows Note:** You might need to adjust PowerShell execution policy:
+
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
 ## Development
 
-To start the development server:
+Start the development server:
+
 ```bash
 npm start
 ```
 
-This will start a local server at `http://localhost:8080` with live reload. It will also watch for changes in your CSS files and automatically rebuild them.
+This will:
+
+- Start a local server at `http://localhost:8080`
+- Enable live reload
+- Watch for CSS and design token changes
 
 ## Building
 
-To build the website for production:
+Build for production:
+
 ```bash
 npm run build
 ```
 
-The output will be generated in the `_site/` directory.
+Output will be in the `_site/` directory.
 
 ## Project Structure
 
 ```
 AI_Safety_Italy_Website/
-├── data/                   # Content data files (for non-technical editors)
+├── data/                   # Content data files (YAML)
+│   ├── home.yaml
+│   ├── about.yaml
+│   ├── events.yaml
+│   └── ...
 ├── src/
 │   ├── components/         # Reusable template components
 │   ├── layouts/            # Page layout templates
-│   ├── data/               # Global data files (site config, team, etc.)
-│   ├── content/            # Page content in Markdown (references data files)
+│   ├── data/               # Site config, team, etc.
+│   ├── content/            # Page content (Markdown)
+│   ├── design/             # Design tokens (YAML) ⭐
+│   │   ├── design.yaml
+│   │   ├── colors.yaml
+│   │   ├── themes.yaml
+│   │   ├── typography.yaml
+│   │   ├── spacing.yaml
+│   │   ├── components.yaml
+│   │   └── layout.yaml
 │   ├── assets/
 │   │   ├── css/
 │   │   ├── js/
 │   │   ├── img/
 │   │   └── fonts/
-│   ├── utils/              # Utility functions
+│   └── utils/              # Utility functions
 ├── .eleventy.js            # Eleventy configuration
-├── tailwind.config.js      # Tailwind CSS configuration
+├── tailwind.config.js      # Tailwind CSS (uses design tokens)
 ├── postcss.config.js       # PostCSS configuration
 ├── vercel.json             # Vercel deployment config
 ├── package.json
-├── ModificationGuide.md    # Content modification guide for non-technical users
+├── ModificationGuide.md    # Content/design editing guide
 └── README.md
 ```
+
+## Design System
+
+The website uses a comprehensive **design token system** that allows you to control all visual aspects through YAML files in `src/design/`.
+
+### Design Token Files
+
+| File              | Purpose           | Example                             |
+| ----------------- | ----------------- | ----------------------------------- |
+| `design.yaml`     | Main settings     | Border radius, shadows, transitions |
+| `colors.yaml`     | Color palette     | Brand colors, semantic colors       |
+| `themes.yaml`     | Light/Dark themes | Theme colors, toggle icons          |
+| `typography.yaml` | Fonts & text      | Font families, sizes, weights       |
+| `spacing.yaml`    | Layout spacing    | Margins, paddings, gaps             |
+| `components.yaml` | Component styles  | Buttons, cards, navigation          |
+| `layout.yaml`     | Layout config     | Grids, breakpoints, animations      |
+
+### Quick Design Changes
+
+#### Change Brand Colors
+
+Edit `src/design/colors.yaml`:
+
+```yaml
+brand:
+  primary: '#3b82f6' # Primary color
+  primaryDark: '#1e40af' # Darker variant
+  secondary: '#10b981' # Secondary color
+  accent: '#6d28d9' # Accent color
+```
+
+#### Change Fonts
+
+Edit `src/design/typography.yaml`:
+
+```yaml
+fontFamilies:
+  sans:
+    stack:
+      - "'Inter'"
+      - 'system-ui'
+      - 'sans-serif'
+```
+
+#### Change Spacing
+
+Edit `src/design/spacing.yaml`:
+
+```yaml
+padding:
+  section:
+    top: '4rem'
+    bottom: '4rem'
+```
+
+#### Change Theme Colors
+
+Edit `src/design/themes.yaml`:
+
+```yaml
+light:
+  css:
+    --bg-primary: '#ffffff'
+    --text-primary: '#111827'
+dark:
+  css:
+    --bg-primary: '#0f1727'
+    --text-primary: '#f9fafb'
+```
+
+For complete design system documentation, see `src/design/README.md`.
 
 ## Content Management
 
 ### For Non-Technical Users
-For instructions on how to safely edit website content without affecting functionality, please see our [Content Modification Guide](ModificationGuide.md). This guide explains how to update text, headings, links, and other content using the data files in the `/data` directory.
+
+For instructions on safely editing content and design, see our [Content Modification Guide](ModificationGuide.md).
+
+**Content Files** (`/data`):
+
+- `home.yaml` - Homepage content
+- `about.yaml` - About page content
+- `events.yaml` - Events page content
+- `community.yaml` - Community page content
+- `faq.yaml` - FAQ content
+- `contact.yaml` - Contact page content
+- `global.yaml` - Navigation, footer, social links
+
+**Design Files** (`/src/design`):
+
+- All visual styles (colors, fonts, spacing, etc.)
 
 ### For Technical Users
-- Edit Markdown files in `src/content/` to update page structure and layout (these now reference data files).
-- Update data files in `/data/` to modify content (YAML format).
-- Update `src/data/site.js` to change site metadata, navigation, social links, and form URLs.
-- Update `src/data/team.js` to manage team member information.
 
-### Styling
-- Tailwind CSS: `tailwind.config.js`
-- Custom CSS: `src/assets/css/style.css`
+- **Edit pages**: `src/content/` (Markdown)
+- **Update content**: `/data/` (YAML)
+- **Update design**: `src/design/` (YAML)
+- **Site config**: `src/data/site.js`
+- **Team info**: `src/data/team.js`
+- **Components**: `src/components/`
+- **Layouts**: `src/layouts/`
 
 ## Housekeeping
 
-- **Clean build outputs**: `npm run clean`
-- **Format repository**: `npm run format` (uses Prettier)
-- **Check formatting**: `npm run format:check`
-- **Lint JavaScript**: `npm run lint`
+```bash
+# Clean build outputs
+npm run clean
 
-Files added for consistency:
-- `.editorconfig` — editor settings
+# Format repository
+npm run format
+
+# Check formatting
+npm run format:check
+
+# Lint JavaScript
+npm run lint
+```
+
+**Configuration files:**
+
+- `.editorconfig` — Editor settings
 - `.prettierrc` — Prettier configuration
-
-Note: Nunjucks template files (`.njk`) are intentionally excluded from the automatic Prettier formatting because they require a specific parser. Edit these files manually or add a Nunjucks Prettier plugin if you want them auto-formatted.
 
 ## Deployment
 
@@ -123,15 +255,24 @@ Note: Nunjucks template files (`.njk`) are intentionally excluded from the autom
 ### Manual Deployment
 
 1. Build: `npm run build`
-2. Deploy the `_site/` folder to your hosting provider
+2. Deploy the `_site/` folder to your hosting
 
 ## Contributing
 
-We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to get started.
+We welcome contributions! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Environment Variables
 
-No environment variables required for MVP. Google Forms URLs are configured in `src/data/site.js`.
+No environment variables required. Google Forms URLs are configured in `src/data/site.js`.
+
+## Technology Stack
+
+- **Static Site Generator**: Eleventy (11ty)
+- **CSS Framework**: Tailwind CSS
+- **PostCSS**: CSS processing
+- **Templating**: Nunjucks
+- **Design Tokens**: YAML-based system
+- **Deployment**: Vercel
 
 ## License
 
@@ -139,4 +280,10 @@ MIT
 
 ## Support
 
-For questions or contributions, contact aisafetyitalia@gmail.com
+For questions or contributions, contact: aisafetyitalia@gmail.com
+
+## Documentation
+
+- [Agent Configuration](Agent.md) - Technical documentation for AI agents
+- [Modification Guide](ModificationGuide.md) - Content and design editing guide
+- [Design System Docs](src/design/README.md) - Design token documentation
