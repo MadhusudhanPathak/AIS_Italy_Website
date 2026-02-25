@@ -52,7 +52,7 @@ const siteData = {
   ],
   social: {
     linkedin: 'https://www.linkedin.com/company/ai-safety-italia/',
-    discord: 'https://discord.gg/aYNAPZjQJu'
+    discord: 'https://discord.gg/aYNAPZjQJu',
   },
   forms: {
     mailingList: 'https://forms.google.com/placeholder-mailing-list',

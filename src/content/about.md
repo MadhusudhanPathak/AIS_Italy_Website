@@ -55,7 +55,6 @@ permalink: /about/
 
 <div class="divider"></div>
 
-
 <!-- CTA Section -->
 <section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
     <div class="container">

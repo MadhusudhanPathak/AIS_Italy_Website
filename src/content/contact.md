@@ -3,6 +3,7 @@ layout: page.njk
 title: Contact
 permalink: /contact/
 ---
+
 <!-- Hero Section -->
 
 <section class="hero">
@@ -65,6 +66,7 @@ permalink: /contact/
             </div>
         </div>
     </div>
+
 </section>
 
 <div class="divider"></div>

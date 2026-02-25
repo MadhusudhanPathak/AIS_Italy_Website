@@ -137,6 +137,3 @@ permalink: /
         </div>
     </div>
 </section>
-
-
-

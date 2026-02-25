@@ -3,6 +3,7 @@ layout: page.njk
 title: Community
 permalink: /community/
 ---
+
 <!-- Hero Section -->
 
 <section class="hero">
@@ -39,7 +40,6 @@ permalink: /community/
         </div>
     </div>
 </section>
-
 
 <div class="divider"></div>
 
