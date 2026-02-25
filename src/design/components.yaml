@@ -1,0 +1,303 @@
+# Component Styles Configuration
+# Design tokens for reusable components
+
+# Buttons
+buttons:
+  primary:
+    background: "linear-gradient(to right, var(--accent), var(--safety-blue))"
+    color: "#ffffff"
+    padding:
+      x: "1.5rem"
+      y: "0.75rem"
+    fontSize: "base"
+    fontWeight: 500
+    borderRadius: "md"
+    boxShadow: "var(--shadow)"
+    transition: "transform 0.2s ease"
+    hover:
+      transform: "scale(1.05)"
+      boxShadow: "var(--shadow-md)"
+  
+  secondary:
+    background: "transparent"
+    color: "var(--text-primary)"
+    border: "1px solid var(--border-default)"
+    padding:
+      x: "1.5rem"
+      y: "0.75rem"
+    fontSize: "base"
+    fontWeight: 500
+    borderRadius: "md"
+    hover:
+      background: "var(--bg-secondary)"
+      borderColor: "var(--border-strong)"
+  
+  outline:
+    background: "transparent"
+    color: "var(--accent)"
+    border: "1px solid var(--accent)"
+    padding:
+      x: "1.5rem"
+      y: "0.75rem"
+    fontSize: "base"
+    fontWeight: 500
+    borderRadius: "md"
+    hover:
+      background: "var(--accent)"
+      color: "#ffffff"
+  
+  sizes:
+    sm:
+      padding:
+        x: "1rem"
+        y: "0.5rem"
+      fontSize: "sm"
+    md:
+      padding:
+        x: "1.5rem"
+        y: "0.75rem"
+      fontSize: "base"
+    lg:
+      padding:
+        x: "2rem"
+        y: "1rem"
+      fontSize: "lg"
+
+# Cards
+cards:
+  default:
+    background: "var(--card-bg)"
+    border: "1px solid var(--border-default)"
+    borderRadius: "lg"
+    boxShadow: "var(--shadow)"
+    padding: "1.5rem"
+    transition: "box-shadow 0.2s ease"
+    hover:
+      boxShadow: "var(--shadow-lg)"
+  
+  elevated:
+    background: "var(--card-elevated)"
+    border: "none"
+    borderRadius: "lg"
+    boxShadow: "var(--shadow-lg)"
+    padding: "2rem"
+  
+  interactive:
+    background: "var(--card-bg)"
+    border: "1px solid var(--border-default)"
+    borderRadius: "lg"
+    boxShadow: "var(--shadow)"
+    padding: "1.5rem"
+    cursor: "pointer"
+    transition: "all 0.2s ease"
+    hover:
+      transform: "translateY(-4px)"
+      boxShadow: "var(--shadow-lg)"
+      borderColor: "var(--accent)"
+
+# Navigation
+navigation:
+  header:
+    height: "4rem"
+    background: "rgba(255, 255, 255, 0.9)"
+    backgroundDark: "rgba(15, 23, 42, 0.9)"
+    backdropBlur: "sm"
+    borderBottom: "1px solid var(--border-default)"
+    position: "sticky"
+    top: 0
+    zIndex: 50
+  
+  logo:
+    size: "2.5rem"
+    gap: "0.75rem"
+  
+  links:
+    color: "var(--text-primary)"
+    fontSize: "sm"
+    padding:
+      x: "0.5rem"
+      y: "0.25rem"
+    hover:
+      color: "var(--accent)"
+    active:
+      color: "var(--accent)"
+  
+  mobile:
+    background: "var(--bg-primary)"
+    padding: "1rem"
+    itemPadding: "0.5rem"
+
+# Hero Section
+hero:
+  padding:
+    y: "6rem"
+    yMobile: "3rem"
+  maxWidth: "48rem"
+  title:
+    size: "4xl"
+    weight: 800
+    marginBottom: "1.5rem"
+    gradient: true
+  subtitle:
+    size: "xl"
+    color: "var(--text-secondary)"
+    marginBottom: "2rem"
+  actions:
+    gap: "1rem"
+    flexDirection: "row"
+    flexWrap: "wrap"
+
+# Feature Cards
+features:
+  grid:
+    columns:
+      default: 1
+      md: 2
+      lg: 3
+    gap: "2rem"
+  
+  icon:
+    size: "3rem"
+    background: "var(--bg-secondary)"
+    borderRadius: "lg"
+    padding: "1rem"
+    marginBottom: "1rem"
+  
+  title:
+    size: "xl"
+    weight: 600
+    marginBottom: "0.5rem"
+  
+  description:
+    size: "base"
+    color: "var(--text-secondary)"
+    lineHeight: 1.6
+
+# Stats
+stats:
+  grid:
+    columns:
+      default: 2
+      md: 4
+    gap: "2rem"
+  
+  number:
+    size: "4xl"
+    weight: 800
+    color: "var(--accent)"
+    marginBottom: "0.25rem"
+  
+  label:
+    size: "sm"
+    color: "var(--text-secondary)"
+    fontWeight: 500
+
+# Footer
+footer:
+  background: "var(--bg-secondary)"
+  borderTop: "1px solid var(--border-default)"
+  padding:
+    y: "3rem"
+    yMobile: "2rem"
+  
+  columns:
+    gap: "2rem"
+    minWidth: "200px"
+  
+  links:
+    color: "var(--text-secondary)"
+    hover:
+      color: "var(--accent)"
+  
+  social:
+    iconSize: "1.5rem"
+    gap: "1rem"
+  
+  copyright:
+    color: "var(--text-muted)"
+    fontSize: "sm"
+    marginTop: "2rem"
+    paddingTop: "2rem"
+    borderTop: "1px solid var(--border-default)"
+
+# Forms
+forms:
+  input:
+    background: "var(--bg-primary)"
+    border: "1px solid var(--border-default)"
+    borderRadius: "md"
+    padding:
+      x: "1rem"
+      y: "0.75rem"
+    fontSize: "base"
+    color: "var(--text-primary)"
+    focus:
+      borderColor: "var(--accent)"
+      boxShadow: "0 0 0 3px rgba(59, 130, 246, 0.1)"
+  
+  label:
+    fontSize: "sm"
+    fontWeight: 500
+    color: "var(--text-primary)"
+    marginBottom: "0.5rem"
+  
+  helpText:
+    fontSize: "sm"
+    color: "var(--text-muted)"
+    marginTop: "0.25rem"
+  
+  error:
+    color: "var(--error)"
+    fontSize: "sm"
+    marginTop: "0.25rem"
+
+# Badges
+badges:
+  default:
+    background: "var(--bg-secondary)"
+    color: "var(--text-primary)"
+    fontSize: "xs"
+    fontWeight: 500
+    padding:
+      x: "0.5rem"
+      y: "0.25rem"
+    borderRadius: "full"
+  
+  variants:
+    primary:
+      background: "var(--accent)"
+      color: "#ffffff"
+    success:
+      background: "var(--success)"
+      color: "#ffffff"
+    warning:
+      background: "var(--warning)"
+      color: "#ffffff"
+    error:
+      background: "var(--error)"
+      color: "#ffffff"
+
+# Alerts
+alerts:
+  padding: "1rem"
+  borderRadius: "md"
+  border: "1px solid"
+  marginBottom: "1rem"
+  
+  variants:
+    info:
+      background: "rgba(59, 130, 246, 0.1)"
+      borderColor: "var(--info)"
+      color: "var(--info)"
+    success:
+      background: "rgba(22, 163, 74, 0.1)"
+      borderColor: "var(--success)"
+      color: "var(--success)"
+    warning:
+      background: "rgba(245, 158, 11, 0.1)"
+      borderColor: "var(--warning)"
+      color: "var(--warning)"
+    error:
+      background: "rgba(220, 38, 38, 0.1)"
+      borderColor: "var(--error)"
+      color: "var(--error)"

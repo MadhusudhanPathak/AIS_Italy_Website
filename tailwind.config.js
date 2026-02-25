@@ -1,48 +1,116 @@
+const yaml = require("js-yaml");
+const fs = require("fs");
+const path = require("path");
+
+// Load design tokens from YAML files
+const designDir = path.join(__dirname, 'src', 'design');
+const loadDesignFile = (filename) => {
+  try {
+    const filePath = path.join(designDir, filename);
+    if (fs.existsSync(filePath)) {
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      return yaml.load(fileContents);
+    }
+  } catch (error) {
+    console.error(`Error loading design file ${filename}:`, error);
+  }
+  return {};
+};
+
+// Load design tokens
+const colors = loadDesignFile('colors.yaml');
+const typography = loadDesignFile('typography.yaml');
+const spacing = loadDesignFile('spacing.yaml');
+const layout = loadDesignFile('layout.yaml');
+
+// Build Tailwind color palette from design tokens
+const buildColorPalette = (colorObj) => {
+  if (!colorObj) return {};
+  const palette = {};
+  Object.entries(colorObj).forEach(([key, value]) => {
+    if (typeof value === 'string') {
+      palette[key] = value;
+    }
+  });
+  return palette;
+};
+
 module.exports = {
   content: ["src/**/*.{html,md,njk}"],
-  darkMode: 'class', // Enable dark mode based on the 'class' strategy
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        primary: {
-          50: '#f9fafb',
-          100: '#f3f4f6',
-          200: '#e5e7eb',
-          300: '#d1d5db',
-          400: '#9ca3af',
-          500: '#6b7280',
-          600: '#4b5563',
-          700: '#374151',
-          800: '#1f2937',
-          900: '#111827',
+        brand: buildColorPalette(colors.brand),
+        semantic: buildColorPalette(colors.semantic),
+        accent: colors.brand?.primary || '#3b82f6',
+        'accent-emerald': colors.custom?.['accent-emerald'] || '#10b981',
+        'accent-dark': colors.brand?.primaryDark || '#1e40af',
+        'safety-blue': colors.custom?.['safety-blue'] || '#0284c7',
+        'safety-purple': colors.custom?.['safety-purple'] || '#6d28d9',
+        danger: colors.semantic?.error || '#dc2626',
+        success: colors.semantic?.success || '#16a34a',
+        warning: colors.semantic?.warning || '#f59e0b',
+        info: colors.semantic?.info || '#3b82f6',
+        primary: buildColorPalette(colors.neutral),
+        bg: {
+          light: buildColorPalette(colors.background?.light),
+          dark: buildColorPalette(colors.background?.dark),
         },
-        emerald: {
-          '50': '#ecfdf5',
-          '100': '#d1fae5',
-          '200': '#a7f3d0',
-          '300': '#6ee7b7',
-          '400': '#34d399',
-          '500': '#10b981',
-          '600': '#059669',
-          '700': '#047857',
-          '800': '#065f46',
-          '900': '#064e3b',
+        text: {
+          light: buildColorPalette(colors.text?.light),
+          dark: buildColorPalette(colors.text?.dark),
         },
-        accent: '#3b82f6',
-        'accent-emerald': '#10b981',
-        'accent-dark': '#1e40af',
-        'safety-blue': '#0284c7',
-        'safety-purple': '#6d28d9',
-        'danger': '#dc2626',
-        'success': '#16a34a',
+        border: {
+          light: buildColorPalette(colors.border?.light),
+          dark: buildColorPalette(colors.border?.dark),
+        },
       },
       fontFamily: {
-        sans: ['system-ui', '-apple-system', 'sans-serif'],
-        display: ['system-ui', '-apple-system', 'sans-serif'],
+        sans: typography.fontFamilies?.sans?.stack || ['system-ui', '-apple-system', 'sans-serif'],
+        display: typography.fontFamilies?.display?.stack || ['system-ui', '-apple-system', 'sans-serif'],
+        mono: typography.fontFamilies?.mono?.stack || ['ui-monospace', 'SFMono-Regular', 'monospace'],
+      },
+      fontSize: {
+        xs: [typography.fontSizes?.xs?.value || '0.75rem', typography.fontSizes?.xs?.lineHeight || '1.5'],
+        sm: [typography.fontSizes?.sm?.value || '0.875rem', typography.fontSizes?.sm?.lineHeight || '1.5'],
+        base: [typography.fontSizes?.base?.value || '1rem', typography.fontSizes?.base?.lineHeight || '1.6'],
+        lg: [typography.fontSizes?.lg?.value || '1.125rem', typography.fontSizes?.lg?.lineHeight || '1.6'],
+        xl: [typography.fontSizes?.xl?.value || '1.25rem', typography.fontSizes?.xl?.lineHeight || '1.6'],
+        '2xl': [typography.fontSizes?.['2xl']?.value || '1.5rem', typography.fontSizes?.['2xl']?.lineHeight || '1.4'],
+        '3xl': [typography.fontSizes?.['3xl']?.value || '1.875rem', typography.fontSizes?.['3xl']?.lineHeight || '1.3'],
+        '4xl': [typography.fontSizes?.['4xl']?.value || '2.25rem', typography.fontSizes?.['4xl']?.lineHeight || '1.2'],
+        '5xl': [typography.fontSizes?.['5xl']?.value || '3rem', typography.fontSizes?.['5xl']?.lineHeight || '1.1'],
+        '6xl': [typography.fontSizes?.['6xl']?.value || '3.75rem', typography.fontSizes?.['6xl']?.lineHeight || '1.1'],
+        '7xl': [typography.fontSizes?.['7xl']?.value || '4.5rem', typography.fontSizes?.['7xl']?.lineHeight || '1.1'],
+      },
+      fontWeight: {
+        thin: typography.fontWeights?.thin || 100,
+        extralight: typography.fontWeights?.extralight || 200,
+        light: typography.fontWeights?.light || 300,
+        normal: typography.fontWeights?.normal || 400,
+        medium: typography.fontWeights?.medium || 500,
+        semibold: typography.fontWeights?.semibold || 600,
+        bold: typography.fontWeights?.bold || 700,
+        extrabold: typography.fontWeights?.extrabold || 800,
+        black: typography.fontWeights?.black || 900,
+      },
+      spacing: {
+        ...buildColorPalette(spacing.base),
+      },
+      letterSpacing: {
+        tighter: typography.letterSpacing?.tighter || '-0.05em',
+        tight: typography.letterSpacing?.tight || '-0.025em',
+        normal: typography.letterSpacing?.normal || '0',
+        wide: typography.letterSpacing?.wide || '0.025em',
+        wider: typography.letterSpacing?.wider || '0.05em',
+        widest: typography.letterSpacing?.widest || '0.1em',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'gradient-primary': 'linear-gradient(to right, #3b82f6, #6d28d9)',
+        'gradient-accent': 'linear-gradient(to right, #3b82f6, #0284c7)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-in',
@@ -62,6 +130,49 @@ module.exports = {
           '0%, 100%': { opacity: '1', boxShadow: '0 0 20px rgba(59, 130, 246, 0.5)' },
           '50%': { opacity: '0.8', boxShadow: '0 0 30px rgba(59, 130, 246, 0.8)' },
         },
+      },
+      borderRadius: {
+        none: '0',
+        sm: '0.25rem',
+        default: '0.375rem',
+        md: '0.5rem',
+        lg: '0.75rem',
+        xl: '1rem',
+        '2xl': '1.5rem',
+        full: '9999px',
+      },
+      boxShadow: {
+        sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+        default: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+        md: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+        lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+        xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      },
+      container: {
+        center: true,
+        padding: {
+          default: '1rem',
+          md: '1.5rem',
+          lg: '2rem',
+        },
+        screens: {
+          sm: '640px',
+          md: '768px',
+          lg: '1024px',
+          xl: '1280px',
+          '2xl': '1536px',
+        },
+      },
+      zIndex: {
+        hidden: '-1',
+        base: '0',
+        dropdown: '100',
+        sticky: '50',
+        fixed: '100',
+        modal: '200',
+        popover: '300',
+        tooltip: '400',
+        notification: '500',
       },
     }
   },

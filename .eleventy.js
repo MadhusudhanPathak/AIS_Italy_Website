@@ -14,6 +14,7 @@ module.exports = function(eleventyConfig) {
 
   // Watch targets
   eleventyConfig.addWatchTarget("src/assets/css/");
+  eleventyConfig.addWatchTarget("src/design/");
 
   // Filters
   eleventyConfig.addFilter("readableDate", dateObj => {
@@ -56,6 +57,36 @@ module.exports = function(eleventyConfig) {
     return {};
   };
 
+  // Load design tokens from design directory
+  const designDir = path.join(__dirname, 'src', 'design');
+  const loadDesignFile = (filename) => {
+    try {
+      const filePath = path.join(designDir, filename);
+      if (fs.existsSync(filePath)) {
+        const fileContents = fs.readFileSync(filePath, 'utf8');
+        if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
+          return yaml.load(fileContents);
+        }
+      }
+    } catch (error) {
+      console.error(`Error loading design file ${filename}:`, error);
+    }
+    return {};
+  };
+
+  // Load all design tokens and make them globally available
+  eleventyConfig.addGlobalData("design", () => {
+    return {
+      colors: loadDesignFile('colors.yaml'),
+      themes: loadDesignFile('themes.yaml'),
+      typography: loadDesignFile('typography.yaml'),
+      spacing: loadDesignFile('spacing.yaml'),
+      components: loadDesignFile('components.yaml'),
+      layout: loadDesignFile('layout.yaml'),
+      settings: loadDesignFile('design.yaml')
+    };
+  });
+
   // Load content data and make it globally available
   eleventyConfig.addGlobalData("home", () => loadDataFile('home.yaml'));
   eleventyConfig.addGlobalData("about", () => loadDataFile('about.yaml'));
@@ -69,6 +100,7 @@ module.exports = function(eleventyConfig) {
   // Exclude README files from processing
   eleventyConfig.ignores.add("src/README.md");
   eleventyConfig.ignores.add("src/assets/img/README.md");
+  eleventyConfig.ignores.add("src/design/README.md");
 
   return {
     dir: {

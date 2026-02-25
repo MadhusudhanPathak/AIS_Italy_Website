@@ -1,0 +1,160 @@
+# Spacing Configuration
+# Margins, paddings, gaps, and layout spacing
+
+# Base Spacing Scale (in rem)
+base:
+  0: "0"
+  1: "0.25rem"   # 4px
+  2: "0.5rem"    # 8px
+  3: "0.75rem"   # 12px
+  4: "1rem"      # 16px
+  5: "1.25rem"   # 20px
+  6: "1.5rem"    # 24px
+  7: "1.75rem"   # 28px
+  8: "2rem"      # 32px
+  9: "2.25rem"   # 36px
+  10: "2.5rem"   # 40px
+  11: "2.75rem"  # 44px
+  12: "3rem"     # 48px
+  14: "3.5rem"   # 56px
+  16: "4rem"     # 64px
+  20: "5rem"     # 80px
+  24: "6rem"     # 96px
+  28: "7rem"     # 112px
+  32: "8rem"     # 128px
+
+# Padding Presets
+padding:
+  section:
+    top: "4rem"
+    bottom: "4rem"
+    mobile:
+      top: "2rem"
+      bottom: "2rem"
+  
+  container:
+    horizontal: "1rem"
+    mobile: "0.75rem"
+  
+  card:
+    default: "1.5rem"
+    compact: "1rem"
+    spacious: "2rem"
+  
+  button:
+    horizontal: "1.5rem"
+    vertical: "0.75rem"
+    small:
+      horizontal: "1rem"
+      vertical: "0.5rem"
+  
+  input:
+    horizontal: "1rem"
+    vertical: "0.75rem"
+
+# Margin Presets
+margin:
+  section:
+    top: "0"
+    bottom: "0"
+  
+  element:
+    small: "0.5rem"
+    default: "1rem"
+    large: "1.5rem"
+    xl: "2rem"
+  
+  heading:
+    h1:
+      top: "0"
+      bottom: "1.5rem"
+    h2:
+      top: "2rem"
+      bottom: "1rem"
+    h3:
+      top: "1.5rem"
+      bottom: "0.75rem"
+    h4:
+      top: "1.25rem"
+      bottom: "0.5rem"
+  
+  paragraph:
+    bottom: "1rem"
+  
+  list:
+    item: "0.5rem"
+
+# Gap (for flexbox/grid)
+gap:
+  xs: "0.25rem"   # 4px
+  sm: "0.5rem"    # 8px
+  md: "1rem"      # 16px
+  lg: "1.5rem"    # 24px
+  xl: "2rem"      # 32px
+  "2xl": "3rem"   # 48px
+  "3xl": "4rem"   # 64px
+
+# Component Spacing
+components:
+  header:
+    height: "4rem"
+    paddingY: "1rem"
+    logoSize: "2.5rem"
+    navGap: "1.5rem"
+  
+  hero:
+    paddingY: "6rem"
+    paddingYMobile: "3rem"
+    contentMaxWidth: "48rem"
+    titleMarginBottom: "1.5rem"
+    subtitleMarginBottom: "2rem"
+  
+  card:
+    padding: "1.5rem"
+    gap: "1rem"
+    imageAspectRatio: "16/9"
+  
+  button:
+    gap: "0.5rem"
+    iconSize: "1.25rem"
+  
+  navigation:
+    mobile:
+      padding: "1rem"
+      itemPadding: "0.5rem"
+  
+  footer:
+    paddingY: "3rem"
+    paddingYMobile: "2rem"
+    columnGap: "2rem"
+
+# Layout Containers
+container:
+  sm: "640px"
+  md: "768px"
+  lg: "1024px"
+  xl: "1280px"
+  "2xl": "1536px"
+  full: "100%"
+  
+  padding:
+    default: "1rem"
+    md: "1.5rem"
+    lg: "2rem"
+
+# Grid Configuration
+grid:
+  columns: 12
+  gap:
+    default: "1.5rem"
+    narrow: "1rem"
+    wide: "2rem"
+
+# Stack Spacing (vertical rhythm)
+stack:
+  xs: "0.25rem"
+  sm: "0.5rem"
+  md: "1rem"
+  lg: "1.5rem"
+  xl: "2rem"
+  "2xl": "3rem"

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.site.description }}">
     <meta name="author" content="{{ site.site.name }}">
-    <meta name="theme-color" content="#3b82f6">
+    <meta name="theme-color" content="{{ design.colors.brand.primary | default('#3b82f6') }}">
     <title>{% if title %}{{ title }} | {% endif %}{{ site.site.name }}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
@@ -109,15 +109,15 @@
         function initThemeToggle() {
             const themeToggleBtn = document.getElementById('theme-toggle');
             const themeIcon = document.getElementById('theme-icon');
-            const currentTheme = localStorage.getItem('theme') || '{{ global.theme.default or "light" }}';
+            const currentTheme = localStorage.getItem('theme') || '{{ design.themes.light.isDefault == true and "light" or "dark" }}';
 
             // Apply saved theme on page load
             if (currentTheme === 'dark') {
                 document.documentElement.setAttribute('data-theme', 'dark');
-                themeIcon.textContent = '☀️'; // Sun icon for light mode
+                themeIcon.textContent = '{{ design.themes.toggle.icon.light | default("☀️") }}'; // Sun icon for light mode
             } else {
                 document.documentElement.removeAttribute('data-theme');
-                themeIcon.textContent = '🌙'; // Moon icon for dark mode
+                themeIcon.textContent = '{{ design.themes.toggle.icon.dark | default("🌙") }}'; // Moon icon for dark mode
             }
 
             // Update background images based on theme

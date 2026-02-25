@@ -1,0 +1,112 @@
+# Color Palette Configuration
+# All colors used across the website
+
+# Brand Colors
+brand:
+  primary: "#3b82f6"
+  primaryDark: "#1e40af"
+  secondary: "#10b981"
+  accent: "#6d28d9"
+
+# Semantic Colors
+semantic:
+  # Action colors
+  info: "#3b82f6"
+  success: "#16a34a"
+  warning: "#f59e0b"
+  error: "#dc2626"
+  
+  # State colors
+  active: "#3b82f6"
+  hover: "#2563eb"
+  focus: "#60a5fa"
+  disabled: "#9ca3af"
+
+# Custom Named Colors
+custom:
+  safety-blue: "#0284c7"
+  safety-purple: "#6d28d9"
+  accent-emerald: "#10b981"
+
+# Neutral Colors (Grayscale)
+neutral:
+  50: "#f9fafb"
+  100: "#f3f4f6"
+  200: "#e5e7eb"
+  300: "#d1d5db"
+  400: "#9ca3af"
+  500: "#6b7280"
+  600: "#4b5563"
+  700: "#374151"
+  800: "#1f2937"
+  900: "#111827"
+
+# Background Colors
+background:
+  light:
+    primary: "#ffffff"
+    secondary: "#f9fafb"
+    tertiary: "#f3f4f6"
+    card: "#ffffff"
+    elevated: "#ffffff"
+  dark:
+    primary: "#0f1727"
+    secondary: "#1e293b"
+    tertiary: "#334155"
+    card: "#1e293b"
+    elevated: "#334155"
+
+# Text Colors
+text:
+  light:
+    primary: "#111827"
+    secondary: "#4b5563"
+    tertiary: "#6b7280"
+    muted: "#9ca3af"
+    inverse: "#ffffff"
+  dark:
+    primary: "#f9fafb"
+    secondary: "#cbd5e1"
+    tertiary: "#94a3b8"
+    muted: "#64748b"
+    inverse: "#0f1727"
+
+# Border Colors
+border:
+  light:
+    default: "#e5e7eb"
+    strong: "#d1d5db"
+    subtle: "#f3f4f6"
+  dark:
+    default: "#334155"
+    strong: "#475569"
+    subtle: "#1e293b"
+
+# Gradient Definitions
+gradients:
+  primary:
+    from: "#3b82f6"
+    to: "#6d28d9"
+    direction: "to right"
+  
+  accent:
+    from: "#3b82f6"
+    to: "#0284c7"
+    direction: "to right"
+  
+  hero:
+    light:
+      from: "#eff6ff"
+      to: "#f5f3ff"
+    dark:
+      from: "#1e3a5f"
+      to: "#2e1065"
+
+# Opacity Variants
+opacity:
+  transparent: "rgba(255, 255, 255, 0)"
+  subtle: "rgba(0, 0, 0, 0.05)"
+  light: "rgba(0, 0, 0, 0.1)"
+  medium: "rgba(0, 0, 0, 0.3)"
+  strong: "rgba(0, 0, 0, 0.5)"
+  solid: "rgba(0, 0, 0, 1)"

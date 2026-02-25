@@ -1,0 +1,107 @@
+# Theme Configuration
+# Light and Dark mode color schemes
+
+# Light Theme
+light:
+  name: "Light"
+  isDefault: true
+  
+  # CSS Variables for light theme
+  css:
+    --bg-primary: "#ffffff"
+    --bg-secondary: "#f9fafb"
+    --bg-tertiary: "#f3f4f6"
+    --card-bg: "#ffffff"
+    --card-elevated: "#ffffff"
+    
+    --text-primary: "#111827"
+    --text-secondary: "#4b5563"
+    --text-tertiary: "#6b7280"
+    --text-muted: "#9ca3af"
+    --text-inverse: "#ffffff"
+    
+    --border-default: "#e5e7eb"
+    --border-strong: "#d1d5db"
+    --border-subtle: "#f3f4f6"
+    
+    --accent: "#3b82f6"
+    --accent-dark: "#1e40af"
+    --accent-light: "#60a5fa"
+    
+    --safety-blue: "#0284c7"
+    --safety-purple: "#6d28d9"
+    --muted: "#6b7280"
+    
+    --success: "#16a34a"
+    --warning: "#f59e0b"
+    --error: "#dc2626"
+    --info: "#3b82f6"
+    
+    --shadow-sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
+    --shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
+    --shadow-md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
+    --shadow-lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+    
+    --overlay: "rgba(0, 0, 0, 0.5)"
+
+# Dark Theme
+dark:
+  name: "Dark"
+  isDefault: false
+  
+  # CSS Variables for dark theme
+  css:
+    --bg-primary: "#0f1727"
+    --bg-secondary: "#1e293b"
+    --bg-tertiary: "#334155"
+    --card-bg: "#1e293b"
+    --card-elevated: "#334155"
+    
+    --text-primary: "#f9fafb"
+    --text-secondary: "#cbd5e1"
+    --text-tertiary: "#94a3b8"
+    --text-muted: "#64748b"
+    --text-inverse: "#0f1727"
+    
+    --border-default: "#334155"
+    --border-strong: "#475569"
+    --border-subtle: "#1e293b"
+    
+    --accent: "#60a5fa"
+    --accent-dark: "#3b82f6"
+    --accent-light: "#93c5fd"
+    
+    --safety-blue: "#7dd3fc"
+    --safety-purple: "#c4b5fd"
+    --muted: "#94a3b8"
+    
+    --success: "#22c55e"
+    --warning: "#fbbf24"
+    --error: "#f87171"
+    --info: "#60a5fa"
+    
+    --shadow-sm: "0 1px 2px 0 rgba(0, 0, 0, 0.3)"
+    --shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3)"
+    --shadow-md: "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)"
+    --shadow-lg: "0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)"
+    
+    --overlay: "rgba(255, 255, 255, 0.1)"
+
+# Theme Toggle Settings
+toggle:
+  enabled: true
+  icon:
+    light: "🌙"
+    dark: "☀️"
+  storage:
+    key: "theme"
+    type: "localStorage"
+
+# Background Images for Themes
+backgrounds:
+  light:
+    hero: "/assets/img/ais_italy_light_bg.png"
+    pattern: null
+  dark:
+    hero: "/assets/img/ais_italy_dark_bg.png"
+    pattern: null
