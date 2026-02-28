@@ -2,6 +2,26 @@ const yaml = require("js-yaml");
 const fs = require("fs");
 const path = require("path");
 
+/**
+ * Loads a YAML file from the specified directory
+ * @param {string} directory - Directory path
+ * @param {string} filename - Filename to load
+ * @returns {object} Parsed YAML content or empty object if file doesn't exist
+ * @private
+ */
+function loadYamlFile(directory, filename) {
+  try {
+    const filePath = path.join(directory, filename);
+    if (fs.existsSync(filePath)) {
+      const fileContents = fs.readFileSync(filePath, 'utf8');
+      return yaml.load(fileContents) || {};
+    }
+  } catch (error) {
+    console.error(`Error loading ${filename} from ${directory}:`, error.message);
+  }
+  return {};
+}
+
 module.exports = function(eleventyConfig) {
   // Pass through copy
   eleventyConfig.addPassthroughCopy("src/assets/img");
@@ -12,11 +32,15 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/robots.txt");
 
-  // Watch targets
+  // Watch targets for live reload
   eleventyConfig.addWatchTarget("src/assets/css/");
   eleventyConfig.addWatchTarget("src/design/");
+  eleventyConfig.addWatchTarget("data/");
 
   // Filters
+  /**
+   * Converts date to readable format
+   */
   eleventyConfig.addFilter("readableDate", dateObj => {
     return new Date(dateObj).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -25,7 +49,9 @@ module.exports = function(eleventyConfig) {
     });
   });
 
-  // Add custom filters
+  /**
+   * Splits string by delimiter
+   */
   eleventyConfig.addFilter("split", (str, delimiter) => {
     if (typeof str !== 'string') return [];
     return str.split(delimiter);
@@ -40,62 +66,50 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addDataExtension("yaml", contents => yaml.load(contents));
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents));
 
-  // Load content data from root data directory
+  // Setup directories for data loading
   const rootDataDir = path.join(__dirname, 'data');
-  const loadDataFile = (filename) => {
-    try {
-      const filePath = path.join(rootDataDir, filename);
-      if (fs.existsSync(filePath)) {
-        const fileContents = fs.readFileSync(filePath, 'utf8');
-        if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
-          return yaml.load(fileContents);
-        }
-      }
-    } catch (error) {
-      console.error(`Error loading data file ${filename}:`, error);
-    }
-    return {};
-  };
-
-  // Load design tokens from design directory
   const designDir = path.join(__dirname, 'src', 'design');
-  const loadDesignFile = (filename) => {
-    try {
-      const filePath = path.join(designDir, filename);
-      if (fs.existsSync(filePath)) {
-        const fileContents = fs.readFileSync(filePath, 'utf8');
-        if (filename.endsWith('.yaml') || filename.endsWith('.yml')) {
-          return yaml.load(fileContents);
-        }
-      }
-    } catch (error) {
-      console.error(`Error loading design file ${filename}:`, error);
-    }
-    return {};
-  };
 
-  // Load all design tokens and make them globally available
-  eleventyConfig.addGlobalData("design", () => {
-    return {
-      colors: loadDesignFile('colors.yaml'),
-      themes: loadDesignFile('themes.yaml'),
-      typography: loadDesignFile('typography.yaml'),
-      spacing: loadDesignFile('spacing.yaml'),
-      components: loadDesignFile('components.yaml'),
-      layout: loadDesignFile('layout.yaml'),
-      settings: loadDesignFile('design.yaml')
-    };
+  /**
+   * Create global data loader for root data directory files
+   */
+  const dataFileNames = [
+    'home.yaml',
+    'about.yaml',
+    'events.yaml',
+    'activities.yaml',
+    'community.yaml',
+    'faq.yaml',
+    'contact.yaml',
+    'global.yaml'
+  ];
+
+  // Load and expose each data file as global data
+  dataFileNames.forEach(filename => {
+    const dataKey = filename.replace('.yaml', '');
+    eleventyConfig.addGlobalData(dataKey, () => {
+      const data = loadYamlFile(rootDataDir, filename);
+      if (Object.keys(data).length === 0) {
+        console.warn(`Warning: ${filename} is empty or missing`);
+      }
+      return data;
+    });
   });
 
-  // Load content data and make it globally available
-  eleventyConfig.addGlobalData("home", () => loadDataFile('home.yaml'));
-  eleventyConfig.addGlobalData("about", () => loadDataFile('about.yaml'));
-  eleventyConfig.addGlobalData("events", () => loadDataFile('events.yaml'));
-  eleventyConfig.addGlobalData("activities", () => loadDataFile('activities.yaml'));
-  eleventyConfig.addGlobalData("community", () => loadDataFile('community.yaml'));
-  eleventyConfig.addGlobalData("faq", () => loadDataFile('faq.yaml'));
-  eleventyConfig.addGlobalData("contact", () => loadDataFile('contact.yaml'));
-  eleventyConfig.addGlobalData("global", () => loadDataFile('global.yaml'));
+  /**
+   * Load all design tokens and make them globally available
+   */
+  eleventyConfig.addGlobalData("design", () => {
+    return {
+      colors: loadYamlFile(designDir, 'colors.yaml'),
+      themes: loadYamlFile(designDir, 'themes.yaml'),
+      typography: loadYamlFile(designDir, 'typography.yaml'),
+      spacing: loadYamlFile(designDir, 'spacing.yaml'),
+      components: loadYamlFile(designDir, 'components.yaml'),
+      layout: loadYamlFile(designDir, 'layout.yaml'),
+      settings: loadYamlFile(designDir, 'design.yaml')
+    };
+  });
 
   // Exclude README files from processing
   eleventyConfig.ignores.add("src/README.md");

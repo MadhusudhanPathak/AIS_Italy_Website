@@ -1,0 +1,79 @@
+# Activities Page Content
+
+# Page sections follow the standard structure with hero, features, and CTA
+
+hero:
+  title: "Our Activities"
+  subtitle: "Promoting AI safety through research, education, and community engagement"
+  description: "Discover the diverse initiatives and programs we run to advance AI safety awareness and knowledge across Italy."
+
+# Core activities and initiatives
+activities:
+  - id: 1
+    icon: "🎓"
+    title: "Educational Workshops"
+    description: "Regular workshops and seminars to educate professionals and students about AI safety principles, risks, and best practices."
+    frequency: "Monthly"
+    audience: "Students, Professionals, Researchers"
+
+  - id: 2
+    icon: "🔬"
+    title: "Research Projects"
+    description: "Collaborative research initiatives focused on AI safety, alignment challenges, and technical solutions."
+    frequency: "Ongoing"
+    audience: "Researchers, PhD Students"
+
+  - id: 3
+    icon: "💬"
+    title: "Community Discussions"
+    description: "Foster open dialogue and debate on AI safety topics through panel discussions, webinars, and meetups."
+    frequency: "Bi-weekly"
+    audience: "Community Members, Professionals"
+
+  - id: 4
+    icon: "📚"
+    title: "Knowledge Sharing"
+    description: "Create and share resources, articles, and guides to democratize AI safety knowledge."
+    frequency: "Ongoing"
+    audience: "General Public"
+
+  - id: 5
+    icon: "🤝"
+    title: "Industry Collaboration"
+    description: "Work with technology companies and organizations to promote responsible AI development practices."
+    frequency: "Quarterly"
+    audience: "Industry Partners, Organizations"
+
+  - id: 6
+    icon: "🌍"
+    title: "Global Network"
+    description: "Connect with international AI safety communities to share insights and coordinate efforts."
+    frequency: "Ongoing"
+    audience: "Global Community"
+
+# Upcoming activities
+upcoming_activities:
+  - id: 1
+    title: "AI Safety Fundamentals Workshop"
+    date: "2026-03-15"
+    time: "18:00 - 20:00"
+    location: "Milan, Italy"
+    description: "An introductory workshop covering core AI safety concepts and real-world applications."
+    register_link: "https://forms.google.com/placeholder"
+    spots_available: 50
+
+  - id: 2
+    title: "Expert Panel: Alignment Challenges"
+    date: "2026-04-12"
+    time: "19:00 - 21:00"
+    location: "Virtual"
+    description: "Panel discussion with leading AI safety researchers discussing current alignment challenges."
+    register_link: "https://forms.google.com/placeholder"
+    spots_available: 100
+
+# Call to Action section
+cta:
+  title: "Get Involved"
+  description: "Join our community and contribute to advancing AI safety in Italy"
+  button_text: "Participate in Our Activities"
+  button_link: "/contact/"

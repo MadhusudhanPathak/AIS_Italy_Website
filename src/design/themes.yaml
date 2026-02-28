@@ -1,91 +1,174 @@
-# Theme Configuration
-# Light and Dark mode color schemes
+# Theme Configuration - AI Safety Italia
+# Comprehensive light and dark themes with unified color system
+# All components use CSS variables for consistent theming
 
 # Light Theme
 light:
   name: "Light"
-  isDefault: true
+  isDefault: false
   
-  # CSS Variables for light theme
+  # Primary Backgrounds
   css:
+    # ========== BACKGROUNDS ==========
     --bg-primary: "#ffffff"
-    --bg-secondary: "#f9fafb"
-    --bg-tertiary: "#f3f4f6"
+    --bg-secondary: "#f8fafc"
+    --bg-tertiary: "#f1f5f9"
+    --bg-overlay: "#f3f4f6"
+    
+    # ========== SURFACES / CARDS ==========
     --card-bg: "#ffffff"
-    --card-elevated: "#ffffff"
+    --card-hover: "#f8fafc"
+    --card-border: "#e2e8f0"
+    --card-shadow: "0 1px 3px 0 rgba(15, 23, 39, 0.08), 0 1px 2px 0 rgba(15, 23, 39, 0.06)"
+    --card-shadow-hover: "0 4px 6px -1px rgba(15, 23, 39, 0.12), 0 2px 4px -1px rgba(15, 23, 39, 0.08)"
     
-    --text-primary: "#111827"
-    --text-secondary: "#4b5563"
-    --text-tertiary: "#6b7280"
-    --text-muted: "#9ca3af"
-    --text-inverse: "#ffffff"
+    # ========== TEXT COLORS ==========
+    --text-primary: "#0f1727"
+    --text-secondary: "#334155"
+    --text-tertiary: "#64748b"
+    --text-muted: "#94a3b8"
+    --text-on-accent: "#ffffff"
+    --text-on-dark: "#ffffff"
     
-    --border-default: "#e5e7eb"
-    --border-strong: "#d1d5db"
-    --border-subtle: "#f3f4f6"
+    # ========== BORDERS ==========
+    --border-default: "#e2e8f0"
+    --border-strong: "#cbd5e1"
+    --border-muted: "#f1f5f9"
     
-    --accent: "#3b82f6"
-    --accent-dark: "#1e40af"
-    --accent-light: "#60a5fa"
+    # ========== PRIMARY ACCENT - Blue (Safety-focused) ==========
+    --accent: "#0369a1"
+    --accent-50: "#f0f9ff"
+    --accent-100: "#e0f2fe"
+    --accent-200: "#bae6fd"
+    --accent-300: "#7dd3fc"
+    --accent-400: "#38bdf8"
+    --accent-500: "#0ea5e9"
+    --accent-600: "#0284c7"
+    --accent-700: "#0369a1"
+    --accent-800: "#075985"
+    --accent-900: "#0c3d66"
     
-    --safety-blue: "#0284c7"
-    --safety-purple: "#6d28d9"
-    --muted: "#6b7280"
+    # ========== SECONDARY ACCENT - Purple (Innovation) ==========
+    --secondary: "#6b21a8"
+    --secondary-50: "#faf5ff"
+    --secondary-100: "#f3e8ff"
+    --secondary-200: "#e9d5ff"
+    --secondary-300: "#d8b4fe"
+    --secondary-400: "#c084fc"
+    --secondary-500: "#a855f7"
+    --secondary-600: "#9333ea"
+    --secondary-700: "#7e22ce"
+    --secondary-800: "#6b21a8"
+    --secondary-900: "#581c87"
     
+    # ========== SEMANTIC COLORS ==========
     --success: "#16a34a"
-    --warning: "#f59e0b"
+    --success-light: "#dcfce7"
+    --warning: "#d97706"
+    --warning-light: "#fef3c7"
     --error: "#dc2626"
-    --info: "#3b82f6"
+    --error-light: "#fee2e2"
+    --info: "#0369a1"
+    --info-light: "#f0f9ff"
     
-    --shadow-sm: "0 1px 2px 0 rgba(0, 0, 0, 0.05)"
-    --shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)"
-    --shadow-md: "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)"
-    --shadow-lg: "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)"
+    # ========== GRADIENTS (as CSS variables for buttons, sections) ==========
+    --gradient-primary: "linear-gradient(to right, var(--accent-600), var(--accent-500))"
+    --gradient-accent: "linear-gradient(to right, var(--accent-500), var(--secondary-600))"
+    --gradient-hero: "linear-gradient(135deg, #0f1727 0%, #1e3a5f 50%, #0f1727 100%)"
     
-    --overlay: "rgba(0, 0, 0, 0.5)"
+    # ========== SHADOWS ==========
+    --shadow-sm: "0 1px 2px 0 rgba(15, 23, 39, 0.05)"
+    --shadow: "0 1px 3px 0 rgba(15, 23, 39, 0.1), 0 1px 2px 0 rgba(15, 23, 39, 0.06)"
+    --shadow-md: "0 4px 6px -1px rgba(15, 23, 39, 0.1), 0 2px 4px -1px rgba(15, 23, 39, 0.06)"
+    --shadow-lg: "0 10px 15px -3px rgba(15, 23, 39, 0.1), 0 4px 6px -2px rgba(15, 23, 39, 0.05)"
+    --shadow-xl: "0 20px 25px -5px rgba(15, 23, 39, 0.1), 0 10px 10px -5px rgba(15, 23, 39, 0.04)"
+    
+    --overlay: "rgba(15, 23, 39, 0.7)"
+    --overlay-light: "rgba(15, 23, 39, 0.5)"
 
 # Dark Theme
 dark:
   name: "Dark"
-  isDefault: false
+  isDefault: true
   
   # CSS Variables for dark theme
   css:
-    --bg-primary: "#0f1727"
+    # ========== BACKGROUNDS ==========
+    --bg-primary: "#0f172a"
     --bg-secondary: "#1e293b"
     --bg-tertiary: "#334155"
-    --card-bg: "#1e293b"
-    --card-elevated: "#334155"
+    --bg-overlay: "#1a1f2e"
     
-    --text-primary: "#f9fafb"
+    # ========== SURFACES / CARDS ==========
+    --card-bg: "#1e293b"
+    --card-hover: "#293548"
+    --card-border: "#475569"
+    --card-shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2)"
+    --card-shadow-hover: "0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)"
+    
+    # ========== TEXT COLORS ==========
+    --text-primary: "#f8fafc"
     --text-secondary: "#cbd5e1"
     --text-tertiary: "#94a3b8"
     --text-muted: "#64748b"
-    --text-inverse: "#0f1727"
+    --text-on-accent: "#0f172a"
+    --text-on-dark: "#f8fafc"
     
-    --border-default: "#334155"
-    --border-strong: "#475569"
-    --border-subtle: "#1e293b"
+    # ========== BORDERS ==========
+    --border-default: "#475569"
+    --border-strong: "#64748b"
+    --border-muted: "#334155"
     
-    --accent: "#60a5fa"
-    --accent-dark: "#3b82f6"
-    --accent-light: "#93c5fd"
+    # ========== PRIMARY ACCENT - Blue (Safety-focused) ==========
+    --accent: "#38bdf8"
+    --accent-50: "#f0f9ff"
+    --accent-100: "#e0f2fe"
+    --accent-200: "#bae6fd"
+    --accent-300: "#7dd3fc"
+    --accent-400: "#38bdf8"
+    --accent-500: "#0ea5e9"
+    --accent-600: "#0284c7"
+    --accent-700: "#0369a1"
+    --accent-800: "#075985"
+    --accent-900: "#0c3d66"
     
-    --safety-blue: "#7dd3fc"
-    --safety-purple: "#c4b5fd"
-    --muted: "#94a3b8"
+    # ========== SECONDARY ACCENT - Purple (Innovation) ==========
+    --secondary: "#d8b4fe"
+    --secondary-50: "#faf5ff"
+    --secondary-100: "#f3e8ff"
+    --secondary-200: "#e9d5ff"
+    --secondary-300: "#d8b4fe"
+    --secondary-400: "#c084fc"
+    --secondary-500: "#a855f7"
+    --secondary-600: "#9333ea"
+    --secondary-700: "#7e22ce"
+    --secondary-800: "#6b21a8"
+    --secondary-900: "#581c87"
     
-    --success: "#22c55e"
+    # ========== SEMANTIC COLORS ==========
+    --success: "#4ade80"
+    --success-light: "#166534"
     --warning: "#fbbf24"
+    --warning-light: "#78350f"
     --error: "#f87171"
-    --info: "#60a5fa"
+    --error-light: "#7f1d1d"
+    --info: "#38bdf8"
+    --info-light: "#082f49"
     
-    --shadow-sm: "0 1px 2px 0 rgba(0, 0, 0, 0.3)"
-    --shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3)"
-    --shadow-md: "0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3)"
-    --shadow-lg: "0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3)"
+    # ========== GRADIENTS (using lighter accent colors for dark mode) ==========
+    --gradient-primary: "linear-gradient(to right, var(--accent-400), var(--accent-300))"
+    --gradient-accent: "linear-gradient(to right, var(--accent-300), var(--secondary-300))"
+    --gradient-hero: "linear-gradient(135deg, #0f172a 0%, #1a3a52 50%, #0f172a 100%)"
     
-    --overlay: "rgba(255, 255, 255, 0.1)"
+    # ========== SHADOWS (stronger in dark mode) ==========
+    --shadow-sm: "0 1px 2px 0 rgba(0, 0, 0, 0.4)"
+    --shadow: "0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4)"
+    --shadow-md: "0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4)"
+    --shadow-lg: "0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4)"
+    --shadow-xl: "0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4)"
+    
+    --overlay: "rgba(0, 0, 0, 0.8)"
+    --overlay-light: "rgba(0, 0, 0, 0.6)"
 
 # Theme Toggle Settings
 toggle:

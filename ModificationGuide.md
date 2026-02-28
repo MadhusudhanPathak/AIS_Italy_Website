@@ -66,23 +66,30 @@ We use YAML format - it's human-readable and uses simple indentation.
 3. Locate the question and update `question` or `answer`
 4. Save the file
 
-## Part 2: Design Modifications
+## Understanding the Theme System
 
-### The Design Directory
+The website uses a **CSS variable-based theme system** that provides seamless switching between light and dark modes. Every color, background, and styled element uses CSS variables that automatically change when the theme is toggled.
 
-All design tokens live in `/src/design` directory:
+### How It Works
 
-```
-src/design/
-├── design.yaml        # Main settings
-├── colors.yaml        # Colors
-├── themes.yaml        # Light/Dark themes
-├── typography.yaml    # Fonts & text styles
-├── spacing.yaml       # Margins & paddings
-├── components.yaml    # Component styles
-├── layout.yaml        # Layout settings
-└── README.md          # Design documentation
-```
+1. **Light Theme (Default)**: Website loads with light theme using CSS variables
+2. **Dark Theme**: When user clicks theme toggle button, variables are overridden for dark mode
+3. **Automatic Switching**: All colors automatically adjust - no manual work needed
+4. **Persistence**: User's choice is saved, so light/dark preference persists on reload
+
+### Theme Variables Location
+
+All theme colors are defined in: **`src/design/themes.yaml`**
+
+This file contains 40+ CSS variables for each theme (light and dark), controlling:
+
+- Background colors
+- Text colors
+- Card styling
+- Borders and shadows
+- Accent colors
+- Gradients
+- And more
 
 ### Changing Brand Colors
 
@@ -99,29 +106,66 @@ brand:
 
 **What changes**: Buttons, links, accents, gradients across the entire site
 
-### Changing Theme Colors
+### Changing Theme Colors (Light & Dark)
 
 **File**: `src/design/themes.yaml`
 
+This file controls the appearance of both light and dark themes. Each theme has 40+ CSS variables.
+
+**Light Theme Section:**
+
 ```yaml
-# Light theme
 light:
   css:
-    --bg-primary: '#ffffff' # Background
-    --text-primary: '#111827' # Text color
-    --border-default: '#e5e7eb' # Border color
-
-# Dark theme
-dark:
-  css:
-    --bg-primary: '#0f1727' # Dark background
-    --text-primary: '#f9fafb' # Light text
-    --border-default: '#334155' # Dark border
+    --bg-primary: '#ffffff'           # Main background (light)
+    --bg-secondary: '#f8fafc'         # Secondary background
+    --text-primary: '#0f1727'         # Main text (dark)
+    --text-secondary: '#334155'       # Secondary text
+    --text-tertiary: '#94a3b8'        # Tertiary text
+    --accent: '#0369a1'               # Primary blue
+    --card-bg: '#ffffff'              # Card background
+    --card-hover: '#f1f5f9'           # Card hover state
+    --card-border: '#e2e8f0'          # Card border color
+    # ... more variables ...
 ```
 
-**What changes**: Background, text, and border colors for light/dark modes
+**Dark Theme Section:**
 
-### Changing Fonts
+```yaml
+dark:
+  css:
+    --bg-primary: '#0f172a'           # Main background (dark)
+    --bg-secondary: '#1e293b'         # Secondary background
+    --text-primary: '#f8fafc'         # Main text (light)
+    --text-secondary: '#cbd5e1'       # Secondary text
+    --text-tertiary: '#94a3b8'        # Tertiary text
+    --accent: '#38bdf8'               # Primary blue (lighter)
+    --card-bg: '#1e293b'              # Card background
+    --card-hover: '#334155'           # Card hover state
+    --card-border: '#334155'          # Card border color
+    # ... more variables ...
+```
+
+**Key Variables:**
+
+- `--bg-primary` / `--bg-secondary` / `--bg-tertiary` - Page backgrounds
+- `--text-primary` / `--text-secondary` / `--text-tertiary` - Text colors
+- `--accent` - Primary brand color
+- `--card-bg`, `--card-border`, `--card-shadow` - Card styling
+- `--success`, `--warning`, `--error`, `--info` - Semantic colors
+
+**What Changes**: Everything! All colors automatically adjust when the theme is switched.
+
+**To Modify**:
+
+1. Open `src/design/themes.yaml`
+2. Find the `light:` section for light mode, or `dark:` section for dark mode
+3. Locate the variable you want to change (e.g., `--accent`)
+4. Update the hex color value (e.g., `'#0369a1'` to `'#3b82f6'`)
+5. Save and reload the website
+6. Use the theme toggle button in the header to verify changes in both modes
+
+#### Changing Fonts
 
 **File**: `src/design/typography.yaml`
 
@@ -139,9 +183,9 @@ fontFamilies:
       - 'sans-serif'
 ```
 
-**What changes**: All text across the website
+**What Changes**: Font across the website. Your choice applies to both light and dark themes.
 
-### Changing Font Sizes
+#### Changing Font Sizes
 
 **File**: `src/design/typography.yaml`
 
@@ -154,28 +198,24 @@ fontSizes:
     value: '1rem' # Body text size
 ```
 
-**What changes**: Text sizes throughout the site
+**What Changes**: All text sizes. Your changes apply to both themes.
 
-### Changing Spacing & Padding
+#### Changing Spacing & Padding
 
 **File**: `src/design/spacing.yaml`
 
 ```yaml
-# Section spacing
 padding:
   section:
-    top: "4rem"      # Top padding for sections
-    bottom: "4rem"   # Bottom padding for sections
-
-# Card padding
-padding:
+    top: '4rem'      # Top padding for sections
+    bottom: '4rem'   # Bottom padding for sections
   card:
-    default: "1.5rem"  # Card padding
+    default: '1.5rem'  # Card padding
 ```
 
-**What changes**: Spacing between sections, inside cards, buttons, etc.
+**What Changes**: Spacing between sections, inside cards, and padding throughout the site. Changes apply to both themes.
 
-### Changing Button Styles
+#### Changing Button Styles
 
 **File**: `src/design/components.yaml`
 
@@ -186,41 +226,9 @@ buttons:
     padding:
       x: '1.5rem' # Horizontal padding
       y: '0.75rem' # Vertical padding
-    borderRadius: 'md'
 ```
 
-**What changes**: All primary buttons across the site
-
-### Changing Border Radius
-
-**File**: `src/design/design.yaml`
-
-```yaml
-settings:
-  borderRadius:
-    sm: '0.25rem' # Small radius
-    default: '0.375rem'
-    md: '0.5rem' # Medium radius
-    lg: '0.75rem' # Large radius
-    xl: '1rem' # Extra large
-    full: '9999px' # Circle
-```
-
-**What changes**: Rounded corners on buttons, cards, inputs
-
-### Changing Shadows
-
-**File**: `src/design/design.yaml`
-
-```yaml
-settings:
-  shadows:
-    sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)'
-    default: '0 1px 3px 0 rgba(0, 0, 0, 0.1)'
-    lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1)'
-```
-
-**What changes**: Drop shadows on cards, buttons, modals
+**What Changes**: All primary buttons. Uses theme CSS variables, so automatically works in both light and dark modes.
 
 ## Step-by-Step Editing Instructions
 
@@ -320,15 +328,27 @@ description: 'Contains: colon & special chars!'
 1. **Preview locally**: Run `npm start` and visit `http://localhost:8080`
 2. **Check affected pages**: Navigate to pages you modified
 3. **Verify design**: Ensure colors, fonts, spacing look correct
-4. **Test both themes**: Check light and dark modes
-5. **Test links**: Click all links
-6. **Check mobile**: View on different screen sizes
+4. **Test both themes**: Click the theme toggle button in the header to verify **light AND dark modes**
+5. **Check text contrast**: Ensure text is readable in both modes
+6. **Test links**: Click all links to verify functionality
+7. **Check mobile**: View on different screen sizes (use F12 → Device Emulation)
+
+### Key Testing Points for Theme Changes
+
+- [ ] Background colors are correct in light mode
+- [ ] Background colors are correct in dark mode
+- [ ] Text colors have sufficient contrast in light mode
+- [ ] Text colors have sufficient contrast in dark mode
+- [ ] Card backgrounds and borders display properly in both modes
+- [ ] Buttons have proper colors and visibility in both modes
+- [ ] Shadows display correctly in both modes (may be more subtle in dark)
+- [ ] All pages maintain proper styling in both themes
 
 ### Troubleshooting
 
 **Site doesn't load after changes:**
 
-1. Check console for error messages
+1. Check console for error messages (F12 → Console tab)
 2. Verify YAML syntax (indentation, colons, quotes)
 3. Compare with previous working version
 
@@ -337,43 +357,78 @@ description: 'Contains: colon & special chars!'
 1. Verify field name matches template
 2. Check file is in correct location
 3. Ensure site rebuilt after changes
+4. Clear browser cache
 
 **Design doesn't update:**
 
-1. Clear browser cache
+1. Clear browser cache (Ctrl+Shift+Delete)
 2. Rebuild: `npm run build`
 3. Check YAML syntax in design file
 
 **Colors look wrong:**
 
 1. Verify hex color format (e.g., `#3b82f6`)
-2. Check CSS variable references
-3. Test in both light and dark modes
+2. Check CSS variable references in themes.yaml
+3. **Test in both light and dark modes** using theme toggle button
+
+**Theme Toggle Doesn't Work:**
+
+1. Check that `data-theme` attribute is on `<html>` element (in browser DevTools)
+2. Clear localStorage (F12 → Application → Local Storage → Clear All)
+3. Refresh page
+
+**Dark Mode Not Showing:**
+
+1. Verify dark theme variables are in `src/design/themes.yaml` under the `dark:` section
+2. Check that `[data-theme='dark']` CSS rules are present in styles
+3. Use browser DevTools (F12) to inspect: right-click element → Inspect
+4. Verify CSS variables are being applied
 
 ## Warnings: Files Not to Edit
 
 ⚠️ **DO NOT EDIT THESE FILES** unless you know what you're doing:
 
+- `/src/assets/css/style.css` - CSS file (use `src/design/` for styling changes instead)
 - `/src/layouts/base.njk` - Page layout template
 - `/src/layouts/page.njk` - Page wrapper template
-- `/src/components/` - Reusable components
+- `/src/components/` - Reusable component templates
 - `/src/utils/` - Utility logic
 - `.eleventy.js` - Site configuration
 - `package.json` - Dependencies
-- `tailwind.config.js` - Styling configuration (loads from design tokens automatically)
+- `tailwind.config.js` - Styling configuration
 
-Editing these files could break the website functionality.
+Editing these files could break the website functionality or break the theme system.
+
+**Theme colors should ALWAYS be updated in**:
+- `src/design/themes.yaml` (CSS variables for light/dark modes) ✅
+- **NOT** in `src/assets/css/style.css` ❌
 
 ## Quick Reference
 
-### Change Brand Colors
+### Change Theme Colors (Most Common Change)
 
-**File**: `src/design/colors.yaml`
+**File**: `src/design/themes.yaml`
+
+Find the `light:` section for light mode colors, or `dark:` section for dark mode colors. Update hex values in the `css:` subsection.
 
 ```yaml
-brand:
-  primary: '#YOUR_COLOR'
+light:
+  css:
+    --bg-primary: '#ffffff'  # Change this
+    --text-primary: '#0f1727'  # Or this
+    # etc.
+dark:
+  css:
+    --bg-primary: '#0f172a'  # Dark mode versions
+    --text-primary: '#f8fafc'
+    # etc.
 ```
+
+### Change Brand Colors
+
+**File**: `src/design/colors.yaml` (reference) and `src/design/themes.yaml` (active)
+
+Primary brand color is stored in themes.yaml as `--accent` for both light and dark modes.
 
 ### Change Fonts
 
@@ -412,6 +467,14 @@ padding:
 **File**: `data/events.yaml`
 
 - Add to upcoming_events list
+
+### Test Your Changes
+
+1. Save the file
+2. Run `npm start` to view locally (`http://localhost:8080`)
+3. **Test both themes** - use the theme toggle button in the header to verify light and dark modes
+4. Check mobile responsiveness
+5. Verify all pages affected by your changes
 
 ## Support
 

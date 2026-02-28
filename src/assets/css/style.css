@@ -13,83 +13,165 @@
    ========================================================================== */
 
 :root {
-  /* Light theme (default) */
+  /* Light theme (default) - All variables populated from design tokens */
+
+  /* Backgrounds */
   --bg-primary: #ffffff;
-  --bg-secondary: #f9fafb;
-  --bg-tertiary: #f3f4f6;
+  --bg-secondary: #f8fafc;
+  --bg-tertiary: #f1f5f9;
+  --bg-overlay: #f3f4f6;
+
+  /* Surfaces / Cards */
   --card-bg: #ffffff;
-  --card-elevated: #ffffff;
+  --card-hover: #f8fafc;
+  --card-border: #e2e8f0;
+  --card-shadow: 0 1px 3px 0 rgba(15, 23, 39, 0.08), 0 1px 2px 0 rgba(15, 23, 39, 0.06);
+  --card-shadow-hover: 0 4px 6px -1px rgba(15, 23, 39, 0.12), 0 2px 4px -1px rgba(15, 23, 39, 0.08);
 
-  --text-primary: #111827;
-  --text-secondary: #4b5563;
-  --text-tertiary: #6b7280;
-  --text-muted: #9ca3af;
-  --text-inverse: #ffffff;
+  /* Text Colors */
+  --text-primary: #0f1727;
+  --text-secondary: #334155;
+  --text-tertiary: #64748b;
+  --text-muted: #94a3b8;
+  --text-on-accent: #ffffff;
+  --text-on-dark: #ffffff;
 
-  --border-default: #e5e7eb;
-  --border-strong: #d1d5db;
-  --border-subtle: #f3f4f6;
+  /* Borders */
+  --border-default: #e2e8f0;
+  --border-strong: #cbd5e1;
+  --border-muted: #f1f5f9;
 
-  --accent: #3b82f6;
-  --accent-dark: #1e40af;
-  --accent-light: #60a5fa;
+  /* Primary Accent - Blue */
+  --accent: #0369a1;
+  --accent-50: #f0f9ff;
+  --accent-100: #e0f2fe;
+  --accent-200: #bae6fd;
+  --accent-300: #7dd3fc;
+  --accent-400: #38bdf8;
+  --accent-500: #0ea5e9;
+  --accent-600: #0284c7;
+  --accent-700: #0369a1;
+  --accent-800: #075985;
+  --accent-900: #0c3d66;
 
-  --safety-blue: #0284c7;
-  --safety-purple: #6d28d9;
-  --muted: #6b7280;
+  /* Secondary Accent - Purple */
+  --secondary: #6b21a8;
+  --secondary-50: #faf5ff;
+  --secondary-100: #f3e8ff;
+  --secondary-200: #e9d5ff;
+  --secondary-300: #d8b4fe;
+  --secondary-400: #c084fc;
+  --secondary-500: #a855f7;
+  --secondary-600: #9333ea;
+  --secondary-700: #7e22ce;
+  --secondary-800: #6b21a8;
+  --secondary-900: #581c87;
 
+  /* Semantic Colors */
   --success: #16a34a;
-  --warning: #f59e0b;
+  --success-light: #dcfce7;
+  --warning: #d97706;
+  --warning-light: #fef3c7;
   --error: #dc2626;
-  --info: #3b82f6;
+  --error-light: #fee2e2;
+  --info: #0369a1;
+  --info-light: #f0f9ff;
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  /* Gradients */
+  --gradient-primary: linear-gradient(to right, #0284c7, #0ea5e9);
+  --gradient-accent: linear-gradient(to right, #0ea5e9, #9333ea);
+  --gradient-hero: linear-gradient(135deg, #0f1727 0%, #1e3a5f 50%, #0f1727 100%);
 
-  --overlay: rgba(0, 0, 0, 0.5);
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(15, 23, 39, 0.05);
+  --shadow: 0 1px 3px 0 rgba(15, 23, 39, 0.1), 0 1px 2px 0 rgba(15, 23, 39, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(15, 23, 39, 0.1), 0 2px 4px -1px rgba(15, 23, 39, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 39, 0.1), 0 4px 6px -2px rgba(15, 23, 39, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 39, 0.1), 0 10px 10px -5px rgba(15, 23, 39, 0.04);
+
+  --overlay: rgba(15, 23, 39, 0.7);
+  --overlay-light: rgba(15, 23, 39, 0.5);
 }
 
 [data-theme='dark'] {
-  /* Dark theme */
-  --bg-primary: #0f1727;
+  /* Dark theme - All variables populated from design tokens */
+
+  /* Backgrounds */
+  --bg-primary: #0f172a;
   --bg-secondary: #1e293b;
   --bg-tertiary: #334155;
-  --card-bg: #1e293b;
-  --card-elevated: #334155;
+  --bg-overlay: #1a1f2e;
 
-  --text-primary: #f9fafb;
+  /* Surfaces / Cards */
+  --card-bg: #1e293b;
+  --card-hover: #293548;
+  --card-border: #475569;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
   --text-secondary: #cbd5e1;
   --text-tertiary: #94a3b8;
   --text-muted: #64748b;
-  --text-inverse: #0f1727;
+  --text-on-accent: #0f172a;
+  --text-on-dark: #f8fafc;
 
-  --border-default: #334155;
-  --border-strong: #475569;
-  --border-subtle: #1e293b;
+  /* Borders */
+  --border-default: #475569;
+  --border-strong: #64748b;
+  --border-muted: #334155;
 
-  --accent: #60a5fa;
-  --accent-dark: #3b82f6;
-  --accent-light: #93c5fd;
+  /* Primary Accent - Blue */
+  --accent: #38bdf8;
+  --accent-50: #f0f9ff;
+  --accent-100: #e0f2fe;
+  --accent-200: #bae6fd;
+  --accent-300: #7dd3fc;
+  --accent-400: #38bdf8;
+  --accent-500: #0ea5e9;
+  --accent-600: #0284c7;
+  --accent-700: #0369a1;
+  --accent-800: #075985;
+  --accent-900: #0c3d66;
 
-  --safety-blue: #7dd3fc;
-  --safety-purple: #c4b5fd;
-  --muted: #94a3b8;
+  /* Secondary Accent - Purple */
+  --secondary: #d8b4fe;
+  --secondary-50: #faf5ff;
+  --secondary-100: #f3e8ff;
+  --secondary-200: #e9d5ff;
+  --secondary-300: #d8b4fe;
+  --secondary-400: #c084fc;
+  --secondary-500: #a855f7;
+  --secondary-600: #9333ea;
+  --secondary-700: #7e22ce;
+  --secondary-800: #6b21a8;
+  --secondary-900: #581c87;
 
-  --success: #22c55e;
+  /* Semantic Colors */
+  --success: #4ade80;
+  --success-light: #166534;
   --warning: #fbbf24;
+  --warning-light: #78350f;
   --error: #f87171;
-  --info: #60a5fa;
+  --error-light: #7f1d1d;
+  --info: #38bdf8;
+  --info-light: #082f49;
 
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
+  /* Gradients */
+  --gradient-primary: linear-gradient(to right, #38bdf8, #7dd3fc);
+  --gradient-accent: linear-gradient(to right, #7dd3fc, #d8b4fe);
+  --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1a3a52 50%, #0f172a 100%);
 
-  --overlay: rgba(255, 255, 255, 0.1);
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+
+  --overlay: rgba(0, 0, 0, 0.8);
+  --overlay-light: rgba(0, 0, 0, 0.6);
 }
 
 /* ==========================================================================
@@ -162,14 +244,13 @@ p {
 
 a {
   color: var(--accent);
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
 }
 
 a:hover {
-  color: var(--accent-dark);
-  text-decoration-thickness: 2px;
+  opacity: 0.8;
+  color: var(--accent);
 }
 
 /* ==========================================================================
@@ -190,19 +271,57 @@ nav a.active {
 }
 
 .btn-primary {
-  @apply bg-gradient-to-r from-accent to-safety-blue text-white shadow-lg hover:shadow-xl hover:scale-[1.03];
+  background: var(--gradient-primary);
+  color: var(--text-on-accent);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-1px);
+}
+
+.btn-primary:focus {
+  outline: 2px solid var(--accent-700);
+  outline-offset: 2px;
 }
 
 .btn-cta {
-  @apply bg-white text-accent px-6 py-2 rounded-md font-semibold shadow-md hover:shadow-lg hover:bg-gray-50;
+  background-color: var(--card-bg);
+  color: var(--accent);
+  border: 2px solid var(--accent);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-cta:hover {
+  background: var(--gradient-primary);
+  color: var(--text-on-accent);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent);
 }
 
 .btn-ghost {
-  @apply bg-white bg-opacity-10 text-white border border-white/20 px-6 py-2 rounded-md;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--text-on-dark);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  box-shadow: var(--shadow-md);
 }
 
 .btn-outline {
-  @apply border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all duration-300;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  background-color: transparent;
+}
+
+.btn-outline:hover {
+  background: var(--gradient-primary);
+  color: var(--text-on-accent);
+  border-color: transparent;
 }
 
 .btn:focus {
@@ -224,31 +343,39 @@ nav a.active {
    ========================================================================== */
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: var(--card-bg);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--card-border);
   border-radius: 0.75rem;
-  box-shadow: var(--shadow);
+  box-shadow: var(--card-shadow);
   padding: 1.5rem;
-  transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease, background-color 0.2s ease;
   color: var(--text-primary);
+  height: 100%;
 }
 
 .card:hover {
-  box-shadow: var(--shadow-lg);
+  background-color: var(--card-hover);
+  box-shadow: var(--card-shadow-hover);
 }
 
 .card-body {
-  @apply flex-grow;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .card-footer {
   @apply pt-4 border-t;
-  border-color: var(--border-default);
-  color: var(--text-primary);
+  border-color: var(--card-border);
+  color: var(--text-secondary);
+  margin-top: auto;
 }
 
 .card-accent {
-  @apply rounded-xl p-6 border-l-4 border-accent;
+  @apply rounded-xl p-6 border-l-4;
+  border-color: var(--accent);
   background-color: var(--card-bg);
   color: var(--text-primary);
 }
@@ -256,7 +383,7 @@ nav a.active {
 .card-dark {
   background-color: var(--card-bg);
   color: var(--text-primary);
-  border-color: var(--border-default);
+  border-color: var(--card-border);
 }
 
 /* ==========================================================================
@@ -274,16 +401,25 @@ nav a.active {
    ========================================================================== */
 
 footer {
-  background: linear-gradient(to bottom, #1e293b, #0f172a);
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-default);
   color: var(--text-secondary);
 }
 
 footer h3 {
-  color: white;
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 footer a {
   color: var(--text-secondary);
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: var(--accent);
+  text-decoration-thickness: 2px;
 }
 
 /* ==========================================================================
@@ -291,24 +427,39 @@ footer a {
    ========================================================================== */
 
 .feature-box {
-  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
-  border: 1px solid var(--border-default);
+  background-color: var(--card-hover);
+  border: 1px solid var(--card-border);
   color: var(--text-primary);
+  border-radius: 0.5rem;
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+.feature-box:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .feature-item {
   @apply flex items-start space-x-4 p-4 rounded-lg;
-  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
-  border: 1px solid var(--border-default);
+  background-color: var(--card-hover);
+  border: 1px solid var(--card-border);
   color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+.feature-item:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .feature-content h4 {
   color: var(--text-primary);
+  font-weight: 600;
 }
 
 .feature-content p {
   color: var(--text-secondary);
+  margin-top: 0.5rem;
 }
 
 /* ==========================================================================
@@ -328,14 +479,21 @@ footer a {
 }
 
 .stat-box {
-  @apply bg-white dark:bg-primary-800 rounded-xl p-6 border border-gray-100 dark:border-primary-700 text-center;
+  @apply rounded-xl p-6 border text-center;
   background-color: var(--card-bg);
   color: var(--text-primary);
+  border-color: var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+.stat-box:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .stat-number {
   @apply text-3xl md:text-4xl font-extrabold;
-  background: linear-gradient(to right, var(--accent), var(--safety-purple));
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -346,16 +504,19 @@ footer a {
    ========================================================================== */
 
 .cta-box {
-  @apply rounded-xl p-8 md:p-12 text-center shadow-2xl;
-  background: linear-gradient(to right, var(--accent), var(--safety-blue), var(--safety-purple));
+  @apply rounded-xl p-8 md:p-12 text-center;
+  background: var(--gradient-accent);
+  box-shadow: var(--shadow-lg);
 }
 
 .cta-box h2 {
-  @apply text-2xl md:text-3xl font-bold text-white;
+  @apply text-2xl md:text-3xl font-bold;
+  color: var(--text-on-accent);
 }
 
 .cta-box p {
-  @apply text-white/90 max-w-2xl mx-auto;
+  @apply max-w-2xl mx-auto;
+  color: rgba(248, 250, 252, 0.95);
 }
 
 /* ==========================================================================
@@ -363,33 +524,49 @@ footer a {
    ========================================================================== */
 
 .hero {
-  @apply bg-gradient-to-br from-slate-900 via-blue-900 to-slate-800 py-24 md:py-36 relative overflow-hidden;
+  background: var(--gradient-hero);
   min-height: 80vh;
+  @apply py-24 md:py-36 relative overflow-hidden;
 }
 
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.18;
+  opacity: 0.15;
   background-image: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.32), transparent 40%),
     radial-gradient(circle at 80% 80%, rgba(109, 40, 217, 0.24), transparent 40%);
+  pointer-events: none;
 }
 
 .hero-background {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.7;
+  opacity: 1;
   z-index: 0;
 }
 
+[data-theme='dark'] .hero-background {
+  opacity: 0.6;
+}
+
 .hero-title {
-  @apply text-4xl md:text-6xl font-extrabold leading-tight text-white;
+  @apply text-4xl md:text-6xl font-extrabold leading-tight;
+  color: var(--text-primary);
 }
 
 .hero-sub {
-  @apply text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mt-4;
+  @apply text-lg md:text-xl max-w-3xl mx-auto mt-4;
+  color: var(--text-secondary);
+}
+
+[data-theme='dark'] .hero-title {
+  color: #ffffff;
+}
+
+[data-theme='dark'] .hero-sub {
+  color: rgba(248, 250, 252, 0.9);
 }
 
 /* ==========================================================================
@@ -397,19 +574,22 @@ footer a {
    ========================================================================== */
 
 nav a {
-  @apply text-gray-700 dark:text-primary-200 font-medium hover:text-accent transition-all duration-300 relative;
+  @apply text-sm font-medium transition-all duration-300 relative;
+  color: var(--text-primary);
   position: relative;
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
 }
 
 nav a:hover {
-  background-color: color-mix(in srgb, var(--accent) 10%, transparent 90%);
+  background-color: rgba(3, 105, 161, 0.08);
+  color: var(--accent);
 }
 
 nav a.active {
-  @apply text-accent font-semibold;
-  background-color: color-mix(in srgb, var(--accent) 15%, transparent 85%);
+  @apply font-semibold;
+  color: var(--accent);
+  background-color: rgba(3, 105, 161, 0.12);
 }
 
 /* ==========================================================================
@@ -418,21 +598,23 @@ nav a.active {
 
 .badge {
   @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+  border-radius: 9999px;
 }
 
 .badge-primary {
-  background-color: color-mix(in srgb, var(--accent) 10%, transparent 90%);
-  color: color-mix(in srgb, var(--accent) 80%, black 20%);
+  background-color: rgba(3, 105, 161, 0.12);
+  color: var(--accent-700);
+  font-weight: 600;
 }
 
 .badge-info {
-  background-color: color-mix(in srgb, var(--safety-blue) 10%, transparent 90%);
-  color: color-mix(in srgb, var(--safety-blue) 80%, black 20%);
+  background-color: rgba(3, 105, 161, 0.12);
+  color: var(--info);
 }
 
 .badge-success {
-  background-color: color-mix(in srgb, #10b981 10%, transparent 90%);
-  color: color-mix(in srgb, #10b981 80%, black 20%);
+  background-color: rgba(22, 163, 74, 0.12);
+  color: var(--success);
 }
 
 /* ==========================================================================
@@ -450,22 +632,30 @@ nav a.active {
 
 h1 {
   @apply text-3xl md:text-5xl font-bold mb-4;
+  color: var(--text-primary);
 }
 
 h2 {
   @apply text-2xl md:text-4xl font-bold mb-6;
+  color: var(--text-primary);
 }
 
 h3 {
   @apply text-xl md:text-2xl font-semibold mb-3;
+  color: var(--text-primary);
 }
 
 p {
   @apply text-base md:text-lg leading-relaxed mb-4;
+  color: var(--text-secondary);
 }
 
 .accent-text {
-  @apply bg-gradient-to-r from-accent to-safety-purple bg-clip-text text-transparent;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -481,7 +671,12 @@ p {
    ========================================================================== */
 
 .hover-lift {
-  @apply transition-all duration-300 ease-in-out hover:-translate-y-1 hover:shadow-xl;
+  @apply transition-all duration-300 ease-in-out hover:-translate-y-1;
+  box-shadow: var(--card-shadow);
+}
+
+.hover-lift:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 .interactive-element {
@@ -490,7 +685,7 @@ p {
 
 .interactive-element:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-lg);
 }
 
 .focus-visible {
@@ -522,9 +717,11 @@ p {
 
 .testimonial {
   @apply p-6 rounded-lg;
-  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
-  border: 1px solid var(--border-default);
+  background-color: var(--card-hover);
+  border: 1px solid var(--card-border);
   color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+  border-left: 4px solid var(--accent);
 }
 
 /* ==========================================================================
@@ -533,9 +730,15 @@ p {
 
 .membership-card {
   @apply rounded-xl p-6 border;
-  border-color: var(--border-default);
+  border-color: var(--card-border);
   background-color: var(--card-bg);
   color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+.membership-card:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 /* ==========================================================================
@@ -543,13 +746,19 @@ p {
    ========================================================================== */
 
 .faq-item {
-  @apply border-b border-gray-200 dark:border-primary-700 py-4;
+  @apply border-b py-4;
+  border-color: var(--card-border);
   color: var(--text-primary);
 }
 
 .faq-question {
   @apply font-semibold text-lg cursor-pointer;
   color: var(--text-primary);
+  transition: color 0.2s ease;
+}
+
+.faq-question:hover {
+  color: var(--accent);
 }
 
 .faq-answer {
@@ -564,8 +773,14 @@ p {
 .contact-card {
   @apply rounded-lg p-6;
   background-color: var(--card-bg);
-  border: 1px solid var(--border-default);
+  border: 1px solid var(--card-border);
   color: var(--text-primary);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  box-shadow: var(--card-shadow-hover);
 }
 
 /* ==========================================================================
@@ -574,14 +789,20 @@ p {
 
 .form-input {
   @apply w-full px-4 py-2 rounded-md border;
-  border-color: var(--border-default);
+  border-color: var(--card-border);
   background-color: var(--card-bg);
   color: var(--text-primary);
+  transition: border-color 0.2s ease;
 }
 
 .form-input:focus {
   outline: none;
   border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1);
+}
+
+.form-input::placeholder {
+  color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -591,6 +812,8 @@ p {
 details summary {
   cursor: pointer;
   color: var(--text-primary);
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
 
 details summary:hover {
@@ -603,16 +826,23 @@ details summary:hover {
 
 table {
   color: var(--text-primary);
+  width: 100%;
+  border-collapse: collapse;
 }
 
 th {
   color: var(--text-primary);
-  background-color: color-mix(in srgb, var(--accent) 10%, transparent 90%);
+  background-color: var(--bg-secondary);
+  padding: 0.75rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--card-border);
 }
 
 td {
   color: var(--text-secondary);
-  border-bottom: 1px solid var(--border-default);
+  border-bottom: 1px solid var(--card-border);
+  padding: 0.75rem;
 }
 
 /* ==========================================================================
@@ -622,8 +852,10 @@ td {
 blockquote {
   color: var(--text-primary);
   border-left: 4px solid var(--accent);
-  background-color: color-mix(in srgb, var(--card-bg) 80%, transparent 20%);
+  background-color: var(--card-hover);
   border-radius: 0 4px 4px 0;
+  padding: 1rem;
+  margin: 1rem 0;
 }
 
 /* ==========================================================================
@@ -631,18 +863,27 @@ blockquote {
    ========================================================================== */
 
 code {
-  color: var(--text-primary);
-  background-color: color-mix(in srgb, var(--card-bg) 60%, transparent 40%);
+  color: var(--accent);
+  background-color: var(--bg-tertiary);
   padding: 0.2rem 0.4rem;
   border-radius: 4px;
   font-size: 0.875em;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+pre {
+  background-color: var(--bg-secondary);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  border: 1px solid var(--card-border);
 }
 
 pre code {
+  color: var(--text-primary);
   background: none;
   padding: 0;
   border-radius: 0;
-  color: var(--text-primary);
 }
 
 /* ==========================================================================

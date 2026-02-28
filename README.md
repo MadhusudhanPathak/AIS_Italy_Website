@@ -2,17 +2,20 @@
 
 A modern, minimal static website for AI Safety Italia - built with Eleventy, Tailwind CSS, and a comprehensive design token system.
 
-## Features
+## ✨ Features
 
-- **Design Token System**: All colors, fonts, spacing, and styles controlled via YAML files
-- **Dark/Light Themes**: Fully configurable theme system with CSS variables
-- **Modern Responsive Design**: Clean, minimal aesthetic using Tailwind CSS
-- **Fast Performance**: Static site generation with Eleventy
-- **Easy Deployment**: Configured for Vercel
-- **Content Management**: Simple Markdown + YAML structure
-- **Component-Based**: Reusable Nunjucks templates
-- **SEO Optimized**: Semantic HTML and proper metadata
-- **Accessibility Focused**: Proper ARIA attributes and keyboard navigation
+- **Design Token System**: All visual properties (colors, fonts, spacing, animations) controlled via YAML files
+- **Dark/Light Themes**: Fully configurable, CSS variable-based theme system with localStorage persistence
+- **Modern Responsive Design**: Clean, minimal aesthetic using Tailwind CSS with mobile-first approach
+- **Fast Performance**: Static site generation with Eleventy ensures minimal HTTP requests and fast load times
+- **Easy Deployment**: Pre-configured for Vercel with zero-config deployment
+- **Content Management**: Simple Markdown + YAML structure separates content from code and design
+- **Component-Based Architecture**: Reusable Nunjucks templates reduce duplication and improve maintainability
+- **SEO Optimized**: Semantic HTML, proper metadata, and dynamic title generation
+- **Accessibility Focused**: Skip links, ARIA labels, keyboard navigation, and semantic HTML throughout
+- **Data Validation**: Integrated validation for content and configuration files with clear error messages
+- **Code Quality**: ESLint, Prettier, and Husky pre-commit hooks ensure consistent, professional code
+- **Unified Utilities**: Centralized validation and helper functions with comprehensive JSDoc documentation
 
 ## Table of Contents
 
@@ -21,8 +24,10 @@ A modern, minimal static website for AI Safety Italia - built with Eleventy, Tai
 - [Development](#development)
 - [Building](#building)
 - [Project Structure](#project-structure)
+- [Architecture](#architecture)
 - [Design System](#design-system)
 - [Content Management](#content-management)
+- [Utilities & Validation](#utilities--validation)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
@@ -33,11 +38,17 @@ A modern, minimal static website for AI Safety Italia - built with Eleventy, Tai
 # Install dependencies
 npm install
 
-# Start development server
+# Start development server with live reload
 npm start
 
 # Build for production
 npm run build
+
+# Format code
+npm run format
+
+# Lint JavaScript
+npm run lint
 ```
 
 ## Installation
@@ -55,7 +66,7 @@ cd AI_Safety_Italy_Website
 npm install
 ```
 
-**Windows Note:** You might need to adjust PowerShell execution policy:
+3. **Windows Note**: You might need to adjust PowerShell execution policy:
 
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
@@ -70,10 +81,10 @@ npm start
 ```
 
 This will:
-
 - Start a local server at `http://localhost:8080`
-- Enable live reload
-- Watch for CSS and design token changes
+- Enable hot reload for HTML, CSS, and JavaScript changes
+- Watch for CSS, design token, and data file changes
+- Automatically rebuild on save
 
 ## Building
 
@@ -83,48 +94,143 @@ Build for production:
 npm run build
 ```
 
-Output will be in the `_site/` directory.
+This will:
+- Clean the `_site/` output directory
+- Build CSS with PostCSS and Tailwind
+- Generate static HTML with Eleventy
+- Output to `_site/` directory ready for deployment
 
 ## Project Structure
 
 ```
 AI_Safety_Italy_Website/
-├── data/                   # Content data files (YAML)
-│   ├── home.yaml
-│   ├── about.yaml
-│   ├── events.yaml
-│   └── ...
+├── data/                         # Content data files (YAML) - Edit here for content changes
+│   ├── home.yaml                 # Homepage content
+│   ├── about.yaml                # About page content
+│   ├── events.yaml               # Events page content
+│   ├── activities.yaml           # Activities page content
+│   ├── community.yaml            # Community page content
+│   ├── faq.yaml                  # FAQ page content
+│   ├── contact.yaml              # Contact page content
+│   ├── global.yaml               # Shared content (navigation, footer, social)
+│   └── AISafetyItaly.svg         # Logo
 ├── src/
-│   ├── components/         # Reusable template components
-│   ├── layouts/            # Page layout templates
-│   ├── data/               # Site config, team, etc.
-│   ├── content/            # Page content (Markdown)
-│   ├── design/             # Design tokens (YAML) ⭐
-│   │   ├── design.yaml
-│   │   ├── colors.yaml
-│   │   ├── themes.yaml
-│   │   ├── typography.yaml
-│   │   ├── spacing.yaml
-│   │   ├── components.yaml
-│   │   └── layout.yaml
-│   ├── assets/
+│   ├── assets/                   # Static assets
 │   │   ├── css/
-│   │   ├── js/
-│   │   ├── img/
-│   │   └── fonts/
-│   └── utils/              # Utility functions
-├── .eleventy.js            # Eleventy configuration
-├── tailwind.config.js      # Tailwind CSS (uses design tokens)
-├── postcss.config.js       # PostCSS configuration
-├── vercel.json             # Vercel deployment config
-├── package.json
-├── ModificationGuide.md    # Content/design editing guide
-└── README.md
+│   │   │   └── style.css          # Main stylesheet (Tailwind + custom CSS)
+│   │   ├── img/                   # Images and icons
+│   │   ├── js/                    # Client-side JavaScript
+│   │   └── fonts/                 # Custom web fonts
+│   ├── components/               # Reusable Nunjucks components
+│   │   ├── header.njk            # Site header with theme toggle
+│   │   ├── footer.njk            # Site footer
+│   │   ├── hero.njk              # Hero section
+│   │   ├── cta.njk               # Call-to-action component
+│   │   ├── event-card.njk        # Event card component
+│   │   ├── features.njk          # Features list
+│   │   ├── stats.njk             # Statistics display
+│   │   ├── icons.njk             # SVG icon definitions
+│   │   ├── style-guide.njk       # Style guide component
+│   │   └── sections/             # Complex section components
+│   ├── layouts/                  # Page layout templates
+│   │   ├── base.njk              # Root HTML template (theme system, global styles)
+│   │   └── page.njk              # Page wrapper
+│   ├── content/                  # Page content (Markdown)
+│   │   ├── index.md              # Homepage
+│   │   ├── about.md              # About page
+│   │   ├── community.md          # Community page
+│   │   ├── contact.md            # Contact page
+│   │   ├── events.md             # Events page
+│   │   ├── faq.md                # FAQ page
+│   │   └── style-guide.md        # Style guide
+│   ├── design/                   # Design tokens (YAML) ⭐
+│   │   ├── colors.yaml           # Color palette
+│   │   ├── themes.yaml           # Light/dark theme definitions
+│   │   ├── typography.yaml       # Font families and text scales
+│   │   ├── spacing.yaml          # Spacing scale
+│   │   ├── components.yaml       # Component styles
+│   │   ├── layout.yaml           # Grid, breakpoints, animations
+│   │   ├── design.yaml           # Main design config
+│   │   └── README.md             # Design system documentation
+│   ├── data/                     # Dynamic data files
+│   │   ├── site.js               # Site config and navigation (with validation)
+│   │   ├── team.js               # Team member data (with validation)
+│   │   └── content.js            # Content data loader
+│   ├── utils/                    # Utility functions
+│   │   ├── validation.js         # Unified validation utilities ⭐ NEW
+│   │   ├── helpers.js            # Client-side helper functions
+│   │   └── contentValidation.js  # Content schema validation
+│   ├── README.md                 # Source directory documentation
+│   └── robots.txt                # SEO robots directive
+├── _site/                        # Build output (generated, ignored in git)
+├── .eleventy.js                  # Eleventy configuration
+├── .eslintrc.cjs                 # ESLint rules
+├── .prettierrc                   # Prettier configuration
+├── .gitignore                    # Git ignore patterns
+├── tailwind.config.js            # Tailwind CSS configuration
+├── postcss.config.js             # PostCSS configuration
+├── vercel.json                   # Vercel deployment config
+├── package.json                  # Project dependencies
+├── Agent.md                      # AI agent guide and architecture overview
+├── README.md                     # This file
+├── ModificationGuide.md          # Content editing guide for non-technical users
+├── CONTRIBUTING.md               # Contribution guidelines
+└── LICENSE                       # MIT License
 ```
 
-## Design System
+## Architecture
 
-The website uses a comprehensive **design token system** that allows you to control all visual aspects through YAML files in `src/design/`.
+### Technology Stack
+
+- **Static Site Generator**: Eleventy (11ty) - Fast, minimal build tool
+- **Styling**: Tailwind CSS with custom CSS and design tokens
+- **CSS Processing**: PostCSS with autoprefixer
+- **Templating**: Nunjucks
+- **Content Format**: Markdown + YAML
+- **Validation**: AJV for schema-based validation
+- **Code Quality**: ESLint, Prettier, Husky
+- **Deployment**: Vercel
+
+### Design Principles
+
+1. **Separation of Concerns**: Code, design, and content are clearly separated
+2. **Single Source of Truth**: Design tokens in YAML are the single source for all visual properties
+3. **Configuration Over Code**: Prefer configuration files (YAML) over hardcoding values
+4. **DRY (Don't Repeat Yourself)**: Reusable components and utilities prevent duplication
+5. **Accessibility First**: Semantic HTML, ARIA labels, keyboard navigation built-in
+6. **Mobile First**: Responsive design starts with mobile-size base
+7. **Performance**: Static generation, minimal CSS, optimized assets
+
+## Theme System
+
+The website features a sophisticated **CSS variable-based theme system** enabling seamless light/dark mode switching.
+
+### How It Works
+
+- **Architecture**: CSS variables declared in `:root` for light theme (default)
+- **Dark Variant**: `[data-theme='dark']` attribute on document element overrides variables
+- **Theme Toggle**: Button in header; persists user preference in localStorage
+- **Coverage**: 40+ CSS variables per theme ensure uniform styling
+- **Readability**: Text colors automatically adjust for contrast (dark text on light, light text on dark)
+- **Variables**: All colors, backgrounds, borders, and shadows use CSS variables
+- **Performance**: No JavaScript repaints - pure CSS solution
+
+### CSS Variables Example
+
+```css
+:root {
+  /* Light theme (default) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --text-primary: #0f1727;
+  --text-secondary: #64748b;
+  --accent: #0369a1;
+  --text-primary: #f8fafc;
+  --accent: #38bdf8;
+  --card-bg: #1e293b;
+  /* ... 40+ more variables */
+}
+
 
 ### Design Token Files
 
@@ -140,58 +246,129 @@ The website uses a comprehensive **design token system** that allows you to cont
 
 ### Quick Design Changes
 
+**Important**: All color changes should be made in `src/design/themes.yaml` so that both light and dark themes are updated simultaneously.
+
 #### Change Brand Colors
 
-Edit `src/design/colors.yaml`:
+Edit `src/design/colors.yaml` and `src/design/themes.yaml`:
 
 ```yaml
-brand:
-  primary: '#3b82f6' # Primary color
-  primaryDark: '#1e40af' # Darker variant
-  secondary: '#10b981' # Secondary color
-  accent: '#6d28d9' # Accent color
+# In colors.yaml - used for reference
+colors:
+  brand:
+    primary: '#0369a1'      # Light mode blue
+    primaryDark: '#38bdf8'  # Dark mode blue
+
+# In themes.yaml - the active variables
+light:
+  css:
+    --accent: '#0369a1'     # Light theme primary color
+
+dark:
+  css:
+    --accent: '#38bdf8'     # Dark theme primary color
 ```
 
-#### Change Fonts
+#### Change Theme Colors (Most Common)
 
-Edit `src/design/typography.yaml`:
-
-```yaml
-fontFamilies:
-  sans:
-    stack:
-      - "'Inter'"
-      - 'system-ui'
-      - 'sans-serif'
-```
-
-#### Change Spacing
-
-Edit `src/design/spacing.yaml`:
-
-```yaml
-padding:
-  section:
-    top: '4rem'
-    bottom: '4rem'
-```
-
-#### Change Theme Colors
-
-Edit `src/design/themes.yaml`:
+Edit `src/design/themes.yaml` - this is the primary source for light/dark mode colors:
 
 ```yaml
 light:
   css:
-    --bg-primary: '#ffffff'
-    --text-primary: '#111827'
+    --bg-primary: '#ffffff'      # Light background
+    --text-primary: '#0f1727'    # Dark text
+    --card-bg: '#f8fafc'         # Card background
+    # ... 40+ more variables
+
 dark:
   css:
-    --bg-primary: '#0f1727'
-    --text-primary: '#f9fafb'
+    --bg-primary: '#0f172a'      # Dark background
+    --text-primary: '#f8fafc'    # Light text
+    --card-bg: '#1e293b'         # Dark card background
+    # ... 40+ more variables
 ```
 
 For complete design system documentation, see `src/design/README.md`.
+
+## Utilities & Validation
+
+### Validation Module (`src/utils/validation.js`)
+
+Centralized validation utilities used throughout the codebase for data validation and consistency.
+
+**Key Functions**:
+
+```javascript
+// Email and URL validation
+isValidEmail(email)  // Returns: boolean
+isValidUrl(url)      // Returns: boolean
+
+// Type checking
+isRequired(value, fieldName)        // Returns: { valid, error }
+isArray(value, fieldName)           // Returns: { valid, error }
+isString(value, fieldName)          // Returns: { valid, error }
+
+// Multi-field validation
+hasRequiredFields(obj, fields)      // Returns: { valid, errors }
+
+// Data structure validation
+validateTeamMember(member)          // Returns: { valid, errors }
+validateSiteData(data)              // Returns: { valid, errors }
+
+// Error reporting
+logValidationErrors(section, errors, level)  // Logs formatted errors
+```
+
+**Usage Example**:
+
+```javascript
+const { isValidEmail, hasRequiredFields } = require('./validation.js');
+
+// Validate email
+if (isValidEmail('user@example.com')) {
+  console.log('Valid email');
+}
+
+// Validate multiple required fields
+const result = hasRequiredFields(user, ['name', 'email', 'role']);
+if (!result.valid) {
+  logValidationErrors('user data', result.errors);
+}
+```
+
+### Helper Functions (`src/utils/helpers.js`)
+
+Client-side utilities for DOM manipulation, notifications, and performance optimization.
+
+**Key Functions**:
+
+```javascript
+// User notifications (auto-dismiss)
+showNotification(message, type, duration)
+// Types: 'info', 'success', 'warning', 'error'
+
+// XSS protection
+sanitizeInput(str)  // Safe HTML escaping
+
+// Performance optimization
+debounce(func, wait, immediate)    // Rate limit execution
+throttle(func, limit)              // Execute at intervals
+
+// DOM utilities
+isElementInViewport(element)       // Check visibility
+```
+
+**Usage Example**:
+
+```javascript
+// Show success notification
+showNotification('Form submitted successfully!', 'success');
+
+// Debounce search input
+const debouncedSearch = debounce(searchAPI, 300);
+input.addEventListener('input', debouncedSearch);
+```
 
 ## Content Management
 
@@ -204,6 +381,7 @@ For instructions on safely editing content and design, see our [Content Modifica
 - `home.yaml` - Homepage content
 - `about.yaml` - About page content
 - `events.yaml` - Events page content
+- `activities.yaml` - Activities page content
 - `community.yaml` - Community page content
 - `faq.yaml` - FAQ content
 - `contact.yaml` - Contact page content
@@ -211,17 +389,78 @@ For instructions on safely editing content and design, see our [Content Modifica
 
 **Design Files** (`/src/design`):
 
-- All visual styles (colors, fonts, spacing, etc.)
+- All visual styles (colors, fonts, spacing, animations, component styles)
 
 ### For Technical Users
 
 - **Edit pages**: `src/content/` (Markdown)
 - **Update content**: `/data/` (YAML)
 - **Update design**: `src/design/` (YAML)
-- **Site config**: `src/data/site.js`
-- **Team info**: `src/data/team.js`
+- **Site config**: `src/data/site.js` (with validation)
+- **Team info**: `src/data/team.js` (with validation)
+- **Utilities**: `src/utils/` 
 - **Components**: `src/components/`
 - **Layouts**: `src/layouts/`
+
+### Data Validation
+
+The project includes integrated validation for site configuration and team data:
+
+**Site Configuration** (`src/data/site.js`):
+- Validates site name, description, domain, contact email
+- Validates navigation structure
+- Validates social media links
+- Validates external form URLs
+- Provides detailed error messages on validation failure
+
+**Team Data** (`src/data/team.js`):
+- Validates team member structure (name, role, bio, email)
+- Supports email addresses and URLs for member links
+- Provides per-member error reporting
+- Non-blocking validation (site works even if some validation fails)
+
+**Content Validation** (`src/utils/contentValidation.js`):
+- Schema-based validation using AJV
+- Validates content structure for each page section
+- Ensures required fields and proper data types
+
+## Code Quality
+
+### Code Standards
+
+The project maintains high code quality through:
+
+- **ESLint**: JavaScript linting with recommended rules
+- **Prettier**: Automatic code formatting (100 char line width, 2-space indent)
+- **Husky**: Git hooks for pre-commit checks
+- **Lint-Staged**: Lint only staged files for efficiency
+- **JSDoc**: Comprehensive documentation for all functions
+
+### Running Quality Checks
+
+```bash
+# Format all files
+npm run format
+
+# Check formatting without changes
+npm run format:check
+
+# Lint JavaScript with auto-fix
+npm run lint
+
+# Pre-commit hook (automatic)
+# Runs: lint, format, ESLint check
+```
+
+### JavaScript Best Practices
+
+- Comprehensive JSDoc documentation for all public functions
+- Parameter and return type annotations
+- Error handling with meaningful error messages
+- Validation of all inputs
+- Clear, descriptive variable and function names
+- No dead code or commented-out blocks
+- Environment detection for browser/server contexts
 
 ## Housekeeping
 
@@ -235,14 +474,21 @@ npm run format
 # Check formatting
 npm run format:check
 
-# Lint JavaScript
+# Lint JavaScript (with auto-fix)
 npm run lint
+
+# Debug Eleventy (verbose output)
+npm run debug
 ```
 
 **Configuration files:**
 
-- `.editorconfig` — Editor settings
-- `.prettierrc` — Prettier configuration
+- `.prettierrc` — Prettier code formatting rules
+- `.eslintrc.cjs` — ESLint linting rules
+- `.gitignore` — Git ignore patterns
+- `.eleventy.js` — Eleventy configuration
+- `tailwind.config.js` — Tailwind CSS configuration
+- `postcss.config.js` — PostCSS configuration
 
 ## Deployment
 

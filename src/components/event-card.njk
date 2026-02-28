@@ -1,16 +1,16 @@
 {%- macro event_card(title, date, emoji='🗓️', participants='', description='', link='#') -%}
-<div class="card hover-lift bg-emerald-50">
+<div class="card hover-lift" style="border-left: 4px solid var(--accent);">
   <div class="card-body">
     <div class="flex items-center space-x-3 mb-4">
       <span class="text-3xl">{{ emoji }}</span>
       <h3 class="mb-0">{{ title }}</h3>
     </div>
-    {% if date %}<p class="text-sm font-semibold text-emerald-600 mb-4">📅 {{ date }}</p>{% endif %}
-    {% if description %}<p>{{ description }}</p>{% endif %}
+    {% if date %}<p class="text-sm font-semibold mb-4" style="color: var(--accent);">📅 {{ date }}</p>{% endif %}
+    {% if description %}<p style="color: var(--text-secondary);">{{ description }}</p>{% endif %}
   </div>
   <div class="card-footer">
-    {% if participants %}<p class="text-sm text-primary-600 dark:text-primary-300">👥 {{ participants }}</p>{% endif %}
-    {% if link %}<a href="{{ link }}" class="text-emerald-600 font-semibold text-sm mt-2 inline-block">Learn more →</a>{% endif %}
+    {% if participants %}<p class="text-sm" style="color: var(--text-secondary);">👥 {{ participants }}</p>{% endif %}
+    {% if link %}<a href="{{ link }}" class="font-semibold text-sm mt-2 inline-block" style="color: var(--accent);">Learn more →</a>{% endif %}
   </div>
 </div>
 {%- endmacro -%}

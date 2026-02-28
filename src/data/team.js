@@ -1,4 +1,11 @@
-// Validation helper functions
+const { validateTeamMember, logValidationErrors } = require('../utils/validation');
+
+/**
+ * Validates an array of team members
+ * @param {Array} teamMembers - Array of team member objects to validate
+ * @returns {Array} The validated team members array
+ * @throws {Error} If input is not an array
+ */
 function validateTeamData(teamMembers) {
   const errors = [];
 
@@ -7,23 +14,19 @@ function validateTeamData(teamMembers) {
   }
 
   teamMembers.forEach((member, index) => {
-    if (!member.name) errors.push(`Team member ${index} must have a name`);
-    if (!member.role) errors.push(`Team member ${index} must have a role`);
-    if (!member.bio) errors.push(`Team member ${index} must have a bio`);
-    if (!member.email || !isValidEmail(member.email))
-      errors.push(`Team member ${index} must have a valid email`);
+    const validation = validateTeamMember(member);
+    if (!validation.valid) {
+      errors.push(
+        `Team member ${index} (${member.name || 'unknown'}): ${validation.errors.join(', ')}`
+      );
+    }
   });
 
   if (errors.length > 0) {
-    console.warn('Team data validation warnings:', errors);
+    logValidationErrors('team data', errors);
   }
 
   return teamMembers;
-}
-
-function isValidEmail(email) {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
 }
 
 // Team member data

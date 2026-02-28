@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="{{ site.site.description }}">
     <meta name="author" content="{{ site.site.name }}">
-    <meta name="theme-color" content="{{ design.colors.brand.primary | default('#3b82f6') }}">
+    <meta name="theme-color" content="{{ design.colors.brand.primary | default('#0369a1') }}">
     <title>{% if title %}{{ title }} | {% endif %}{{ site.site.name }}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
 </head>
-<body class="bg-white text-primary-900 dark:bg-primary-900 dark:text-primary-100">
+<body style="background-color: var(--bg-primary); color: var(--text-primary);">
     {% include "header.njk" %}
 
     <main id="main" class="min-h-screen">
@@ -109,7 +109,7 @@
         function initThemeToggle() {
             const themeToggleBtn = document.getElementById('theme-toggle');
             const themeIcon = document.getElementById('theme-icon');
-            const currentTheme = localStorage.getItem('theme') || '{{ design.themes.light.isDefault == true and "light" or "dark" }}';
+            const currentTheme = localStorage.getItem('theme') || '{{ design.themes.dark.isDefault == true and "dark" or "light" }}';
 
             // Apply saved theme on page load
             if (currentTheme === 'dark') {

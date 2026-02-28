@@ -1,17 +1,17 @@
 <div class="container section">
   <div class="text-center mb-8">
     <h1 class="text-3xl md:text-4xl font-bold">Design System — Style Guide</h1>
-    <p class="text-muted mt-2">Colors, typography, components and icons used across the site.</p>
+    <p class="mt-2" style="color: var(--text-muted);">Colors, typography, components and icons used across the site.</p>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
     <div>
       <h2 class="mb-4">Color Palette</h2>
       <div class="grid grid-cols-2 gap-4">
-        <div class="p-6 rounded shadow text-center" style="background:linear-gradient(90deg,#3b82f6,#0284c7);">Accent</div>
-        <div class="p-6 rounded shadow text-center" style="background:#6d28d9;color:#fff">Safety Purple</div>
-        <div class="p-6 rounded shadow text-center" style="background:#0284c7;color:#fff">Safety Blue</div>
-        <div class="p-6 rounded shadow text-center" style="background:#111827;color:#fff">Dark</div>
+        <div class="p-6 rounded shadow text-center" style="background: var(--gradient-primary); color: var(--text-on-accent);">Primary Accent</div>
+        <div class="p-6 rounded shadow text-center" style="background: var(--secondary); color: var(--text-on-accent);">Secondary Accent</div>
+        <div class="p-6 rounded shadow text-center" style="background: var(--success); color: var(--text-on-accent);">Success</div>
+        <div class="p-6 rounded shadow text-center" style="background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--card-border);">Secondary BG</div>
       </div>
     </div>
 
@@ -28,18 +28,18 @@
     <h2>Buttons</h2>
     <div class="space-x-4 mt-4">
       <a class="btn btn-primary">Primary</a>
-      <a class="btn btn-cta">CTA (white)</a>
+      <a class="btn btn-cta">CTA</a>
       <a class="btn btn-ghost">Ghost</a>
     </div>
   </div>
 
   <div class="mt-10">
     <h2>Icons</h2>
-    <div class="flex gap-4 mt-4 items-center">
-      <svg class="w-6 h-6 text-accent"><use href="#icon-mail"></use></svg>
-      <svg class="w-6 h-6 text-accent"><use href="#icon-calendar"></use></svg>
-      <svg class="w-6 h-6 text-accent"><use href="#icon-users"></use></svg>
-      <svg class="w-6 h-6 text-accent"><use href="#icon-check"></use></svg>
+    <div class="flex gap-4 mt-4 items-center" style="color: var(--accent);">
+      <svg class="w-6 h-6"><use href="#icon-mail"></use></svg>
+      <svg class="w-6 h-6"><use href="#icon-calendar"></use></svg>
+      <svg class="w-6 h-6"><use href="#icon-users"></use></svg>
+      <svg class="w-6 h-6"><use href="#icon-check"></use></svg>
     </div>
   </div>
 

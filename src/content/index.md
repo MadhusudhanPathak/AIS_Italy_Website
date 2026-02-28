@@ -8,9 +8,9 @@ permalink: /
 <section class="hero">
     <div class="hero-background absolute inset-0 z-0 opacity-70" style="background-size: cover; background-position: center;"></div>
     <div class="container text-center relative z-10">
-        <h1>{{ home.hero.title }}</h1>
-        <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">{{ home.hero.subtitle }}</p>
-        <p class="text-lg text-blue-200 max-w-2xl mx-auto mt-4">{{ home.hero.description }}</p>
+        <h1 class="hero-title">{{ home.hero.title }}</h1>
+        <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto">{{ home.hero.subtitle }}</p>
+        <p class="hero-sub text-lg max-w-2xl mx-auto mt-4">{{ home.hero.description }}</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
             <a href="{{ home.hero.cta_link }}" class="btn btn-primary">{{ home.hero.cta_text }}</a>
             <a href="{{ home.hero.secondary_cta_link }}" class="btn btn-secondary">{{ home.hero.secondary_cta_text }}</a>
@@ -33,7 +33,7 @@ permalink: /
 </section> -->
 
 <!-- Current Announcements -->
-<section class="section bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-primary-800 dark:to-primary-900 relative overflow-hidden">
+<section class="section relative overflow-hidden" style="background: linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary));">
     <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-32"></div>
     <div class="container relative z-10">
         <div class="text-center mb-12">
@@ -46,9 +46,9 @@ permalink: /
                 <div class="flex items-start space-x-4">
                     <span class="text-4xl flex-shrink-0">{{ announcement.emoji }}</span>
                     <div class="flex-1">
-                        <h3 class="text-accent mb-2">{{ announcement.title }}</h3>
-                        <p class="text-primary-700 dark:text-primary-300 mb-3">{{ announcement.description | safe }}</p>
-                        <p class="text-sm text-primary-600 dark:text-primary-300">Stay updated by <a href="{{ announcement.link_url }}" target="{{ announcement.link_target }}" class="text-accent font-semibold hover:underline">{{ announcement.link_text }}</a>!</p>
+                        <h3 class="mb-2" style="color: var(--accent);">{{ announcement.title }}</h3>
+                        <p class="mb-3" style="color: var(--text-secondary);">{{ announcement.description | safe }}</p>
+                        <p class="text-sm" style="color: var(--text-secondary);">Stay updated by <a href="{{ announcement.link_url }}" target="{{ announcement.link_target }}" class="font-semibold" style="color: var(--accent);">{{ announcement.link_text }}</a>!</p>
                     </div>
                 </div>
             </div>
