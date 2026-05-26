@@ -5,53 +5,178 @@ permalink: /community/
 ---
 
 <!-- Hero Section -->
-
 <section class="hero">
-    <div class="hero-background absolute inset-0 z-0 opacity-70" style="background-size: cover; background-position: center;"></div>
+    <div class="hero-background absolute inset-0 z-0" style="background-image: url('/assets/img/ais_italy.jpg');"></div>
     <div class="container text-center relative z-10">
-        <h1 class="hero-title">{{ community.hero.title }}</h1>
-        <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto">{{ community.hero.subtitle }}</p>
+        <h1 class="hero-title" data-en="{{ translations.en.community.hero_title }}" data-it="{{ translations.it.community.hero_title }}">{{ translations.en.community.hero_title }}</h1>
+        <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto" data-en="{{ translations.en.community.hero_subtitle }}" data-it="{{ translations.it.community.hero_subtitle }}">{{ translations.en.community.hero_subtitle }}</p>
     </div>
 </section>
 
-<!-- Team Section -->
-
-<section class="section">
+<!-- Members Table Section -->
+<section class="section" style="background-color: var(--bg-secondary);">
     <div class="container">
-        <div class="text-center mb-16">
-            <h2>{{ community.team_section.title }}</h2>
-            <p class="text-xl mt-4 max-w-2xl mx-auto" style="color: var(--text-secondary);">{{ community.team_section.subtitle }}</p>
+        <div class="text-center mb-10">
+            <h2 data-en="{{ translations.en.community.members_title }}" data-it="{{ translations.it.community.members_title }}">{{ translations.en.community.members_title }}</h2>
+            <p class="text-sm mt-2" style="color: var(--text-tertiary);">Last updated: {{ members.last_updated }}</p>
         </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {% for member in team %}
-            <div class="card hover-lift text-center">
-                <div class="card-body">
-                    <div class="w-24 h-24 rounded-full flex items-center justify-center text-white text-3xl font-bold mx-auto mb-4" style="background: var(--gradient-primary);">
+
+        <!-- Search + sort bar -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-6">
+            <input id="tbl-search" type="text" placeholder="Search name…"
+                oninput="filterTable()"
+                class="flex-1 px-4 py-2 rounded-lg text-sm border"
+                style="background-color: var(--card-bg); border-color: var(--card-border); color: var(--text-primary);"
+                data-placeholder-en="Search name…" data-placeholder-it="Cerca nome…">
+            <select id="tbl-sort" onchange="filterTable()"
+                class="px-4 py-2 rounded-lg text-sm border"
+                style="background-color: var(--card-bg); border-color: var(--card-border); color: var(--text-primary);">
+                <option value="surname-asc" data-en="Surname A→Z" data-it="Cognome A→Z">Surname A→Z</option>
+                <option value="surname-desc" data-en="Surname Z→A" data-it="Cognome Z→A">Surname Z→A</option>
+            </select>
+        </div>
+
+        <div class="overflow-x-auto rounded-lg border" style="border-color: var(--card-border);">
+            <table class="w-full text-sm" style="border-collapse: collapse;">
+                <thead>
+                    <tr style="background-color: var(--bg-tertiary); color: var(--text-primary);">
+                        <th class="text-left px-4 py-3 font-semibold" data-en="Name" data-it="Nome">Name</th>
+                        <th class="text-left px-4 py-3 font-semibold" data-en="Location" data-it="Posizione">Location</th>
+                        <th class="text-left px-4 py-3 font-semibold" data-en="Areas of Interest" data-it="Aree di interesse">Areas of Interest</th>
+                    </tr>
+                </thead>
+                <tbody id="members-tbody">
+                    {% for member in members.members %}
+                    <tr class="member-row border-t"
+                        style="border-color: var(--card-border);"
+                        data-name="{{ member.name | lower }}">
+                        <td class="px-4 py-3 font-medium" style="color: var(--text-primary);">
+                            <div class="flex items-center gap-2">
+                                <div class="w-7 h-7 rounded-full flex items-center justify-center text-white text-xs font-bold flex-shrink-0"
+                                     style="background: var(--gradient-primary);">{{ member.name | first }}</div>
+                                <div>
+                                    <div>{{ member.name }}</div>
+                                    {% if member.email %}
+                                    <a href="mailto:{{ member.email }}" class="text-xs" style="color: var(--accent);">{{ member.email }}</a>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </td>
+                        <td class="px-4 py-3" style="color: var(--text-secondary);">{{ member.location or '' }}</td>
+                        <td class="px-4 py-3" style="color: var(--text-secondary); font-size: 0.75rem;">{{ member.areas or '' }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <p id="tbl-count" class="text-xs mt-3 text-right" style="color: var(--text-tertiary);"></p>
+    </div>
+</section>
+
+<!-- Working Groups Cards Section -->
+<section class="section" style="background-color: var(--bg-primary);">
+    <div class="container">
+        <div class="text-center mb-10">
+            <h2 data-en="Working Groups" data-it="Gruppi di lavoro">Working Groups</h2>
+            <p class="text-sm mt-2" style="color: var(--text-secondary);"
+               data-en="Members actively involved in our working groups."
+               data-it="Membri attivamente coinvolti nei nostri gruppi di lavoro.">Members actively involved in our working groups.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {% for member in members.members %}
+            {% if (member.groups or []) | length > 0 %}
+            <div class="card hover-lift member-card" style="padding: 1rem;"
+                 data-name="{{ member.name | lower }}"
+                 data-groups="{{ (member.groups or []) | join(',') }}">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
+                         style="background: var(--gradient-primary);">
                         {{ member.name | first }}
                     </div>
-                    <h3 class="mb-2">{{ member.name }}</h3>
-                    <p class="text-sm font-semibold mb-3 uppercase tracking-wide" style="color: var(--accent);">{{ member.role }}</p>
-                    <p class="text-sm" style="color: var(--text-secondary);">{{ member.bio }}</p>
+                    <div class="flex-1 min-w-0">
+                        <p class="font-semibold text-sm truncate" style="color: var(--text-primary);">{{ member.name }}</p>
+                        {% if member.email %}
+                        <a href="mailto:{{ member.email }}" class="text-xs truncate block" style="color: var(--accent);">{{ member.email }}</a>
+                        {% endif %}
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <a href="{{ member.email }}" class="text-sm hover:text-opacity-75 font-semibold" style="color: var(--accent);">{{ member.email }}</a>
+                <div class="flex flex-wrap gap-1 mt-2">
+                    {% for group in member.groups %}
+                    <span class="text-xs px-1.5 py-0.5 rounded-full" style="background-color: var(--accent-100); color: var(--accent-700);">{{ group }}</span>
+                    {% endfor %}
                 </div>
             </div>
+            {% endif %}
             {% endfor %}
         </div>
     </div>
 </section>
 
-<div class="divider"></div>
+<!-- Join CTA -->
+<section class="section" style="background-color: var(--bg-tertiary);">
+    <div class="container text-center">
+        <h3 data-en="Want to be part of this list?" data-it="Vuoi far parte di questa lista?">Want to be part of this list?</h3>
+        <p class="mb-6" style="color: var(--text-secondary);"
+           data-en="Fill in our interest form to join AI Safety Italia."
+           data-it="Compila il modulo di interesse per unirti ad AI Safety Italia.">Fill in our interest form to join AI Safety Italia.</p>
+        <a href="{{ site.forms.mailingList }}" target="_blank" rel="noopener noreferrer"
+           class="btn btn-primary"
+           data-en="{{ translations.en.community.join_button }}"
+           data-it="{{ translations.it.community.join_button }}">{{ translations.en.community.join_button }}</a>
+    </div>
+</section>
 
 <!-- CTA Section -->
-
-<section class="section" style="background: var(--gradient-accent);">
+<section class="section" style="background: var(--gradient-primary);">
     <div class="container">
         <div class="cta-box text-center">
-            <h2>{{ community.cta.title }}</h2>
-            <p>{{ community.cta.description }}</p>
-            <a href="{{ site.social.discord }}" class="btn mt-6" style="background-color: var(--card-bg); color: var(--accent); border: 2px solid var(--accent);" target="_blank" rel="noopener noreferrer">{{ community.cta.button_text }}</a>
+            <h2 data-en="{{ translations.en.community.cta_title }}" data-it="{{ translations.it.community.cta_title }}">{{ translations.en.community.cta_title }}</h2>
+            <p data-en="{{ translations.en.community.cta_description }}" data-it="{{ translations.it.community.cta_description }}">{{ translations.en.community.cta_description }}</p>
+            <a href="{{ site.forms.mailingList }}" class="btn mt-6" style="background-color: #ffffff; color: var(--accent-700);"
+               target="_blank" rel="noopener noreferrer"
+               data-en="{{ translations.en.community.cta_button }}"
+               data-it="{{ translations.it.community.cta_button }}">{{ translations.en.community.cta_button }}</a>
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    function surname(row) {
+        const parts = row.dataset.name.trim().split(' ');
+        return parts[parts.length - 1];
+    }
+
+    function filterTable() {
+        const search = (document.getElementById('tbl-search').value || '').toLowerCase();
+        const sort   = document.getElementById('tbl-sort').value;
+
+        const rows = Array.from(document.querySelectorAll('.member-row'));
+        let visible = rows.filter(r => !search || r.dataset.name.includes(search));
+
+        visible.sort((a, b) => sort === 'surname-desc'
+            ? surname(b).localeCompare(surname(a))
+            : surname(a).localeCompare(surname(b)));
+
+        const tbody = document.getElementById('members-tbody');
+        rows.forEach(r => r.style.display = 'none');
+        visible.forEach(r => { r.style.display = ''; tbody.appendChild(r); });
+
+        const count = document.getElementById('tbl-count');
+        if (count) count.textContent = visible.length + ' member' + (visible.length !== 1 ? 's' : '');
+    }
+    window.filterTable = filterTable;
+
+    document.addEventListener('DOMContentLoaded', function () {
+        filterTable();
+
+        // Sort working-group cards by surname
+        const grid = document.querySelector('.member-card') && document.querySelector('.member-card').closest('.grid');
+        if (grid) {
+            const cards = Array.from(grid.querySelectorAll('.member-card'));
+            cards.sort((a, b) => a.dataset.name.trim().split(' ').pop().localeCompare(b.dataset.name.trim().split(' ').pop()));
+            cards.forEach(c => grid.appendChild(c));
+        }
+    });
+})();
+</script>

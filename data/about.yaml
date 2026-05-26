@@ -1,50 +1,52 @@
 # About Page Content Data
-# This file contains all user-facing content for the about page
-# Each field is documented with comments explaining its purpose
 
-# Hero Section
 hero:
   title: "About AI Safety Italia"
+  title_it: "Chi Siamo"
   subtitle: "We are a grassroots community dedicated to reducing risks from advanced AI and ensuring its safe development for humanity's benefit."
+  subtitle_it: "Siamo una comunità dal basso dedicata a ridurre i rischi dell'IA avanzata e garantirne uno sviluppo sicuro a beneficio dell'umanità."
 
-# Mission and Vision Section
 mission_vision:
   mission:
     title: "Our Mission"
+    title_it: "La Nostra Missione"
     emoji: "🎯"
     description: "We work to raise awareness about AI safety challenges, upskill individuals in the field, and create opportunities for collaboration among researchers and policymakers committed to safer AI."
-  
+    description_it: "Lavoriamo per sensibilizzare sulle sfide dell'AI safety, formare le persone nel settore e creare opportunità di collaborazione tra ricercatori e responsabili politici impegnati per un'IA più sicura."
   vision:
     title: "Our Vision"
+    title_it: "La Nostra Visione"
     emoji: "🌍"
     description: "A world where advanced AI systems are developed responsibly, with safety and human values at the core of AI development practices across organizations and governments."
+    description_it: "Un mondo in cui i sistemi di IA avanzata vengono sviluppati in modo responsabile, con sicurezza e valori umani al centro delle pratiche di sviluppo dell'IA in tutte le organizzazioni e i governi."
 
-# Our Approach Section
+approach_section_title: "How We Work"
+approach_section_title_it: "Come Lavoriamo"
+
 approach:
   - id: 1
     icon: "📚"
     title: "Learning"
+    title_it: "Apprendimento"
     description: "We discuss AI safety and produce materials and resources to deepen understanding of the field."
+    description_it: "Discutiamo di AI safety e produciamo materiali e risorse per approfondire la comprensione del settore."
   - id: 2
     icon: "🎓"
     title: "Education"
+    title_it: "Formazione"
     description: "We use our learning outputs for outreach to university students and other newcomers to AI safety."
+    description_it: "Utilizziamo i risultati del nostro apprendimento per diffondere l'AI safety tra studenti universitari e altri nuovi arrivati nel campo."
   - id: 3
     icon: "🤝"
     title: "Community Building"
+    title_it: "Costruzione della Community"
     description: "Connect researchers, students, and enthusiasts for opportunities."
-  # - id: 3
-  #   icon: "📦"
-  #   title: "Resources & Tools"
-  #   description: "Curated learning materials, research guides, and connections to leading organizations in AI safety."
-  # - id: 4
-  #   icon: "🎤"
-  #   title: "Events & Workshops"
-  #   description: "Regular workshops, roundtables, and networking events featuring industry experts and thought leaders."
+    description_it: "Connettere ricercatori, studenti e appassionati per creare opportunità."
 
-# CTA Section
 cta:
   title: "Join Our Mission"
+  title_it: "Unisciti alla Nostra Missione"
   description: "Whether you're a researcher, student, professional, or just curious about AI safety, there's a place for you in our community."
+  description_it: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso sull'AI safety, c'è un posto per te nella nostra community."
   button_text: "Get Involved Today"
-  button_link: "{{ site.forms.mailingList }}"
+  button_text_it: "Inizia Ora"

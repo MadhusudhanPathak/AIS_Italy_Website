@@ -1,31 +1,43 @@
 # Contact Page Content Data
-# This file contains all user-facing content for the contact page
-# Each field is documented with comments explaining its purpose
 
-# Hero Section
 hero:
   title: "Get in Touch"
+  title_it: "Contattaci"
   subtitle: "Have questions or want to get involved? Reach out to us through one of these channels."
+  subtitle_it: "Hai domande o vuoi partecipare? Contattaci attraverso uno di questi canali."
 
-# Unified contact channels: Email, LinkedIn, Discord
 channels:
   - id: email
     title: "Email"
+    title_it: "Email"
     emoji: "📧"
     description: "For any questions about our organization, activities, or how to get involved."
-    link: "mailto:{{ site.site.email }}"
-    button_text: "aisafetyitalia@gmail.com"
+    description_it: "Per qualsiasi domanda sulla nostra organizzazione, attività o come partecipare."
+    link_text: "aisafetyitalia@gmail.com"
+    link_text_it: "aisafetyitalia@gmail.com"
 
   - id: linkedin
     title: "LinkedIn"
+    title_it: "LinkedIn"
     emoji: "💼"
     description: "Follow us for updates, articles, and professional networking opportunities."
-    link: "{{ site.social.linkedin }}"
-    button_text: "Visit LinkedIn"
+    description_it: "Seguici per aggiornamenti, articoli e opportunità di networking professionale."
+    link_text: "Visit LinkedIn"
+    link_text_it: "Visita LinkedIn"
 
   - id: discord
     title: "Discord"
+    title_it: "Discord"
     emoji: "💬"
     description: "Chat with the community, join events, and discuss AI safety in real time."
-    link: "{{ site.social.discord }}"
-    button_text: "Join Discord"
+    description_it: "Chatta con la community, partecipa agli eventi e discuti di AI safety in tempo reale."
+    link_text: "Join Discord"
+    link_text_it: "Entra su Discord"
+
+cta:
+  title: "Ready to Join Our Community?"
+  title_it: "Pronto a Unirti alla Nostra Community?"
+  description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  description_it: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso sull'AI safety, c'è un posto per te nella nostra community."
+  button_text: "Join the Community"
+  button_text_it: "Entra nella Community"

@@ -16,10 +16,10 @@
   /* Light theme (default) - All variables populated from design tokens */
 
   /* Backgrounds */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f8fafc;
-  --bg-tertiary: #f1f5f9;
-  --bg-overlay: #f3f4f6;
+  --bg-primary: #fdfaf5;
+  --bg-secondary: #f6edd9;
+  --bg-tertiary: #ede4cc;
+  --bg-overlay: #f0e8d0;
 
   /* Surfaces / Cards */
   --card-bg: #ffffff;
@@ -41,31 +41,31 @@
   --border-strong: #cbd5e1;
   --border-muted: #f1f5f9;
 
-  /* Primary Accent - Blue */
-  --accent: #0369a1;
-  --accent-50: #f0f9ff;
-  --accent-100: #e0f2fe;
-  --accent-200: #bae6fd;
-  --accent-300: #7dd3fc;
-  --accent-400: #38bdf8;
-  --accent-500: #0ea5e9;
-  --accent-600: #0284c7;
-  --accent-700: #0369a1;
-  --accent-800: #075985;
-  --accent-900: #0c3d66;
+  /* Primary Accent - Green (AIS Italy brand) */
+  --accent: #008c45;
+  --accent-50: #f0fdf4;
+  --accent-100: #dcfce7;
+  --accent-200: #bbf7d0;
+  --accent-300: #86efac;
+  --accent-400: #20c467;
+  --accent-500: #16a34a;
+  --accent-600: #008c45;
+  --accent-700: #15803d;
+  --accent-800: #166534;
+  --accent-900: #14532d;
 
-  /* Secondary Accent - Purple */
-  --secondary: #6b21a8;
-  --secondary-50: #faf5ff;
-  --secondary-100: #f3e8ff;
-  --secondary-200: #e9d5ff;
-  --secondary-300: #d8b4fe;
-  --secondary-400: #c084fc;
-  --secondary-500: #a855f7;
-  --secondary-600: #9333ea;
-  --secondary-700: #7e22ce;
-  --secondary-800: #6b21a8;
-  --secondary-900: #581c87;
+  /* Secondary Accent - Soft Purple */
+  --secondary: #9999cc;
+  --secondary-50: #f5f5ff;
+  --secondary-100: #ebebff;
+  --secondary-200: #d6d6f5;
+  --secondary-300: #c2c2ea;
+  --secondary-400: #adadde;
+  --secondary-500: #9999cc;
+  --secondary-600: #7a7aaa;
+  --secondary-700: #5c5c88;
+  --secondary-800: #3d3d66;
+  --secondary-900: #1e1e44;
 
   /* Semantic Colors */
   --success: #16a34a;
@@ -74,13 +74,13 @@
   --warning-light: #fef3c7;
   --error: #dc2626;
   --error-light: #fee2e2;
-  --info: #0369a1;
-  --info-light: #f0f9ff;
+  --info: #008c45;
+  --info-light: #f0fdf4;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(to right, #0284c7, #0ea5e9);
-  --gradient-accent: linear-gradient(to right, #0ea5e9, #9333ea);
-  --gradient-hero: linear-gradient(135deg, #0f1727 0%, #1e3a5f 50%, #0f1727 100%);
+  --gradient-primary: linear-gradient(to right, #008c45, #20c467);
+  --gradient-accent: linear-gradient(to right, #20c467, #9999cc);
+  --gradient-hero: linear-gradient(135deg, #003d1f 0%, #006633 50%, #003d1f 100%);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(15, 23, 39, 0.05);
@@ -525,8 +525,8 @@ footer a:hover {
 
 .hero {
   background: var(--gradient-hero);
-  min-height: 80vh;
-  @apply py-24 md:py-36 relative overflow-hidden;
+  min-height: 55vh;
+  @apply py-16 md:py-24 relative overflow-hidden;
 }
 
 .hero::before {
@@ -541,32 +541,26 @@ footer a:hover {
 
 .hero-background {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
-  opacity: 1;
+  opacity: 0.25;
   z-index: 0;
 }
 
 [data-theme='dark'] .hero-background {
-  opacity: 0.6;
+  opacity: 0.35;
 }
 
 .hero-title {
   @apply text-4xl md:text-6xl font-extrabold leading-tight;
-  color: var(--text-primary);
+  color: #ffffff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
 .hero-sub {
   @apply text-lg md:text-xl max-w-3xl mx-auto mt-4;
-  color: var(--text-secondary);
-}
-
-[data-theme='dark'] .hero-title {
-  color: #ffffff;
-}
-
-[data-theme='dark'] .hero-sub {
-  color: rgba(248, 250, 252, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
 }
 
 /* ==========================================================================
@@ -582,14 +576,14 @@ nav a {
 }
 
 nav a:hover {
-  background-color: rgba(3, 105, 161, 0.08);
+  background-color: rgba(0, 140, 69, 0.08);
   color: var(--accent);
 }
 
 nav a.active {
   @apply font-semibold;
   color: var(--accent);
-  background-color: rgba(3, 105, 161, 0.12);
+  background-color: rgba(0, 140, 69, 0.12);
 }
 
 /* ==========================================================================

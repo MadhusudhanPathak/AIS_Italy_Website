@@ -1,59 +1,91 @@
 # FAQ Page Content Data
-# This file contains all user-facing content for the FAQ page
-# Each field is documented with comments explaining its purpose
 
-# Hero Section
 hero:
   title: "Frequently Asked Questions"
+  title_it: "Domande Frequenti"
   subtitle: "Find answers to common questions about AI Safety Italia and our mission."
+  subtitle_it: "Trova risposte alle domande più comuni su AI Safety Italia e la nostra missione."
 
-# FAQ Categories
 categories:
   - id: 1
     name: "About AI Safety"
+    name_it: "Cos'è l'AI Safety"
     icon: "❓"
     questions:
       - id: 1
         question: "What is AI safety?"
-        answer: "AI safety refers to the field of research and practice focused on ensuring that artificial intelligence systems behave in ways that are beneficial to humanity. This includes preventing unintended consequences, ensuring AI systems remain under human control, and aligning AI goals with human values."
+        question_it: "Cos'è l'AI safety?"
+        answer: "AI safety is the field of research and practice focused on ensuring that artificial intelligence systems behave in ways that are beneficial to humanity. This includes preventing unintended consequences, ensuring AI systems remain under meaningful human control, and aligning AI goals with human values."
+        answer_it: "L'AI safety è il campo di ricerca e pratica focalizzato sull'assicurare che i sistemi di intelligenza artificiale si comportino in modo benefico per l'umanità. Include la prevenzione di conseguenze indesiderate, il mantenimento di un controllo umano significativo e l'allineamento degli obiettivi dell'IA con i valori umani."
+
       - id: 2
-        question: "Why is AI safety important?"
-        answer: "As AI systems become more powerful and integrated into society, ensuring their safe development becomes increasingly critical. Advanced AI could have transformative effects on society, and getting safety right is essential to realizing the benefits while avoiding potential risks."
+        question: "Why is AI safety important now?"
+        question_it: "Perché l'AI safety è importante adesso?"
+        answer: "AI systems are rapidly becoming more capable. Experts broadly expect significant progress during our lifetimes, potentially reaching human-level intelligence across a wide range of tasks. Digital systems with such capabilities would revolutionize every aspect of society, making their safe development one of the most pressing challenges of our time."
+        answer_it: "I sistemi di IA stanno diventando rapidamente più capaci. Gli esperti si aspettano progressi significativi nel corso della nostra vita, potenzialmente raggiungendo l'intelligenza a livello umano in molti settori. Sistemi digitali con tali capacità rivoluzionerebbero ogni aspetto della società, rendendo il loro sviluppo sicuro una delle sfide più urgenti del nostro tempo."
+
       - id: 3
         question: "What is the difference between AI safety and AI ethics?"
-        answer: "AI ethics focuses on the moral implications and societal impacts of AI, while AI safety is more concerned with technical methods to ensure AI systems behave as intended. Both fields overlap significantly and are complementary."
+        question_it: "Qual è la differenza tra AI safety e AI ethics?"
+        answer: "AI ethics focuses on the moral implications and societal impacts of AI systems — fairness, accountability, privacy, and discrimination. AI safety is more concerned with technical and governance methods to ensure AI systems behave as intended, including the long-term risk of advanced AI systems that could act in ways harmful to humanity. The two fields overlap significantly and are complementary."
+        answer_it: "L'AI ethics si occupa delle implicazioni morali e degli impatti sociali dei sistemi di IA — equità, responsabilità, privacy e discriminazione. L'AI safety si concentra maggiormente su metodi tecnici e di governance per garantire che i sistemi di IA si comportino come previsto, incluso il rischio a lungo termine di sistemi di IA avanzati. I due campi si sovrappongono significativamente e sono complementari."
 
   - id: 2
     name: "About Our Organization"
+    name_it: "La Nostra Organizzazione"
     icon: "🏢"
     questions:
       - id: 4
         question: "What does AI Safety Italia do?"
-        answer: "We work to reduce risks from advanced AI by raising awareness and creating networking opportunities for collaboration. We organize events and build a community of people committed to safer AI development."
+        question_it: "Cosa fa AI Safety Italia?"
+        answer: "AI Safety Italia is a grassroots community that works to reduce risks from advanced AI in Italy. We organize seminars, study groups, and networking events; we run mentorship and education programs; and we connect members with opportunities in the AI safety field. Our working groups cover mentorship, governance, communication, technical infrastructure, events, seminars, education, and more."
+        answer_it: "AI Safety Italia è una comunità dal basso che lavora per ridurre i rischi dell'IA avanzata in Italia. Organizziamo seminari, gruppi di studio ed eventi di networking; gestiamo programmi di mentorship e formazione; e colleghiamo i membri con opportunità nel campo dell'AI safety. I nostri gruppi di lavoro coprono mentorship, governance, comunicazione, infrastruttura tecnica, eventi, seminari, didattica e molto altro."
+
       - id: 5
         question: "Who can join AI Safety Italia?"
-        answer: "Anyone interested in AI safety is welcome! Our community includes researchers, students, professionals from various fields, policymakers, and anyone curious about the topic. We believe diverse perspectives are essential for addressing AI safety challenges."
+        question_it: "Chi può unirsi ad AI Safety Italia?"
+        answer: "Anyone interested in AI safety is welcome — researchers, students, professionals from any field, policymakers, science communicators, and curious minds. We believe diverse perspectives are essential for addressing AI safety challenges. You can join at any level of technical knowledge."
+        answer_it: "Chiunque sia interessato all'AI safety è benvenuto — ricercatori, studenti, professionisti di qualsiasi settore, esperti di policy, comunicatori scientifici e menti curiose. Crediamo che prospettive diverse siano fondamentali per affrontare le sfide dell'AI safety. Puoi unirti con qualsiasi livello di conoscenza tecnica."
+
       - id: 6
         question: "Is AI Safety Italia affiliated with any institution?"
-        answer: "AI Safety Italia is an independent grassroots organization. We collaborate with various universities and organizations but operate independently to serve the Italian AI safety community."
+        question_it: "AI Safety Italia è affiliata a qualche istituzione?"
+        answer: "AI Safety Italia is an independent grassroots organization. We collaborate with universities, research groups, and international AI safety organizations, but operate independently to serve the Italian community. We are part of the broader global AI safety movement."
+        answer_it: "AI Safety Italia è un'organizzazione indipendente. Collaboriamo con università, gruppi di ricerca e organizzazioni internazionali di AI safety, ma operiamo in modo indipendente per servire la comunità italiana. Facciamo parte del più ampio movimento globale per l'AI safety."
+
+      - id: 7
+        question: "How is AI Safety Italia organized?"
+        question_it: "Come è organizzata AI Safety Italia?"
+        answer: "We have a small core team and a board, supported by working groups focused on specific areas: mentorship, governance & fundraising, finance, communication, technical infrastructure, community & networking, events, seminars, and education & outreach. Members can participate in one or more groups based on their interests and availability."
+        answer_it: "Abbiamo un piccolo team centrale e un direttivo, supportati da gruppi di lavoro focalizzati su aree specifiche: mentorship, governance e fundraising, finanze, comunicazione, infrastruttura tecnica, comunità e networking, eventi, seminari, e didattica e divulgazione. I membri possono partecipare a uno o più gruppi in base ai loro interessi e disponibilità."
 
   - id: 3
     name: "Getting Involved"
+    name_it: "Come Partecipare"
     icon: "🤝"
     questions:
-      - id: 7
-        question: "How can I get involved with AI Safety Italia?"
-        answer: "There are many ways to get involved: join our community, volunteer for our initiatives, or contribute to our research projects. Check our events page or contact us for more information."
       - id: 8
-        question: "Can I volunteer with AI Safety Italia?"
-        answer: "Yes! We welcome volunteers to help with organizing events, managing our community, developing educational content, and supporting our operations. Join our Discord and contact us to learn about current opportunities and contribute in your way."
-      - id: 9
-        question: "How can I stay updated on your activities?"
-        answer: "Join our Discord channel and LinkedIn page to receive updates about events, programs, and news."
+        question: "How can I join AI Safety Italia?"
+        question_it: "Come posso unirmi ad AI Safety Italia?"
+        answer: "Fill in our interest form — it takes about 5 minutes. You can indicate which working groups you'd like to join and how many hours per month you can commit. We'll reach out to welcome you and connect you with the relevant groups."
+        answer_it: "Compila il nostro modulo di interesse — richiede circa 5 minuti. Puoi indicare a quali gruppi di lavoro vuoi unirti e quante ore al mese puoi dedicare. Ti contatteremo per darti il benvenuto e metterti in contatto con i gruppi pertinenti."
 
-# CTA Section
+      - id: 9
+        question: "What working groups can I join?"
+        question_it: "A quali gruppi di lavoro posso unirmi?"
+        answer: "Current working groups are: Mentorship, Governance & Fundraising, Finance, Communication, Technical Infrastructure, Community & Networking, Events, Seminars, Education & Outreach, and Board. You can join multiple groups and adjust your involvement over time."
+        answer_it: "I gruppi di lavoro attuali sono: Mentorship, Governance e Fundraising, Finanze, Comunicazione, Infrastruttura Tecnica, Comunità e Networking, Eventi, Seminari, Didattica e Divulgazione, e Direttivo. Puoi unirti a più gruppi e adattare il tuo coinvolgimento nel tempo."
+
+      - id: 10
+        question: "How can I stay updated on your activities?"
+        question_it: "Come posso rimanere aggiornato sulle vostre attività?"
+        answer: "Join our Discord server and follow us on LinkedIn. You can also subscribe to the AISafety.com newsletter for the broader AI safety ecosystem."
+        answer_it: "Unisciti al nostro server Discord e seguici su LinkedIn. Puoi anche iscriverti alla newsletter di AISafety.com per il più ampio ecosistema dell'AI safety."
+
 cta:
   title: "Ready to Join Our Community?"
+  title_it: "Pronto a Unirti alla Community?"
   description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
+  description_it: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso riguardo all'AI safety, c'è un posto per te nella nostra community."
   button_text: "Join Our Discord"
-  # Link handled directly in template via `site.social.discord`
+  button_text_it: "Unisciti al Discord"

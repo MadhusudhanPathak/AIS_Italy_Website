@@ -1,0 +1,36 @@
+# News items for the scrolling carousel
+# Add new items at the top (newest first)
+
+items:
+  - id: 1
+    date: "2026-05-01"
+    emoji: "🌐"
+    title_en: "AISafety.com Newsletter"
+    title_it: "Newsletter AISafety.com"
+    description_en: "Find your place in the AI safety ecosystem: curated lists of events, communities, courses, and more focused on preventing human extinction from AI."
+    description_it: "Trova il tuo posto nell'ecosistema dell'AI safety: liste curate di eventi, community, corsi e molto altro per prevenire i rischi dell'IA."
+    link_url: "https://www.aisafety.com/"
+    link_text_en: "Subscribe to the newsletter"
+    link_text_it: "Iscriviti alla newsletter"
+
+  - id: 2
+    date: "2026-04-15"
+    emoji: "🎓"
+    title_en: "AI Safety Fundamentals Course"
+    title_it: "Corso di Fondamenti di AI Safety"
+    description_en: "BlueDot Impact's AI Safety Fundamentals course is open for applications. Learn about alignment, governance, and careers in AI safety."
+    description_it: "Il corso AI Safety Fundamentals di BlueDot Impact è aperto alle candidature. Scopri allineamento, governance e carriere nell'AI safety."
+    link_url: "https://aisafetyfundamentals.com/"
+    link_text_en: "Apply now"
+    link_text_it: "Candidati ora"
+
+  - id: 3
+    date: "2026-03-20"
+    emoji: "🤝"
+    title_en: "Join Our Community"
+    title_it: "Unisciti alla Community"
+    description_en: "AI Safety Italia is growing! Fill in our interest form to join the community and get involved in our working groups."
+    description_it: "AI Safety Italia sta crescendo! Compila il modulo di interesse per unirti alla community e partecipare ai gruppi di lavoro."
+    link_url: "https://drive.google.com/drive/folders/1SVXScuH3Uf4un1upA3w_3i1gHGE_p722"
+    link_text_en: "Fill in the form"
+    link_text_it: "Compila il modulo"

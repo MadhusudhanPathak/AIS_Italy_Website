@@ -1,0 +1,82 @@
+<section class="section relative overflow-hidden" style="background: linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary));">
+  <div class="absolute top-0 right-0 w-96 h-96 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-32" style="background-color: var(--accent-200);"></div>
+  <div class="container relative z-10">
+    <div class="text-center mb-10">
+      <span class="badge badge-primary mb-4" data-en="{{ translations.en.news.badge }}" data-it="{{ translations.it.news.badge }}">{{ translations.en.news.badge }}</span>
+      <h2 data-en="{{ translations.en.news.heading }}" data-it="{{ translations.it.news.heading }}">{{ translations.en.news.heading }}</h2>
+    </div>
+
+    <div class="relative overflow-hidden" id="news-carousel-wrapper">
+      <!-- Carousel track -->
+      <div id="news-carousel" class="flex gap-6 transition-transform duration-500 ease-in-out">
+        {% for item in news.items %}
+        <div class="news-card card flex-shrink-0 w-full md:w-96" style="min-width: min(24rem, 90vw);">
+          <div class="card-body">
+            <div class="flex items-start gap-4">
+              <span class="text-4xl flex-shrink-0">{{ item.emoji }}</span>
+              <div class="flex-1">
+                <p class="text-xs mb-2" style="color: var(--text-tertiary);">{{ item.date }}</p>
+                <h3 class="text-lg mb-2" style="color: var(--accent);"
+                    data-en="{{ item.title_en }}" data-it="{{ item.title_it }}">{{ item.title_en }}</h3>
+                <p class="text-sm mb-4" style="color: var(--text-secondary);"
+                   data-en="{{ item.description_en }}" data-it="{{ item.description_it }}">{{ item.description_en }}</p>
+                <a href="{{ item.link_url }}" target="_blank" rel="noopener noreferrer"
+                   class="text-sm font-semibold" style="color: var(--accent);"
+                   data-en="{{ item.link_text_en }}" data-it="{{ item.link_text_it }}">{{ item.link_text_en }} →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Nav arrows -->
+      <button onclick="carouselPrev()" aria-label="Previous"
+        class="absolute left-0 top-1/2 -translate-y-1/2 -ml-3 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md"
+        style="background-color: var(--card-bg); border: 1px solid var(--card-border); color: var(--accent);">‹</button>
+      <button onclick="carouselNext()" aria-label="Next"
+        class="absolute right-0 top-1/2 -translate-y-1/2 -mr-3 z-10 w-9 h-9 rounded-full flex items-center justify-center shadow-md"
+        style="background-color: var(--card-bg); border: 1px solid var(--card-border); color: var(--accent);">›</button>
+    </div>
+
+    <!-- Dots -->
+    <div id="carousel-dots" class="flex justify-center gap-2 mt-6">
+      {% for item in news.items %}
+      <button onclick="carouselGoTo({{ loop.index0 }})"
+        class="carousel-dot w-2.5 h-2.5 rounded-full transition-all duration-300"
+        style="background-color: {% if loop.first %}var(--accent){% else %}var(--card-border){% endif %};"
+        aria-label="Go to slide {{ loop.index }}"></button>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  let current = 0;
+  const carousel = document.getElementById('news-carousel');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const total = dots.length;
+
+  function getCardWidth() {
+    const card = carousel.querySelector('.news-card');
+    if (!card) return 0;
+    return card.offsetWidth + 24; // 24 = gap-6
+  }
+
+  function goTo(index) {
+    current = (index + total) % total;
+    carousel.style.transform = 'translateX(-' + (current * getCardWidth()) + 'px)';
+    dots.forEach((d, i) => {
+      d.style.backgroundColor = i === current ? 'var(--accent)' : 'var(--card-border)';
+    });
+  }
+
+  window.carouselNext = function() { goTo(current + 1); };
+  window.carouselPrev = function() { goTo(current - 1); };
+  window.carouselGoTo = goTo;
+
+  // Auto-advance every 5 seconds
+  setInterval(function() { goTo(current + 1); }, 5000);
+})();
+</script>

@@ -1,0 +1,93 @@
+last_updated: '2026-05-26'
+members:
+- id: 1
+  name: Angelo Leone
+  email: angelo.leone1204@gmail.com
+  location: Londra, Regno Unito
+  career: Postdoc o ricercatore early-career (0–3 anni post-PhD)
+  institution: Indipendente
+  hours_per_month: 2–5 ore
+  areas: Evaluation (capability evaluations, dangerous capability evals, benchmarking),
+    Alignment (RLHF, scalable oversight, value alignment), AI governance e policy,
+    Etica dell'AI e impatto sociale
+  groups:
+  - mentorship
+  - governance
+  - communication
+  - technical
+  - community
+  - events
+  - seminars
+  - education
+- id: 2
+  name: Luca Mattiazzi
+  email: l.d.mattiazzi@gmail.com
+  profile: https://grokked.it
+  location: Milano, Italia
+  career: Ricercatore / Professore / professionista senior
+  institution: n8n
+  hours_per_month: 5–10 ore
+  areas: Interpretability (mechanistic interpretability, analisi delle rappresentazioni,
+    ecc.), Evaluation (capability evaluations, dangerous capability evals, benchmarking),
+    Alignment (RLHF, scalable oversight, value alignment), Sicurezza informatica per
+    modelli di frontiera
+  groups:
+  - technical
+- id: 3
+  name: Cristian Curaba
+  email: cristiancuraba00@gmail.com
+  profile: https://cristian-curaba.github.io/
+  location: Udine, Italia
+  career: Postdoc o ricercatore early-career (0–3 anni post-PhD)
+  institution: Università di Udine
+  hours_per_month: 5–10 ore
+  areas: Etica dell'AI e impatto sociale, Rischi catastrofici / esistenziali, Monitoring
+    con metodi formali
+  groups:
+  - technical
+  - education
+- id: 4
+  name: Madhusudhan Pathak
+  email: madhu.sudhan.pathak.ais@gmail.com
+  profile: https://myspy.vercel.app/
+  location: Padova, Italy
+  career: Studente triennale o magistrale
+  institution: University of Padova
+  hours_per_month: 5–10 ore
+  areas: Alignment (RLHF, scalable oversight, value alignment), Etica dell'AI e impatto
+    sociale
+  groups:
+  - communication
+  - technical
+  - education
+- id: 5
+  name: Lorenzo Pacchiardi
+  email: lorenzo.pacchiardi@gmail.com
+  profile: http://www.lorenzopacchiardi.me/
+  location: Cambridge, United Kingdom
+  career: Ricercatore / professionista mid-career
+  institution: University of Cambridge
+  areas: Evaluation (capability evaluations, dangerous capability evals, benchmarking),
+    Alignment (RLHF, scalable oversight, value alignment), AI governance e policy,
+    Rischi catastrofici / esistenziali
+- id: 6
+  name: Raffaele Mura
+  email: raffaele.mura@unica.it
+  profile: https://rmura498.github.io/
+  location: Cagliari, Italia
+  career: Dottorando / PhD student
+  institution: Università di Cagliari
+  hours_per_month: 2–5 ore
+  areas: Interpretability (mechanistic interpretability, analisi delle rappresentazioni,
+    ecc.), Robustness e adversarial ML, AI governance e policy, Sicurezza informatica
+    per modelli di frontiera
+  groups:
+  - seminars
+- id: 7
+  name: Giulia Consonni
+  email: kawngc@gmail.coml
+  profile: https://www.linkedin.com/in/gconsonni/, https://github.com/joleencfh/
+  location: Neustadt (Weinstr.), Germania
+  career: Ricercatore / professionista mid-career
+  institution: Indipendente
+  areas: Rischi catastrofici / esistenziali, AI safety communications

@@ -127,7 +127,7 @@
                     if (document.documentElement.getAttribute('data-theme') === 'dark') {
                         heroBg.style.backgroundImage = 'url("/assets/img/ais_italy_dark_bg.png")';
                     } else {
-                        heroBg.style.backgroundImage = 'url("/assets/img/ais_italy_light_bg.png")';
+                        heroBg.style.backgroundImage = 'url("/assets/img/ais_italy.jpg")';
                     }
                 });
                 
@@ -173,6 +173,44 @@
 
         // Initialize theme toggle when DOM is ready
         domReady(initThemeToggle);
+
+        // ── Language toggle ──────────────────────────────────────────────────
+        function applyLanguage(lang) {
+            document.querySelectorAll('[data-en][data-it]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+            // placeholder attrs on inputs/selects
+            document.querySelectorAll('[data-placeholder-en][data-placeholder-it]').forEach(el => {
+                el.placeholder = el.getAttribute('data-placeholder-' + lang);
+            });
+            // select option text
+            document.querySelectorAll('select option[data-en][data-it]').forEach(el => {
+                el.textContent = el.getAttribute('data-' + lang);
+            });
+            // nav items
+            document.querySelectorAll('[data-en-href][data-it-href]').forEach(el => {
+                el.href = el.getAttribute('data-' + lang + '-href');
+            });
+            const label = document.getElementById('lang-label');
+            const labelMobile = document.getElementById('lang-label-mobile');
+            const nextLang = lang === 'en' ? 'IT' : 'EN';
+            if (label) label.textContent = nextLang;
+            if (labelMobile) labelMobile.textContent = nextLang;
+            document.documentElement.lang = lang;
+            localStorage.setItem('lang', lang);
+        }
+
+        function toggleLanguage() {
+            const current = localStorage.getItem('lang') || 'en';
+            applyLanguage(current === 'en' ? 'it' : 'en');
+        }
+
+        function initLanguage() {
+            const saved = localStorage.getItem('lang') || 'en';
+            applyLanguage(saved);
+        }
+
+        domReady(initLanguage);
     </script>
 </body>
 </html>

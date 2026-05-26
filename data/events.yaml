@@ -1,84 +1,80 @@
 # Events & News Page Content Data
-# This file contains all user-facing content for the events & news page
-# Each field is documented with comments explaining its purpose
 
-# Hero Section
 hero:
   title: "Events & News"
+  title_it: "Eventi e News"
   subtitle: "Stay updated on our latest events, workshops, and announcements."
+  subtitle_it: "Rimani aggiornato sui nostri ultimi eventi, workshop e annunci."
 
-# Upcoming Events Section
+section_upcoming_title: "Upcoming & Recent Events"
+section_upcoming_title_it: "Eventi Imminenti e Recenti"
+
+section_highlights_title: "✨ Recent Highlights"
+section_highlights_title_it: "✨ Momenti Recenti"
+
 upcoming_events:
-  # - id: 1
-  #   title: "AI Safety Governance Panel Discussion"
-  #   date: "February 15, 2026 | 18:00 CET"
-  #   emoji: "📅"
-  #   status: "Upcoming"
-  #   description: "Join us for a panel discussion with leading experts on AI governance frameworks, regulatory approaches, and the role of international cooperation in AI safety policy."
-  #   format_info:
-  #     - label: "Format"
-  #       value: "Online Panel + Q&A"
-  #     - label: "Duration"
-  #       value: "2 hours"
-  #     - label: "Speakers"
-  #       value: "Industry leaders & policymakers"
-  #   register_text: "Register for Details"
-  #   register_link: "{{ site.forms.mailingList }}"
-  #   register_target: "_blank"
-  
-  # - id: 2
-  #   title: "8-Week Introductory Courses Begin"
-  #   date: "March 2026"
-  #   emoji: "📅"
-  #   status: "Upcoming"
-  #   description: "Our flagship educational program launches with two tracks: AI Safety Governance and AI Safety Alignment. Learn from experienced practitioners and join a community of like-minded individuals."
-  #   format_info:
-  #     - label: "Duration"
-  #       value: "8 weeks"
-  #     - label: "Format"
-  #       value: "Online + Discussion Groups"
-  #     - label: "Commitment"
-  #       value: "3-4 hours/week"
-  #   register_text: "Apply Now"
-  #   register_link: "{{ site.forms.courseApplication }}"
-  #   register_target: "_blank"
-  
-  - id: 3
-    title: "Wednesady Researcher Meetup"
-    date: "Every 2nd Wednesady at 18:00 CET"
-    emoji: "📅"
-    status: "Recurring"
-    description: "Informal gathering for AI safety researchers, students, and enthusiasts to discuss and collaborate on projects. A great place to network with the community!"
+  - id: 1
+    title: "🌱 Mentorship Program — Coming Soon"
+    title_it: "🌱 Programma di Mentorship — In Arrivo"
+    date: "Summer 2026"
+    date_it: "Estate 2026"
+    emoji: "🤝"
+    status: "Upcoming"
+    status_it: "In arrivo"
+    description: "We are preparing our first structured mentorship program, pairing AI safety newcomers with more experienced members of the community. The program will include regular 1-on-1 sessions, curated reading materials, and access to our working groups. Stay tuned — applications will open soon!"
+    description_it: "Stiamo preparando il nostro primo programma di mentorship strutturato, abbinando i nuovi arrivati all'AI safety con membri più esperti della community. Il programma includerà sessioni 1-to-1 regolari, materiali di lettura selezionati e accesso ai nostri gruppi di lavoro. Restate sintonizzati — le candidature apriranno presto!"
     format_info:
       - label: "Format"
+        label_it: "Formato"
+        value: "1-on-1 mentorship + group sessions"
+        value_it: "Mentorship 1-a-1 + sessioni di gruppo"
+      - label: "Duration"
+        label_it: "Durata"
+        value: "8–12 weeks"
+        value_it: "8–12 settimane"
+      - label: "Who is it for"
+        label_it: "Per chi"
+        value: "Students, researchers, and professionals new to AI safety"
+        value_it: "Studenti, ricercatori e professionisti alle prime armi con l'AI safety"
+    register_text: "Express your interest"
+    register_text_it: "Esprimi il tuo interesse"
+    register_link: "https://drive.google.com/drive/folders/1SVXScuH3Uf4un1upA3w_3i1gHGE_p722"
+    register_target: "_blank"
+
+  - id: 3
+    title: "Wednesday Researcher Meetup"
+    title_it: "Incontro Ricercatori del Mercoledì"
+    date: "Every 2nd Wednesday at 18:00 CET"
+    date_it: "Ogni 2° mercoledì alle 18:00 CET"
+    emoji: "📅"
+    status: "Recurring"
+    status_it: "Ricorrente"
+    description: "Informal gathering for AI safety researchers, students, and enthusiasts to discuss and collaborate on projects. A great place to network with the community!"
+    description_it: "Incontro informale per ricercatori, studenti e appassionati di AI safety per discutere e collaborare su progetti. Un ottimo posto per fare networking con la community!"
+    format_info:
+      - label: "Format"
+        label_it: "Formato"
         value: "Virtual Meetup"
+        value_it: "Incontro virtuale"
       - label: "Size"
+        label_it: "Dimensione"
         value: "3-10 participants"
+        value_it: "3-10 partecipanti"
       - label: "Level"
+        label_it: "Livello"
         value: "All experience welcome"
+        value_it: "Tutte le esperienze benvenute"
     register_text: ""
+    register_text_it: ""
     register_link: ""
     register_target: "_blank"
 
-# Recent Highlights Section
-recent_highlights:
-  # - id: 1
-  #   title: "AI Safety Roundtable Discussion"
-  #   date: "January 20, 2026"
-  #   emoji: "🏆"
-  #   description: "Industry experts discussed current challenges in AI alignment research and governance. Topics included transformer interpretability and societal impacts of large language models."
-  #   participants: "40+ participants"
-  
-  # - id: 2
-  #   title: "Introduction to AI Safety Workshop"
-  #   date: "January 15, 2026"
-  #   emoji: "🎓"
-  #   description: "Interactive workshop covering fundamentals of AI safety, technical approaches, policy considerations, and career paths. Hands-on activities and expert insights made it engaging for all levels."
-  #   participants: "50+ participants"
+recent_highlights: []
 
-# CTA Section
 cta:
   title: "Ready to Join Our Community?"
+  title_it: "Pronto a Unirti alla Nostra Community?"
   description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-  button_text: "Join Our Discord"
-  # Link handled directly in template via `site.social.discord`
+  description_it: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso sull'AI safety, c'è un posto per te nella nostra community."
+  button_text: "Join the Community"
+  button_text_it: "Entra nella Community"

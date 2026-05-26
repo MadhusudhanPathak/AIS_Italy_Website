@@ -6,14 +6,14 @@ permalink: /
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-background absolute inset-0 z-0 opacity-70" style="background-size: cover; background-position: center;"></div>
+    <div class="hero-background absolute inset-0 z-0" style="background-image: url('/assets/img/ais_italy.jpg');"></div>
     <div class="container text-center relative z-10">
-        <h1 class="hero-title">{{ home.hero.title }}</h1>
-        <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto">{{ home.hero.subtitle }}</p>
-        <p class="hero-sub text-lg max-w-2xl mx-auto mt-4">{{ home.hero.description }}</p>
+        <h1 class="hero-title" data-en="{{ translations.en.hero.title }}" data-it="{{ translations.it.hero.title }}">{{ translations.en.hero.title }}</h1>
+        <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto" data-en="{{ translations.en.hero.subtitle }}" data-it="{{ translations.it.hero.subtitle }}">{{ translations.en.hero.subtitle }}</p>
+        <p class="hero-sub text-lg max-w-2xl mx-auto mt-4" data-en="{{ translations.en.hero.description }}" data-it="{{ translations.it.hero.description }}">{{ translations.en.hero.description }}</p>
         <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-            <a href="{{ home.hero.cta_link }}" class="btn btn-primary">{{ home.hero.cta_text }}</a>
-            <a href="{{ home.hero.secondary_cta_link }}" class="btn btn-secondary">{{ home.hero.secondary_cta_text }}</a>
+            <a href="{{ home.hero.cta_link }}" class="btn btn-primary" data-en="{{ translations.en.hero.cta }}" data-it="{{ translations.it.hero.cta }}">{{ translations.en.hero.cta }}</a>
+            <a href="{{ home.hero.secondary_cta_link }}" class="btn btn-secondary" data-en="{{ translations.en.hero.secondary_cta }}" data-it="{{ translations.it.hero.secondary_cta }}">{{ translations.en.hero.secondary_cta }}</a>
         </div>
     </div>
 </section>
@@ -32,30 +32,7 @@ permalink: /
     </div>
 </section> -->
 
-<!-- Current Announcements -->
-<section class="section relative overflow-hidden" style="background: linear-gradient(to bottom right, var(--bg-secondary), var(--bg-tertiary));">
-    <div class="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 -mr-32"></div>
-    <div class="container relative z-10">
-        <div class="text-center mb-12">
-            <span class="badge badge-primary mb-4">📢 News</span>
-            <h2>Latest Announcements</h2>
-        </div>
-        <div class="max-w-2xl mx-auto">
-            {% for announcement in home.announcements %}
-            <div class="card-accent">
-                <div class="flex items-start space-x-4">
-                    <span class="text-4xl flex-shrink-0">{{ announcement.emoji }}</span>
-                    <div class="flex-1">
-                        <h3 class="mb-2" style="color: var(--accent);">{{ announcement.title }}</h3>
-                        <p class="mb-3" style="color: var(--text-secondary);">{{ announcement.description | safe }}</p>
-                        <p class="text-sm" style="color: var(--text-secondary);">Stay updated by <a href="{{ announcement.link_url }}" target="{{ announcement.link_target }}" class="font-semibold" style="color: var(--accent);">{{ announcement.link_text }}</a>!</p>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</section>
+{% include "news-carousel.njk" %}
 
 <!-- Recent Events
 <section class="section" id="learn-more">
@@ -128,12 +105,12 @@ permalink: /
 </section> -->
 
 <!-- CTA Section -->
-<section class="section bg-gradient-to-r from-accent via-safety-blue to-safety-purple">
+<section class="section" style="background: var(--gradient-primary);">
     <div class="container">
         <div class="cta-box text-center">
-            <h2>{{ home.cta.title }}</h2>
-            <p>{{ home.cta.description }}</p>
-            <a href="{{ home.cta.button_link }}" class="btn bg-white dark:bg-primary-700 text-accent hover:bg-gray-100 dark:hover:bg-primary-600 mt-6">{{ home.cta.button_text }}</a>
+            <h2 data-en="{{ translations.en.cta.title }}" data-it="{{ translations.it.cta.title }}">{{ translations.en.cta.title }}</h2>
+            <p data-en="{{ translations.en.cta.description }}" data-it="{{ translations.it.cta.description }}">{{ translations.en.cta.description }}</p>
+            <a href="{{ site.forms.mailingList }}" target="_blank" class="btn mt-6" style="background-color: #ffffff; color: var(--accent-700);" data-en="{{ translations.en.cta.button }}" data-it="{{ translations.it.cta.button }}">{{ translations.en.cta.button }}</a>
         </div>
     </div>
 </section>
