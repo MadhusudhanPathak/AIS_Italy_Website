@@ -94,59 +94,59 @@
 }
 
 [data-theme='dark'] {
-  /* Dark theme - All variables populated from design tokens */
+  /* Dark theme - brand palette (green #008c45/#20c467, lavender #9999cc) */
 
-  /* Backgrounds */
-  --bg-primary: #0f172a;
-  --bg-secondary: #1e293b;
-  --bg-tertiary: #334155;
-  --bg-overlay: #1a1f2e;
+  /* Backgrounds — deep forest greens */
+  --bg-primary: #0a1a0f;
+  --bg-secondary: #0f2318;
+  --bg-tertiary: #162d1f;
+  --bg-overlay: #122018;
 
   /* Surfaces / Cards */
-  --card-bg: #1e293b;
-  --card-hover: #293548;
-  --card-border: #475569;
-  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3), 0 1px 2px 0 rgba(0, 0, 0, 0.2);
-  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  --card-bg: #0f2318;
+  --card-hover: #1a3325;
+  --card-border: #2a4a35;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --card-shadow-hover: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
 
   /* Text Colors */
-  --text-primary: #f8fafc;
-  --text-secondary: #cbd5e1;
-  --text-tertiary: #94a3b8;
-  --text-muted: #64748b;
-  --text-on-accent: #0f172a;
-  --text-on-dark: #f8fafc;
+  --text-primary: #f0faf4;
+  --text-secondary: #a8d5b8;
+  --text-tertiary: #6aaa85;
+  --text-muted: #3d6e50;
+  --text-on-accent: #ffffff;
+  --text-on-dark: #f0faf4;
 
   /* Borders */
-  --border-default: #475569;
-  --border-strong: #64748b;
-  --border-muted: #334155;
+  --border-default: #2a4a35;
+  --border-strong: #3d6e50;
+  --border-muted: #162d1f;
 
-  /* Primary Accent - Blue */
-  --accent: #38bdf8;
-  --accent-50: #f0f9ff;
-  --accent-100: #e0f2fe;
-  --accent-200: #bae6fd;
-  --accent-300: #7dd3fc;
-  --accent-400: #38bdf8;
-  --accent-500: #0ea5e9;
-  --accent-600: #0284c7;
-  --accent-700: #0369a1;
-  --accent-800: #075985;
-  --accent-900: #0c3d66;
+  /* Primary Accent - bright green (same brand green, lightened for dark bg) */
+  --accent: #20c467;
+  --accent-50: #f0fdf4;
+  --accent-100: #c6f5d8;
+  --accent-200: #8eeab3;
+  --accent-300: #55db8c;
+  --accent-400: #20c467;
+  --accent-500: #008c45;
+  --accent-600: #006e36;
+  --accent-700: #005228;
+  --accent-800: #00361a;
+  --accent-900: #001a0d;
 
-  /* Secondary Accent - Purple */
-  --secondary: #d8b4fe;
-  --secondary-50: #faf5ff;
-  --secondary-100: #f3e8ff;
-  --secondary-200: #e9d5ff;
-  --secondary-300: #d8b4fe;
-  --secondary-400: #c084fc;
-  --secondary-500: #a855f7;
-  --secondary-600: #9333ea;
-  --secondary-700: #7e22ce;
-  --secondary-800: #6b21a8;
-  --secondary-900: #581c87;
+  /* Secondary Accent - lavender (same brand lavender) */
+  --secondary: #b3b3dd;
+  --secondary-50: #f5f5ff;
+  --secondary-100: #e8e8f8;
+  --secondary-200: #d1d1f0;
+  --secondary-300: #b3b3dd;
+  --secondary-400: #9999cc;
+  --secondary-500: #7a7aaa;
+  --secondary-600: #5c5c88;
+  --secondary-700: #3d3d66;
+  --secondary-800: #252545;
+  --secondary-900: #131330;
 
   /* Semantic Colors */
   --success: #4ade80;
@@ -155,13 +155,13 @@
   --warning-light: #78350f;
   --error: #f87171;
   --error-light: #7f1d1d;
-  --info: #38bdf8;
-  --info-light: #082f49;
+  --info: #20c467;
+  --info-light: #003320;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(to right, #38bdf8, #7dd3fc);
-  --gradient-accent: linear-gradient(to right, #7dd3fc, #d8b4fe);
-  --gradient-hero: linear-gradient(135deg, #0f172a 0%, #1a3a52 50%, #0f172a 100%);
+  --gradient-primary: linear-gradient(to right, #008c45, #20c467);
+  --gradient-accent: linear-gradient(to right, #20c467, #9999cc);
+  --gradient-hero: linear-gradient(135deg, #0a1a0f 0%, #0f2318 50%, #0a1a0f 100%);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
@@ -554,13 +554,13 @@ footer a:hover {
 .hero-title {
   @apply text-4xl md:text-6xl font-extrabold leading-tight;
   color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-sub {
   @apply text-lg md:text-xl max-w-3xl mx-auto mt-4;
   color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================================================

@@ -61,6 +61,7 @@ permalink: /contact/
             </div>
         </div>
     </div>
+
 </section>
 
 <div class="divider"></div>

@@ -36,13 +36,13 @@ permalink: /community/
             </select>
         </div>
 
-        <div class="overflow-x-auto rounded-lg border" style="border-color: var(--card-border);">
+        <div class="overflow-x-auto rounded-lg border" style="border-color: var(--card-border); max-height: 480px; overflow-y: auto;">
             <table class="w-full text-sm" style="border-collapse: collapse;">
                 <thead>
                     <tr style="background-color: var(--bg-tertiary); color: var(--text-primary);">
-                        <th class="text-left px-4 py-3 font-semibold" data-en="Name" data-it="Nome">Name</th>
-                        <th class="text-left px-4 py-3 font-semibold" data-en="Location" data-it="Posizione">Location</th>
-                        <th class="text-left px-4 py-3 font-semibold" data-en="Areas of Interest" data-it="Aree di interesse">Areas of Interest</th>
+                        <th class="text-left px-4 py-3 font-semibold" style="position: sticky; top: 0; background-color: var(--bg-tertiary); z-index: 1;" data-en="Name" data-it="Nome">Name</th>
+                        <th class="text-left px-4 py-3 font-semibold" style="position: sticky; top: 0; background-color: var(--bg-tertiary); z-index: 1;" data-en="Location" data-it="Posizione">Location</th>
+                        <th class="text-left px-4 py-3 font-semibold" style="position: sticky; top: 0; background-color: var(--bg-tertiary); z-index: 1;" data-en="Areas of Interest" data-it="Aree di interesse">Areas of Interest</th>
                     </tr>
                 </thead>
                 <tbody id="members-tbody">
@@ -71,6 +71,7 @@ permalink: /community/
         </div>
         <p id="tbl-count" class="text-xs mt-3 text-right" style="color: var(--text-tertiary);"></p>
     </div>
+
 </section>
 
 <!-- Working Groups Cards Section -->

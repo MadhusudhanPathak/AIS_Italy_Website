@@ -56,9 +56,11 @@ permalink: /events/
             {% endfor %}
         </div>
     </div>
+
 </section>
 
 {% if events.recent_highlights | length > 0 %}
+
 <div class="divider"></div>
 
 <!-- Past Events -->

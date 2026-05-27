@@ -54,6 +54,7 @@ en:
 
   footer:
     about_heading: "About AI Safety Italia"
+    about_description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
     links_heading: "Quick Links"
     connect_heading: "Connect With Us"
     copyright: "© 2026 AI Safety Italia | Advancing AI Safety"
@@ -111,6 +112,7 @@ it:
 
   footer:
     about_heading: "Chi è AI Safety Italia"
+    about_description: "Una comunità AI in crescita che lavora per ridurre i rischi dell'IA avanzata, sensibilizzando, formando e creando opportunità per un mondo AI più sicuro."
     links_heading: "Link Rapidi"
     connect_heading: "Connettiti con Noi"
     copyright: "© 2026 AI Safety Italia | Per un'IA più sicura"

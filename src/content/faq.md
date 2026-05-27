@@ -39,6 +39,7 @@ permalink: /faq/
         </div>
         {% endfor %}
     </div>
+
 </section>
 
 <!-- CTA Section -->
