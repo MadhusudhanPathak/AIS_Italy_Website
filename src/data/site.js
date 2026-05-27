@@ -22,8 +22,8 @@ const siteData = {
     discord: 'https://discord.gg/aYNAPZjQJu',
   },
   forms: {
-    mailingList: 'https://drive.google.com/drive/folders/1SVXScuH3Uf4un1upA3w_3i1gHGE_p722',
-    courseApplication: 'https://drive.google.com/drive/folders/1SVXScuH3Uf4un1upA3w_3i1gHGE_p722',
+    mailingList: 'https://forms.gle/mtBnGSNY21bABNSt7',
+    courseApplication: 'placeholder', // Update with actual link when available
   },
 };
 

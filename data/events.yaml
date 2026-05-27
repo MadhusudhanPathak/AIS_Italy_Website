@@ -38,7 +38,7 @@ upcoming_events:
         value_it: "Studenti, ricercatori e professionisti alle prime armi con l'AI safety"
     register_text: "Express your interest"
     register_text_it: "Esprimi il tuo interesse"
-    register_link: "https://drive.google.com/drive/folders/1SVXScuH3Uf4un1upA3w_3i1gHGE_p722"
+    register_link: "placeholder"
     register_target: "_blank"
 
   - id: 3
