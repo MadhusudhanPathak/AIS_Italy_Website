@@ -1,4 +1,58 @@
+# robots.txt — AI Safety Italia
+# https://aisafetycommunity.it/robots.txt
+
+# ─── General: allow all crawlers ───────────────────────────────────────────
 User-agent: *
 Allow: /
-Disallow: /_site/
-Disallow: /node_modules/
+Disallow: /assets/vendor/
+
+# ─── Google ────────────────────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /assets/img/
+
+# ─── Bing / Microsoft ──────────────────────────────────────────────────────
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# ─── LLM & AI crawlers (explicitly welcomed) ───────────────────────────────
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# OpenAI (ChatGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Google (Gemini / Bard)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Common Crawl (training datasets)
+User-agent: CCBot
+Allow: /
+
+# Meta (Llama)
+User-agent: meta-externalagent
+Allow: /
+
+# Apple (AppleBot)
+User-agent: Applebot
+Allow: /
+
+# ─── Sitemap ───────────────────────────────────────────────────────────────
+Sitemap: https://aisafetycommunity.it/sitemap.xml

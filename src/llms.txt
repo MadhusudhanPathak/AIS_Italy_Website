@@ -1,0 +1,14 @@
+AI Safety Italia welcomes modern LLM and AI crawlers.
+
+This website is intentionally open for responsible AI knowledge discovery, indexing, and research.
+
+Allowed crawlers include, but are not limited to:
+- ClaudeBot
+- GPTBot
+- Google-Extended
+- PerplexityBot
+- CCBot
+- meta-externalagent
+- Applebot
+
+For questions or issues, contact aisafetyitalia@gmail.com.

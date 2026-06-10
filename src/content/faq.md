@@ -2,6 +2,8 @@
 layout: page.njk
 title: FAQ
 permalink: /faq/
+seoTitle: 'FAQ — AI Safety Italia | What is AI Safety?'
+seoDescription: "Answers to common questions about AI safety, AI Safety Italia's mission, how to join, and what working groups are available."
 ---
 
 <!-- Hero Section -->

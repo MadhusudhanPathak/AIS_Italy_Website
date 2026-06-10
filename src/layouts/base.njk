@@ -1,14 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ site.site.description }}">
-    <meta name="author" content="{{ site.site.name }}">
-    <meta name="theme-color" content="{{ design.colors.brand.primary | default('#0369a1') }}">
-    <title>{% if title %}{{ title }} | {% endif %}{{ site.site.name }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="icon" type="image/svg+xml" href="/assets/img/favicon.svg">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#3b82f6" />
+
+  {# ── Core SEO ────────────────────────────────────────────────── #}
+  <title>{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety Italia{% endif %}</title>
+  <meta name="description" content="{% if seoDescription %}{{ seoDescription }}{% elif description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="author" content="AI Safety Italia" />
+
+  {# ── Canonical URL ───────────────────────────────────────────── #}
+  <link rel="canonical" href="https://aisafetycommunity.it{{ page.url }}" />
+
+  {# ── hreflang (EN / IT) ──────────────────────────────────────── #}
+  <link rel="alternate" hreflang="en" href="https://aisafetycommunity.it{{ page.url }}" />
+  <link rel="alternate" hreflang="it" href="https://aisafetycommunity.it/it{{ page.url }}" />
+  <link rel="alternate" hreflang="x-default" href="https://aisafetycommunity.it{{ page.url }}" />
+
+  {# ── Open Graph ──────────────────────────────────────────────── #}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AI Safety Italia" />
+  <meta property="og:title" content="{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety Italia{% endif %}" />
+  <meta property="og:description" content="{% if seoDescription %}{{ seoDescription }}{% elif description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:url" content="https://aisafetycommunity.it{{ page.url }}" />
+  <meta property="og:image" content="https://aisafetycommunity.it/assets/img/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="AI Safety Italia — Building a safer future through awareness, education, and community" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="it_IT" />
+
+  {# ── Twitter / X Card ────────────────────────────────────────── #}
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety Italia{% endif %}" />
+  <meta name="twitter:description" content="{% if seoDescription %}{{ seoDescription }}{% elif description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta name="twitter:image" content="https://aisafetycommunity.it/assets/img/og-image.png" />
+
+  {# ── Favicon ─────────────────────────────────────────────────── #}
+  <link rel="icon" type="image/svg+xml" href="/assets/img/AISafetyItaly.svg" />
+
+  {# ── Preload logo SVG ────────────────────────────────────────── #}
+  <link rel="preload" as="image" href="/assets/img/AISafetyItaly.svg" />
+
+  {# ── CSS ─────────────────────────────────────────────────────── #}
+  <link rel="stylesheet" href="/assets/css/style.css" />
+
+  {# ══════════════════════════════════════════════════════════════
+     STRUCTURED DATA (JSON-LD)
+     Each block only outputs on the matching page URL
+     ══════════════════════════════════════════════════════════════ #}
+
+  {# Homepage: Organization + WebSite #}
+  {% if page.url == "/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://aisafetycommunity.it/#organization",
+        "name": "AI Safety Italia",
+        "alternateName": ["AI Safety Italy"],
+        "url": "https://aisafetycommunity.it/",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://aisafetycommunity.it/assets/img/AISafetyItaly.svg"
+        },
+        "description": "Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration.",
+        "knowsAbout": ["AI safety", "AI alignment", "AI governance", "Existential risk from AI", "Machine learning interpretability"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "aisafetyitalia@gmail.com",
+          "contactType": "general"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/ai-safety-italia/",
+          "https://discord.gg/aYNAPZjQJu"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://aisafetycommunity.it/#website",
+        "url": "https://aisafetycommunity.it/",
+        "name": "AI Safety Italia",
+        "inLanguage": ["en", "it"],
+        "publisher": { "@id": "https://aisafetycommunity.it/#organization" }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  {# About page #}
+  {% if page.url == "/about/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "url": "https://aisafetycommunity.it/about/",
+    "name": "About AI Safety Italia",
+    "isPartOf": { "@id": "https://aisafetycommunity.it/#website" },
+    "about": { "@id": "https://aisafetycommunity.it/#organization" }
+  }
+  </script>
+  {% endif %}
+
+  {# FAQ page: enables Google FAQ rich results #}
+  {% if page.url == "/faq/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "url": "https://aisafetycommunity.it/faq/",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is AI safety?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI safety is the field of research focused on ensuring AI systems behave in ways that are beneficial to humanity, preventing unintended consequences and aligning AI goals with human values." }
+      },
+      {
+        "@type": "Question",
+        "name": "What does AI Safety Italia do?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI Safety Italia is a grassroots community running seminars, study groups, mentorship programs, and networking events in Italy. It operates through 9 working groups covering mentorship, governance, technical infrastructure, education, and more." }
+      },
+      {
+        "@type": "Question",
+        "name": "Who can join AI Safety Italia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Anyone interested in AI safety is welcome — researchers, students, and professionals from any field. We believe diverse perspectives are essential for addressing AI safety challenges." }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I join AI Safety Italia?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Fill in the interest form at https://aisafetycommunity.it/community/ — it takes about 5 minutes. Indicate which working groups you'd like to join and how many hours per month you can commit." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is AI Safety Italia affiliated with any institution?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI Safety Italia is an independent grassroots organization. We collaborate with universities and international AI safety organizations, but operate independently to serve the Italian community." }
+      }
+    ]
+  }
+  </script>
+  {% endif %}
+
+  {# Community page #}
+  {% if page.url == "/community/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "url": "https://aisafetycommunity.it/community/",
+    "name": "AI Safety Italia Community — Members and Working Groups",
+    "isPartOf": { "@id": "https://aisafetycommunity.it/#website" },
+    "about": {
+      "@type": "Organization",
+      "@id": "https://aisafetycommunity.it/#organization",
+      "department": [
+        { "@type": "Organization", "name": "Mentorship Working Group" },
+        { "@type": "Organization", "name": "Governance and Fundraising Working Group" },
+        { "@type": "Organization", "name": "Communications Working Group" },
+        { "@type": "Organization", "name": "Technical Infrastructure Working Group" },
+        { "@type": "Organization", "name": "Events Working Group" },
+        { "@type": "Organization", "name": "Education and Outreach Working Group" }
+      ]
+    }
+  }
+  </script>
+  {% endif %}
+
+  {# Contact page #}
+  {% if page.url == "/contact/" %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "url": "https://aisafetycommunity.it/contact/",
+    "name": "Contact AI Safety Italia",
+    "isPartOf": { "@id": "https://aisafetycommunity.it/#website" },
+    "mainEntity": {
+      "@type": "Organization",
+      "@id": "https://aisafetycommunity.it/#organization",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "email": "aisafetyitalia@gmail.com",
+        "contactType": "general",
+        "availableLanguage": ["English", "Italian"]
+      }
+    }
+  }
+  </script>
+  {% endif %}
+
+  {# Optional: any page can inject extra <head> content via frontmatter extraHead #}
+  {% if extraHead %}{{ extraHead | safe }}{% endif %}
+
 </head>
 <body style="background-color: var(--bg-primary); color: var(--text-primary);">
     {% include "header.njk" %}

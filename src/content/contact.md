@@ -2,6 +2,8 @@
 layout: page.njk
 title: Contact
 permalink: /contact/
+seoTitle: 'Contact AI Safety Italia'
+seoDescription: "Get in touch with AI Safety Italia by email or join our Discord and LinkedIn to connect with Italy's AI safety community."
 ---
 
 <!-- Hero Section -->

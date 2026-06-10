@@ -2,6 +2,8 @@
 layout: page.njk
 title: About Us
 permalink: /about/
+seoTitle: 'About AI Safety Italia — Mission, Vision & How We Work'
+seoDescription: "Learn about AI Safety Italia's mission to reduce AI risks in Italy through learning, education, and community building across 9 active working groups."
 ---
 
 <!-- Hero Section -->

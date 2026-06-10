@@ -2,6 +2,8 @@
 layout: page.njk
 title: Community
 permalink: /community/
+seoTitle: 'AI Safety Italia Community — Members & Working Groups'
+seoDescription: 'Meet the members of AI Safety Italia. Working groups cover mentorship, governance, technical research, education, and more. Open to all.'
 ---
 
 <!-- Hero Section -->

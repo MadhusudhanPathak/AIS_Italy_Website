@@ -31,6 +31,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy({ "src/assets/img/favicon.svg": "favicon.svg" });
 
   eleventyConfig.addPassthroughCopy("src/robots.txt");
+  eleventyConfig.addPassthroughCopy("src/llms.txt");
 
   // Watch targets for live reload
   eleventyConfig.addWatchTarget("src/assets/css/");
@@ -47,6 +48,15 @@ module.exports = function(eleventyConfig) {
       month: 'long',
       day: 'numeric'
     });
+  });
+
+  eleventyConfig.addFilter("date", (dateObj, format) => {
+    const date = new Date(dateObj);
+    if (Number.isNaN(date.getTime())) return "";
+    if (format === "Y-m-d") {
+      return date.toISOString().slice(0, 10);
+    }
+    return date.toLocaleDateString('en-US');
   });
 
   /**

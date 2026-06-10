@@ -2,6 +2,8 @@
 layout: page.njk
 title: Home
 permalink: /
+seoTitle: "AI Safety Italia — Italy's AI Safety Community"
+seoDescription: "AI Safety Italia is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals."
 ---
 
 <!-- Hero Section -->

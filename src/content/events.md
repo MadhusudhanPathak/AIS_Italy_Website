@@ -2,6 +2,8 @@
 layout: page.njk
 title: Events & News
 permalink: /events/
+seoTitle: 'AI Safety Events & News — Italy | AI Safety Italia'
+seoDescription: 'Upcoming AI safety events, seminars, and workshops in Italy and online. Stay updated with the latest news from AI Safety Italia.'
 ---
 
 <!-- Hero Section -->

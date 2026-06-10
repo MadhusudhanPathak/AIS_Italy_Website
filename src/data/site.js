@@ -2,10 +2,12 @@ const { validateSiteData, logValidationErrors } = require('../utils/validation')
 
 // Site configuration
 const siteData = {
+  description:
+    "AI Safety Italia is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals.",
   site: {
     name: 'AI Safety Italia',
     description:
-      'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.',
+      "AI Safety Italia is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals.",
     domain: 'aisafetyitalia.org',
     email: 'aisafetyitalia@gmail.com',
   },
