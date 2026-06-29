@@ -16,7 +16,8 @@
   /* Light theme (default) - All variables populated from design tokens */
 
   /* Font families — Source Serif 4 (display) + Hanken Grotesk (body/UI) */
-  --font-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
   --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
@@ -510,8 +511,7 @@ footer a:hover {
   border-radius: 1rem;
   box-shadow: var(--shadow-sm);
   padding: 2rem;
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
-    border-color 0.3s var(--ease);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .feature-box:hover {
@@ -539,8 +539,7 @@ footer a:hover {
   border-radius: 1rem;
   color: var(--text-primary);
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
-    border-color 0.3s var(--ease);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .feature-item:hover {
@@ -600,8 +599,7 @@ footer a:hover {
   border-radius: 1.25rem;
   padding: 2.25rem 1.5rem;
   box-shadow: var(--shadow-sm);
-  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
-    border-color 0.3s var(--ease);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
 }
 
 .team-card:hover {
