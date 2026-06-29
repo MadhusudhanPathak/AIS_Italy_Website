@@ -15,8 +15,14 @@
 :root {
   /* Light theme (default) - All variables populated from design tokens */
 
+  /* Font families — Source Serif 4 (display) + Hanken Grotesk (body/UI) */
+  --font-sans: 'Hanken Grotesk', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
   /* Backgrounds */
   --bg-primary: #fdfaf5;
+  --bg-primary-rgb: 253, 250, 245;
   --bg-secondary: #f6edd9;
   --bg-tertiary: #ede4cc;
   --bg-overlay: #f0e8d0;
@@ -77,17 +83,22 @@
   --info: #008c45;
   --info-light: #f0fdf4;
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(to right, #008c45, #20c467);
-  --gradient-accent: linear-gradient(to right, #20c467, #9999cc);
-  --gradient-hero: linear-gradient(135deg, #003d1f 0%, #006633 50%, #003d1f 100%);
+  /* Gradients — tonal, calm (no blue/purple AI cliché) */
+  --gradient-primary: linear-gradient(135deg, #008c45, #20c467);
+  --gradient-accent: linear-gradient(135deg, #16a34a, #9999cc);
+  /* Light, airy hero wash — barely-there green → cream → lavender */
+  --gradient-hero: linear-gradient(160deg, #f4fbf6 0%, #fcfbf8 45%, #f6f3fb 100%);
+  --gradient-hero-deep: linear-gradient(150deg, #0a1a0f 0%, #0f3322 55%, #0a1a0f 100%);
 
-  /* Shadows */
+  /* Shadows — soft, slate-tinted (never pure black), low spread */
   --shadow-sm: 0 1px 2px 0 rgba(15, 23, 39, 0.05);
-  --shadow: 0 1px 3px 0 rgba(15, 23, 39, 0.1), 0 1px 2px 0 rgba(15, 23, 39, 0.06);
-  --shadow-md: 0 4px 6px -1px rgba(15, 23, 39, 0.1), 0 2px 4px -1px rgba(15, 23, 39, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(15, 23, 39, 0.1), 0 4px 6px -2px rgba(15, 23, 39, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(15, 23, 39, 0.1), 0 10px 10px -5px rgba(15, 23, 39, 0.04);
+  --shadow: 0 1px 3px 0 rgba(15, 23, 39, 0.08), 0 1px 2px 0 rgba(15, 23, 39, 0.05);
+  --shadow-md: 0 4px 10px -2px rgba(15, 23, 39, 0.08), 0 2px 4px -2px rgba(15, 23, 39, 0.05);
+  --shadow-lg: 0 12px 24px -6px rgba(15, 23, 39, 0.1), 0 4px 8px -4px rgba(15, 23, 39, 0.05);
+  --shadow-xl: 0 24px 40px -10px rgba(15, 23, 39, 0.12), 0 8px 16px -8px rgba(15, 23, 39, 0.06);
+
+  /* Focus ring (green, accessible) */
+  --ring: 0 0 0 3px rgba(0, 140, 69, 0.18);
 
   --overlay: rgba(15, 23, 39, 0.7);
   --overlay-light: rgba(15, 23, 39, 0.5);
@@ -98,6 +109,7 @@
 
   /* Backgrounds — deep forest greens */
   --bg-primary: #0a1a0f;
+  --bg-primary-rgb: 10, 26, 15;
   --bg-secondary: #0f2318;
   --bg-tertiary: #162d1f;
   --bg-overlay: #122018;
@@ -159,16 +171,20 @@
   --info-light: #003320;
 
   /* Gradients */
-  --gradient-primary: linear-gradient(to right, #008c45, #20c467);
-  --gradient-accent: linear-gradient(to right, #20c467, #9999cc);
-  --gradient-hero: linear-gradient(135deg, #0a1a0f 0%, #0f2318 50%, #0a1a0f 100%);
+  --gradient-primary: linear-gradient(135deg, #008c45, #20c467);
+  --gradient-accent: linear-gradient(135deg, #16a34a, #9999cc);
+  --gradient-hero: linear-gradient(160deg, #0a1a0f 0%, #0f2318 50%, #0a1a0f 100%);
+  --gradient-hero-deep: linear-gradient(150deg, #0a1a0f 0%, #0f3322 55%, #0a1a0f 100%);
 
   /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.4);
   --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px 0 rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 10px -2px rgba(0, 0, 0, 0.5), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 12px 24px -6px rgba(0, 0, 0, 0.5), 0 4px 8px -4px rgba(0, 0, 0, 0.4);
+  --shadow-xl: 0 24px 40px -10px rgba(0, 0, 0, 0.6), 0 8px 16px -8px rgba(0, 0, 0, 0.4);
+
+  /* Focus ring */
+  --ring: 0 0 0 3px rgba(32, 196, 103, 0.3);
 
   --overlay: rgba(0, 0, 0, 0.8);
   --overlay-light: rgba(0, 0, 0, 0.6);
@@ -183,9 +199,11 @@ html {
 }
 
 body {
-  @apply font-sans antialiased;
+  @apply antialiased;
+  font-family: var(--font-sans);
   background-color: var(--bg-primary);
   color: var(--text-primary);
+  text-rendering: optimizeLegibility;
 }
 
 /* ==========================================================================
@@ -198,9 +216,12 @@ h3,
 h4,
 h5,
 h6 {
+  font-family: var(--font-display);
   color: var(--text-primary);
   font-weight: 700;
   line-height: 1.2;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
 }
 
 h1 {
@@ -324,6 +345,22 @@ nav a.active {
   border-color: transparent;
 }
 
+/* Secondary — clean white surface with slate border (light hero pairing) */
+.btn-secondary {
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--card-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
 .btn:focus {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -346,18 +383,18 @@ nav a.active {
   display: flex;
   flex-direction: column;
   background-color: var(--card-bg);
-  border: 1px solid var(--card-border);
-  border-radius: 0.75rem;
-  box-shadow: var(--card-shadow);
-  padding: 1.5rem;
-  transition: box-shadow 0.2s ease, background-color 0.2s ease;
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  padding: 1.75rem;
+  transition: box-shadow 0.3s var(--ease), border-color 0.3s var(--ease);
   color: var(--text-primary);
   height: 100%;
 }
 
 .card:hover {
-  background-color: var(--card-hover);
-  box-shadow: var(--card-shadow-hover);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-200);
 }
 
 .card-body {
@@ -378,6 +415,46 @@ nav a.active {
   border-color: var(--accent);
   background-color: var(--card-bg);
   color: var(--text-primary);
+}
+
+/* Modern card — hairline border, large radius, animated gradient accent + lift.
+   Shared look for mission panels and any "content box". */
+.card-elevated {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  padding: 2.25rem;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+}
+
+.card-elevated::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--gradient-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+
+.card-elevated:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-200);
+}
+
+.card-elevated:hover::before {
+  transform: scaleX(1);
 }
 
 .card-dark {
@@ -427,39 +504,574 @@ footer a:hover {
    ========================================================================== */
 
 .feature-box {
-  background-color: var(--card-hover);
-  border: 1px solid var(--card-border);
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-muted);
   color: var(--text-primary);
-  border-radius: 0.5rem;
-  box-shadow: var(--card-shadow);
-  transition: box-shadow 0.2s ease;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    border-color 0.3s var(--ease);
 }
 
 .feature-box:hover {
-  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-200);
+}
+
+/* "How We Work" — centred, readable column of white cards with prominent icons */
+.feature-list {
+  max-width: 44rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .feature-item {
-  @apply flex items-start space-x-4 p-4 rounded-lg;
-  background-color: var(--card-hover);
-  border: 1px solid var(--card-border);
+  display: flex;
+  align-items: flex-start;
+  gap: 1.35rem;
+  padding: 1.6rem 1.85rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
   color: var(--text-primary);
-  box-shadow: var(--card-shadow);
-  transition: box-shadow 0.2s ease;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    border-color 0.3s var(--ease);
 }
 
 .feature-item:hover {
-  box-shadow: var(--card-shadow-hover);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-200);
+}
+
+.feature-item .feature-icon {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-100);
+  color: var(--accent-700);
+  transition: transform 0.3s var(--ease);
+}
+
+.feature-item:hover .feature-icon {
+  transform: scale(1.08);
 }
 
 .feature-content h4 {
   color: var(--text-primary);
   font-weight: 600;
+  margin: 0.15rem 0 0;
+  font-size: var(--text-lg);
 }
 
 .feature-content p {
   color: var(--text-secondary);
-  margin-top: 0.5rem;
+  margin-top: 0.4rem;
+  margin-bottom: 0;
+}
+
+/* Elegant lead paragraph — serif, large, balanced (About mission prose) */
+.lead-text {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.85rem);
+  line-height: 1.5;
+  color: var(--text-primary);
+  text-wrap: balance;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Team cards — round animated placeholder avatars (faces)
+   ========================================================================== */
+
+.team-card {
+  text-align: center;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-muted);
+  border-radius: 1.25rem;
+  padding: 2.25rem 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s var(--ease), box-shadow 0.3s var(--ease),
+    border-color 0.3s var(--ease);
+}
+
+.team-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-200);
+}
+
+.team-avatar {
+  position: relative;
+  width: 5.5rem;
+  height: 5.5rem;
+  margin: 0 auto 1.2rem;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #fff;
+  background: var(--gradient-accent);
+  box-shadow: 0 10px 24px -8px rgba(0, 140, 69, 0.45);
+  transition: transform 0.3s var(--ease);
+}
+
+/* Soft pulsing ring around the avatar */
+.team-avatar::after {
+  content: '';
+  position: absolute;
+  inset: -5px;
+  border-radius: inherit;
+  border: 2px solid var(--accent-300);
+  opacity: 0.55;
+}
+
+.team-card:hover .team-avatar {
+  transform: scale(1.06);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .team-avatar {
+    animation: float-avatar 5s var(--ease) infinite;
+  }
+  .team-card:nth-child(2) .team-avatar {
+    animation-delay: -1.6s;
+  }
+  .team-card:nth-child(3) .team-avatar {
+    animation-delay: -3.2s;
+  }
+  .team-avatar::after {
+    animation: pulse-ring 3.2s var(--ease) infinite;
+  }
+  @keyframes float-avatar {
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+  @keyframes pulse-ring {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.55;
+    }
+    50% {
+      transform: scale(1.12);
+      opacity: 0.12;
+    }
+  }
+}
+
+.team-name {
+  font-size: var(--text-lg);
+  margin: 0 0 0.15rem;
+}
+
+.team-role {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin: 0 0 0.7rem;
+}
+
+.team-bio {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Contact channel cards — icon in an accent circle
+   ========================================================================== */
+
+.channel-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  margin: 0 auto 1.1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--accent-100);
+  color: var(--accent);
+  transition: transform 0.3s var(--ease);
+}
+
+.channel-icon svg {
+  width: 1.6rem;
+  height: 1.6rem;
+}
+
+.card:hover .channel-icon {
+  transform: scale(1.08);
+}
+
+/* ==========================================================================
+   Contact form — two-column (intro + social / form)
+   ========================================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+@media (max-width: 820px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
+
+/* Social icon squares (outlined, fill on hover) */
+.social-square {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 0.85rem;
+  border: 1.5px solid var(--border-strong);
+  color: var(--text-secondary);
+  transition: transform 0.25s var(--ease), border-color 0.25s var(--ease),
+    background-color 0.25s var(--ease), color 0.25s var(--ease);
+}
+
+.social-square svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.social-square:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  background-color: var(--accent);
+  color: #fff;
+}
+
+/* Form fields */
+.form-label {
+  display: block;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-tertiary);
+  margin-bottom: 0.5rem;
+}
+
+.contact-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 520px) {
+  .contact-form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form .form-input {
+  border-radius: 0.7rem;
+  padding: 0.75rem 0.95rem;
+  background-color: var(--card-bg);
+}
+
+.contact-form textarea.form-input {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact-submit {
+  width: 100%;
+  margin-top: 1.25rem;
+  border-radius: var(--radius-full);
+  padding: 0.9rem 1.5rem;
+  font-size: var(--text-base);
+}
+
+/* ==========================================================================
+   Eyebrow pill (section label)
+   ========================================================================== */
+
+.eyebrow {
+  @apply inline-flex items-center gap-2 rounded-full font-semibold;
+  font-size: var(--text-sm, 0.875rem);
+  color: var(--accent-700);
+  background-color: var(--accent-100);
+  padding: 0.35rem 0.8rem;
+  line-height: 1.2;
+}
+
+/* ==========================================================================
+   Feature cards — tinted top rule (green / lavender / cream)
+   ========================================================================== */
+
+.feature-card {
+  position: relative;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-muted);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-sm);
+  padding: 2rem;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+    border-color 0.35s var(--ease);
+}
+
+/* Animated gradient accent that wipes in on hover */
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease);
+}
+.feature-card.tint-green::before {
+  background: linear-gradient(90deg, var(--accent), var(--accent-400));
+}
+.feature-card.tint-lavender::before {
+  background: linear-gradient(90deg, var(--secondary), var(--secondary-300));
+}
+.feature-card.tint-cream::before {
+  background: linear-gradient(90deg, var(--accent-400), var(--secondary));
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--accent-200);
+}
+.feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.feature-card .feature-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: var(--radius-full);
+  margin-bottom: 1.25rem;
+  transition: transform 0.35s var(--ease);
+}
+.feature-card:hover .feature-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.feature-card.tint-green .feature-icon {
+  background-color: var(--accent-100);
+  color: var(--accent-700);
+}
+.feature-card.tint-lavender .feature-icon {
+  background-color: var(--secondary-100);
+  color: var(--secondary-700);
+}
+.feature-card.tint-cream .feature-icon {
+  background-color: var(--bg-secondary);
+  color: var(--accent-600);
+}
+
+/* Inline line-icon (Lucide via <use>) — replaces emoji for a crafted, on-brand look */
+.ds-icon {
+  width: 1.85rem;
+  height: 1.85rem;
+  display: block;
+  stroke: currentColor;
+}
+
+/* ==========================================================================
+   Entrance animation (gated on reduced-motion)
+   ========================================================================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  .rise {
+    animation: rise 0.6s cubic-bezier(0.4, 0, 0.2, 1) backwards;
+  }
+  @keyframes rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+  }
+
+  /* Scroll-reveal — elements rise + fade as they enter the viewport */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s var(--ease), transform 0.6s var(--ease);
+    will-change: opacity, transform;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ==========================================================================
+   News — journal / list layout (replaces the boxed carousel)
+   ========================================================================== */
+
+.news-list {
+  border-top: 1px solid var(--border-default);
+}
+
+.news-entry {
+  display: grid;
+  grid-template-columns: 8.5rem 1fr;
+  gap: 1.75rem;
+  align-items: baseline;
+  padding: 1.85rem 0.75rem;
+  border-bottom: 1px solid var(--border-default);
+  transition: background-color 0.25s var(--ease), padding-left 0.25s var(--ease);
+}
+
+.news-entry:hover {
+  background-color: var(--bg-secondary);
+  padding-left: 1.25rem;
+}
+
+.news-entry-date {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  white-space: nowrap;
+}
+
+.news-entry-title {
+  font-size: 1.2rem;
+  margin: 0 0 0.4rem;
+  color: var(--text-primary);
+  transition: color 0.25s var(--ease);
+}
+
+.news-entry:hover .news-entry-title {
+  color: var(--accent);
+}
+
+.news-entry-desc {
+  font-size: 0.95rem;
+  margin: 0 0 0.6rem;
+  color: var(--text-secondary);
+}
+
+.news-entry-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent);
+  transition: gap 0.2s var(--ease);
+}
+
+.news-entry:hover .news-entry-link {
+  gap: 0.6rem;
+}
+
+@media (max-width: 640px) {
+  .news-entry {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
+
+/* ==========================================================================
+   CTA panel — contained, light, motion accents (replaces full-width green bar)
+   ========================================================================== */
+
+.cta-panel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  border: 1px solid var(--border-default);
+  background: var(--gradient-hero);
+  box-shadow: var(--shadow-md);
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
+
+/* Soft animated blobs — gentle "moving parts" without the loud green slab */
+.cta-panel::before,
+.cta-panel::after {
+  content: '';
+  position: absolute;
+  border-radius: var(--radius-full);
+  filter: blur(48px);
+  opacity: 0.5;
+  pointer-events: none;
+  z-index: 0;
+}
+.cta-panel::before {
+  width: 18rem;
+  height: 18rem;
+  background: var(--accent-200);
+  top: -6rem;
+  left: -4rem;
+}
+.cta-panel::after {
+  width: 16rem;
+  height: 16rem;
+  background: var(--secondary-200, #d6d6f5);
+  bottom: -6rem;
+  right: -4rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .cta-panel::before {
+    animation: float-a 11s ease-in-out infinite;
+  }
+  .cta-panel::after {
+    animation: float-b 13s ease-in-out infinite;
+  }
+  @keyframes float-a {
+    50% {
+      transform: translate(2rem, 1.5rem);
+    }
+  }
+  @keyframes float-b {
+    50% {
+      transform: translate(-2rem, -1.5rem);
+    }
+  }
+}
+
+.cta-panel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cta-panel h2 {
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.cta-panel p {
+  color: var(--text-secondary);
+  max-width: 46ch;
+  margin: 0 auto 1.75rem;
 }
 
 /* ==========================================================================
@@ -503,10 +1115,9 @@ footer a:hover {
    CTA Components
    ========================================================================== */
 
+/* Sits on a gradient-primary band — stays transparent so the band shows through */
 .cta-box {
-  @apply rounded-xl p-8 md:p-12 text-center;
-  background: var(--gradient-accent);
-  box-shadow: var(--shadow-lg);
+  @apply p-8 md:p-12 text-center;
 }
 
 .cta-box h2 {
@@ -516,7 +1127,7 @@ footer a:hover {
 
 .cta-box p {
   @apply max-w-2xl mx-auto;
-  color: rgba(248, 250, 252, 0.95);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* ==========================================================================
@@ -525,42 +1136,36 @@ footer a:hover {
 
 .hero {
   background: var(--gradient-hero);
-  min-height: 55vh;
-  @apply py-16 md:py-24 relative overflow-hidden;
+  border-bottom: 1px solid var(--border-default);
+  @apply py-20 md:py-28 relative overflow-hidden;
 }
 
+/* Subtle masked CSS dot-grid — texture without illustration */
 .hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  opacity: 0.15;
-  background-image: radial-gradient(circle at 20% 50%, rgba(59, 130, 246, 0.32), transparent 40%),
-    radial-gradient(circle at 80% 80%, rgba(109, 40, 217, 0.24), transparent 40%);
   pointer-events: none;
-}
-
-.hero-background {
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  opacity: 0.25;
-  z-index: 0;
-}
-
-[data-theme='dark'] .hero-background {
-  opacity: 0.35;
+  opacity: 0.55;
+  background-image: radial-gradient(circle, var(--accent-300) 1px, transparent 1.4px);
+  background-size: 26px 26px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 80% at 50% 30%, #000 30%, transparent 72%);
+  mask-image: radial-gradient(ellipse 70% 80% at 50% 30%, #000 30%, transparent 72%);
 }
 
 .hero-title {
-  @apply text-4xl md:text-6xl font-extrabold leading-tight;
-  color: #ffffff;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  @apply text-4xl md:text-6xl font-bold leading-tight;
+  color: var(--text-primary);
+  letter-spacing: -0.025em;
+}
+
+.hero-title .accent {
+  color: var(--accent);
 }
 
 .hero-sub {
-  @apply text-lg md:text-xl max-w-3xl mx-auto mt-4;
-  color: rgba(255, 255, 255, 0.9);
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  @apply text-lg md:text-xl mx-auto mt-5;
+  color: var(--text-secondary);
 }
 
 /* ==========================================================================
@@ -596,14 +1201,14 @@ nav a.active {
 }
 
 .badge-primary {
-  background-color: rgba(3, 105, 161, 0.12);
+  background-color: var(--accent-100);
   color: var(--accent-700);
   font-weight: 600;
 }
 
 .badge-info {
-  background-color: rgba(3, 105, 161, 0.12);
-  color: var(--info);
+  background-color: var(--bg-tertiary);
+  color: var(--text-secondary);
 }
 
 .badge-success {
@@ -657,7 +1262,8 @@ p {
    ========================================================================== */
 
 .container {
-  @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  @apply mx-auto px-4 sm:px-6 lg:px-8;
+  max-width: 90rem;
 }
 
 /* ==========================================================================
@@ -792,7 +1398,7 @@ p {
 .form-input:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(3, 105, 161, 0.1);
+  box-shadow: var(--ring);
 }
 
 .form-input::placeholder {

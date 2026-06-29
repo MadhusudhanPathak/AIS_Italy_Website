@@ -3,18 +3,18 @@ const { validateSiteData, logValidationErrors } = require('../utils/validation')
 // Site configuration
 const siteData = {
   description:
-    "AI Safety Italia is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals.",
+    "AI Safety for Italy is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals.",
   site: {
-    name: 'AI Safety Italia',
+    name: 'AI Safety for Italy',
     description:
-      "AI Safety Italia is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals.",
+      "AI Safety for Italy is Italy's grassroots community reducing risks from advanced AI through awareness, education, and collaboration. Open to researchers, students, and professionals.",
     domain: 'aisafetyitalia.org',
     email: 'aisafetyitalia@gmail.com',
   },
   navigation: [
     { name: 'Home', url: '/' },
     { name: 'About', url: '/about/', dropdown: false },
-    { name: 'Events & News', url: '/events/' },
+    { name: 'Initiatives', url: '/initiatives/' },
     { name: 'Community', url: '/community/' },
     { name: 'FAQ', url: '/faq/' },
     { name: 'Contact', url: '/contact/' },

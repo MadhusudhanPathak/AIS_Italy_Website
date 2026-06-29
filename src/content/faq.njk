@@ -2,13 +2,12 @@
 layout: page.njk
 title: FAQ
 permalink: /faq/
-seoTitle: 'FAQ — AI Safety Italia | What is AI Safety?'
-seoDescription: "Answers to common questions about AI safety, AI Safety Italia's mission, how to join, and what working groups are available."
+seoTitle: 'FAQ — AI Safety for Italy | What is AI Safety?'
+seoDescription: "Answers to common questions about AI safety, AI Safety for Italy's mission, how to join, and what working groups are available."
 ---
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-background absolute inset-0 z-0" style="background-image: url('/assets/img/ais_italy.jpg');"></div>
     <div class="container text-center relative z-10">
         <h1 class="hero-title" data-en="{{ faq.hero.title }}" data-it="{{ faq.hero.title_it }}">{{ faq.hero.title }}</h1>
         <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto" data-en="{{ faq.hero.subtitle }}" data-it="{{ faq.hero.subtitle_it }}">{{ faq.hero.subtitle }}</p>
@@ -45,12 +44,12 @@ seoDescription: "Answers to common questions about AI safety, AI Safety Italia's
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: var(--gradient-primary);">
+<section class="section">
     <div class="container">
-        <div class="cta-box text-center">
+        <div class="cta-panel reveal">
             <h2 data-en="{{ faq.cta.title }}" data-it="{{ faq.cta.title_it }}">{{ faq.cta.title }}</h2>
             <p data-en="{{ faq.cta.description }}" data-it="{{ faq.cta.description_it }}">{{ faq.cta.description }}</p>
-            <a href="{{ site.forms.mailingList }}" target="_blank" class="btn mt-6" style="background-color: #ffffff; color: var(--accent-700);"
+            <a href="{{ site.forms.mailingList }}" target="_blank" class="btn btn-primary btn-lg"
                data-en="{{ faq.cta.button_text }}" data-it="{{ faq.cta.button_text_it }}">{{ faq.cta.button_text }}</a>
         </div>
     </div>

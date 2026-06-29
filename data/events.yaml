@@ -1,10 +1,10 @@
 # Events & News Page Content Data
 
 hero:
-  title: "Events & News"
-  title_it: "Eventi e News"
-  subtitle: "Stay updated on our latest events, workshops, and announcements."
-  subtitle_it: "Rimani aggiornato sui nostri ultimi eventi, workshop e annunci."
+  title: "Initiatives"
+  title_it: "Iniziative"
+  subtitle: "Our programs and gatherings — mentorship, seminars, and the latest news from the community."
+  subtitle_it: "I nostri programmi e incontri — mentorship, seminari e le ultime novità dalla community."
 
 section_upcoming_title: "Upcoming & Recent Events"
 section_upcoming_title_it: "Eventi Imminenti e Recenti"
@@ -14,11 +14,11 @@ section_highlights_title_it: "✨ Momenti Recenti"
 
 upcoming_events:
   - id: 1
-    title: "🌱 Mentorship Program — Coming Soon"
-    title_it: "🌱 Programma di Mentorship — In Arrivo"
+    category: "mentorship"
+    title: "Mentorship Program — Coming Soon"
+    title_it: "Programma di Mentorship — In Arrivo"
     date: "Summer 2026"
     date_it: "Estate 2026"
-    emoji: "🤝"
     status: "Upcoming"
     status_it: "In arrivo"
     description: "We are preparing our first structured mentorship program, pairing AI safety newcomers with more experienced members of the community. The program will include regular 1-on-1 sessions, curated reading materials, and access to our working groups. Stay tuned — applications will open soon!"
@@ -42,11 +42,11 @@ upcoming_events:
     register_target: "_blank"
 
   - id: 3
+    category: "seminar"
     title: "Wednesday Researcher Meetup"
     title_it: "Incontro Ricercatori del Mercoledì"
     date: "Every 2nd Wednesday at 18:00 CET"
     date_it: "Ogni 2° mercoledì alle 18:00 CET"
-    emoji: "📅"
     status: "Recurring"
     status_it: "Ricorrente"
     description: "Informal gathering for AI safety researchers, students, and enthusiasts to discuss and collaborate on projects. A great place to network with the community!"
