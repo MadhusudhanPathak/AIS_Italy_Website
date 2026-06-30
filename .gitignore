@@ -96,3 +96,6 @@ temp/
 *.swp
 .env.*.local
 .vercel/
+
+# Local design-system reference (not part of the site)
+Design/

@@ -2,16 +2,38 @@
 layout: page.njk
 title: Community
 permalink: /community/
-seoTitle: 'AI Safety Italia Community — Members & Working Groups'
-seoDescription: 'Meet the members of AI Safety Italia. Working groups cover mentorship, governance, technical research, education, and more. Open to all.'
+seoTitle: 'AI Safety for Italy Community — Members & Working Groups'
+seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover mentorship, governance, technical research, education, and more. Open to all.'
 ---
 
 <!-- Hero Section -->
 <section class="hero">
-    <div class="hero-background absolute inset-0 z-0" style="background-image: url('/assets/img/ais_italy.jpg');"></div>
     <div class="container text-center relative z-10">
         <h1 class="hero-title" data-en="{{ translations.en.community.hero_title }}" data-it="{{ translations.it.community.hero_title }}">{{ translations.en.community.hero_title }}</h1>
         <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto" data-en="{{ translations.en.community.hero_subtitle }}" data-it="{{ translations.it.community.hero_subtitle }}">{{ translations.en.community.hero_subtitle }}</p>
+    </div>
+</section>
+
+<!-- Team Section (core team — faces) -->
+<section class="section" id="team" style="background-color: var(--bg-primary);">
+    <div class="container">
+        <div class="text-center mb-12 max-w-2xl mx-auto">
+            <h2 data-en="Meet the team" data-it="Il team">Meet the team</h2>
+            <p data-en="The people driving AI Safety for Italy forward."
+               data-it="Le persone che portano avanti AI Safety for Italy.">The people driving AI Safety for Italy forward.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" style="max-width: 56rem; margin: 0 auto;">
+            {% for member in team %}
+            {% set clean = member.name | replace("Dr. ", "") | trim %}
+            {% set parts = clean | split(" ") %}
+            <div class="team-card reveal">
+                <div class="team-avatar" aria-hidden="true">{{ (parts | first)[0] }}{{ (parts | last)[0] if (parts | length) > 1 else "" }}</div>
+                <h3 class="team-name">{{ member.name }}</h3>
+                <p class="team-role">{{ member.role }}</p>
+                <p class="team-bio">{{ member.bio }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
 
@@ -88,7 +110,7 @@ seoDescription: 'Meet the members of AI Safety Italia. Working groups cover ment
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {% for member in members.members %}
             {% if (member.groups or []) | length > 0 %}
-            <div class="card hover-lift member-card" style="padding: 1rem;"
+            <div class="card hover-lift member-card reveal" style="padding: 1rem;"
                  data-name="{{ member.name | lower }}"
                  data-groups="{{ (member.groups or []) | join(',') }}">
                 <div class="flex items-center gap-3">
@@ -120,8 +142,8 @@ seoDescription: 'Meet the members of AI Safety Italia. Working groups cover ment
     <div class="container text-center">
         <h3 data-en="Want to be part of this list?" data-it="Vuoi far parte di questa lista?">Want to be part of this list?</h3>
         <p class="mb-6" style="color: var(--text-secondary);"
-           data-en="Fill in our interest form to join AI Safety Italia."
-           data-it="Compila il modulo di interesse per unirti ad AI Safety Italia.">Fill in our interest form to join AI Safety Italia.</p>
+           data-en="Fill in our interest form to join AI Safety for Italy."
+           data-it="Compila il modulo di interesse per unirti ad AI Safety for Italy.">Fill in our interest form to join AI Safety for Italy.</p>
         <a href="{{ site.forms.mailingList }}" target="_blank" rel="noopener noreferrer"
            class="btn btn-primary"
            data-en="{{ translations.en.community.join_button }}"
@@ -130,12 +152,12 @@ seoDescription: 'Meet the members of AI Safety Italia. Working groups cover ment
 </section>
 
 <!-- CTA Section -->
-<section class="section" style="background: var(--gradient-primary);">
+<section class="section">
     <div class="container">
-        <div class="cta-box text-center">
+        <div class="cta-panel reveal">
             <h2 data-en="{{ translations.en.community.cta_title }}" data-it="{{ translations.it.community.cta_title }}">{{ translations.en.community.cta_title }}</h2>
             <p data-en="{{ translations.en.community.cta_description }}" data-it="{{ translations.it.community.cta_description }}">{{ translations.en.community.cta_description }}</p>
-            <a href="{{ site.forms.mailingList }}" class="btn mt-6" style="background-color: #ffffff; color: var(--accent-700);"
+            <a href="{{ site.forms.mailingList }}" class="btn btn-primary btn-lg"
                target="_blank" rel="noopener noreferrer"
                data-en="{{ translations.en.community.cta_button }}"
                data-it="{{ translations.it.community.cta_button }}">{{ translations.en.community.cta_button }}</a>

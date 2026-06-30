@@ -3,8 +3,8 @@
 hero:
   title: "Frequently Asked Questions"
   title_it: "Domande Frequenti"
-  subtitle: "Find answers to common questions about AI Safety Italia and our mission."
-  subtitle_it: "Trova risposte alle domande più comuni su AI Safety Italia e la nostra missione."
+  subtitle: "Find answers to common questions about AI Safety for Italy and our mission."
+  subtitle_it: "Trova risposte alle domande più comuni su AI Safety for Italy e la nostra missione."
 
 categories:
   - id: 1
@@ -36,26 +36,26 @@ categories:
     icon: "🏢"
     questions:
       - id: 4
-        question: "What does AI Safety Italia do?"
-        question_it: "Cosa fa AI Safety Italia?"
-        answer: "AI Safety Italia is a grassroots community that works to reduce risks from advanced AI in Italy. We organize seminars, study groups, and networking events; we run mentorship and education programs; and we connect members with opportunities in the AI safety field. Our working groups cover mentorship, governance, communication, technical infrastructure, events, seminars, education, and more."
-        answer_it: "AI Safety Italia è una comunità dal basso che lavora per ridurre i rischi dell'IA avanzata in Italia. Organizziamo seminari, gruppi di studio ed eventi di networking; gestiamo programmi di mentorship e formazione; e colleghiamo i membri con opportunità nel campo dell'AI safety. I nostri gruppi di lavoro coprono mentorship, governance, comunicazione, infrastruttura tecnica, eventi, seminari, didattica e molto altro."
+        question: "What does AI Safety for Italy do?"
+        question_it: "Cosa fa AI Safety for Italy?"
+        answer: "AI Safety for Italy is a grassroots community that works to reduce risks from advanced AI in Italy. We organize seminars, study groups, and networking events; we run mentorship and education programs; and we connect members with opportunities in the AI safety field. Our working groups cover mentorship, governance, communication, technical infrastructure, events, seminars, education, and more."
+        answer_it: "AI Safety for Italy è una comunità dal basso che lavora per ridurre i rischi dell'IA avanzata in Italia. Organizziamo seminari, gruppi di studio ed eventi di networking; gestiamo programmi di mentorship e formazione; e colleghiamo i membri con opportunità nel campo dell'AI safety. I nostri gruppi di lavoro coprono mentorship, governance, comunicazione, infrastruttura tecnica, eventi, seminari, didattica e molto altro."
 
       - id: 5
-        question: "Who can join AI Safety Italia?"
-        question_it: "Chi può unirsi ad AI Safety Italia?"
+        question: "Who can join AI Safety for Italy?"
+        question_it: "Chi può unirsi ad AI Safety for Italy?"
         answer: "Anyone interested in AI safety is welcome — researchers, students, professionals from any field, policymakers, science communicators, and curious minds. We believe diverse perspectives are essential for addressing AI safety challenges. You can join at any level of technical knowledge."
         answer_it: "Chiunque sia interessato all'AI safety è benvenuto — ricercatori, studenti, professionisti di qualsiasi settore, esperti di policy, comunicatori scientifici e menti curiose. Crediamo che prospettive diverse siano fondamentali per affrontare le sfide dell'AI safety. Puoi unirti con qualsiasi livello di conoscenza tecnica."
 
       - id: 6
-        question: "Is AI Safety Italia affiliated with any institution?"
-        question_it: "AI Safety Italia è affiliata a qualche istituzione?"
-        answer: "AI Safety Italia is an independent grassroots organization. We collaborate with universities, research groups, and international AI safety organizations, but operate independently to serve the Italian community. We are part of the broader global AI safety movement."
-        answer_it: "AI Safety Italia è un'organizzazione indipendente. Collaboriamo con università, gruppi di ricerca e organizzazioni internazionali di AI safety, ma operiamo in modo indipendente per servire la comunità italiana. Facciamo parte del più ampio movimento globale per l'AI safety."
+        question: "Is AI Safety for Italy affiliated with any institution?"
+        question_it: "AI Safety for Italy è affiliata a qualche istituzione?"
+        answer: "AI Safety for Italy is an independent grassroots organization. We collaborate with universities, research groups, and international AI safety organizations, but operate independently to serve the Italian community. We are part of the broader global AI safety movement."
+        answer_it: "AI Safety for Italy è un'organizzazione indipendente. Collaboriamo con università, gruppi di ricerca e organizzazioni internazionali di AI safety, ma operiamo in modo indipendente per servire la comunità italiana. Facciamo parte del più ampio movimento globale per l'AI safety."
 
       - id: 7
-        question: "How is AI Safety Italia organized?"
-        question_it: "Come è organizzata AI Safety Italia?"
+        question: "How is AI Safety for Italy organized?"
+        question_it: "Come è organizzata AI Safety for Italy?"
         answer: "We have a small core team and a board, supported by working groups focused on specific areas: mentorship, governance & fundraising, finance, communication, technical infrastructure, community & networking, events, seminars, and education & outreach. Members can participate in one or more groups based on their interests and availability."
         answer_it: "Abbiamo un piccolo team centrale e un direttivo, supportati da gruppi di lavoro focalizzati su aree specifiche: mentorship, governance e fundraising, finanze, comunicazione, infrastruttura tecnica, comunità e networking, eventi, seminari, e didattica e divulgazione. I membri possono partecipare a uno o più gruppi in base ai loro interessi e disponibilità."
 
@@ -65,8 +65,8 @@ categories:
     icon: "🤝"
     questions:
       - id: 8
-        question: "How can I join AI Safety Italia?"
-        question_it: "Come posso unirmi ad AI Safety Italia?"
+        question: "How can I join AI Safety for Italy?"
+        question_it: "Come posso unirmi ad AI Safety for Italy?"
         answer: "Fill in our interest form — it takes about 5 minutes. You can indicate which working groups you'd like to join and how many hours per month you can commit. We'll reach out to welcome you and connect you with the relevant groups."
         answer_it: "Compila il nostro modulo di interesse — richiede circa 5 minuti. Puoi indicare a quali gruppi di lavoro vuoi unirti e quante ore al mese puoi dedicare. Ti contatteremo per darti il benvenuto e metterti in contatto con i gruppi pertinenti."
 

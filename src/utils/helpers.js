@@ -1,5 +1,5 @@
 /**
- * Client-side utility functions for the AI Safety Italia website.
+ * Client-side utility functions for the AI Safety for Italy website.
  * These functions are designed to run in browser environments.
  * @module src/utils/helpers
  */

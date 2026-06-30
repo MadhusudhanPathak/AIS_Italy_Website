@@ -1,4 +1,4 @@
-# robots.txt — AI Safety Italia
+# robots.txt — AI Safety for Italy
 # https://aisafetycommunity.it/robots.txt
 
 # ─── General: allow all crawlers ───────────────────────────────────────────

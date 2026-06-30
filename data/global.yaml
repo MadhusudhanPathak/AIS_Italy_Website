@@ -28,7 +28,7 @@ navigation:
 
 # Site metadata
 site_metadata:
-  name: "AI Safety Italia"
+  name: "AI Safety for Italy"
   description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
   domain: "aisafetyitalia.org"
   email: "aisafetyitalia@gmail.com"
@@ -82,7 +82,7 @@ footer:
         - name: "Terms of Service"
           url: "/terms/"
 
-  copyright: "© 2026 AI Safety Italia. All rights reserved."
+  copyright: "© 2026 AI Safety for Italy. All rights reserved."
 
 # Forms and external links
 forms:

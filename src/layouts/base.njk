@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#3b82f6" />
+  <meta name="theme-color" content="#008c45" />
 
   {# ── Core SEO ────────────────────────────────────────────────── #}
-  <title>{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety Italia{% endif %}</title>
+  <title>{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety for Italy{% endif %}</title>
   <meta name="description" content="{% if seoDescription %}{{ seoDescription }}{% elif description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta name="author" content="AI Safety Italia" />
+  <meta name="author" content="AI Safety for Italy" />
 
   {# ── Canonical URL ───────────────────────────────────────────── #}
   <link rel="canonical" href="https://aisafetycommunity.it{{ page.url }}" />
@@ -20,20 +20,20 @@
 
   {# ── Open Graph ──────────────────────────────────────────────── #}
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="AI Safety Italia" />
-  <meta property="og:title" content="{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety Italia{% endif %}" />
+  <meta property="og:site_name" content="AI Safety for Italy" />
+  <meta property="og:title" content="{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety for Italy{% endif %}" />
   <meta property="og:description" content="{% if seoDescription %}{{ seoDescription }}{% elif description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
   <meta property="og:url" content="https://aisafetycommunity.it{{ page.url }}" />
   <meta property="og:image" content="https://aisafetycommunity.it/assets/img/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
-  <meta property="og:image:alt" content="AI Safety Italia — Building a safer future through awareness, education, and community" />
+  <meta property="og:image:alt" content="AI Safety for Italy — Building a safer future through awareness, education, and community" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:locale:alternate" content="it_IT" />
 
   {# ── Twitter / X Card ────────────────────────────────────────── #}
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety Italia{% endif %}" />
+  <meta name="twitter:title" content="{% if seoTitle %}{{ seoTitle }}{% else %}{{ title }} | AI Safety for Italy{% endif %}" />
   <meta name="twitter:description" content="{% if seoDescription %}{{ seoDescription }}{% elif description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
   <meta name="twitter:image" content="https://aisafetycommunity.it/assets/img/og-image.png" />
 
@@ -42,6 +42,11 @@
 
   {# ── Preload logo SVG ────────────────────────────────────────── #}
   <link rel="preload" as="image" href="/assets/img/AISafetyItaly.svg" />
+
+  {# ── Webfonts: Source Serif 4 (display) + Hanken Grotesk (body) ── #}
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Hanken+Grotesk:wght@400;500;600;700;800&display=swap" />
 
   {# ── CSS ─────────────────────────────────────────────────────── #}
   <link rel="stylesheet" href="/assets/css/style.css" />
@@ -60,8 +65,8 @@
       {
         "@type": "Organization",
         "@id": "https://aisafetycommunity.it/#organization",
-        "name": "AI Safety Italia",
-        "alternateName": ["AI Safety Italy"],
+        "name": "AI Safety for Italy",
+        "alternateName": ["AI Safety Italia", "AIS4I"],
         "url": "https://aisafetycommunity.it/",
         "logo": {
           "@type": "ImageObject",
@@ -83,7 +88,7 @@
         "@type": "WebSite",
         "@id": "https://aisafetycommunity.it/#website",
         "url": "https://aisafetycommunity.it/",
-        "name": "AI Safety Italia",
+        "name": "AI Safety for Italy",
         "inLanguage": ["en", "it"],
         "publisher": { "@id": "https://aisafetycommunity.it/#organization" }
       }
@@ -99,7 +104,7 @@
     "@context": "https://schema.org",
     "@type": "AboutPage",
     "url": "https://aisafetycommunity.it/about/",
-    "name": "About AI Safety Italia",
+    "name": "About AI Safety for Italy",
     "isPartOf": { "@id": "https://aisafetycommunity.it/#website" },
     "about": { "@id": "https://aisafetycommunity.it/#organization" }
   }
@@ -121,23 +126,23 @@
       },
       {
         "@type": "Question",
-        "name": "What does AI Safety Italia do?",
-        "acceptedAnswer": { "@type": "Answer", "text": "AI Safety Italia is a grassroots community running seminars, study groups, mentorship programs, and networking events in Italy. It operates through 9 working groups covering mentorship, governance, technical infrastructure, education, and more." }
+        "name": "What does AI Safety for Italy do?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI Safety for Italy is a grassroots community running seminars, study groups, mentorship programs, and networking events in Italy. It operates through 9 working groups covering mentorship, governance, technical infrastructure, education, and more." }
       },
       {
         "@type": "Question",
-        "name": "Who can join AI Safety Italia?",
+        "name": "Who can join AI Safety for Italy?",
         "acceptedAnswer": { "@type": "Answer", "text": "Anyone interested in AI safety is welcome — researchers, students, and professionals from any field. We believe diverse perspectives are essential for addressing AI safety challenges." }
       },
       {
         "@type": "Question",
-        "name": "How can I join AI Safety Italia?",
+        "name": "How can I join AI Safety for Italy?",
         "acceptedAnswer": { "@type": "Answer", "text": "Fill in the interest form at https://aisafetycommunity.it/community/ — it takes about 5 minutes. Indicate which working groups you'd like to join and how many hours per month you can commit." }
       },
       {
         "@type": "Question",
-        "name": "Is AI Safety Italia affiliated with any institution?",
-        "acceptedAnswer": { "@type": "Answer", "text": "AI Safety Italia is an independent grassroots organization. We collaborate with universities and international AI safety organizations, but operate independently to serve the Italian community." }
+        "name": "Is AI Safety for Italy affiliated with any institution?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AI Safety for Italy is an independent grassroots organization. We collaborate with universities and international AI safety organizations, but operate independently to serve the Italian community." }
       }
     ]
   }
@@ -151,7 +156,7 @@
     "@context": "https://schema.org",
     "@type": "WebPage",
     "url": "https://aisafetycommunity.it/community/",
-    "name": "AI Safety Italia Community — Members and Working Groups",
+    "name": "AI Safety for Italy Community — Members and Working Groups",
     "isPartOf": { "@id": "https://aisafetycommunity.it/#website" },
     "about": {
       "@type": "Organization",
@@ -176,7 +181,7 @@
     "@context": "https://schema.org",
     "@type": "ContactPage",
     "url": "https://aisafetycommunity.it/contact/",
-    "name": "Contact AI Safety Italia",
+    "name": "Contact AI Safety for Italy",
     "isPartOf": { "@id": "https://aisafetycommunity.it/#website" },
     "mainEntity": {
       "@type": "Organization",
@@ -397,6 +402,36 @@
         }
 
         domReady(initLanguage);
+
+        // ── Scroll reveal — animate elements with .reveal as they enter view ──
+        function initScrollReveal() {
+            const items = document.querySelectorAll('.reveal');
+            if (!items.length) return;
+
+            const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (reduce || !('IntersectionObserver' in window)) {
+                items.forEach(el => el.classList.add('is-visible'));
+                return;
+            }
+
+            const observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        const el = entry.target;
+                        // Stagger siblings within the same parent for a cascade effect
+                        const siblings = Array.from(el.parentElement.querySelectorAll(':scope > .reveal'));
+                        const idx = Math.max(0, siblings.indexOf(el));
+                        el.style.transitionDelay = (idx * 80) + 'ms';
+                        el.classList.add('is-visible');
+                        observer.unobserve(el);
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+            items.forEach(el => observer.observe(el));
+        }
+
+        domReady(initScrollReveal);
     </script>
 </body>
 </html>

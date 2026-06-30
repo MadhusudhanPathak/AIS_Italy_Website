@@ -69,7 +69,7 @@ module.exports = function(eleventyConfig) {
 
   // Collections
   eleventyConfig.addCollection("events", function(collection) {
-    return collection.getFilteredByGlob("src/content/events.md");
+    return collection.getFilteredByGlob("src/content/initiatives.njk");
   });
 
   // Add data extensions for YAML files
