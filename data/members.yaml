@@ -1,4 +1,4 @@
-last_updated: '2026-05-26'
+last_updated: '2026-06-30'
 members:
 - id: 1
   name: Angelo Leone
@@ -38,11 +38,10 @@ members:
   email: cristiancuraba00@gmail.com
   profile: https://cristian-curaba.github.io/
   location: Udine, Italia
-  career: Postdoc o ricercatore early-career (0–3 anni post-PhD)
-  institution: Università di Udine
+  career: Dottorando / PhD student
+  institution: Università degli studi di Udine
   hours_per_month: 5–10 ore
-  areas: Etica dell'AI e impatto sociale, Rischi catastrofici / esistenziali, Monitoring
-    con metodi formali
+  areas: Monitoraggio attraverso metodi formali
   groups:
   - technical
   - education
@@ -91,3 +90,56 @@ members:
   career: Ricercatore / professionista mid-career
   institution: Indipendente
   areas: Rischi catastrofici / esistenziali, AI safety communications
+- id: 8
+  name: Luca Scionis
+  email: luca.scionis@unica.it
+  profile: linkedin.com/in/luca-scionis-148b37251/
+  location: Cagliari, Italia
+  career: Dottorando / PhD student
+  institution: Università di Cagliari
+  areas: Evaluation (capability evaluations, dangerous capability evals, benchmarking),
+    Robustness e adversarial ML
+- id: 9
+  name: Giovanni Occhipinti
+  email: occhidipinti00@gmail.com
+  profile: https://www.linkedin.com/in/occhipintigiovanni, https://github.com/Joe-Occhipinti,
+    https://scholar.google.com/citations?hl=it&view_op=list_works&gmla=AIqSsVvv-UWkc_1GO81G7DLSWJR_-QuSCtoSjW4WWgfnizSwlf7S68xhXSKiPprPDZLtYP_RcbFWGELDVM9azolz&user=2vWR8IAAAAAJ
+  location: Bologna, Italia
+  career: Studente triennale o magistrale
+  institution: Indipendente
+  hours_per_month: Più di 20 ore
+  areas: Evaluation (capability evaluations, dangerous capability evals, benchmarking),
+    Alignment (RLHF, scalable oversight, value alignment), Robustness e adversarial
+    ML, Rischi catastrofici / esistenziali
+  groups:
+  - mentorship
+  - governance
+  - communication
+  - technical
+  - community
+  - events
+  - education
+- id: 10
+  name: Carola Maria Caivano
+  email: carola.caivano@gmail.com
+  profile: https://www.linkedin.com/in/carolacaivano/
+  location: Torino, Italia
+  career: Ricercatore / professionista mid-career
+  institution: Indipendente
+  hours_per_month: 5–10 ore
+  areas: Interpretability (mechanistic interpretability, analisi delle rappresentazioni,
+    ecc.), Evaluation (capability evaluations, dangerous capability evals, benchmarking),
+    AI governance e policy, Etica dell'AI e impatto sociale
+  groups:
+  - communication
+  - community
+  - events
+- id: 11
+  name: Battista Biggio
+  email: battista.biggio@unica.it
+  profile: https://battistabiggio.github.io/
+  location: Cagliari, Italia
+  career: Ricercatore / Professore / professionista senior
+  institution: Univ. Cagliari
+  areas: Interpretability (mechanistic interpretability, analisi delle rappresentazioni,
+    ecc.), Robustness e adversarial ML

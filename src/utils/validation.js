@@ -16,7 +16,7 @@ const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  * @type {RegExp}
  * @private
  */
-const URL_REGEX = /^(https?:\/\/)?([a-z0-9.-]+)\.([a-z]{2,6})(\/[^\\s]*)?$/;
+const URL_REGEX = /^(https?:\/\/)?([a-z0-9.-]+)\.([a-z]{2,})(\/\S*)?$/i;
 
 /**
  * Validates an email address format
@@ -158,7 +158,6 @@ function validateTeamMember(member) {
     name: isRequired(member.name, 'name'),
     role: isRequired(member.role, 'role'),
     bio: isRequired(member.bio, 'bio'),
-    email: isRequired(member.email, 'email'),
   };
 
   Object.values(fieldValidations).forEach((validation) => {
@@ -167,8 +166,18 @@ function validateTeamMember(member) {
     }
   });
 
+  // email is optional; active members may provide contact links instead.
   if (member.email && !isValidEmail(member.email) && !isValidUrl(member.email)) {
     errors.push('email must be a valid email address or URL');
+  }
+
+  // Each contact link, when present, must carry a valid URL.
+  if (Array.isArray(member.links)) {
+    member.links.forEach((link, i) => {
+      if (!link || !isValidUrl(link.url)) {
+        errors.push(`links[${i}] must have a valid url`);
+      }
+    });
   }
 
   return {

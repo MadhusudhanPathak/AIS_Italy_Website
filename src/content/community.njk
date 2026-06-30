@@ -2,8 +2,8 @@
 layout: page.njk
 title: Community
 permalink: /community/
-seoTitle: 'AI Safety for Italy Community — Members & Working Groups'
-seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover mentorship, governance, technical research, education, and more. Open to all.'
+seoTitle: 'AI Safety for Italy Community — Team & Members'
+seoDescription: 'Meet the team and members of AI Safety for Italy — researchers, students, and practitioners working on mentorship, governance, technical research, and education. Open to all.'
 ---
 
 <!-- Hero Section -->
@@ -22,15 +22,49 @@ seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover m
             <p data-en="The people driving AI Safety for Italy forward."
                data-it="Le persone che portano avanti AI Safety for Italy.">The people driving AI Safety for Italy forward.</p>
         </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8" style="max-width: 56rem; margin: 0 auto;">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8" style="max-width: 64rem; margin: 0 auto;">
             {% for member in team %}
             {% set clean = member.name | replace("Dr. ", "") | trim %}
             {% set parts = clean | split(" ") %}
-            <div class="team-card reveal">
+            <div class="team-card team-card--rich reveal">
+                {% if member.photo %}
+                <img class="team-photo" src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy" width="112" height="112">
+                {% else %}
                 <div class="team-avatar" aria-hidden="true">{{ (parts | first)[0] }}{{ (parts | last)[0] if (parts | length) > 1 else "" }}</div>
+                {% endif %}
                 <h3 class="team-name">{{ member.name }}</h3>
                 <p class="team-role">{{ member.role }}</p>
                 <p class="team-bio">{{ member.bio }}</p>
+
+                {% if member.areas %}
+                <div class="team-tags-block">
+                    <p class="team-tags-label" data-en="Contribution areas" data-it="Aree di contributo">Contribution areas</p>
+                    <div class="team-tags">
+                        {% for area in member.areas %}
+                        <span class="team-tag">{{ area }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if member.interests %}
+                <div class="team-tags-block">
+                    <p class="team-tags-label" data-en="Interests" data-it="Interessi">Interests</p>
+                    <div class="team-tags">
+                        {% for interest in member.interests %}
+                        <span class="team-tag team-tag--muted">{{ interest }}</span>
+                        {% endfor %}
+                    </div>
+                </div>
+                {% endif %}
+
+                {% if member.links and (member.links | length) > 0 %}
+                <div class="team-links">
+                    {% for link in member.links %}
+                    <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="team-link">{{ link.label }}</a>
+                    {% endfor %}
+                </div>
+                {% endif %}
             </div>
             {% endfor %}
         </div>
@@ -98,45 +132,6 @@ seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover m
 
 </section>
 
-<!-- Working Groups Cards Section -->
-<section class="section" style="background-color: var(--bg-primary);">
-    <div class="container">
-        <div class="text-center mb-10">
-            <h2 data-en="Working Groups" data-it="Gruppi di lavoro">Working Groups</h2>
-            <p class="text-sm mt-2" style="color: var(--text-secondary);"
-               data-en="Members actively involved in our working groups."
-               data-it="Membri attivamente coinvolti nei nostri gruppi di lavoro.">Members actively involved in our working groups.</p>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {% for member in members.members %}
-            {% if (member.groups or []) | length > 0 %}
-            <div class="card hover-lift member-card reveal" style="padding: 1rem;"
-                 data-name="{{ member.name | lower }}"
-                 data-groups="{{ (member.groups or []) | join(',') }}">
-                <div class="flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full flex items-center justify-center text-white text-sm font-bold flex-shrink-0"
-                         style="background: var(--gradient-primary);">
-                        {{ member.name | first }}
-                    </div>
-                    <div class="flex-1 min-w-0">
-                        <p class="font-semibold text-sm truncate" style="color: var(--text-primary);">{{ member.name }}</p>
-                        {% if member.email %}
-                        <a href="mailto:{{ member.email }}" class="text-xs truncate block" style="color: var(--accent);">{{ member.email }}</a>
-                        {% endif %}
-                    </div>
-                </div>
-                <div class="flex flex-wrap gap-1 mt-2">
-                    {% for group in member.groups %}
-                    <span class="text-xs px-1.5 py-0.5 rounded-full" style="background-color: var(--accent-100); color: var(--accent-700);">{{ group }}</span>
-                    {% endfor %}
-                </div>
-            </div>
-            {% endif %}
-            {% endfor %}
-        </div>
-    </div>
-</section>
-
 <!-- Join CTA -->
 <section class="section" style="background-color: var(--bg-tertiary);">
     <div class="container text-center">
@@ -194,14 +189,6 @@ seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover m
 
     document.addEventListener('DOMContentLoaded', function () {
         filterTable();
-
-        // Sort working-group cards by surname
-        const grid = document.querySelector('.member-card') && document.querySelector('.member-card').closest('.grid');
-        if (grid) {
-            const cards = Array.from(grid.querySelectorAll('.member-card'));
-            cards.sort((a, b) => a.dataset.name.trim().split(' ').pop().localeCompare(b.dataset.name.trim().split(' ').pop()));
-            cards.forEach(c => grid.appendChild(c));
-        }
     });
 })();
 </script>
