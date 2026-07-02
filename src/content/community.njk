@@ -114,8 +114,17 @@ seoDescription: 'Meet the team and members of AI Safety for Italy — researcher
                                      style="background: var(--gradient-primary);">{{ member.name | first }}</div>
                                 <div>
                                     <div>{{ member.name }}</div>
-                                    {% if member.email %}
-                                    <a href="mailto:{{ member.email }}" class="text-xs" style="color: var(--accent);">{{ member.email }}</a>
+                                    {% if member.profile %}
+                                    <div class="flex flex-wrap gap-x-2">
+                                    {% for raw in member.profile | split(",") %}
+                                    {% set url = raw | trim %}
+                                    {% if url %}
+                                    {% set href = url if ("http://" in url or "https://" in url) else "https://" + url %}
+                                    {% set label = url | replace("https://", "") | replace("http://", "") | replace("www.", "") %}
+                                    <a href="{{ href }}" target="_blank" rel="noopener noreferrer" class="text-xs" style="color: var(--accent);">{{ label }}</a>
+                                    {% endif %}
+                                    {% endfor %}
+                                    </div>
                                     {% endif %}
                                 </div>
                             </div>
