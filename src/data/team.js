@@ -106,6 +106,40 @@ const teamData = [
       { label: 'GitHub', url: 'https://github.com/Cristian-Curaba' },
     ],
   },
+  {
+    name: 'Francesco Ortu',
+    role: 'Co-founder — PhD Student',
+    bio: 'Francesco is a co-founder of AI Safety for Italy and a PhD student at the University of Trieste and Area Science Park. His research focuses on the mechanistic interpretability of LLMs and VLMs. As part of his PhD, he visited the AI Safety and Alignment group at the ELLIS Institute in Tübingen.',
+    areas: [
+      'General Operations & Coordination',
+      'Mentorship',
+    ],
+    interests: [
+      'Mechanistic interpretability',
+      'Societal implication of AI',
+    ],
+    links: [
+      { label: 'Website', url: 'https://francescortu.github.io/' },
+    ],
+  },
+  {
+    name: 'Luca Scionis',
+    role: 'PhD Student',
+    bio: 'Luca Scionis is a PhD student in the Italian National AI PhD Programme, affiliated with the University of Cagliari (sAIferLab). He is currently an ELLIS intern working on the AI safety of AI agents. His research spans adversarial machine learning, with a focus on the robustness of computer vision models, and AI safety, particularly the security of LLM-based agents and assistants.',
+    areas: [
+      'Community Events',
+      'Mentorship',
+    ],
+    interests: [
+      'Technical AI safety',
+      'Adversarial machine learning',
+      'Robustness of ML models',
+      'Security of LLM-based agents and assistants',
+    ],
+    links: [
+      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/luca-scionis-148b37251/' },
+    ],
+  },
 ];
 
 module.exports = validateTeamData(teamData);
