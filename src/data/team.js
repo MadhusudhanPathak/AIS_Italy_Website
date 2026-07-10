@@ -55,18 +55,9 @@ const teamData = [
     role: 'Organizing Team — Communications & Community',
     photo: '/assets/img/team/carola-caivano.jpeg',
     bio: 'Carola is part of the organizing group of AI Safety for Italy, contributing to the development of the initiative across external communications, community strategy, and networking. Her background is in physics and she currently works as a data scientist. Her involvement in AI safety includes participating in the ML4Good bootcamp and graduating from BlueDot Impact’s AI Alignment course.',
-    areas: [
-      'Communications & Social Media',
-      'Community',
-    ],
-    interests: [
-      'AI Strategy',
-      'Technical safety',
-      'AI governance',
-    ],
-    links: [
-      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/carolacaivano/' },
-    ],
+    areas: ['Communications & Social Media', 'Community'],
+    interests: ['AI Strategy', 'Technical safety', 'AI governance'],
+    links: [{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/carolacaivano/' }],
   },
   {
     name: 'Elisabetta Rocchetti',
@@ -79,11 +70,7 @@ const teamData = [
       'Mentorship',
       'Governance & Finance',
     ],
-    interests: [
-      'Mechanistic interpretability',
-      'Technical AI safety',
-      'AI alignment',
-    ],
+    interests: ['Mechanistic interpretability', 'Technical AI safety', 'AI alignment'],
     links: [
       { label: 'LinkedIn', url: 'https://www.linkedin.com/in/elisabetta-rocchetti-70a953143/' },
     ],
@@ -93,14 +80,8 @@ const teamData = [
     role: 'Technical Infrastructure & Didactics',
     photo: '/assets/img/team/cristian-curaba.png',
     bio: 'Cristian holds a Master’s degree in Data Science and Scientific Computing and a Bachelor’s in Mathematics, providing him with a rigorous analytical and problem-solving foundation. He actively participated in the Apart Fellowship, ML4Good France, and various related courses. His involvement extends to local community building, where he currently leads an AGI Safety Discussion Group at the University of Udine to engage researchers and students in critical AI safety topics.',
-    areas: [
-      'Website & Technical Infrastructure',
-      'Didactics',
-    ],
-    interests: [
-      'Autoformalization',
-      'Formal Monitoring',
-    ],
+    areas: ['Website & Technical Infrastructure', 'Didactics'],
+    interests: ['Autoformalization', 'Formal Monitoring'],
     links: [
       { label: 'Website', url: 'https://cristian-curaba.github.io' },
       { label: 'GitHub', url: 'https://github.com/Cristian-Curaba' },
@@ -110,35 +91,22 @@ const teamData = [
     name: 'Francesco Ortu',
     role: 'Co-founder — PhD Student',
     bio: 'Francesco is a co-founder of AI Safety for Italy and a PhD student at the University of Trieste and Area Science Park. His research focuses on the mechanistic interpretability of LLMs and VLMs. As part of his PhD, he visited the AI Safety and Alignment group at the ELLIS Institute in Tübingen.',
-    areas: [
-      'General Operations & Coordination',
-      'Mentorship',
-    ],
-    interests: [
-      'Mechanistic interpretability',
-      'Societal implication of AI',
-    ],
-    links: [
-      { label: 'Website', url: 'https://francescortu.github.io/' },
-    ],
+    areas: ['General Operations & Coordination', 'Mentorship'],
+    interests: ['Mechanistic interpretability', 'Societal implication of AI'],
+    links: [{ label: 'Website', url: 'https://francescortu.github.io/' }],
   },
   {
     name: 'Luca Scionis',
     role: 'PhD Student',
     bio: 'Luca Scionis is a PhD student in the Italian National AI PhD Programme, affiliated with the University of Cagliari (sAIferLab). He is currently an ELLIS intern working on the AI safety of AI agents. His research spans adversarial machine learning, with a focus on the robustness of computer vision models, and AI safety, particularly the security of LLM-based agents and assistants.',
-    areas: [
-      'Community Events',
-      'Mentorship',
-    ],
+    areas: ['Community Events', 'Mentorship'],
     interests: [
       'Technical AI safety',
       'Adversarial machine learning',
       'Robustness of ML models',
       'Security of LLM-based agents and assistants',
     ],
-    links: [
-      { label: 'LinkedIn', url: 'https://www.linkedin.com/in/luca-scionis-148b37251/' },
-    ],
+    links: [{ label: 'LinkedIn', url: 'https://www.linkedin.com/in/luca-scionis-148b37251/' }],
   },
 ];
 
