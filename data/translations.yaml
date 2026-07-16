@@ -3,116 +3,118 @@
 
 en:
   nav:
-    home: "Home"
-    about: "About"
-    events: "Initiatives"
-    community: "Community"
-    faq: "FAQ"
-    contact: "Contact"
-    join: "Join"
+    home: 'Home'
+    about: 'About'
+    events: 'Initiatives'
+    community: 'Community'
+    resources: 'Resources'
+    faq: 'FAQ'
+    contact: 'Contact'
+    join: 'Join'
 
   hero:
-    title: "AI Safety for Italy"
-    subtitle: "Building a safer future through awareness, education, and community"
-    description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
-    cta: "Join Our Community"
-    secondary_cta: "Learn More"
+    title: 'AI Safety for Italy'
+    subtitle: 'Building a safer future through awareness, education, and community'
+    description: 'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.'
+    cta: 'Join Our Community'
+    secondary_cta: 'Learn More'
 
   announcements:
-    badge: "📢 News"
-    heading: "Latest Announcements"
+    badge: '📢 News'
+    heading: 'Latest Announcements'
 
   mission:
-    problem_title: "The Challenge"
-    solution_title: "Our Solution"
+    problem_title: 'The Challenge'
+    solution_title: 'Our Solution'
 
   features:
-    heading: "What We Do"
-    subheading: "Our core activities and impact areas"
+    heading: 'What We Do'
+    subheading: 'Our core activities and impact areas'
 
   cta:
-    title: "Ready to Join Our Community?"
+    title: 'Ready to Join Our Community?'
     description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-    button: "Join the Community"
+    button: 'Join the Community'
 
   community:
-    hero_title: "Join Our Community"
-    hero_subtitle: "Connect with researchers, practitioners, and enthusiasts passionate about AI safety."
-    team_title: "Our Team"
-    team_subtitle: "Passionate individuals driving AI safety forward"
-    members_title: "Community Members"
-    members_subtitle: "All members of AI Safety for Italy"
-    cta_title: "Ready to Join Our Community?"
+    hero_title: 'Join Our Community'
+    hero_subtitle: 'Connect with researchers, practitioners, and enthusiasts passionate about AI safety.'
+    team_title: 'Our Team'
+    team_subtitle: 'Passionate individuals driving AI safety forward'
+    members_title: 'Community Members'
+    members_subtitle: 'All members of AI Safety for Italy'
+    cta_title: 'Ready to Join Our Community?'
     cta_description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-    cta_button: "Join the Community"
-    join_button: "Join the community"
-    groups_label: "Working groups"
+    cta_button: 'Join the Community'
+    join_button: 'Join the community'
+    groups_label: 'Working groups'
 
   news:
-    heading: "News"
-    badge: "📰 Updates"
+    heading: 'News'
+    badge: '📰 Updates'
 
   footer:
-    about_heading: "About AI Safety for Italy"
-    about_description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
-    links_heading: "Quick Links"
-    connect_heading: "Connect With Us"
-    copyright: "© 2026 AI Safety for Italy | Advancing AI Safety"
+    about_heading: 'About AI Safety for Italy'
+    about_description: 'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.'
+    links_heading: 'Quick Links'
+    connect_heading: 'Connect With Us'
+    copyright: '© 2026 AI Safety for Italy | Advancing AI Safety'
 
 it:
   nav:
-    home: "Home"
-    about: "Chi siamo"
-    events: "Iniziative"
-    community: "Community"
-    faq: "FAQ"
-    contact: "Contatti"
-    join: "Unisciti"
+    home: 'Home'
+    about: 'Chi siamo'
+    events: 'Iniziative'
+    community: 'Community'
+    resources: 'Risorse'
+    faq: 'FAQ'
+    contact: 'Contatti'
+    join: 'Unisciti'
 
   hero:
-    title: "AI Safety for Italy"
-    subtitle: "Costruire un futuro più sicuro attraverso consapevolezza, educazione e comunità"
+    title: 'AI Safety for Italy'
+    subtitle: 'Costruire un futuro più sicuro attraverso consapevolezza, educazione e comunità'
     description: "Una comunità AI in crescita che lavora per ridurre i rischi dell'IA avanzata, sensibilizzando, formando e creando opportunità per un mondo AI più sicuro."
-    cta: "Unisciti alla Community"
-    secondary_cta: "Scopri di più"
+    cta: 'Unisciti alla Community'
+    secondary_cta: 'Scopri di più'
 
   announcements:
-    badge: "📢 Notizie"
-    heading: "Ultime Notizie"
+    badge: '📢 Notizie'
+    heading: 'Ultime Notizie'
 
   mission:
-    problem_title: "La Sfida"
-    solution_title: "La Nostra Soluzione"
+    problem_title: 'La Sfida'
+    solution_title: 'La Nostra Soluzione'
 
   features:
-    heading: "Cosa Facciamo"
-    subheading: "Le nostre attività principali e aree di impatto"
+    heading: 'Cosa Facciamo'
+    subheading: 'Le nostre attività principali e aree di impatto'
 
   cta:
-    title: "Pronto a Unirti alla Nostra Community?"
+    title: 'Pronto a Unirti alla Nostra Community?'
     description: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso riguardo all'AI safety, c'è un posto per te nella nostra community."
-    button: "Unisciti alla Community"
+    button: 'Unisciti alla Community'
 
   community:
-    hero_title: "Unisciti alla Community"
-    hero_subtitle: "Connettiti con ricercatori, professionisti e appassionati di AI safety."
-    team_title: "Il Nostro Team"
+    hero_title: 'Unisciti alla Community'
+    hero_subtitle: 'Connettiti con ricercatori, professionisti e appassionati di AI safety.'
+    team_title: 'Il Nostro Team'
     team_subtitle: "Persone appassionate che guidano l'AI safety"
-    members_title: "Membri della Community"
-    members_subtitle: "Tutti i membri di AI Safety for Italy"
-    cta_title: "Pronto a Unirti alla Nostra Community?"
+    members_title: 'Membri della Community'
+    members_subtitle: 'Tutti i membri di AI Safety for Italy'
+    cta_title: 'Pronto a Unirti alla Nostra Community?'
     cta_description: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso riguardo all'AI safety, c'è un posto per te nella nostra community."
-    cta_button: "Unisciti alla Community"
-    join_button: "Entra nella community"
-    groups_label: "Gruppi di lavoro"
+    cta_button: 'Unisciti alla Community'
+    join_button: 'Entra nella community'
+    groups_label: 'Gruppi di lavoro'
 
   news:
-    heading: "Notizie"
-    badge: "📰 Aggiornamenti"
+    heading: 'Notizie'
+    badge: '📰 Aggiornamenti'
 
   footer:
-    about_heading: "Chi è AI Safety for Italy"
+    about_heading: 'Chi è AI Safety for Italy'
     about_description: "Una comunità AI in crescita che lavora per ridurre i rischi dell'IA avanzata, sensibilizzando, formando e creando opportunità per un mondo AI più sicuro."
-    links_heading: "Link Rapidi"
-    connect_heading: "Connettiti con Noi"
+    links_heading: 'Link Rapidi'
+    connect_heading: 'Connettiti con Noi'
     copyright: "© 2026 AI Safety for Italy | Per un'IA più sicura"

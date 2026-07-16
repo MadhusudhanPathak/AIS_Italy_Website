@@ -1,0 +1,63 @@
+# Resources Page Content Data
+# Curated external links to help people learn about and get into AI safety.
+# Each field has an English value and an Italian (_it) counterpart for the language toggle.
+
+hero:
+  title: 'Resources'
+  title_it: 'Risorse'
+  subtitle: 'A curated collection of useful links to learn about AI safety, find courses, communities, and opportunities.'
+  subtitle_it: "Una raccolta selezionata di link utili per conoscere l'AI safety, trovare corsi, community e opportunità."
+
+# Featured resource highlighted at the top of the page
+featured:
+  label: 'Start here'
+  label_it: 'Da qui'
+  title: 'Lots of Links'
+  description: 'A large, regularly updated directory of AI safety resources — courses, communities, funding, jobs, and reading lists all in one place.'
+  description_it: "Una grande raccolta, aggiornata regolarmente, di risorse sull'AI safety: corsi, community, finanziamenti, offerte di lavoro e letture, tutto in un unico posto."
+  link_text: 'Open the directory'
+  link_text_it: 'Apri la raccolta'
+  link_url: 'https://www.aisafetysupport.org/lots-of-links'
+
+categories:
+  - id: 1
+    name: 'Start learning'
+    name_it: 'Inizia a imparare'
+    icon: '📚'
+    links:
+      - title: 'AI Safety Fundamentals'
+        description: 'Structured courses on AI alignment and governance, with curated reading lists you can also follow on your own.'
+        description_it: "Corsi strutturati su allineamento e governance dell'IA, con letture selezionate che puoi seguire anche in autonomia."
+        url: 'https://aisafetyfundamentals.com/'
+      - title: 'BlueDot Impact'
+        description: 'Runs free, cohort-based courses that help people move into AI safety work.'
+        description_it: "Organizza corsi gratuiti, basati su gruppi di studio, che aiutano le persone a entrare nel campo dell'AI safety."
+        url: 'https://bluedot.org/'
+      - title: 'AISafety.com'
+        description: 'Curated lists of events, communities, courses, and more across the AI safety ecosystem.'
+        description_it: "Liste selezionate di eventi, community, corsi e altro ancora in tutto l'ecosistema dell'AI safety."
+        url: 'https://www.aisafety.com/'
+
+  - id: 2
+    name: 'Research & reading'
+    name_it: 'Ricerca e letture'
+    icon: '🔬'
+    links:
+      - title: 'Alignment Forum'
+        description: 'In-depth technical discussion and research on AI alignment from the wider community.'
+        description_it: "Discussioni tecniche approfondite e ricerca sull'allineamento dell'IA da parte della community."
+        url: 'https://www.alignmentforum.org/'
+      - title: 'AI Safety Support'
+        description: 'Support, resources, and community for people looking to contribute to AI safety.'
+        description_it: "Supporto, risorse e community per chi vuole contribuire all'AI safety."
+        url: 'https://www.aisafetysupport.org/'
+
+  - id: 3
+    name: 'Careers & opportunities'
+    name_it: 'Carriere e opportunità'
+    icon: '🚀'
+    links:
+      - title: '80,000 Hours — AI risk'
+        description: 'Career guidance and a detailed problem profile on reducing risks from advanced AI.'
+        description_it: "Orientamento professionale e un'analisi dettagliata su come ridurre i rischi dell'IA avanzata."
+        url: 'https://80000hours.org/problem-profiles/artificial-intelligence/'

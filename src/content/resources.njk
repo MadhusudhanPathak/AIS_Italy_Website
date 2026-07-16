@@ -1,0 +1,64 @@
+---
+layout: page.njk
+title: Resources
+permalink: /resources/
+seoTitle: 'Resources — AI Safety for Italy'
+seoDescription: "Curated links to learn about AI safety: courses, communities, research, careers, and opportunities, selected by AI Safety for Italy."
+---
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container text-center relative z-10">
+        <h1 class="hero-title" data-en="{{ resources.hero.title }}" data-it="{{ resources.hero.title_it }}">{{ resources.hero.title }}</h1>
+        <p class="hero-sub text-xl md:text-2xl max-w-3xl mx-auto" data-en="{{ resources.hero.subtitle }}" data-it="{{ resources.hero.subtitle_it }}">{{ resources.hero.subtitle }}</p>
+    </div>
+</section>
+
+<!-- Featured resource -->
+<section class="section" style="background-color: var(--bg-primary);">
+    <div class="container">
+        <div class="cta-panel reveal">
+            <span class="text-sm font-semibold uppercase tracking-wide" style="color: var(--accent);"
+                  data-en="{{ resources.featured.label }}" data-it="{{ resources.featured.label_it }}">{{ resources.featured.label }}</span>
+            <h2 class="mt-2" data-en="{{ resources.featured.title }}" data-it="{{ resources.featured.title }}">{{ resources.featured.title }}</h2>
+            <p data-en="{{ resources.featured.description }}" data-it="{{ resources.featured.description_it }}">{{ resources.featured.description }}</p>
+            <a href="{{ resources.featured.link_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg"
+               data-en="{{ resources.featured.link_text }}" data-it="{{ resources.featured.link_text_it }}">{{ resources.featured.link_text }}</a>
+        </div>
+    </div>
+</section>
+
+<!-- Resource categories -->
+<section class="section" style="background-color: var(--bg-secondary);">
+    <div class="container">
+        {% for category in resources.categories %}
+        <div class="mb-14">
+            <h2 class="mb-6" data-en="{{ category.icon }} {{ category.name }}" data-it="{{ category.icon }} {{ category.name_it }}">{{ category.icon }} {{ category.name }}</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {% for link in category.links %}
+                <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer" class="card hover-lift reveal" style="display: flex; flex-direction: column;">
+                    <h3 class="mb-2" style="color: var(--text-primary);" data-en="{{ link.title }}" data-it="{{ link.title }}">{{ link.title }}</h3>
+                    <p class="text-sm" style="color: var(--text-secondary); margin-bottom: 1rem;"
+                       data-en="{{ link.description }}" data-it="{{ link.description_it }}">{{ link.description }}</p>
+                    <span class="text-sm font-semibold mt-auto" style="color: var(--accent);"
+                          data-en="Visit →" data-it="Vai →">Visit →</span>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="section">
+    <div class="container">
+        <div class="cta-panel reveal">
+            <h2 data-en="Know a resource we should add?" data-it="Conosci una risorsa che dovremmo aggiungere?">Know a resource we should add?</h2>
+            <p data-en="Get in touch and help us grow this list for the Italian AI safety community."
+               data-it="Contattaci e aiutaci a far crescere questa lista per la community italiana dell'AI safety.">Get in touch and help us grow this list for the Italian AI safety community.</p>
+            <a href="/contact/" class="btn btn-primary btn-lg"
+               data-en="Contact us" data-it="Contattaci">Contact us</a>
+        </div>
+    </div>
+</section>

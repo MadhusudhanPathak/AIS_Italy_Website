@@ -80,9 +80,6 @@ seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover m
                                      style="background: var(--gradient-primary);">{{ member.name | first }}</div>
                                 <div>
                                     <div>{{ member.name }}</div>
-                                    {% if member.email %}
-                                    <a href="mailto:{{ member.email }}" class="text-xs" style="color: var(--accent);">{{ member.email }}</a>
-                                    {% endif %}
                                 </div>
                             </div>
                         </td>
@@ -120,9 +117,6 @@ seoDescription: 'Meet the members of AI Safety for Italy. Working groups cover m
                     </div>
                     <div class="flex-1 min-w-0">
                         <p class="font-semibold text-sm truncate" style="color: var(--text-primary);">{{ member.name }}</p>
-                        {% if member.email %}
-                        <a href="mailto:{{ member.email }}" class="text-xs truncate block" style="color: var(--accent);">{{ member.email }}</a>
-                        {% endif %}
                     </div>
                 </div>
                 <div class="flex flex-wrap gap-1 mt-2">

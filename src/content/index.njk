@@ -33,8 +33,8 @@ seoDescription: "AI Safety for Italy is Italy's grassroots community reducing ri
             {% for feature in home.features %}
             <div class="feature-card tint-{{ tints[loop.index0] }} reveal">
                 <span class="feature-icon"><svg class="ds-icon" aria-hidden="true"><use href="#icon-{{ icons[loop.index0] }}"></use></svg></span>
-                <h3 class="mb-2">{{ feature.title }}</h3>
-                <p style="margin-bottom: 0;">{{ feature.description }}</p>
+                <h3 class="mb-2" data-en="{{ feature.title }}" data-it="{{ feature.title_it }}">{{ feature.title }}</h3>
+                <p style="margin-bottom: 0;" data-en="{{ feature.description }}" data-it="{{ feature.description_it }}">{{ feature.description }}</p>
             </div>
             {% endfor %}
         </div>
@@ -46,13 +46,13 @@ seoDescription: "AI Safety for Italy is Italy's grassroots community reducing ri
     <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
             <div class="card-elevated reveal">
-                <h3 class="mb-3">{{ home.mission.problem_title }}</h3>
-                <p>{{ home.mission.problem_description | split('\n\n') | first }}</p>
-                <p style="margin-bottom: 0;">{{ home.mission.problem_description | split('\n\n') | last }}</p>
+                <h3 class="mb-3" data-en="{{ home.mission.problem_title }}" data-it="{{ home.mission.problem_title_it }}">{{ home.mission.problem_title }}</h3>
+                <p data-en="{{ home.mission.problem_description | split('\n\n') | first }}" data-it="{{ home.mission.problem_description_it | split('\n\n') | first }}">{{ home.mission.problem_description | split('\n\n') | first }}</p>
+                <p style="margin-bottom: 0;" data-en="{{ home.mission.problem_description | split('\n\n') | last }}" data-it="{{ home.mission.problem_description_it | split('\n\n') | last }}">{{ home.mission.problem_description | split('\n\n') | last }}</p>
             </div>
             <div class="card-elevated reveal">
-                <h3 class="mb-3">{{ home.mission.solution_title }}</h3>
-                <p>{{ home.mission.solution_description | split('\n\n') | first }}</p>
+                <h3 class="mb-3" data-en="{{ home.mission.solution_title }}" data-it="{{ home.mission.solution_title_it }}">{{ home.mission.solution_title }}</h3>
+                <p data-en="{{ home.mission.solution_description | split('\n\n') | first }}" data-it="{{ home.mission.solution_description_it | split('\n\n') | first }}">{{ home.mission.solution_description | split('\n\n') | first }}</p>
                 <a href="{{ site.forms.mailingList }}" target="_blank" class="btn btn-primary mt-2" style="align-self: flex-start;" data-en="Get involved today" data-it="Partecipa oggi">Get involved today</a>
             </div>
         </div>
