@@ -15,7 +15,7 @@ en:
   hero:
     title: 'AI Safety for Italy'
     subtitle: 'Building a safer future through awareness, education, and community'
-    description: 'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.'
+    description: "We're a non-profit building Italy's AI safety community, bringing people together to learn, run events, and work on making advanced AI safe."
     cta: 'Join Our Community'
     secondary_cta: 'Learn More'
 
@@ -55,7 +55,7 @@ en:
 
   footer:
     about_heading: 'About AI Safety for Italy'
-    about_description: 'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.'
+    about_description: "We're a non-profit building Italy's AI safety community, bringing people together to learn, run events, and work on making advanced AI safe."
     links_heading: 'Quick Links'
     connect_heading: 'Connect With Us'
     copyright: '© 2026 AI Safety for Italy | Advancing AI Safety'
@@ -74,7 +74,7 @@ it:
   hero:
     title: 'AI Safety for Italy'
     subtitle: 'Costruire un futuro più sicuro attraverso consapevolezza, educazione e comunità'
-    description: "Una comunità AI in crescita che lavora per ridurre i rischi dell'IA avanzata, sensibilizzando, formando e creando opportunità per un mondo AI più sicuro."
+    description: "Siamo un'organizzazione no profit che costruisce la community italiana dell'AI safety: riuniamo le persone per formarsi, organizzare eventi e contribuire a uno sviluppo sicuro dell'IA avanzata."
     cta: 'Unisciti alla Community'
     secondary_cta: 'Scopri di più'
 
@@ -114,7 +114,7 @@ it:
 
   footer:
     about_heading: 'Chi è AI Safety for Italy'
-    about_description: "Una comunità AI in crescita che lavora per ridurre i rischi dell'IA avanzata, sensibilizzando, formando e creando opportunità per un mondo AI più sicuro."
+    about_description: "Siamo un'organizzazione no profit che costruisce la community italiana dell'AI safety: riuniamo le persone per formarsi, organizzare eventi e contribuire a uno sviluppo sicuro dell'IA avanzata."
     links_heading: 'Link Rapidi'
     connect_heading: 'Connettiti con Noi'
     copyright: "© 2026 AI Safety for Italy | Per un'IA più sicura"

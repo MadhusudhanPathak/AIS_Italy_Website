@@ -13,7 +13,7 @@ featured:
   label: 'Start here'
   label_it: 'Da qui'
   title: 'Lots of Links'
-  description: 'A large, regularly updated directory of AI safety resources — courses, communities, funding, jobs, and reading lists all in one place.'
+  description: 'A large, regularly updated directory of AI safety resources: courses, communities, funding, jobs, and reading lists all in one place.'
   description_it: "Una grande raccolta, aggiornata regolarmente, di risorse sull'AI safety: corsi, community, finanziamenti, offerte di lavoro e letture, tutto in un unico posto."
   link_text: 'Open the directory'
   link_text_it: 'Apri la raccolta'
@@ -57,7 +57,7 @@ categories:
     name_it: 'Carriere e opportunità'
     icon: '🚀'
     links:
-      - title: '80,000 Hours — AI risk'
+      - title: '80,000 Hours: AI risk'
         description: 'Career guidance and a detailed problem profile on reducing risks from advanced AI.'
         description_it: "Orientamento professionale e un'analisi dettagliata su come ridurre i rischi dell'IA avanzata."
         url: 'https://80000hours.org/problem-profiles/artificial-intelligence/'

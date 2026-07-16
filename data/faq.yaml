@@ -27,8 +27,8 @@ categories:
       - id: 3
         question: 'What is the difference between AI safety and AI ethics?'
         question_it: 'Qual è la differenza tra AI safety e AI ethics?'
-        answer: 'AI ethics focuses on the moral implications and societal impacts of AI systems — fairness, accountability, privacy, and discrimination. AI safety is more concerned with technical and governance methods to ensure AI systems behave as intended, including the long-term risk of advanced AI systems that could act in ways harmful to humanity. The two fields overlap significantly and are complementary.'
-        answer_it: "L'AI ethics si occupa delle implicazioni morali e degli impatti sociali dei sistemi di IA — equità, responsabilità, privacy e discriminazione. L'AI safety si concentra maggiormente su metodi tecnici e di governance per garantire che i sistemi di IA si comportino come previsto, incluso il rischio a lungo termine di sistemi di IA avanzati. I due campi si sovrappongono significativamente e sono complementari."
+        answer: 'AI ethics focuses on the moral implications and societal impacts of AI systems: fairness, accountability, privacy, and discrimination. AI safety is more concerned with technical and governance methods to ensure AI systems behave as intended, including the long-term risk of advanced AI systems that could act in ways harmful to humanity. The two fields overlap significantly and are complementary.'
+        answer_it: "L'AI ethics si occupa delle implicazioni morali e degli impatti sociali dei sistemi di IA: equità, responsabilità, privacy e discriminazione. L'AI safety si concentra maggiormente su metodi tecnici e di governance per garantire che i sistemi di IA si comportino come previsto, incluso il rischio a lungo termine di sistemi di IA avanzati. I due campi si sovrappongono significativamente e sono complementari."
 
   - id: 2
     name: 'About Our Organization'
@@ -44,8 +44,8 @@ categories:
       - id: 5
         question: 'Who can join AI Safety for Italy?'
         question_it: 'Chi può unirsi ad AI Safety for Italy?'
-        answer: 'Anyone interested in AI safety is welcome — researchers, students, professionals from any field, policymakers, science communicators, and curious minds. We believe diverse perspectives are essential for addressing AI safety challenges. You can join at any level of technical knowledge.'
-        answer_it: "Chiunque sia interessato all'AI safety è benvenuto — ricercatori, studenti, professionisti di qualsiasi settore, esperti di policy, comunicatori scientifici e menti curiose. Crediamo che prospettive diverse siano fondamentali per affrontare le sfide dell'AI safety. Puoi unirti con qualsiasi livello di conoscenza tecnica."
+        answer: 'Anyone interested in AI safety is welcome: researchers, students, professionals from any field, policymakers, science communicators, and curious minds. We believe diverse perspectives are essential for addressing AI safety challenges. You can join at any level of technical knowledge.'
+        answer_it: "Chiunque sia interessato all'AI safety è benvenuto: ricercatori, studenti, professionisti di qualsiasi settore, esperti di policy, comunicatori scientifici e menti curiose. Crediamo che prospettive diverse siano fondamentali per affrontare le sfide dell'AI safety. Puoi unirti con qualsiasi livello di conoscenza tecnica."
 
       - id: 6
         question: 'Is AI Safety for Italy affiliated with any institution?'
@@ -67,8 +67,8 @@ categories:
       - id: 8
         question: 'How can I join AI Safety for Italy?'
         question_it: 'Come posso unirmi ad AI Safety for Italy?'
-        answer: "Fill in our interest form — it takes about 5 minutes. You can indicate which working groups you'd like to join and how many hours per month you can commit. We'll reach out to welcome you and connect you with the relevant groups."
-        answer_it: 'Compila il nostro modulo di interesse — richiede circa 5 minuti. Puoi indicare a quali gruppi di lavoro vuoi unirti e quante ore al mese puoi dedicare. Ti contatteremo per darti il benvenuto e metterti in contatto con i gruppi pertinenti.'
+        answer: "Fill in our interest form. It takes about 5 minutes. You can indicate which working groups you'd like to join and how many hours per month you can commit. We'll reach out to welcome you and connect you with the relevant groups."
+        answer_it: 'Compila il nostro modulo di interesse: richiede circa 5 minuti. Puoi indicare a quali gruppi di lavoro vuoi unirti e quante ore al mese puoi dedicare. Ti contatteremo per darti il benvenuto e metterti in contatto con i gruppi pertinenti.'
 
       - id: 9
         question: 'What working groups can I join?'

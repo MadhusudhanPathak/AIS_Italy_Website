@@ -57,7 +57,7 @@
             (!name ? el['name'] : !email ? el['email'] : el['message']).focus();
             return false;
         }
-        var subject = encodeURIComponent('Website contact — ' + name);
+        var subject = encodeURIComponent('Website contact: ' + name);
         var body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\n\n' + message);
         window.location.href = 'mailto:{{ site.site.email }}?subject=' + subject + '&body=' + body;
         return false;
