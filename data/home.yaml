@@ -4,13 +4,13 @@
 
 # Hero Section
 hero:
-  title: "AI Safety for Italy"
-  subtitle: "Building a safer future through awareness, education, and community"
-  description: "A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world."
-  cta_text: "Join Our Community"
-  cta_link: "/community/"
-  secondary_cta_text: "Learn More"
-  secondary_cta_link: "#learn-more"
+  title: 'AI Safety for Italy'
+  subtitle: 'Building a safer future through awareness, education, and community'
+  description: 'A growing grassroots AI community working to reduce risks from advanced AI by raising awareness, upskilling and creating opportunities for a safer AI world.'
+  cta_text: 'Join Our Community'
+  cta_link: '/community/'
+  secondary_cta_text: 'Learn More'
+  secondary_cta_link: '#learn-more'
 
 # Stats Section
 # stats:
@@ -26,12 +26,12 @@ hero:
 # Announcements Section
 announcements:
   - id: 1
-    emoji: "🌐"
-    title: "AIsafety.com"
-    description: "Find your place in the AI safety ecosystem: Curated lists of events, communities, courses, and more - focused on preventing human extinction from AI."
-    link_text: "Stay updated by registering to its newsletter."
-    link_url: "{{ https://www.aisafety.com/ }}"
-    link_target: "_blank"
+    emoji: '🌐'
+    title: 'AIsafety.com'
+    description: 'Find your place in the AI safety ecosystem: Curated lists of events, communities, courses, and more - focused on preventing human extinction from AI.'
+    link_text: 'Stay updated by registering to its newsletter.'
+    link_url: '{{ https://www.aisafety.com/ }}'
+    link_target: '_blank'
 
 # Recent Events Section
 # recent_events:
@@ -52,41 +52,51 @@ announcements:
 
 # Mission Section
 mission:
-  problem_title: "The Challenge"
-  problem_emoji: "⚠️"
+  problem_title: 'The Challenge'
+  problem_title_it: 'La Sfida'
+  problem_emoji: '⚠️'
   problem_description: "AI will soon radically transform our society, for better or worse. Experts broadly expect significant progress during our lifetimes, potentially achieving human-level intelligence.\n\nDigital systems with such capabilities would revolutionize every aspect of our society, making their safe development one of the most pressing challenges of our time."
-  problem_cta_text: "Explore the Issues"
-  problem_cta_link: "/community/"
-  
-  solution_title: "Our Solution"
-  solution_emoji: "💡"
+  problem_description_it: "L'IA trasformerà presto radicalmente la nostra società, nel bene o nel male. Gli esperti si aspettano progressi significativi nel corso della nostra vita, fino a raggiungere potenzialmente un'intelligenza di livello umano.\n\nSistemi digitali con tali capacità rivoluzionerebbero ogni aspetto della società, rendendo il loro sviluppo sicuro una delle sfide più urgenti del nostro tempo."
+  problem_cta_text: 'Explore the Issues'
+  problem_cta_link: '/community/'
+
+  solution_title: 'Our Solution'
+  solution_title_it: 'La Nostra Soluzione'
+  solution_emoji: '💡'
   solution_description: "We work to ensure AI is developed to benefit humanity's future. Through education, community building, and raising awareness, we create a network of people committed to safer AI development.\n\nWe organize courses, host events, and connect members with resources and opportunities in the rapidly growing AI safety field."
-  solution_cta_text: "Get Involved Today"
-  solution_cta_link: "{{ site.forms.mailingList }}"
+  solution_description_it: "Lavoriamo per garantire che l'IA sia sviluppata a beneficio del futuro dell'umanità. Attraverso formazione, costruzione della community e sensibilizzazione, creiamo una rete di persone impegnate per uno sviluppo dell'IA più sicuro.\n\nOrganizziamo corsi, ospitiamo eventi e mettiamo in contatto i membri con risorse e opportunità nel campo in rapida crescita dell'AI safety."
+  solution_cta_text: 'Get Involved Today'
+  solution_cta_link: '{{ site.forms.mailingList }}'
 
 # Features Section
 features:
   - id: 1
-    emoji: "🎓"
-    title: "Educational Programs"
-    description: "Comprehensive courses and workshops designed to upskill individuals in AI safety concepts and practices."
+    emoji: '🎓'
+    title: 'Educational Programs'
+    title_it: 'Programmi Formativi'
+    description: 'Comprehensive courses and workshops designed to upskill individuals in AI safety concepts and practices.'
+    description_it: "Corsi e workshop completi, pensati per far crescere le competenze nei concetti e nelle pratiche dell'AI safety."
   - id: 2
-    emoji: "🤝"
-    title: "Community Building"
-    description: "Connect with like-minded individuals passionate about AI safety through our events and networking opportunities."
+    emoji: '🤝'
+    title: 'Community Building'
+    title_it: 'Costruire la Community'
+    description: 'Connect with like-minded individuals passionate about AI safety through our events and networking opportunities.'
+    description_it: "Entra in contatto con persone che condividono la passione per l'AI safety attraverso i nostri eventi e le occasioni di networking."
   - id: 3
-    emoji: "🔬"
-    title: "Research & Resources"
-    description: "Access curated research materials and resources to stay updated on the latest developments in AI safety."
+    emoji: '🔬'
+    title: 'Research & Resources'
+    title_it: 'Ricerca e Risorse'
+    description: 'Access curated research materials and resources to stay updated on the latest developments in AI safety.'
+    description_it: "Accedi a materiali di ricerca e risorse selezionate per restare aggiornato sugli ultimi sviluppi dell'AI safety."
 
 # CTA Section
 cta:
-  title: "Ready to Join Our Community?"
+  title: 'Ready to Join Our Community?'
   description: "Whether you're a researcher, student, professional, or simply curious about AI safety, there's a place for you in our community."
-  button_text: "Join Our Discord"
+  button_text: 'Join Our Discord'
   # Link handled directly in template via `site.social.discord`
 
 # Theme Background Images
 theme_backgrounds:
-  dark_image: "/assets/img/ais_italy_dark_bg.png"
-  light_image: "/assets/img/ais_italy_light_bg.png"
+  dark_image: '/assets/img/ais_italy_dark_bg.png'
+  light_image: '/assets/img/ais_italy_light_bg.png'

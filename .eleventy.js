@@ -94,7 +94,8 @@ module.exports = function(eleventyConfig) {
     'global.yaml',
     'translations.yaml',
     'news.yaml',
-    'members.yaml'
+    'members.yaml',
+    'resources.yaml'
   ];
 
   // Load and expose each data file as global data

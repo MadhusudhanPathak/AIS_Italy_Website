@@ -1,52 +1,52 @@
 # About Page Content Data
 
 hero:
-  title: "About AI Safety for Italy"
-  title_it: "Chi Siamo"
-  subtitle: "We are a grassroots community dedicated to reducing risks from advanced AI and ensuring its safe development for humanity's benefit."
-  subtitle_it: "Siamo una comunità dal basso dedicata a ridurre i rischi dell'IA avanzata e garantirne uno sviluppo sicuro a beneficio dell'umanità."
+  title: 'About AI Safety for Italy'
+  title_it: 'Chi Siamo'
+  subtitle: 'We are a non-profit organization building a community to advance AI safety in Italy.'
+  subtitle_it: "Siamo un'organizzazione no profit che costruisce una community per far progredire l'AI safety in Italia."
 
 mission_vision:
   mission:
-    title: "Our Mission"
-    title_it: "La Nostra Missione"
-    emoji: "🎯"
-    description: "We work to raise awareness about AI safety challenges, upskill individuals in the field, and create opportunities for collaboration among researchers and policymakers committed to safer AI."
-    description_it: "Lavoriamo per sensibilizzare sulle sfide dell'AI safety, formare le persone nel settore e creare opportunità di collaborazione tra ricercatori e responsabili politici impegnati per un'IA più sicura."
+    title: 'Our Mission'
+    title_it: 'La Nostra Missione'
+    emoji: '🎯'
+    description: 'We connect researchers, students, and professionals across Italy, run study groups and events, and help people find their way into AI safety work.'
+    description_it: "Mettiamo in contatto ricercatori, studenti e professionisti in tutta Italia, organizziamo gruppi di studio ed eventi e aiutiamo le persone a muovere i primi passi nell'AI safety."
   vision:
-    title: "Our Vision"
-    title_it: "La Nostra Visione"
-    emoji: "🌍"
-    description: "A world where advanced AI systems are developed responsibly, with safety and human values at the core of AI development practices across organizations and governments."
-    description_it: "Un mondo in cui i sistemi di IA avanzata vengono sviluppati in modo responsabile, con sicurezza e valori umani al centro delle pratiche di sviluppo dell'IA in tutte le organizzazioni e i governi."
+    title: 'Our Vision'
+    title_it: 'La Nostra Visione'
+    emoji: '🌍'
+    description: 'As AI systems become more capable, making them safe becomes more urgent. We want Italy to have the people, the knowledge, and the connections to contribute to that work.'
+    description_it: "Man mano che i sistemi di IA diventano più capaci, renderli sicuri diventa più urgente. Vogliamo che l'Italia abbia le persone, le competenze e i contatti per contribuire a questo lavoro."
 
-approach_section_title: "How We Work"
-approach_section_title_it: "Come Lavoriamo"
+approach_section_title: 'How We Work'
+approach_section_title_it: 'Come Lavoriamo'
 
 approach:
   - id: 1
-    icon: "📚"
-    title: "Learning"
-    title_it: "Apprendimento"
-    description: "We discuss AI safety and produce materials and resources to deepen understanding of the field."
-    description_it: "Discutiamo di AI safety e produciamo materiali e risorse per approfondire la comprensione del settore."
+    icon: '📚'
+    title: 'Learning'
+    title_it: 'Apprendimento'
+    description: 'We discuss AI safety and produce materials and resources to deepen understanding of the field.'
+    description_it: 'Discutiamo di AI safety e produciamo materiali e risorse per approfondire la comprensione del settore.'
   - id: 2
-    icon: "🎓"
-    title: "Education"
-    title_it: "Formazione"
-    description: "We use our learning outputs for outreach to university students and other newcomers to AI safety."
+    icon: '🎓'
+    title: 'Education'
+    title_it: 'Formazione'
+    description: 'We use our learning outputs for outreach to university students and other newcomers to AI safety.'
     description_it: "Utilizziamo i risultati del nostro apprendimento per diffondere l'AI safety tra studenti universitari e altri nuovi arrivati nel campo."
   - id: 3
-    icon: "🤝"
-    title: "Community Building"
-    title_it: "Costruzione della Community"
-    description: "Connect researchers, students, and enthusiasts for opportunities."
-    description_it: "Connettere ricercatori, studenti e appassionati per creare opportunità."
+    icon: '🤝'
+    title: 'Community Building'
+    title_it: 'Costruzione della Community'
+    description: 'Connect researchers, students, and enthusiasts for opportunities.'
+    description_it: 'Connettere ricercatori, studenti e appassionati per creare opportunità.'
 
 cta:
-  title: "Join Our Mission"
-  title_it: "Unisciti alla Nostra Missione"
+  title: 'Join Our Mission'
+  title_it: 'Unisciti alla Nostra Missione'
   description: "Whether you're a researcher, student, professional, or just curious about AI safety, there's a place for you in our community."
   description_it: "Che tu sia un ricercatore, studente, professionista o semplicemente curioso sull'AI safety, c'è un posto per te nella nostra community."
-  button_text: "Get Involved Today"
-  button_text_it: "Inizia Ora"
+  button_text: 'Get Involved Today'
+  button_text_it: 'Inizia Ora'
